@@ -10,6 +10,7 @@ import UIKit
 
 struct Constant {
     static let shortVersionString = "CFBundleShortVersionString"
+    static let dataSourceGPXUrl = "http://libertyskate.hu/mobile/skate-budapest-locations.gpx"
 }
 
 extension UserDefaults {
