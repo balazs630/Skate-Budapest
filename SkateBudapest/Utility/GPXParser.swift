@@ -8,7 +8,7 @@
 
 import MapKit
 
-class GPXParser: NSObject, XMLParserDelegate {
+class GPXParser: NSObject {
     // MARK: Properties
     typealias GPXCompletionHandler = (GPXParser?) -> Void
     private let completionHandler: GPXCompletionHandler
@@ -31,7 +31,7 @@ class GPXParser: NSObject, XMLParserDelegate {
 }
 
 // MARK: XML parser utility methods
-extension GPXParser {
+extension GPXParser: XMLParserDelegate {
     private func complete(success: Bool) {
         DispatchQueue.main.async {
             self.completionHandler(success ? self : nil)

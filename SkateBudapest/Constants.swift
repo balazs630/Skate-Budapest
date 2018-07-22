@@ -10,7 +10,11 @@ import UIKit
 
 struct Constant {
     static let shortVersionString = "CFBundleShortVersionString"
-    static let dataSourceGPXUrl = "http://libertyskate.hu/mobile/skate-budapest-locations.gpx"
+    static let dataSourceGPXUrl = "https://libertyskate.hu/mobile/example/locations.gpx"
+    //static let dataSourceGPXUrl = "https://libertyskate.hu/mobile/skate-budapest/locations.gpx"
+
+    static let leftAccessoryViewSize = CGRect(x: 0, y: 0, width: 59, height: 59)
+    static let calloutViewIdentifier = "calloutViewIdentifier"
 }
 
 extension UserDefaults {
