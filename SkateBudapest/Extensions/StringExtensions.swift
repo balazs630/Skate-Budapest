@@ -12,11 +12,4 @@ public  extension String {
     var trimmed: String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-
-    var asGpxDate: Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z"
-
-        return dateFormatter.date(from: self)
-    }
 }

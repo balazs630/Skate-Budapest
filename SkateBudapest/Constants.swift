@@ -17,16 +17,24 @@ struct Constant {
     static let calloutViewIdentifier = "calloutViewIdentifier"
 }
 
+public enum Theme {
+    public enum Icons {
+        public static let skateparkPin = "yellow"
+        public static let skateshopPin = "green"
+        public static let streetSpotPin = "purple"
+    }
+}
+
 public enum GPX {
     public enum Tag: String {
         case waypoint = "wpt"
         case latitude = "lat"
         case longitude = "lon"
-        case name = "name"
+        case name
         case description = "desc"
         case locationType = "loctype"
         case image = "img"
-        case href = "href"
+        case href
         case imageType = "imgtype"
         case smallImage = "thumbnail"
         case largeImage = "large"

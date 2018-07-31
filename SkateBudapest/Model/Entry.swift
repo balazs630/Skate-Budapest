@@ -12,7 +12,7 @@ class Entry: NSObject {
     var images = [Image]()
     var attributes = [String: String]()
 
-    var name: String? {
-        return attributes[GPX.Tag.name.rawValue]
+    var name: String {
+        return attributes[GPX.Tag.name.rawValue]!
     }
 }

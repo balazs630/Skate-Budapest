@@ -44,15 +44,28 @@ class MapViewController: UIViewController {
 // MARK: MKMapView
 extension MapViewController {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let annotationView = MKPinAnnotationView(annotation: annotation,
-                                                 reuseIdentifier: Constant.calloutViewIdentifier)
-        annotationView.canShowCallout = true
-
-        if (annotation as? Waypoint)?.thumbnailImageUrl != nil {
-            annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.leftAccessoryViewSize)
+        let annotationView = MKAnnotationView(annotation: annotation,
+                                              reuseIdentifier: Constant.calloutViewIdentifier)
+        guard let waypoint = annotation as? Waypoint else {
+            fatalError("Unable to cast MKAnnotation to Waypoint")
         }
 
+        annotationView.canShowCallout = true
+        annotationView.image = getAnnotationImage(for: waypoint.locationType)
+        annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.leftAccessoryViewSize)
+
         return annotationView
+    }
+
+    private func getAnnotationImage(for locationType: LocationType) -> UIImage {
+        switch locationType {
+        case .skatepark:
+            return UIImage(named: Theme.Icons.skateparkPin)!
+        case .skateshop:
+            return UIImage(named: Theme.Icons.skateshopPin)!
+        case .streetspot:
+            return UIImage(named: Theme.Icons.streetSpotPin)!
+        }
     }
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {

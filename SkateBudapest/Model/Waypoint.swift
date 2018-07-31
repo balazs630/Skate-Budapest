@@ -8,24 +8,30 @@
 
 import MapKit
 
+public enum LocationType: String {
+    case skatepark
+    case skateshop
+    case streetspot
+}
+
 class Waypoint: Entry {
     var latitude: Double
     var longitude: Double
 
-    var info: String? {
-        return attributes[GPX.Tag.description.rawValue]
+    var info: String {
+        return attributes[GPX.Tag.description.rawValue]!
     }
 
-    var locationType: String? {
-        return attributes[GPX.Tag.locationType.rawValue]
+    var locationType: LocationType {
+        return LocationType(rawValue: attributes[GPX.Tag.locationType.rawValue]!)!
     }
 
-    var thumbnailImageUrl: URL? {
-        return getImageUrl(type: GPX.Tag.smallImage.rawValue)
+    var thumbnailImageUrl: URL {
+        return getImageUrl(type: GPX.Tag.smallImage.rawValue)!
     }
 
-    var displayImageUrl: URL? {
-        return getImageUrl(type: GPX.Tag.largeImage.rawValue)
+    var displayImageUrl: URL {
+        return getImageUrl(type: GPX.Tag.largeImage.rawValue)!
     }
 
     init(latitude: Double, longitude: Double) {

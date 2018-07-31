@@ -167,10 +167,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC63326320FA95C3007E5D98 /* Build configuration list for PBXNativeTarget "SkateBudapest" */;
 			buildPhases = (
+				AC76CF8B20FA977A003ED70F /* SwiftLint */,
 				AC63324D20FA95C2007E5D98 /* Sources */,
 				AC63324E20FA95C2007E5D98 /* Frameworks */,
 				AC63324F20FA95C2007E5D98 /* Resources */,
-				AC76CF8B20FA977A003ED70F /* SwiftLint */,
 			);
 			buildRules = (
 			);
