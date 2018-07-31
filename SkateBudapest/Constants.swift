@@ -17,6 +17,22 @@ struct Constant {
     static let calloutViewIdentifier = "calloutViewIdentifier"
 }
 
+public enum GPX {
+    public enum Tag: String {
+        case waypoint = "wpt"
+        case latitude = "lat"
+        case longitude = "lon"
+        case name = "name"
+        case description = "desc"
+        case locationType = "loctype"
+        case image = "img"
+        case href = "href"
+        case imageType = "imgtype"
+        case smallImage = "thumbnail"
+        case largeImage = "large"
+    }
+}
+
 extension UserDefaults {
     struct Key {
         static let isAppAlreadyLaunchedOnce = "isAppAlreadyLaunchedOnce"

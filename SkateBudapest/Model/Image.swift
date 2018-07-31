@@ -1,5 +1,5 @@
 //
-//  Link.swift
+//  Image.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2018. 07. 21..
@@ -8,12 +8,11 @@
 
 import Foundation
 
-class Link {
+class Image {
     var href: String
-    var linkAttributes = [String: String]()
+    var imageAttributes = [String: String]()
     var url: URL? { return URL(string: href) }
-    var text: String? { return linkAttributes["text"] }
-    var type: String? { return linkAttributes["type"] }
+    var type: String? { return imageAttributes[GPX.Tag.imageType.rawValue] }
 
     init(href: String) {
         self.href = href

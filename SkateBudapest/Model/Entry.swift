@@ -9,11 +9,10 @@
 import Foundation
 
 class Entry: NSObject {
-    var links = [Link]()
+    var images = [Image]()
     var attributes = [String: String]()
 
     var name: String? {
-        set { attributes["name"] = newValue }
-        get { return attributes["name"] }
+        return attributes[GPX.Tag.name.rawValue]
     }
 }

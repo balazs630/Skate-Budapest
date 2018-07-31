@@ -13,19 +13,20 @@ class Waypoint: Entry {
     var longitude: Double
 
     var info: String? {
-        set { attributes["desc"] = newValue }
-        get { return attributes["desc"] }
+        return attributes[GPX.Tag.description.rawValue]
+    }
+
+    var locationType: String? {
+        return attributes[GPX.Tag.locationType.rawValue]
     }
 
     var thumbnailImageUrl: URL? {
-        return getImageUrl(type: "thumbnail")
+        return getImageUrl(type: GPX.Tag.smallImage.rawValue)
     }
 
     var displayImageUrl: URL? {
-        return getImageUrl(type: "large")
+        return getImageUrl(type: GPX.Tag.largeImage.rawValue)
     }
-
-    lazy var date: Date? = self.attributes["time"]?.asGpxDate
 
     init(latitude: Double, longitude: Double) {
         self.latitude = latitude
@@ -37,8 +38,8 @@ class Waypoint: Entry {
 // MARK: Utility methods
 extension Waypoint {
     private func getImageUrl(type: String) -> URL? {
-        for link in links where link.type == type {
-            return link.url
+        for image in images where image.type == type {
+            return image.url
         }
 
         return nil
