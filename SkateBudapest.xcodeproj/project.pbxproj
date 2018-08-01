@@ -11,6 +11,8 @@
 		AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */; };
 		AC171D632103E096008747AB /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC171D622103E096008747AB /* Entry.swift */; };
 		AC171D652103E0C0008747AB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC171D642103E0C0008747AB /* Image.swift */; };
+		AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */; };
+		AC2E12AB21171EF600A5B05E /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E12AA21171EF600A5B05E /* URLExtensions.swift */; };
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
 		AC63325720FA95C2007E5D98 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* MapViewController.swift */; };
 		AC63325A20FA95C2007E5D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC63325820FA95C2007E5D98 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 		AC171D622103E096008747AB /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		AC171D642103E0C0008747AB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		AC2E12AA21171EF600A5B05E /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		AC63325120FA95C2007E5D98 /* SkateBudapest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateBudapest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC63325420FA95C2007E5D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC63325620FA95C2007E5D98 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */,
+				AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */,
+				AC2E12AA21171EF600A5B05E /* URLExtensions.swift */,
 				AC9FB99C210369E4002D4C37 /* StringExtensions.swift */,
 			);
 			path = Extensions;
@@ -281,7 +287,9 @@
 				AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */,
 				AC171D632103E096008747AB /* Entry.swift in Sources */,
 				ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */,
+				AC2E12AB21171EF600A5B05E /* URLExtensions.swift in Sources */,
 				ACA489C020FAA0F70084D9F3 /* UpdateService.swift in Sources */,
+				AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */,
 				AC171D652103E0C0008747AB /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

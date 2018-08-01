@@ -18,20 +18,21 @@ class Waypoint: Entry {
     var latitude: Double
     var longitude: Double
 
-    var info: String {
-        return attributes[GPX.Tag.description.rawValue]!
-    }
-
     var locationType: LocationType {
         return LocationType(rawValue: attributes[GPX.Tag.locationType.rawValue]!)!
     }
 
-    var thumbnailImageUrl: URL {
-        return getImageUrl(type: GPX.Tag.smallImage.rawValue)!
+    var info: String? {
+        return attributes[GPX.Tag.description.rawValue]
     }
 
-    var displayImageUrl: URL {
-        return getImageUrl(type: GPX.Tag.largeImage.rawValue)!
+    // TODO: getImageURLsWith to extension
+    var thumbnailImageUrl: URL? {
+        return getImageURLsWith(type: GPX.Tag.smallImage.rawValue)[0]
+    }
+
+    var displayImageUrls: [URL?] {
+        return getImageURLsWith(type: GPX.Tag.largeImage.rawValue)
     }
 
     init(latitude: Double, longitude: Double) {
@@ -43,12 +44,15 @@ class Waypoint: Entry {
 
 // MARK: Utility methods
 extension Waypoint {
-    private func getImageUrl(type: String) -> URL? {
+    private func getImageURLsWith(type: String) -> [URL?] {
+        var imageUrls = [URL]()
         for image in images where image.type == type {
-            return image.url
+            if let imageUrl = image.url {
+                imageUrls.append(imageUrl)
+            }
         }
 
-        return nil
+        return imageUrls
     }
 }
 

@@ -89,7 +89,8 @@ extension MapViewController: MKMapViewDelegate {
         guard let thumbnailImageButton = view.leftCalloutAccessoryView as? UIButton else { return }
         guard let url = (view.annotation as? Waypoint)?.thumbnailImageUrl else { return }
         guard let imageData = NSData(contentsOf: url) else { return }
-        let image = UIImage(data: imageData as Data)!
+        guard let image = UIImage(data: imageData as Data) else { return }
+
         thumbnailImageButton.setImage(image, for: .normal)
     }
 
