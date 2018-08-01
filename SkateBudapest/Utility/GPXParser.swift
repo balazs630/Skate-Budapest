@@ -48,7 +48,7 @@ extension GPXParser {
     }
 }
 
-// MARK: XMLParserDelegate methods
+// MARK: XMLParserDelegate
 extension GPXParser: XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         inputStream += string

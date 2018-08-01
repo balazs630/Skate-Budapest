@@ -47,3 +47,8 @@ extension UserDefaults {
         static let appVersion = "appVersion"
     }
 }
+
+struct SegueIdentifier {
+    static let showLocationPinDetails = "showLocationPinDetailsSegue"
+
+}

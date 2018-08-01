@@ -34,11 +34,20 @@
                     <navigationItem key="navigationItem" id="B8S-iP-H5a"/>
                     <connections>
                         <outlet property="mapView" destination="0UC-DV-S0M" id="Cl8-dW-VTm"/>
+                        <segue destination="vYS-tB-GXD" kind="show" identifier="showLocationPinDetailsSegue" id="3Sb-OA-IUh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="32.833583208395808"/>
+        </scene>
+        <!--LocationDetailsViewController-->
+        <scene sceneID="ECI-uB-EUT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LocationDetails" referencedIdentifier="LocationDetailsViewController" id="vYS-tB-GXD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPI-kL-4ZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iEg-SV-gZ7">

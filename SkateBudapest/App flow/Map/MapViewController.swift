@@ -39,10 +39,38 @@ class MapViewController: UIViewController {
         mapView.addAnnotations(waypoints)
         mapView.showAnnotations(waypoints, animated: true)
     }
+
+    private func getAnnotationImage(for locationType: LocationType) -> UIImage {
+        switch locationType {
+        case .skatepark:
+            return UIImage(named: Theme.Icons.skateparkPin)!
+        case .skateshop:
+            return UIImage(named: Theme.Icons.skateshopPin)!
+        case .streetspot:
+            return UIImage(named: Theme.Icons.streetSpotPin)!
+        }
+    }
 }
 
-// MARK: MKMapView
+// MARK: Navigation
 extension MapViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let annotationView = sender as? MKAnnotationView
+        guard let waypoint = annotationView?.annotation as? Waypoint else { return }
+
+        if segue.identifier == SegueIdentifier.showLocationPinDetails {
+            guard let destVC = segue.destination as? LocationDetailsViewController else { return }
+            destVC.waypoint = waypoint
+        }
+    }
+}
+
+// MARK: MKMapViewDelegate
+extension MapViewController: MKMapViewDelegate {
+    func setMapViewDelegate() {
+        mapView.delegate = self
+    }
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: annotation,
                                               reuseIdentifier: Constant.calloutViewIdentifier)
@@ -57,30 +85,17 @@ extension MapViewController {
         return annotationView
     }
 
-    private func getAnnotationImage(for locationType: LocationType) -> UIImage {
-        switch locationType {
-        case .skatepark:
-            return UIImage(named: Theme.Icons.skateparkPin)!
-        case .skateshop:
-            return UIImage(named: Theme.Icons.skateshopPin)!
-        case .streetspot:
-            return UIImage(named: Theme.Icons.streetSpotPin)!
-        }
-    }
-
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        if let thumbnailImageButton = view.leftCalloutAccessoryView as? UIButton,
-            let url = (view.annotation as? Waypoint)?.thumbnailImageUrl,
-            let imageData = NSData(contentsOf: url),
-            let image = UIImage(data: imageData as Data) {
-            thumbnailImageButton.setImage(image, for: .normal)
-        }
+        guard let thumbnailImageButton = view.leftCalloutAccessoryView as? UIButton else { return }
+        guard let url = (view.annotation as? Waypoint)?.thumbnailImageUrl else { return }
+        guard let imageData = NSData(contentsOf: url) else { return }
+        let image = UIImage(data: imageData as Data)!
+        thumbnailImageButton.setImage(image, for: .normal)
     }
-}
 
-// MARK: MKMapViewDelegate
-extension MapViewController: MKMapViewDelegate {
-    func setMapViewDelegate() {
-        mapView.delegate = self
+    func mapView(_ mapView: MKMapView,
+                 annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: SegueIdentifier.showLocationPinDetails, sender: view)
     }
 }
