@@ -112,7 +112,7 @@ extension LocationDetailsViewController {
     }
 }
 
-// MARK: UIScrollViewDelegate
+// MARK: UIScrollViewDelegate methods
 extension LocationDetailsViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)

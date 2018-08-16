@@ -14,45 +14,36 @@ public enum LocationType: String {
     case streetspot
 }
 
-class Waypoint: Entry {
+class Waypoint: GPXEntry {
+    // MARK: Properties
     var latitude: Double
     var longitude: Double
 
     var locationType: LocationType {
-        return LocationType(rawValue: attributes[GPX.Tag.locationType.rawValue]!)!
+        let type = attributes[GPX.Tag.locationType.rawValue]
+        guard let locationType = LocationType(rawValue: type!) else {
+            fatalError("Unknown location type: \(String(describing: type))")
+        }
+
+        return locationType
     }
 
     var info: String? {
         return attributes[GPX.Tag.description.rawValue]
     }
 
-    // TODO: getImageURLsWith to extension
     var thumbnailImageUrl: URL? {
-        return getImageURLsWith(type: GPX.Tag.smallImage.rawValue)[0]
+        return images.imageURLsFor(type: GPX.Tag.smallImage.rawValue)[0]
     }
 
     var displayImageUrls: [URL?] {
-        return getImageURLsWith(type: GPX.Tag.largeImage.rawValue)
+        return images.imageURLsFor(type: GPX.Tag.largeImage.rawValue)
     }
 
+    // MARK: Initializers
     init(latitude: Double, longitude: Double) {
         self.latitude = latitude
         self.longitude = longitude
-        super.init()
-    }
-}
-
-// MARK: Utility methods
-extension Waypoint {
-    private func getImageURLsWith(type: String) -> [URL?] {
-        var imageUrls = [URL]()
-        for image in images where image.type == type {
-            if let imageUrl = image.url {
-                imageUrls.append(imageUrl)
-            }
-        }
-
-        return imageUrls
     }
 }
 

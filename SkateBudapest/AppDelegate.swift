@@ -15,27 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        initUserDefaults()
         return true
-    }
-}
-
-// MARK: - UserDefaults setup
-extension AppDelegate {
-    private func initUserDefaults() {
-        let defaults = UserDefaults.standard
-
-        if defaults.object(forKey: UserDefaults.Key.isAppAlreadyLaunchedOnce) == nil {
-            let firstTimeLaunchDefaults: [String: Any] = [
-                UserDefaults.Key.isAppAlreadyLaunchedOnce: true,
-                UserDefaults.Key.appVersion: UpdateService.getCurrentAppVersion()
-            ]
-
-            for item in firstTimeLaunchDefaults {
-                defaults.set(item.value, forKey: item.key)
-            }
-
-            defaults.synchronize()
-        }
     }
 }

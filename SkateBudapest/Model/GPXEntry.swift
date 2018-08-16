@@ -1,5 +1,5 @@
 //
-//  Entry.swift
+//  GPXEntry.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2018. 07. 21..
@@ -8,8 +8,9 @@
 
 import Foundation
 
-class Entry: NSObject {
-    var images = [Image]()
+class GPXEntry: NSObject {
+    // MARK: Properties
+    var images = [PlaceImage]()
     var attributes = [String: String]()
 
     var name: String {

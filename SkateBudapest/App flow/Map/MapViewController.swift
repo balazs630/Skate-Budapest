@@ -18,7 +18,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         setMapViewDelegate()
-        loadMapWaypointsFrom(url: URL(string: Constant.dataSourceGPXUrl)!)
+        loadMapWaypointsFrom(url: Constant.dataSourceGPXUrl)
     }
 
     // MARK: Setup mapView
@@ -54,6 +54,10 @@ class MapViewController: UIViewController {
 
 // MARK: Navigation
 extension MapViewController {
+    private func navigateToDetailsScreen(from view: UIView) {
+        performSegue(withIdentifier: SegueIdentifier.showLocationPinDetails, sender: view)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let annotationView = sender as? MKAnnotationView
         guard let waypoint = annotationView?.annotation as? Waypoint else { return }
@@ -65,7 +69,7 @@ extension MapViewController {
     }
 }
 
-// MARK: MKMapViewDelegate
+// MARK: MKMapViewDelegate methods
 extension MapViewController: MKMapViewDelegate {
     func setMapViewDelegate() {
         mapView.delegate = self
@@ -80,23 +84,28 @@ extension MapViewController: MKMapViewDelegate {
 
         annotationView.canShowCallout = true
         annotationView.image = getAnnotationImage(for: waypoint.locationType)
-        annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.leftAccessoryViewSize)
+
+        annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.calloutImageViewSize)
+        annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
 
         return annotationView
     }
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let thumbnailImageButton = view.leftCalloutAccessoryView as? UIButton else { return }
-        guard let url = (view.annotation as? Waypoint)?.thumbnailImageUrl else { return }
-        guard let imageData = NSData(contentsOf: url) else { return }
-        guard let image = UIImage(data: imageData as Data) else { return }
+        guard let leftCalloutAccessoryButton = view.leftCalloutAccessoryView as? UIButton,
+                let url = (view.annotation as? Waypoint)?.thumbnailImageUrl,
+                let imageData = NSData(contentsOf: url),
+                let image = UIImage(data: imageData as Data) else {
+                    return
+        }
 
-        thumbnailImageButton.setImage(image, for: .normal)
+        leftCalloutAccessoryButton.setImage(image, for: .normal)
+        leftCalloutAccessoryButton.isUserInteractionEnabled = false
     }
 
     func mapView(_ mapView: MKMapView,
                  annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
-        performSegue(withIdentifier: SegueIdentifier.showLocationPinDetails, sender: view)
+        navigateToDetailsScreen(from: view)
     }
 }

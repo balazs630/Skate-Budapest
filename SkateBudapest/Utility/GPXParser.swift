@@ -17,7 +17,7 @@ class GPXParser: NSObject {
 
     var waypoints = [Waypoint]()
     private var waypoint: Waypoint!
-    private var image: Image?
+    private var image: PlaceImage?
 
     // MARK: Initializers
     private init(url: URL, completionHandler: @escaping GPXCompletionHandler) {
@@ -48,7 +48,7 @@ extension GPXParser {
     }
 }
 
-// MARK: XMLParserDelegate
+// MARK: XMLParserDelegate methods
 extension GPXParser: XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         inputStream += string
@@ -66,7 +66,7 @@ extension GPXParser: XMLParserDelegate {
             let longitude = Double(attributeDict[GPX.Tag.longitude.rawValue]!)!
             waypoint = Waypoint(latitude: latitude, longitude: longitude)
         case .image:
-            image = Image(href: attributeDict[GPX.Tag.href.rawValue]!)
+            image = PlaceImage(href: attributeDict[GPX.Tag.href.rawValue]!)
         default:
             break
         }
@@ -79,7 +79,7 @@ extension GPXParser: XMLParserDelegate {
         guard let elementType = GPX.Tag(rawValue: elementName) else { return }
         switch elementType {
         case .waypoint:
-                waypoints.append(waypoint)
+            waypoints.append(waypoint)
         case .name, .description, .locationType:
             waypoint!.attributes[elementName] = inputStream.trimmed
             inputStream = ""
