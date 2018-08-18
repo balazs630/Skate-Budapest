@@ -21,11 +21,19 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UC-DV-S0M">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80f-Ms-r1x">
+                                <rect key="frame" x="313" y="605" width="22" height="22"/>
+                                <connections>
+                                    <action selector="centerMapOnUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIp-M5-kzR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0UC-DV-S0M" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="BRq-We-gN7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="80f-Ms-r1x" secondAttribute="bottom" constant="40" id="DM2-hg-z4k"/>
                             <constraint firstItem="0UC-DV-S0M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="IwH-xq-YET"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80f-Ms-r1x" secondAttribute="trailing" constant="40" id="SJg-bM-ekF"/>
                             <constraint firstAttribute="trailing" secondItem="0UC-DV-S0M" secondAttribute="trailing" id="bRQ-t3-kuc"/>
                             <constraint firstItem="0UC-DV-S0M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="miR-sb-IfH"/>
                         </constraints>

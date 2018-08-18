@@ -14,7 +14,7 @@ struct Constant {
     //static let dataSourceGPXUrl = URL(string: "https://libertyskate.hu/mobile/skate-budapest/locations.gpx")!
 
     static let calloutImageViewSize = CGRect(x: 0, y: 0, width: 59, height: 59)
-    static let calloutViewIdentifier = "mapPinPopupView"
+    static let calloutViewIdentifier = "customMKAnnotationView"
 }
 
 public enum Theme {

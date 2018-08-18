@@ -44,6 +44,7 @@
 		AC9FB9A62103CB48002D4C37 /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
 		ACA489BA20FA9E890084D9F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Budapest, Hungary.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				AC63326020FA95C3007E5D98 /* Info.plist */,
+				ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

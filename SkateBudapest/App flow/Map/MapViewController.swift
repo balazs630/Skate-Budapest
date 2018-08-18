@@ -10,6 +10,9 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
+    // MARK: Properties
+    private let locationManager = CLLocationManager()
+
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
 
@@ -17,11 +20,25 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        enableLocationServices()
         setMapViewDelegate()
         loadMapWaypointsFrom(url: Constant.dataSourceGPXUrl)
     }
 
-    // MARK: Setup mapView
+    // MARK: Button actions
+    @IBAction func centerMapOnUserLocation(_ sender: Any) {
+        if let userLocation = locationManager.location {
+            let latitudinalMeters = CLLocationDistance(10000)
+            let longitudinalMeters = CLLocationDistance(10000)
+
+            let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate,
+                                                                latitudinalMeters,
+                                                                longitudinalMeters)
+            mapView.setRegion(viewRegion, animated: true)
+        }
+    }
+
+    // MARK: Map waypoint operations
     private func loadMapWaypointsFrom(url: URL) {
         clearWaypoints()
         GPXParser.parse(url: url) { gpx in
@@ -40,7 +57,7 @@ class MapViewController: UIViewController {
         mapView.showAnnotations(waypoints, animated: true)
     }
 
-    private func getAnnotationImage(for locationType: LocationType) -> UIImage {
+    private func getWaypointImage(for locationType: LocationType) -> UIImage {
         switch locationType {
         case .skatepark:
             return UIImage(named: Theme.Icons.skateparkPin)!
@@ -69,6 +86,32 @@ extension MapViewController {
     }
 }
 
+// MARK: CLLocationManagerDelegate methods
+extension MapViewController: CLLocationManagerDelegate {
+    private func enableLocationServices() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined, .restricted, .denied:
+            locationManager.requestWhenInUseAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
+            break
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        case .restricted, .denied:
+            locationManager.stopUpdatingLocation()
+        case .notDetermined, .authorizedAlways:
+            break
+        }
+    }
+}
+
 // MARK: MKMapViewDelegate methods
 extension MapViewController: MKMapViewDelegate {
     func setMapViewDelegate() {
@@ -78,12 +121,16 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: annotation,
                                               reuseIdentifier: Constant.calloutViewIdentifier)
+        if annotation.isKind(of: MKUserLocation.self) {
+            return nil
+        }
+
         guard let waypoint = annotation as? Waypoint else {
             fatalError("Unable to cast MKAnnotation to Waypoint")
         }
 
         annotationView.canShowCallout = true
-        annotationView.image = getAnnotationImage(for: waypoint.locationType)
+        annotationView.image = getWaypointImage(for: waypoint.locationType)
 
         annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.calloutImageViewSize)
         annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)

@@ -9,7 +9,7 @@
 import UIKit
 
 class LocationDetailsViewController: UIViewController {
-    // Properties
+    // MARK: Properties
     var waypoint: Waypoint!
     var selectedImage: UIImageView!
 
@@ -41,9 +41,9 @@ extension LocationDetailsViewController {
     }
 
     private func setupImageScrollView() {
-        let imageViews = loadImageViews()
-
         imageScrollView.delegate = self
+
+        let imageViews = loadImageViews()
         imageScrollView.addSubviews(imageViews)
         imageScrollView.contentSize.width = imageScrollView.frame.width * CGFloat(imageViews.count)
 
