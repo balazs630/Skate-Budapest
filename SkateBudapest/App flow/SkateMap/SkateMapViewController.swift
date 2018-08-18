@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  SkateMapViewController.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2018. 07. 14..
@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class SkateMapViewController: UIViewController {
     // MARK: Properties
     private let locationManager = CLLocationManager()
 
@@ -70,7 +70,7 @@ class MapViewController: UIViewController {
 }
 
 // MARK: Navigation
-extension MapViewController {
+extension SkateMapViewController {
     private func navigateToDetailsScreen(from view: UIView) {
         performSegue(withIdentifier: SegueIdentifier.showLocationPinDetails, sender: view)
     }
@@ -87,7 +87,7 @@ extension MapViewController {
 }
 
 // MARK: CLLocationManagerDelegate methods
-extension MapViewController: CLLocationManagerDelegate {
+extension SkateMapViewController: CLLocationManagerDelegate {
     private func enableLocationServices() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -113,7 +113,7 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 // MARK: MKMapViewDelegate methods
-extension MapViewController: MKMapViewDelegate {
+extension SkateMapViewController: MKMapViewDelegate {
     func setMapViewDelegate() {
         mapView.delegate = self
     }

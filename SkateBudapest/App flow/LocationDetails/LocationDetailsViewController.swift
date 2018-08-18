@@ -11,7 +11,8 @@ import UIKit
 class LocationDetailsViewController: UIViewController {
     // MARK: Properties
     var waypoint: Waypoint!
-    var selectedImage: UIImageView!
+    var imageViews: [UIImageView]!
+    var imageOffset = IndexPath(row: 0, section: 0)
 
     // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,6 +24,12 @@ class LocationDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        let xOffset = imageScrollView.frame.width * CGFloat(imageOffset.row)
+        pageControl.currentPage = imageOffset.row
+        imageScrollView.setContentOffset(CGPoint(x: xOffset, y: 0), animated: false)
     }
 }
 
@@ -43,22 +50,19 @@ extension LocationDetailsViewController {
     private func setupImageScrollView() {
         imageScrollView.delegate = self
 
-        let imageViews = loadImageViews()
+        imageViews = loadImageViews()
         imageScrollView.addSubviews(imageViews)
         imageScrollView.contentSize.width = imageScrollView.frame.width * CGFloat(imageViews.count)
 
-        let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImageInFullscreenTap))
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(navigateToImageViewerScreen))
         imageTap.cancelsTouchesInView = false
         imageScrollView.addGestureRecognizer(imageTap)
     }
 
     private func setupPageControl() {
-        pageControl.numberOfPages = imageScrollView.subviews.count
+        pageControl.numberOfPages = waypoint.displayImageUrls.count
     }
-}
 
-// TODO: loadImageViews to extensions?
-extension LocationDetailsViewController {
     private func loadImageViews() -> [UIImageView] {
         let images = waypoint.displayImageUrls.imagesFromURLs()
         var imageViews = [UIImageView]()
@@ -78,37 +82,21 @@ extension LocationDetailsViewController {
     }
 }
 
-// TODO: Refactor long method..
-// MARK: Gesture recognisers
+// MARK: Navigation
 extension LocationDetailsViewController {
-    @objc func openImageInFullscreenTap(_ sender: UITapGestureRecognizer) {
-        guard let imageView = sender.view?.subviews[pageControl.currentPage] as? UIImageView else { return }
-        selectedImage = UIImageView(image: imageView.image)
-        selectedImage.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        selectedImage.contentMode = .scaleAspectFit
-
-        let scrollView = UIScrollView()
-        scrollView.delegate = self
-        scrollView.minimumZoomScale = 1.0
-        scrollView.maximumZoomScale = 5.0
-        scrollView.frame = UIScreen.main.bounds
-        scrollView.backgroundColor = .black
-        scrollView.contentMode = .scaleAspectFit
-
-        let dismissTap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImageTap))
-        dismissTap.cancelsTouchesInView = false
-        scrollView.addGestureRecognizer(dismissTap)
-
-        scrollView.addSubview(selectedImage)
-        view.addSubview(scrollView)
-        navigationController?.isNavigationBarHidden = true
-        tabBarController?.tabBar.isHidden = true
+    @objc private func navigateToImageViewerScreen() {
+        performSegue(withIdentifier: SegueIdentifier.showImageViewer, sender: nil)
     }
 
-    @objc func dismissFullscreenImageTap(_ sender: UITapGestureRecognizer) {
-        navigationController?.isNavigationBarHidden = false
-        tabBarController?.tabBar.isHidden = false
-        sender.view?.removeFromSuperview()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SegueIdentifier.showImageViewer {
+            guard let destVC = segue.destination as? ImageViewerViewController else { return }
+
+            destVC.images = imageViews.images()
+            imageOffset.row = pageControl.currentPage
+            destVC.imageOffset = imageOffset
+            destVC.delegate = self
+        }
     }
 }
 
@@ -117,8 +105,11 @@ extension LocationDetailsViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
     }
+}
 
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return selectedImage
+// MARK: ImageViewerViewControllerDelegate methods
+extension LocationDetailsViewController: ImageViewerViewControllerDelegate {
+    func updateImageOffset(indexPath: IndexPath) {
+        imageOffset = indexPath
     }
 }

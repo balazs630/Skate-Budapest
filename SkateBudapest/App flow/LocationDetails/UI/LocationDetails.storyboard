@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AWZ-4X-6uK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,29 +16,29 @@
             <objects>
                 <viewController storyboardIdentifier="LocationDetailsViewController" id="o7c-Sh-F8G" customClass="LocationDetailsViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eKf-lW-Hgv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14b-kQ-awA">
-                                <rect key="frame" x="25" y="25" width="45" height="20.5"/>
+                                <rect key="frame" x="25" y="89" width="45" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXW-Kl-sSf">
-                                <rect key="frame" x="0.0" y="136" width="375" height="281.5"/>
+                                <rect key="frame" x="0.0" y="200" width="375" height="281.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jXW-Kl-sSf" secondAttribute="height" multiplier="4:3" id="SAn-6K-7iY"/>
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsw-2y-29Y">
-                                <rect key="frame" x="25" y="65" width="88" height="20.5"/>
+                                <rect key="frame" x="25" y="129" width="88" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cke-pk-tY0">
-                                <rect key="frame" x="168" y="427.5" width="39" height="37"/>
+                                <rect key="frame" x="168" y="491.5" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.080110668159999995" green="1" blue="0.58388884600000002" alpha="0.31357284330000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="currentPageIndicatorTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
@@ -57,15 +57,42 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5ha-Ph-44X"/>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationItem key="navigationItem" id="WHH-zp-U4I"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="nsw-2y-29Y" id="JS9-Np-Dti"/>
                         <outlet property="imageScrollView" destination="jXW-Kl-sSf" id="L40-q1-6cw"/>
                         <outlet property="pageControl" destination="cke-pk-tY0" id="quy-Yf-Nh7"/>
                         <outlet property="titleLabel" destination="14b-kQ-awA" id="MXF-BM-kZS"/>
+                        <segue destination="75A-Tl-aML" kind="show" identifier="showImageViewerSegue" animates="NO" id="oym-yM-yka"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mk-h8-sxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828" y="32.833583208395808"/>
+        </scene>
+        <!--ImageViewerViewController-->
+        <scene sceneID="0Co-xi-NL9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImageViewer" referencedIdentifier="ImageViewerViewController" id="75A-Tl-aML" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HP1-D0-Xxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3643" y="32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UpF-M6-Efe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AWZ-4X-6uK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pIo-Th-1gs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o7c-Sh-F8G" kind="relationship" relationship="rootViewController" id="baR-l2-qjb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ic6-mP-PHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1888.8" y="32.833583208395808"/>
         </scene>

@@ -15,6 +15,7 @@ struct Constant {
 
     static let calloutImageViewSize = CGRect(x: 0, y: 0, width: 59, height: 59)
     static let calloutViewIdentifier = "customMKAnnotationView"
+    static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
 }
 
 public enum Theme {
@@ -50,4 +51,5 @@ extension UserDefaults {
 
 struct SegueIdentifier {
     static let showLocationPinDetails = "showLocationPinDetailsSegue"
+    static let showImageViewer = "showImageViewerSegue"
 }

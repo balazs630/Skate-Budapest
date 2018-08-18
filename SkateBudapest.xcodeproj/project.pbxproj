@@ -14,10 +14,14 @@
 		AC2E12AB21171EF600A5B05E /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E12AA21171EF600A5B05E /* URLExtensions.swift */; };
 		AC4334AC21258FA400571802 /* GPXEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4334AB21258FA400571802 /* GPXEntry.swift */; };
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
-		AC63325720FA95C2007E5D98 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* MapViewController.swift */; };
-		AC63325A20FA95C2007E5D98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC63325820FA95C2007E5D98 /* Main.storyboard */; };
+		AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */; };
+		AC63325A20FA95C2007E5D98 /* SkateMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC63325820FA95C2007E5D98 /* SkateMap.storyboard */; };
 		AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC63325B20FA95C3007E5D98 /* Assets.xcassets */; };
 		AC63325F20FA95C3007E5D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */; };
+		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
+		AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC907892212997F600FC0528 /* UIImageViewExtensions.swift */; };
+		AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */; };
+		AC975D41212F10660021DC7A /* ImageViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC975D40212F10660021DC7A /* ImageViewer.storyboard */; };
 		AC9FB99D210369E4002D4C37 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FB99C210369E4002D4C37 /* StringExtensions.swift */; };
 		AC9FB9A1210372C9002D4C37 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FB9A0210372C9002D4C37 /* Waypoint.swift */; };
 		AC9FB9A72103CB48002D4C37 /* GPXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FB9A62103CB48002D4C37 /* GPXParser.swift */; };
@@ -34,11 +38,15 @@
 		AC4334AB21258FA400571802 /* GPXEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXEntry.swift; sourceTree = "<group>"; };
 		AC63325120FA95C2007E5D98 /* SkateBudapest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateBudapest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC63325420FA95C2007E5D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC63325620FA95C2007E5D98 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		AC63325920FA95C2007E5D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapViewController.swift; sourceTree = "<group>"; };
+		AC63325920FA95C2007E5D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SkateMap.storyboard; sourceTree = "<group>"; };
 		AC63325B20FA95C3007E5D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC63325E20FA95C3007E5D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC63326020FA95C3007E5D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
+		AC907892212997F600FC0528 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewFullViewCell.swift; sourceTree = "<group>"; };
+		AC975D40212F10660021DC7A /* ImageViewer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageViewer.storyboard; sourceTree = "<group>"; };
 		AC9FB99C210369E4002D4C37 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		AC9FB9A0210372C9002D4C37 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
 		AC9FB9A62103CB48002D4C37 /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
@@ -58,13 +66,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AC0B89A72111FDBA006CDB7E /* Details */ = {
+		AC0B89A72111FDBA006CDB7E /* LocationDetails */ = {
 			isa = PBXGroup;
 			children = (
 				AC0B89A82111FDCB006CDB7E /* UI */,
 				AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */,
 			);
-			path = Details;
+			path = LocationDetails;
 			sourceTree = "<group>";
 		};
 		AC0B89A82111FDCB006CDB7E /* UI */ = {
@@ -78,26 +86,27 @@
 		AC171D5E2103D7CA008747AB /* App flow */ = {
 			isa = PBXGroup;
 			children = (
-				AC171D5F2103D7D4008747AB /* Map */,
-				AC0B89A72111FDBA006CDB7E /* Details */,
+				AC171D5F2103D7D4008747AB /* SkateMap */,
+				AC0B89A72111FDBA006CDB7E /* LocationDetails */,
+				AC975D3E212F10340021DC7A /* ImageViewer */,
 			);
 			path = "App flow";
 			sourceTree = "<group>";
 		};
-		AC171D5F2103D7D4008747AB /* Map */ = {
+		AC171D5F2103D7D4008747AB /* SkateMap */ = {
 			isa = PBXGroup;
 			children = (
 				AC171D602103D7E6008747AB /* UI */,
-				AC63325620FA95C2007E5D98 /* MapViewController.swift */,
+				AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */,
 			);
-			path = Map;
+			path = SkateMap;
 			sourceTree = "<group>";
 		};
 		AC171D602103D7E6008747AB /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */,
-				AC63325820FA95C2007E5D98 /* Main.storyboard */,
+				AC63325820FA95C2007E5D98 /* SkateMap.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -158,6 +167,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		AC975D3E212F10340021DC7A /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				AC975D3F212F104B0021DC7A /* UI */,
+				AC90789021297E6300FC0528 /* ImageViewerViewController.swift */,
+				AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */,
+			);
+			path = ImageViewer;
+			sourceTree = "<group>";
+		};
+		AC975D3F212F104B0021DC7A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC975D40212F10660021DC7A /* ImageViewer.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		AC9FB9A2210374C2002D4C37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */,
+				AC907892212997F600FC0528 /* UIImageViewExtensions.swift */,
 				AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */,
 				AC2E12AA21171EF600A5B05E /* URLExtensions.swift */,
 				AC9FB99C210369E4002D4C37 /* StringExtensions.swift */,
@@ -241,7 +269,8 @@
 				AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */,
 				AC63325F20FA95C3007E5D98 /* LaunchScreen.storyboard in Resources */,
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
-				AC63325A20FA95C2007E5D98 /* Main.storyboard in Resources */,
+				AC63325A20FA95C2007E5D98 /* SkateMap.storyboard in Resources */,
+				AC975D41212F10660021DC7A /* ImageViewer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC63325720FA95C2007E5D98 /* MapViewController.swift in Sources */,
+				AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */,
+				AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */,
+				AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
+				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,
 				AC4334AC21258FA400571802 /* GPXEntry.swift in Sources */,
 				AC9FB9A1210372C9002D4C37 /* Waypoint.swift in Sources */,
 				AC9FB9A72103CB48002D4C37 /* GPXParser.swift in Sources */,
@@ -287,12 +319,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC63325820FA95C2007E5D98 /* Main.storyboard */ = {
+		AC63325820FA95C2007E5D98 /* SkateMap.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC63325920FA95C2007E5D98 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SkateMap.storyboard;
 			sourceTree = "<group>";
 		};
 		AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */ = {
