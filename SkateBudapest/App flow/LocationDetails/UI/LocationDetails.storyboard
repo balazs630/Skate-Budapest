@@ -63,20 +63,12 @@
                         <outlet property="imageScrollView" destination="jXW-Kl-sSf" id="L40-q1-6cw"/>
                         <outlet property="pageControl" destination="cke-pk-tY0" id="quy-Yf-Nh7"/>
                         <outlet property="titleLabel" destination="14b-kQ-awA" id="MXF-BM-kZS"/>
-                        <segue destination="75A-Tl-aML" kind="show" identifier="showImageViewerSegue" animates="NO" id="oym-yM-yka"/>
+                        <segue destination="5nn-zZ-c5F" kind="show" identifier="showImageViewerSegue" id="Ww7-gq-2pb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mk-h8-sxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2828" y="32.833583208395808"/>
-        </scene>
-        <!--ImageViewerViewController-->
-        <scene sceneID="0Co-xi-NL9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ImageViewer" referencedIdentifier="ImageViewerViewController" id="75A-Tl-aML" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HP1-D0-Xxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3643" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UpF-M6-Efe">
@@ -95,6 +87,81 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ic6-mP-PHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1888.8" y="32.833583208395808"/>
+        </scene>
+        <!--Image Viewer View Controller-->
+        <scene sceneID="Pja-92-Ri1">
+            <objects>
+                <viewController id="5nn-zZ-c5F" customClass="ImageViewerViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JBX-S6-VHf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Ol-le-xCn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uYz-KS-bFe">
+                                    <size key="itemSize" width="265" height="261"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageViewerCellIdentifier" id="WDG-kY-e0O" customClass="ImagePreviewFullViewCell" customModule="SkateBudapest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="261"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="265" height="261"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Hk-gw-J23">
+                                                    <rect key="frame" x="0.0" y="0.0" width="265" height="261"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cHX-hB-kop">
+                                                            <rect key="frame" x="0.0" y="0.0" width="265" height="261"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="cHX-hB-kop" firstAttribute="centerX" secondItem="6Hk-gw-J23" secondAttribute="centerX" id="0n5-Zt-O3s"/>
+                                                        <constraint firstItem="cHX-hB-kop" firstAttribute="top" secondItem="6Hk-gw-J23" secondAttribute="top" id="7F9-hG-dcw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cHX-hB-kop" secondAttribute="trailing" id="M4B-3x-wjN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cHX-hB-kop" secondAttribute="bottom" id="b50-WU-s5Y"/>
+                                                        <constraint firstItem="cHX-hB-kop" firstAttribute="leading" secondItem="6Hk-gw-J23" secondAttribute="leading" id="dm5-yq-kGV"/>
+                                                        <constraint firstItem="cHX-hB-kop" firstAttribute="centerY" secondItem="6Hk-gw-J23" secondAttribute="centerY" id="hxO-TI-37d"/>
+                                                    </constraints>
+                                                </scrollView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="6Hk-gw-J23" secondAttribute="bottom" id="5t3-hc-dQ4"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Hk-gw-J23" secondAttribute="trailing" id="Wf9-Qq-OX5"/>
+                                            <constraint firstItem="6Hk-gw-J23" firstAttribute="top" secondItem="WDG-kY-e0O" secondAttribute="top" id="gCh-8q-0xk"/>
+                                            <constraint firstItem="6Hk-gw-J23" firstAttribute="leading" secondItem="WDG-kY-e0O" secondAttribute="leading" id="xe4-hq-3qs"/>
+                                        </constraints>
+                                        <size key="customSize" width="265" height="261"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="cHX-hB-kop" id="I7C-ko-6wE"/>
+                                            <outlet property="scrollView" destination="6Hk-gw-J23" id="DTm-FN-hx8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4Ol-le-xCn" firstAttribute="top" secondItem="tI1-tJ-KPP" secondAttribute="top" id="37H-xt-GIJ"/>
+                            <constraint firstItem="4Ol-le-xCn" firstAttribute="leading" secondItem="tI1-tJ-KPP" secondAttribute="leading" id="Www-aj-vvg"/>
+                            <constraint firstItem="4Ol-le-xCn" firstAttribute="bottom" secondItem="tI1-tJ-KPP" secondAttribute="bottom" id="fGx-Uc-ytZ"/>
+                            <constraint firstItem="4Ol-le-xCn" firstAttribute="trailing" secondItem="tI1-tJ-KPP" secondAttribute="trailing" id="k6Z-FA-kiL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tI1-tJ-KPP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SGc-Gr-T2t"/>
+                    <connections>
+                        <outlet property="imageCollectionView" destination="4Ol-le-xCn" id="22C-ZS-ZN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="609-gL-1px" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3802" y="33"/>
         </scene>
     </scenes>
 </document>

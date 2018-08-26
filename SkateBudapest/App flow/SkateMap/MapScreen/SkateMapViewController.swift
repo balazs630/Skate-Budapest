@@ -38,7 +38,18 @@ class SkateMapViewController: UIViewController {
         }
     }
 
-    // MARK: Map waypoint operations
+    @IBAction func filterAnnotations(_ sender: Any) {
+        guard let annotationFilterVC = storyboard?.instantiateViewController(withIdentifier: Constant.annotationFilter)
+            as? AnnotationFilterViewController else { return }
+
+        annotationFilterVC.modalPresentationStyle = .custom
+        annotationFilterVC.transitioningDelegate = self
+        annotationFilterVC.delegate = self
+
+        present(annotationFilterVC, animated: true, completion: nil)
+    }
+
+    // MARK: Map annotation operations
     private func loadMapWaypointsFrom(url: URL) {
         clearWaypoints()
         GPXParser.parse(url: url) { gpx in
@@ -57,14 +68,11 @@ class SkateMapViewController: UIViewController {
         mapView.showAnnotations(waypoints, animated: true)
     }
 
-    private func getWaypointImage(for locationType: LocationType) -> UIImage {
-        switch locationType {
-        case .skatepark:
-            return UIImage(named: Theme.Icons.skateparkPin)!
-        case .skateshop:
-            return UIImage(named: Theme.Icons.skateshopPin)!
-        case .streetspot:
-            return UIImage(named: Theme.Icons.streetSpotPin)!
+    private func filter(types: [LocationType]) {
+        for annotation in mapView.annotations {
+            if let waypoint = annotation as? Waypoint {
+                mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.locationType) ? true : false
+            }
         }
     }
 }
@@ -138,6 +146,17 @@ extension SkateMapViewController: MKMapViewDelegate {
         return annotationView
     }
 
+    private func getWaypointImage(for locationType: LocationType) -> UIImage {
+        switch locationType {
+        case .skatepark:
+            return UIImage(named: Theme.Icons.skateparkPin)!
+        case .skateshop:
+            return UIImage(named: Theme.Icons.skateshopPin)!
+        case .streetspot:
+            return UIImage(named: Theme.Icons.streetSpotPin)!
+        }
+    }
+
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let leftCalloutAccessoryButton = view.leftCalloutAccessoryView as? UIButton,
                 let url = (view.annotation as? Waypoint)?.thumbnailImageUrl,
@@ -154,5 +173,21 @@ extension SkateMapViewController: MKMapViewDelegate {
                  annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
         navigateToDetailsScreen(from: view)
+    }
+}
+
+// MARK: UIViewControllerTransitioningDelegate methods
+extension SkateMapViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController,
+                                presenting: UIViewController?,
+                                source: UIViewController) -> UIPresentationController? {
+        return HalfScreenModalPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
+// MARK: AnnotationFilterDelegate methods
+extension SkateMapViewController: AnnotationFilterDelegate {
+    func filterAnnotationsBy(types: [LocationType]) {
+        return filter(types: types)
     }
 }

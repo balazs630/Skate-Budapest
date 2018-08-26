@@ -16,6 +16,7 @@ struct Constant {
     static let calloutImageViewSize = CGRect(x: 0, y: 0, width: 59, height: 59)
     static let calloutViewIdentifier = "customMKAnnotationView"
     static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
+    static let annotationFilter = "AnnotationFilterViewController"
 }
 
 public enum Theme {
@@ -46,6 +47,13 @@ extension UserDefaults {
     struct Key {
         static let isAppAlreadyLaunchedOnce = "isAppAlreadyLaunchedOnce"
         static let appVersion = "appVersion"
+
+        // swiftlint:disable type_name
+        struct Sw {
+            static let skatepark = "skatepark"
+            static let skateshop = "stateshop"
+            static let streetspot = "streetspot"
+        }
     }
 }
 

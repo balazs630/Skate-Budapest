@@ -39,7 +39,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="B8S-iP-H5a"/>
+                    <navigationItem key="navigationItem" id="B8S-iP-H5a">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="green" id="PY3-Av-sP1">
+                            <connections>
+                                <action selector="filterAnnotations:" destination="BYZ-38-t0r" id="DGl-us-Ev5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="0UC-DV-S0M" id="Cl8-dW-VTm"/>
                         <segue destination="vYS-tB-GXD" kind="show" identifier="showLocationPinDetailsSegue" id="3Sb-OA-IUh"/>
@@ -49,13 +55,85 @@
             </objects>
             <point key="canvasLocation" x="972" y="32.833583208395808"/>
         </scene>
+        <!--Annotation Filter View Controller-->
+        <scene sceneID="wpw-KI-uNV">
+            <objects>
+                <viewController storyboardIdentifier="AnnotationFilterViewController" id="EaO-2K-C0g" customClass="AnnotationFilterViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QiV-Pk-toP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-iv-aKe">
+                                <rect key="frame" x="16" y="7" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonTap:" destination="EaO-2K-C0g" eventType="touchUpInside" id="G4f-oO-HjK"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XxK-JQ-iwx">
+                                <rect key="frame" x="94" y="100" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skatepark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-Ud-xIO">
+                                <rect key="frame" x="200" y="105" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c59-jU-YeW">
+                                <rect key="frame" x="94" y="187" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skateshop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBj-uA-nOX">
+                                <rect key="frame" x="200" y="192" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLI-Jc-2sP">
+                                <rect key="frame" x="94" y="269" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Streetspot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-YO-CdN">
+                                <rect key="frame" x="200" y="274" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-te-JTn">
+                                <rect key="frame" x="324" y="7" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="filterButtonTap:" destination="EaO-2K-C0g" eventType="touchUpInside" id="LiZ-H4-aWx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KSh-5M-tAS"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="400"/>
+                    <connections>
+                        <outlet property="swSkatepark" destination="XxK-JQ-iwx" id="MjY-PK-ywt"/>
+                        <outlet property="swSkateshop" destination="c59-jU-YeW" id="7bC-t5-DuP"/>
+                        <outlet property="swStreetspot" destination="QLI-Jc-2sP" id="CXs-QM-xwB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsU-y4-ila" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="365"/>
+        </scene>
         <!--LocationDetailsViewController-->
         <scene sceneID="ECI-uB-EUT">
             <objects>
                 <viewControllerPlaceholder storyboardName="LocationDetails" referencedIdentifier="LocationDetailsViewController" id="vYS-tB-GXD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPI-kL-4ZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739" y="32"/>
+            <point key="canvasLocation" x="1674" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iEg-SV-gZ7">
@@ -76,4 +154,7 @@
             <point key="canvasLocation" x="82" y="33"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="green" width="24" height="24"/>
+    </resources>
 </document>
