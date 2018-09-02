@@ -63,7 +63,7 @@
                         <outlet property="imageScrollView" destination="jXW-Kl-sSf" id="L40-q1-6cw"/>
                         <outlet property="pageControl" destination="cke-pk-tY0" id="quy-Yf-Nh7"/>
                         <outlet property="titleLabel" destination="14b-kQ-awA" id="MXF-BM-kZS"/>
-                        <segue destination="5nn-zZ-c5F" kind="show" identifier="showImageViewerSegue" id="Ww7-gq-2pb"/>
+                        <segue destination="5nn-zZ-c5F" kind="show" identifier="showImageViewerSegue" animates="NO" id="Ww7-gq-2pb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mk-h8-sxj" userLabel="First Responder" sceneMemberID="firstResponder"/>

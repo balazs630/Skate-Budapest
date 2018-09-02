@@ -15,6 +15,7 @@ class GPXParser: NSObject {
     private let url: URL
     private var inputStream = ""
 
+    var version: String!
     var waypoints = [Waypoint]()
     private var waypoint: Waypoint!
     private var image: PlaceImage?
@@ -80,7 +81,7 @@ extension GPXParser: XMLParserDelegate {
         switch elementType {
         case .waypoint:
             waypoints.append(waypoint)
-        case .name, .description, .locationType:
+        case .id, .name, .description, .type, .status:
             waypoint!.attributes[elementName] = inputStream.trimmed
             inputStream = ""
         case .image:
@@ -92,6 +93,8 @@ extension GPXParser: XMLParserDelegate {
                 image.imageAttributes[elementName] = inputStream.trimmed
                 inputStream = ""
             }
+        case .version:
+            version = inputStream.trimmed
         default:
             break
         }

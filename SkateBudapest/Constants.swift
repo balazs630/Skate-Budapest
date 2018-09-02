@@ -5,6 +5,7 @@
 //  Created by Horváth Balázs on 2018. 07. 14..
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
+// swiftlint:disable identifier_name
 
 import UIKit
 
@@ -32,14 +33,17 @@ public enum GPX {
         case waypoint = "wpt"
         case latitude = "lat"
         case longitude = "lon"
+        case id = "id"
         case name
         case description = "desc"
-        case locationType = "loctype"
+        case status = "status"
+        case type = "type"
         case image = "img"
         case href
         case imageType = "imgtype"
         case smallImage = "thumbnail"
         case largeImage = "large"
+        case version = "wpt-data-version"
     }
 }
 

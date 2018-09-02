@@ -20,8 +20,8 @@ class SkateMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapView.delegate = self
         enableLocationServices()
-        setMapViewDelegate()
         loadMapWaypointsFrom(url: Constant.dataSourceGPXUrl)
     }
 
@@ -71,7 +71,7 @@ class SkateMapViewController: UIViewController {
     private func filter(types: [LocationType]) {
         for annotation in mapView.annotations {
             if let waypoint = annotation as? Waypoint {
-                mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.locationType) ? true : false
+                mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.type) ? true : false
             }
         }
     }
@@ -122,10 +122,6 @@ extension SkateMapViewController: CLLocationManagerDelegate {
 
 // MARK: MKMapViewDelegate methods
 extension SkateMapViewController: MKMapViewDelegate {
-    func setMapViewDelegate() {
-        mapView.delegate = self
-    }
-
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: annotation,
                                               reuseIdentifier: Constant.calloutViewIdentifier)
@@ -138,7 +134,7 @@ extension SkateMapViewController: MKMapViewDelegate {
         }
 
         annotationView.canShowCallout = true
-        annotationView.image = getWaypointImage(for: waypoint.locationType)
+        annotationView.image = getWaypointImage(for: waypoint.type)
 
         annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.calloutImageViewSize)
         annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
@@ -146,8 +142,8 @@ extension SkateMapViewController: MKMapViewDelegate {
         return annotationView
     }
 
-    private func getWaypointImage(for locationType: LocationType) -> UIImage {
-        switch locationType {
+    private func getWaypointImage(for type: LocationType) -> UIImage {
+        switch type {
         case .skatepark:
             return UIImage(named: Theme.Icons.skateparkPin)!
         case .skateshop:

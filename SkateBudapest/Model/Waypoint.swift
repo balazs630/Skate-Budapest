@@ -5,6 +5,7 @@
 //  Created by Horváth Balázs on 2018. 07. 21..
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
+// swiftlint:disable identifier_name
 
 import MapKit
 
@@ -19,10 +20,13 @@ class Waypoint: GPXEntry {
     var latitude: Double
     var longitude: Double
 
-    var locationType: LocationType {
-        let type = attributes[GPX.Tag.locationType.rawValue]
-        guard let locationType = LocationType(rawValue: type!) else {
-            fatalError("Unknown location type: \(String(describing: type))")
+    var id: String? {
+        return attributes[GPX.Tag.id.rawValue]
+    }
+
+    var type: LocationType {
+        guard let locationType = LocationType(rawValue: attributes[GPX.Tag.type.rawValue]!) else {
+            fatalError("Cannot parse location type")
         }
 
         return locationType
@@ -30,6 +34,10 @@ class Waypoint: GPXEntry {
 
     var info: String? {
         return attributes[GPX.Tag.description.rawValue]
+    }
+
+    var status: String? {
+        return attributes[GPX.Tag.status.rawValue]
     }
 
     var thumbnailImageUrl: URL? {
