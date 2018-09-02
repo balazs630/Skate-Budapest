@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 class LocationDetailsViewController: UIViewController {
     // MARK: Properties
     var waypoint: Waypoint!
-    var imageViews: [UIImageView]!
+    var currentLocation: CLLocationCoordinate2D?
+    var imageViews: [UIImageView]?
     var imageOffset = IndexPath(row: 0, section: 0)
 
     // MARK: Outlets
@@ -51,8 +53,10 @@ extension LocationDetailsViewController {
         imageScrollView.delegate = self
 
         imageViews = loadImageViews()
-        imageScrollView.addSubviews(imageViews)
-        imageScrollView.contentSize.width = imageScrollView.frame.width * CGFloat(imageViews.count)
+        if let imageViews = imageViews {
+            imageScrollView.addSubviews(imageViews)
+            imageScrollView.contentSize.width = imageScrollView.frame.width * CGFloat(imageViews.count)
+        }
 
         let imageTap = UITapGestureRecognizer(target: self, action: #selector(navigateToImageViewerScreen))
         imageTap.cancelsTouchesInView = false
@@ -92,7 +96,7 @@ extension LocationDetailsViewController {
         if segue.identifier == SegueIdentifier.showImageViewer {
             guard let destVC = segue.destination as? ImageViewerViewController else { return }
 
-            destVC.images = imageViews.images()
+            destVC.images = imageViews?.images()
             imageOffset.row = pageControl.currentPage
             destVC.imageOffset = imageOffset
             destVC.delegate = self

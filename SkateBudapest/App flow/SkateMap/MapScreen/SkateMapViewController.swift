@@ -90,6 +90,7 @@ extension SkateMapViewController {
         if segue.identifier == SegueIdentifier.showLocationPinDetails {
             guard let destVC = segue.destination as? LocationDetailsViewController else { return }
             destVC.waypoint = waypoint
+            destVC.currentLocation = locationManager.location?.coordinate
         }
     }
 }
