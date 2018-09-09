@@ -18,6 +18,9 @@ class LocationDetailsViewController: UIViewController {
 
     // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var favouriteButton: UIButton!
+    @IBOutlet weak var locationTypeImageView: UIImageView!
+    @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -38,7 +41,6 @@ class LocationDetailsViewController: UIViewController {
 // MARK: - UI manipulation
 extension LocationDetailsViewController {
     private func setupView() {
-        self.title = waypoint.name
         setupLabels()
         setupImageScrollView()
         setupPageControl()
