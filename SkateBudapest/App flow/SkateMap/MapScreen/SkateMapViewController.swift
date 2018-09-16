@@ -43,6 +43,7 @@ class SkateMapViewController: UIViewController {
             as? AnnotationFilterViewController else { return }
 
         annotationFilterVC.modalPresentationStyle = .custom
+        annotationFilterVC.view.frame.size.width = view.frame.width
         annotationFilterVC.transitioningDelegate = self
         annotationFilterVC.delegate = self
 

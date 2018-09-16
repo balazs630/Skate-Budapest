@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Skate Map View Controller-->
+        <!--Térkép-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SkateMapViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,8 +21,14 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0UC-DV-S0M">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80f-Ms-r1x">
-                                <rect key="frame" x="313" y="605" width="22" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80f-Ms-r1x">
+                                <rect key="frame" x="325" y="617" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="IBC-2F-GnN"/>
+                                    <constraint firstAttribute="height" constant="25" id="aZL-eK-5cq"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="location-arrow"/>
                                 <connections>
                                     <action selector="centerMapOnUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VIp-M5-kzR"/>
                                 </connections>
@@ -31,16 +37,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0UC-DV-S0M" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="BRq-We-gN7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="80f-Ms-r1x" secondAttribute="bottom" constant="40" id="DM2-hg-z4k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="80f-Ms-r1x" secondAttribute="bottom" constant="25" id="DM2-hg-z4k"/>
                             <constraint firstItem="0UC-DV-S0M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="IwH-xq-YET"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80f-Ms-r1x" secondAttribute="trailing" constant="40" id="SJg-bM-ekF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80f-Ms-r1x" secondAttribute="trailing" constant="25" id="SJg-bM-ekF"/>
                             <constraint firstAttribute="trailing" secondItem="0UC-DV-S0M" secondAttribute="trailing" id="bRQ-t3-kuc"/>
                             <constraint firstItem="0UC-DV-S0M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="miR-sb-IfH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="B8S-iP-H5a">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="green" id="PY3-Av-sP1">
+                    <navigationItem key="navigationItem" title="Térkép" id="B8S-iP-H5a">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="filtering" id="PY3-Av-sP1">
                             <connections>
                                 <action selector="filterAnnotations:" destination="BYZ-38-t0r" id="DGl-us-Ev5"/>
                             </connections>
@@ -60,63 +66,95 @@
             <objects>
                 <viewController storyboardIdentifier="AnnotationFilterViewController" id="EaO-2K-C0g" customClass="AnnotationFilterViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QiV-Pk-toP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-iv-aKe">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iR-fd-mR9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                <color key="backgroundColor" red="0.93671119213104248" green="0.99265605211257935" blue="0.77772635221481323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9E8-Ze-COR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-iv-aKe">
                                 <rect key="frame" x="16" y="7" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closeButtonTap:" destination="EaO-2K-C0g" eventType="touchUpInside" id="G4f-oO-HjK"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XxK-JQ-iwx">
-                                <rect key="frame" x="94" y="100" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skatepark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-Ud-xIO">
-                                <rect key="frame" x="200" y="105" width="77" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c59-jU-YeW">
-                                <rect key="frame" x="94" y="187" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skateshop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBj-uA-nOX">
-                                <rect key="frame" x="200" y="192" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLI-Jc-2sP">
-                                <rect key="frame" x="94" y="269" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Streetspot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-YO-CdN">
-                                <rect key="frame" x="200" y="274" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-te-JTn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-te-JTn">
                                 <rect key="frame" x="324" y="7" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Filter"/>
                                 <connections>
                                     <action selector="filterButtonTap:" destination="EaO-2K-C0g" eventType="touchUpInside" id="LiZ-H4-aWx"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtG-f9-Rzd">
+                                <rect key="frame" x="85" y="61" width="204" height="205"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLI-Jc-2sP">
+                                        <rect key="frame" x="20" y="154" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skateshop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBj-uA-nOX">
+                                        <rect key="frame" x="103" y="92" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streetspot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp4-YO-CdN">
+                                        <rect key="frame" x="103" y="159" width="81" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c59-jU-YeW">
+                                        <rect key="frame" x="20" y="87" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skatepark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-Ud-xIO">
+                                        <rect key="frame" x="105" y="25" width="77" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XxK-JQ-iwx">
+                                        <rect key="frame" x="20" y="20" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Bp4-YO-CdN" firstAttribute="centerY" secondItem="QLI-Jc-2sP" secondAttribute="centerY" id="3Vf-N7-27n"/>
+                                    <constraint firstItem="c59-jU-YeW" firstAttribute="top" secondItem="XxK-JQ-iwx" secondAttribute="bottom" constant="36" id="3lG-CP-Xpb"/>
+                                    <constraint firstItem="QLI-Jc-2sP" firstAttribute="top" secondItem="c59-jU-YeW" secondAttribute="bottom" constant="36" id="8xv-N9-Ko6"/>
+                                    <constraint firstItem="XxK-JQ-iwx" firstAttribute="top" secondItem="PtG-f9-Rzd" secondAttribute="top" constant="20" id="Ban-fN-YCc"/>
+                                    <constraint firstItem="DBj-uA-nOX" firstAttribute="leading" secondItem="c59-jU-YeW" secondAttribute="trailing" constant="34" id="L4P-2l-J1K"/>
+                                    <constraint firstItem="XxK-JQ-iwx" firstAttribute="leading" secondItem="PtG-f9-Rzd" secondAttribute="leading" constant="20" id="L4g-4Q-Ipg"/>
+                                    <constraint firstAttribute="height" constant="205" id="Lbe-Yz-IcT"/>
+                                    <constraint firstAttribute="width" constant="204" id="UqX-sr-FmV"/>
+                                    <constraint firstItem="Bp4-YO-CdN" firstAttribute="leading" secondItem="QLI-Jc-2sP" secondAttribute="trailing" constant="34" id="au4-tA-6dQ"/>
+                                    <constraint firstItem="QLI-Jc-2sP" firstAttribute="leading" secondItem="PtG-f9-Rzd" secondAttribute="leading" constant="20" id="de3-MS-wII"/>
+                                    <constraint firstItem="DBj-uA-nOX" firstAttribute="centerY" secondItem="c59-jU-YeW" secondAttribute="centerY" id="f4k-Kp-J8h"/>
+                                    <constraint firstItem="c59-jU-YeW" firstAttribute="leading" secondItem="PtG-f9-Rzd" secondAttribute="leading" constant="20" id="j4n-Ad-x85"/>
+                                    <constraint firstItem="XnO-Ud-xIO" firstAttribute="centerY" secondItem="XxK-JQ-iwx" secondAttribute="centerY" id="szF-8d-1yy"/>
+                                    <constraint firstItem="XnO-Ud-xIO" firstAttribute="leading" secondItem="XxK-JQ-iwx" secondAttribute="trailing" constant="36" id="yDo-dm-yUb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hce-te-JTn" firstAttribute="top" secondItem="KSh-5M-tAS" secondAttribute="top" constant="7" id="CGB-si-T9o"/>
+                            <constraint firstItem="9iR-fd-mR9" firstAttribute="trailing" secondItem="KSh-5M-tAS" secondAttribute="trailing" id="Ho6-OR-saA"/>
+                            <constraint firstItem="LVR-iv-aKe" firstAttribute="leading" secondItem="KSh-5M-tAS" secondAttribute="leading" constant="16" id="J7w-Sm-MXu"/>
+                            <constraint firstItem="KSh-5M-tAS" firstAttribute="trailing" secondItem="Hce-te-JTn" secondAttribute="trailing" constant="16" id="OCd-WA-ASk"/>
+                            <constraint firstItem="9iR-fd-mR9" firstAttribute="top" secondItem="KSh-5M-tAS" secondAttribute="top" id="YDd-JD-UoU"/>
+                            <constraint firstItem="PtG-f9-Rzd" firstAttribute="top" secondItem="9iR-fd-mR9" secondAttribute="bottom" constant="16" id="YvI-er-9qM"/>
+                            <constraint firstItem="PtG-f9-Rzd" firstAttribute="centerX" secondItem="QiV-Pk-toP" secondAttribute="centerX" id="h0Z-hr-VRP"/>
+                            <constraint firstItem="LVR-iv-aKe" firstAttribute="top" secondItem="KSh-5M-tAS" secondAttribute="top" constant="7" id="nlE-Ku-f7w"/>
+                            <constraint firstItem="9iR-fd-mR9" firstAttribute="leading" secondItem="KSh-5M-tAS" secondAttribute="leading" id="xih-ph-18U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KSh-5M-tAS"/>
                     </view>
-                    <size key="freeformSize" width="375" height="400"/>
+                    <size key="freeformSize" width="375" height="280"/>
                     <connections>
                         <outlet property="swSkatepark" destination="XxK-JQ-iwx" id="MjY-PK-ywt"/>
                         <outlet property="swSkateshop" destination="c59-jU-YeW" id="7bC-t5-DuP"/>
@@ -125,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsU-y4-ila" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="365"/>
+            <point key="canvasLocation" x="1832.8" y="364.31784107946032"/>
         </scene>
         <!--LocationDetailsViewController-->
         <scene sceneID="ECI-uB-EUT">
@@ -155,6 +193,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="green" width="24" height="24"/>
+        <image name="filtering" width="22" height="22"/>
+        <image name="location-arrow" width="128" height="128"/>
     </resources>
 </document>

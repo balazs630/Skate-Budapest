@@ -11,8 +11,8 @@ import UIKit
 class HalfScreenModalPresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         return CGRect(x: 0,
-                      y: containerView!.bounds.height / 2,
+                      y: containerView!.bounds.height - 280,
                       width: containerView!.bounds.width,
-                      height: containerView!.bounds.height / 2)
+                      height: 280)
     }
 }

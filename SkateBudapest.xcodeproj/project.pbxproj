@@ -133,8 +133,8 @@
 		AC2D9DAC21335D70003A6263 /* Filtering */ = {
 			isa = PBXGroup;
 			children = (
-				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 				AC2D9DA921335558003A6263 /* AnnotationFilterViewController.swift */,
+				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 			);
 			path = Filtering;
 			sourceTree = "<group>";
