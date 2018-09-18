@@ -31,9 +31,9 @@ class SkateMapViewController: UIViewController {
             let latitudinalMeters = CLLocationDistance(10000)
             let longitudinalMeters = CLLocationDistance(10000)
 
-            let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate,
-                                                                latitudinalMeters,
-                                                                longitudinalMeters)
+            let viewRegion = MKCoordinateRegion.init(center: userLocation.coordinate,
+                                                     latitudinalMeters: latitudinalMeters,
+                                                     longitudinalMeters: longitudinalMeters)
             mapView.setRegion(viewRegion, animated: true)
         }
     }
