@@ -147,11 +147,11 @@ extension SkateMapViewController: MKMapViewDelegate {
     private func getWaypointImage(for type: LocationType) -> UIImage {
         switch type {
         case .skatepark:
-            return UIImage(named: Theme.Icons.skateparkPin)!
+            return Theme.Icon.skateparkPin
         case .skateshop:
-            return UIImage(named: Theme.Icons.skateshopPin)!
+            return Theme.Icon.skateshopPin
         case .streetspot:
-            return UIImage(named: Theme.Icons.streetSpotPin)!
+            return Theme.Icon.streetSpotPin
         }
     }
 

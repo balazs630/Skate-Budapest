@@ -21,10 +21,20 @@ struct Constant {
 }
 
 public enum Theme {
-    public enum Icons {
-        public static let skateparkPin = "yellow"
-        public static let skateshopPin = "green"
-        public static let streetSpotPin = "purple"
+    public enum Icon {
+        public static let skateparkPin = UIImage(named: "yellow")!
+        public static let skateshopPin = UIImage(named: "green")!
+        public static let streetSpotPin = UIImage(named: "purple")!
+
+        public static let skateparkIcon = UIImage(named: "yellow")!
+        public static let skateshopIcon = UIImage(named: "green")!
+        public static let streetSpotIcon = UIImage(named: "purple")!
+    }
+
+    public enum Color {
+        public static let skateparkColor = UIColor.color(red: 210, green: 64, blue: 140)
+        public static let skateshopColor = UIColor.color(red: 64, green: 200, blue: 140)
+        public static let streetSpotColor = UIColor.color(red: 135, green: 200, blue: 240)
     }
 }
 

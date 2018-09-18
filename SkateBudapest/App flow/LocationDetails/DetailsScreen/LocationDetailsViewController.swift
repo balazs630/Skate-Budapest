@@ -19,7 +19,8 @@ class LocationDetailsViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var favouriteButton: UIButton!
-    @IBOutlet weak var locationTypeImageView: UIImageView!
+    @IBOutlet weak var locationTypeView: UIView!
+    @IBOutlet weak var locationTypeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imageScrollView: UIScrollView!
@@ -41,14 +42,52 @@ class LocationDetailsViewController: UIViewController {
 // MARK: - UI manipulation
 extension LocationDetailsViewController {
     private func setupView() {
+        setupNavigationBarTitleView()
         setupLabels()
+        setupLocationTypeView()
         setupImageScrollView()
         setupPageControl()
+    }
+
+    private func setupNavigationBarTitleView() {
+        let image = getLocationIcon()
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        self.navigationItem.titleView = imageView
+    }
+
+    private func getLocationIcon() -> UIImage {
+        switch waypoint.type {
+        case .skatepark:
+            return Theme.Icon.skateparkIcon
+        case .streetspot:
+            return Theme.Icon.streetSpotIcon
+        case .skateshop:
+            return Theme.Icon.skateshopIcon
+        }
     }
 
     private func setupLabels() {
         titleLabel.text = waypoint.name
         descriptionLabel.text = waypoint.info
+    }
+
+    private func setupLocationTypeView() {
+        locationTypeLabel.text = waypoint.type.rawValue
+        locationTypeView.layer.cornerRadius = 10
+        locationTypeView.backgroundColor = getLocationColor()
+    }
+
+    private func getLocationColor() -> UIColor {
+        switch waypoint.type {
+        case .skatepark:
+            return Theme.Color.skateparkColor
+        case .streetspot:
+            return Theme.Color.streetSpotColor
+        case .skateshop:
+            return Theme.Color.skateshopColor
+        }
     }
 
     private func setupImageScrollView() {
