@@ -23,6 +23,7 @@
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
 		AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC907892212997F600FC0528 /* UIImageViewExtensions.swift */; };
 		AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */; };
+		AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */; };
 		AC9FB99D210369E4002D4C37 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FB99C210369E4002D4C37 /* StringExtensions.swift */; };
 		AC9FB9A1210372C9002D4C37 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FB9A0210372C9002D4C37 /* Waypoint.swift */; };
 		AC9FB9A72103CB48002D4C37 /* GPXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FB9A62103CB48002D4C37 /* GPXParser.swift */; };
@@ -49,6 +50,7 @@
 		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		AC907892212997F600FC0528 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewFullViewCell.swift; sourceTree = "<group>"; };
+		AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		AC9FB99C210369E4002D4C37 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		AC9FB9A0210372C9002D4C37 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
 		AC9FB9A62103CB48002D4C37 /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */,
 				AC2E12AA21171EF600A5B05E /* URLExtensions.swift */,
 				AC9FB99C210369E4002D4C37 /* StringExtensions.swift */,
+				AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */,
+				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
 				AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */,
 				AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,

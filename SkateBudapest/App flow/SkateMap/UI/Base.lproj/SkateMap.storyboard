@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHc-BU-tjH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHc-BU-tjH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,27 +71,36 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9iR-fd-mR9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-te-JTn">
+                                        <rect key="frame" x="20" y="8" width="35" height="30"/>
+                                        <state key="normal" title="Filter"/>
+                                        <connections>
+                                            <action selector="filterButtonTap:" destination="EaO-2K-C0g" eventType="touchUpInside" id="LiZ-H4-aWx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-iv-aKe">
+                                        <rect key="frame" x="316" y="8" width="39" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closeButtonTap:" destination="EaO-2K-C0g" eventType="touchUpInside" id="G4f-oO-HjK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.67450980392156867" green="0.92156862745098034" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="9E8-Ze-COR"/>
+                                    <constraint firstAttribute="trailing" secondItem="LVR-iv-aKe" secondAttribute="trailing" constant="20" id="MpF-Bj-u5z"/>
+                                    <constraint firstItem="LVR-iv-aKe" firstAttribute="top" secondItem="9iR-fd-mR9" secondAttribute="top" constant="8" id="ZIl-zj-ZQ6"/>
+                                    <constraint firstItem="LVR-iv-aKe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hce-te-JTn" secondAttribute="trailing" constant="100" id="Zkl-cs-NGF"/>
+                                    <constraint firstItem="Hce-te-JTn" firstAttribute="leading" secondItem="9iR-fd-mR9" secondAttribute="leading" constant="20" id="kcA-pI-bPY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hce-te-JTn" secondAttribute="bottom" constant="7" id="pfW-bA-cxL"/>
+                                    <constraint firstAttribute="bottom" secondItem="LVR-iv-aKe" secondAttribute="bottom" constant="7" id="pfq-sG-Y3z"/>
+                                    <constraint firstItem="Hce-te-JTn" firstAttribute="top" secondItem="9iR-fd-mR9" secondAttribute="top" constant="8" id="q7v-OR-MdT"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-iv-aKe">
-                                <rect key="frame" x="16" y="7" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
-                                <connections>
-                                    <action selector="closeButtonTap:" destination="EaO-2K-C0g" eventType="touchUpInside" id="G4f-oO-HjK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-te-JTn">
-                                <rect key="frame" x="324" y="7" width="35" height="30"/>
-                                <state key="normal" title="Filter"/>
-                                <connections>
-                                    <action selector="filterButtonTap:" destination="EaO-2K-C0g" eventType="touchUpInside" id="LiZ-H4-aWx"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtG-f9-Rzd">
-                                <rect key="frame" x="85" y="61" width="204" height="205"/>
+                                <rect key="frame" x="85.5" y="61" width="204" height="205"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLI-Jc-2sP">
                                         <rect key="frame" x="20" y="154" width="51" height="31"/>
@@ -125,11 +134,14 @@
                                 <constraints>
                                     <constraint firstItem="Bp4-YO-CdN" firstAttribute="centerY" secondItem="QLI-Jc-2sP" secondAttribute="centerY" id="3Vf-N7-27n"/>
                                     <constraint firstItem="c59-jU-YeW" firstAttribute="top" secondItem="XxK-JQ-iwx" secondAttribute="bottom" constant="36" id="3lG-CP-Xpb"/>
+                                    <constraint firstAttribute="trailing" secondItem="XnO-Ud-xIO" secondAttribute="trailing" constant="22" id="7T2-vd-w3I"/>
                                     <constraint firstItem="QLI-Jc-2sP" firstAttribute="top" secondItem="c59-jU-YeW" secondAttribute="bottom" constant="36" id="8xv-N9-Ko6"/>
                                     <constraint firstItem="XxK-JQ-iwx" firstAttribute="top" secondItem="PtG-f9-Rzd" secondAttribute="top" constant="20" id="Ban-fN-YCc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bp4-YO-CdN" secondAttribute="trailing" constant="20" id="Elo-WK-yoA"/>
                                     <constraint firstItem="DBj-uA-nOX" firstAttribute="leading" secondItem="c59-jU-YeW" secondAttribute="trailing" constant="34" id="L4P-2l-J1K"/>
                                     <constraint firstItem="XxK-JQ-iwx" firstAttribute="leading" secondItem="PtG-f9-Rzd" secondAttribute="leading" constant="20" id="L4g-4Q-Ipg"/>
                                     <constraint firstAttribute="height" constant="205" id="Lbe-Yz-IcT"/>
+                                    <constraint firstAttribute="trailing" secondItem="DBj-uA-nOX" secondAttribute="trailing" constant="20" id="Pr9-ym-fnq"/>
                                     <constraint firstAttribute="width" constant="204" id="UqX-sr-FmV"/>
                                     <constraint firstItem="Bp4-YO-CdN" firstAttribute="leading" secondItem="QLI-Jc-2sP" secondAttribute="trailing" constant="34" id="au4-tA-6dQ"/>
                                     <constraint firstItem="QLI-Jc-2sP" firstAttribute="leading" secondItem="PtG-f9-Rzd" secondAttribute="leading" constant="20" id="de3-MS-wII"/>
@@ -142,14 +154,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Hce-te-JTn" firstAttribute="top" secondItem="KSh-5M-tAS" secondAttribute="top" constant="7" id="CGB-si-T9o"/>
                             <constraint firstItem="9iR-fd-mR9" firstAttribute="trailing" secondItem="KSh-5M-tAS" secondAttribute="trailing" id="Ho6-OR-saA"/>
-                            <constraint firstItem="LVR-iv-aKe" firstAttribute="leading" secondItem="KSh-5M-tAS" secondAttribute="leading" constant="16" id="J7w-Sm-MXu"/>
-                            <constraint firstItem="KSh-5M-tAS" firstAttribute="trailing" secondItem="Hce-te-JTn" secondAttribute="trailing" constant="16" id="OCd-WA-ASk"/>
                             <constraint firstItem="9iR-fd-mR9" firstAttribute="top" secondItem="KSh-5M-tAS" secondAttribute="top" id="YDd-JD-UoU"/>
                             <constraint firstItem="PtG-f9-Rzd" firstAttribute="top" secondItem="9iR-fd-mR9" secondAttribute="bottom" constant="16" id="YvI-er-9qM"/>
                             <constraint firstItem="PtG-f9-Rzd" firstAttribute="centerX" secondItem="QiV-Pk-toP" secondAttribute="centerX" id="h0Z-hr-VRP"/>
-                            <constraint firstItem="LVR-iv-aKe" firstAttribute="top" secondItem="KSh-5M-tAS" secondAttribute="top" constant="7" id="nlE-Ku-f7w"/>
                             <constraint firstItem="9iR-fd-mR9" firstAttribute="leading" secondItem="KSh-5M-tAS" secondAttribute="leading" id="xih-ph-18U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KSh-5M-tAS"/>
