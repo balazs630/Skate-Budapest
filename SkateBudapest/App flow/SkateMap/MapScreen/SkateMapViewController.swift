@@ -72,7 +72,7 @@ class SkateMapViewController: UIViewController {
     private func filter(types: [LocationType]) {
         for annotation in mapView.annotations {
             if let waypoint = annotation as? Waypoint {
-                mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.type) ? true : false
+                mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.type)
             }
         }
     }
@@ -87,11 +87,15 @@ extension SkateMapViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let annotationView = sender as? MKAnnotationView
         guard let waypoint = annotationView?.annotation as? Waypoint else { return }
+        guard segue.identifier != nil else { return }
 
-        if segue.identifier == SegueIdentifier.showLocationPinDetails {
+        switch segue.identifier {
+        case SegueIdentifier.showLocationPinDetails:
             guard let destVC = segue.destination as? LocationDetailsViewController else { return }
             destVC.waypoint = waypoint
             destVC.currentLocation = locationManager.location?.coordinate
+        default:
+            debugPrint("Unexpected segue identifier was given in: \(#file), line: \(#line)")
         }
     }
 }

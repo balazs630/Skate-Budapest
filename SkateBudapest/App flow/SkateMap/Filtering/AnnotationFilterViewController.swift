@@ -42,9 +42,17 @@ class AnnotationFilterViewController: UIViewController {
     // MARK: Utility methods
     func selectedTypes() -> [LocationType] {
         var filteredTypes = [LocationType]()
-        if swSkatepark.isOn { filteredTypes.append(LocationType.skatepark) }
-        if swSkateshop.isOn { filteredTypes.append(LocationType.skateshop) }
-        if swStreetspot.isOn { filteredTypes.append(LocationType.streetspot) }
+        if swSkatepark.isOn {
+            filteredTypes.append(LocationType.skatepark)
+        }
+
+        if swSkateshop.isOn {
+            filteredTypes.append(LocationType.skateshop)
+        }
+
+        if swStreetspot.isOn {
+            filteredTypes.append(LocationType.streetspot)
+        }
 
         return filteredTypes
     }
