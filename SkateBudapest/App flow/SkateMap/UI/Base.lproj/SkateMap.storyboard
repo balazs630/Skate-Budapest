@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Térkép-->
+        <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SkateMapViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Térkép" id="B8S-iP-H5a">
+                    <navigationItem key="navigationItem" title="Map" id="B8S-iP-H5a">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="filtering" id="PY3-Av-sP1">
                             <connections>
                                 <action selector="filterAnnotations:" destination="BYZ-38-t0r" id="DGl-us-Ev5"/>
