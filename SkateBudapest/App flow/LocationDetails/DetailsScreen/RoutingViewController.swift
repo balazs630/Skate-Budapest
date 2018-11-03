@@ -11,22 +11,7 @@ import MapKit
 
 class RoutingViewController: UIViewController {
     // MARK: Properties
-    var currentLocation: CLLocationCoordinate2D!
     var destinationLocation: CLLocationCoordinate2D!
-
-    var currentLocationMapItem: MKMapItem {
-        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation))
-        mapItem.name = "Source"
-
-        return mapItem
-    }
-
-    var destinationLocationMapItem: MKMapItem {
-        let mapItem =  MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation))
-        mapItem.name = "Destination"
-
-        return mapItem
-    }
 
     // MARK: Outlets
     @IBOutlet weak var transitRouteButton: UIButton!
@@ -38,8 +23,20 @@ class RoutingViewController: UIViewController {
     @IBOutlet weak var walkingActivityIndicator: UIActivityIndicatorView!
 
     // MARK: View lifecycle
+    override func viewDidLoad() {
+        setObserverForUIApplicationDidBecomeActive()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
-        requestETA(for: [.transit, .automobile, .walking])
+        super.viewDidAppear(animated)
+        setupView()
+    }
+
+    private func setObserverForUIApplicationDidBecomeActive() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(setupView),
+                                               name: UIApplication.didBecomeActiveNotification,
+                                               object: nil)
     }
 }
 
@@ -55,6 +52,46 @@ extension RoutingViewController {
 
     @IBAction func walkingButtonTap(_ sender: Any) {
         openMaps(directionMode: MKLaunchOptionsDirectionsModeWalking)
+    }
+
+    @IBAction func enableLocationTap(_ sender: Any) {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+        UIApplication.shared.open(settingsUrl)
+    }
+}
+
+// MARK: UI Manipulation
+extension RoutingViewController {
+    @objc private func setupView() {
+        if LocationManager.shared.location != nil {
+            presentEmptyView(false)
+            requestETA(for: [.transit, .automobile, .walking])
+        } else {
+            presentEmptyView(true)
+        }
+    }
+
+    private func presentEmptyView(_ state: Bool) {
+        let emptyViewTag = 1
+        view.subviews
+            .filter { $0.tag == emptyViewTag }
+            .forEach { $0.isHidden = !state }
+    }
+
+    private func setTransitTimeButtonTexts(for transportType: MKDirectionsTransportType, travelTime: TimeInterval) {
+        switch transportType {
+        case .transit:
+            transitRouteButton.setTitle(travelTime.stringTime, for: .normal)
+            transitActivityIndicator.isHidden = true
+        case .automobile:
+            drivingRouteButton.setTitle(travelTime.stringTime, for: .normal)
+            drivingActivityIndicator.isHidden = true
+        case .walking:
+            walkingRouteButton.setTitle(travelTime.stringTime, for: .normal)
+            walkingActivityIndicator.isHidden = true
+        default:
+            debugPrint("Unknown transportType: \(transportType)")
+        }
     }
 }
 
@@ -80,30 +117,21 @@ extension RoutingViewController {
 
     private func prepareTransitRequestInformations() -> MKDirections.Request {
         let request = MKDirections.Request()
-        request.source = currentLocationMapItem
-        request.destination = destinationLocationMapItem
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: LocationManager.shared.coordinates!))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation))
         request.requestsAlternateRoutes = false
 
         return request
     }
 
-    private func setTransitTimeButtonTexts(for transportType: MKDirectionsTransportType, travelTime: TimeInterval) {
-        switch transportType {
-        case .transit:
-            transitRouteButton.setTitle(travelTime.stringTime, for: .normal)
-            transitActivityIndicator.isHidden = true
-        case .automobile:
-            drivingRouteButton.setTitle(travelTime.stringTime, for: .normal)
-            drivingActivityIndicator.isHidden = true
-        case .walking:
-            walkingRouteButton.setTitle(travelTime.stringTime, for: .normal)
-            walkingActivityIndicator.isHidden = true
-        default:
-            debugPrint("Unknown transportType: \(transportType)")
-        }
-    }
-
     private func openMaps(directionMode: String) {
+        guard let currentLocation = LocationManager.shared.coordinates else { return }
+        let currentLocationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation))
+        currentLocationMapItem.name = "Source"
+
+        let destinationLocationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation))
+        destinationLocationMapItem.name = "Destination"
+
         MKMapItem.openMaps(with: [currentLocationMapItem, destinationLocationMapItem],
                            launchOptions: [MKLaunchOptionsDirectionsModeKey: directionMode])
     }

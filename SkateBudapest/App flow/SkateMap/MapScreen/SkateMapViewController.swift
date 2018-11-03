@@ -10,9 +10,6 @@ import UIKit
 import MapKit
 
 class SkateMapViewController: UIViewController {
-    // MARK: Properties
-    private let locationManager = CLLocationManager()
-
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
 
@@ -20,14 +17,14 @@ class SkateMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        LocationManager.shared.startTracking()
         mapView.delegate = self
-        enableLocationServices()
         loadMapWaypointsFrom(url: Constant.dataSourceGPXUrl)
     }
 
     // MARK: Button actions
     @IBAction func centerMapOnUserLocation(_ sender: Any) {
-        if let userLocation = locationManager.location {
+        if let userLocation = LocationManager.shared.location {
             let latitudinalMeters = CLLocationDistance(10000)
             let longitudinalMeters = CLLocationDistance(10000)
 
@@ -93,35 +90,8 @@ extension SkateMapViewController {
         case SegueIdentifier.showLocationPinDetails:
             guard let destVC = segue.destination as? LocationDetailsViewController else { return }
             destVC.waypoint = waypoint
-            destVC.currentLocation = locationManager.location?.coordinate
         default:
             debugPrint("Unexpected segue identifier was given in: \(#file), line: \(#line)")
-        }
-    }
-}
-
-// MARK: CLLocationManagerDelegate methods
-extension SkateMapViewController: CLLocationManagerDelegate {
-    private func enableLocationServices() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-
-        switch CLLocationManager.authorizationStatus() {
-        case .notDetermined, .restricted, .denied:
-            locationManager.requestWhenInUseAuthorization()
-        case .authorizedAlways, .authorizedWhenInUse:
-            break
-        }
-    }
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .authorizedWhenInUse:
-            locationManager.startUpdatingLocation()
-        case .restricted, .denied:
-            locationManager.stopUpdatingLocation()
-        case .notDetermined, .authorizedAlways:
-            break
         }
     }
 }

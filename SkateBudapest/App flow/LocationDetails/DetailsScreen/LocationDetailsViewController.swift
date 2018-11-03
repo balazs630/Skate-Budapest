@@ -13,7 +13,6 @@ class LocationDetailsViewController: UIViewController {
     // MARK: Properties
     fileprivate var routingViewController: RoutingViewController?
     var waypoint: Waypoint!
-    var currentLocation: CLLocationCoordinate2D?
     var imageViews: [UIImageView]?
     var imageOffset = IndexPath(row: 0, section: 0)
 
@@ -61,7 +60,6 @@ extension LocationDetailsViewController {
             .filter { $0.isKind(of: RoutingViewController.self) }
             .first as? RoutingViewController
 
-        routingViewController?.currentLocation = currentLocation
         routingViewController?.destinationLocation = waypoint.coordinate
     }
 

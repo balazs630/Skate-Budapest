@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AWZ-4X-6uK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AWZ-4X-6uK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +30,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXW-Kl-sSf">
+                                            <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXW-Kl-sSf">
                                                 <rect key="frame" x="0.0" y="258" width="375" height="211"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jXW-Kl-sSf" secondAttribute="height" multiplier="16:9" id="fZc-3d-Uh7"/>
@@ -100,12 +100,12 @@
                                             <constraint firstAttribute="trailing" secondItem="jXW-Kl-sSf" secondAttribute="trailing" id="JdY-oT-JRo"/>
                                             <constraint firstItem="oyu-gA-vyS" firstAttribute="leading" secondItem="eK5-Vm-Uue" secondAttribute="leading" constant="15" id="Jka-28-Djn"/>
                                             <constraint firstItem="14b-kQ-awA" firstAttribute="leading" secondItem="eK5-Vm-Uue" secondAttribute="leading" constant="15" id="Jrn-dO-RPR"/>
-                                            <constraint firstItem="cke-pk-tY0" firstAttribute="centerX" secondItem="jXW-Kl-sSf" secondAttribute="centerX" id="KHU-cX-sb3"/>
                                             <constraint firstItem="jXW-Kl-sSf" firstAttribute="leading" secondItem="eK5-Vm-Uue" secondAttribute="leading" id="PSg-C5-H4m"/>
                                             <constraint firstAttribute="trailing" secondItem="vXf-3T-ghF" secondAttribute="trailing" constant="20" id="UW9-34-8dj"/>
                                             <constraint firstAttribute="trailing" secondItem="OcE-4b-2iA" secondAttribute="trailing" constant="15" id="VHD-O2-tQH"/>
                                             <constraint firstItem="OcE-4b-2iA" firstAttribute="top" secondItem="nsw-2y-29Y" secondAttribute="bottom" constant="15" id="Vrx-42-oOg"/>
                                             <constraint firstItem="nsw-2y-29Y" firstAttribute="leading" secondItem="eK5-Vm-Uue" secondAttribute="leading" constant="15" id="Xkw-bh-kqU"/>
+                                            <constraint firstItem="cke-pk-tY0" firstAttribute="centerX" secondItem="eK5-Vm-Uue" secondAttribute="centerX" id="Ylj-y8-GoE"/>
                                             <constraint firstAttribute="bottom" secondItem="cke-pk-tY0" secondAttribute="bottom" constant="20" id="a5a-1I-rqg"/>
                                             <constraint firstItem="nsw-2y-29Y" firstAttribute="top" secondItem="oyu-gA-vyS" secondAttribute="bottom" constant="15" id="fXn-rP-Ile"/>
                                             <constraint firstItem="OcE-4b-2iA" firstAttribute="leading" secondItem="eK5-Vm-Uue" secondAttribute="leading" constant="15" id="jck-nU-cve"/>
@@ -358,14 +358,40 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llG-j8-NNO" userLabel="Empty View">
+                                <rect key="frame" x="13" y="10" width="319" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFh-NF-VgP">
+                                        <rect key="frame" x="245" y="15" width="47" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Enable"/>
+                                        <connections>
+                                            <action selector="enableLocationTap:" destination="a6M-vz-oxu" eventType="touchUpInside" id="XcE-wD-ajE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable location to show navigation options" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evm-qG-GUM">
+                                        <rect key="frame" x="15" y="6" width="208" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="F7Q-14-JWL" secondAttribute="trailing" constant="13" id="2Kh-HE-WGp"/>
                             <constraint firstAttribute="bottom" secondItem="F7Q-14-JWL" secondAttribute="bottom" constant="10" id="Ahf-sD-AHx"/>
+                            <constraint firstItem="vCM-iR-Dxg" firstAttribute="trailing" secondItem="llG-j8-NNO" secondAttribute="trailing" constant="13" id="E3Z-GT-GKj"/>
                             <constraint firstItem="F7Q-14-JWL" firstAttribute="leading" secondItem="Jl1-71-4E2" secondAttribute="leading" constant="13" id="V5J-Yl-uXz"/>
+                            <constraint firstItem="llG-j8-NNO" firstAttribute="leading" secondItem="vCM-iR-Dxg" secondAttribute="leading" constant="13" id="lXi-Ei-Doe"/>
                             <constraint firstItem="F7Q-14-JWL" firstAttribute="top" secondItem="Jl1-71-4E2" secondAttribute="top" constant="10" id="whj-2z-atK"/>
+                            <constraint firstAttribute="bottom" secondItem="llG-j8-NNO" secondAttribute="bottom" constant="10" id="x88-qc-XTK"/>
+                            <constraint firstItem="llG-j8-NNO" firstAttribute="top" secondItem="vCM-iR-Dxg" secondAttribute="top" constant="10" id="xS1-zf-oHm"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="vCM-iR-Dxg"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="10"/>
@@ -383,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKP-0M-H9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3774" y="-126"/>
+            <point key="canvasLocation" x="3773.5999999999999" y="-126.83658170914543"/>
         </scene>
     </scenes>
 </document>
