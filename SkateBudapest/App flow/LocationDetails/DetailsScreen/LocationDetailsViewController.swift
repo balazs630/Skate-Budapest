@@ -85,6 +85,17 @@ extension LocationDetailsViewController {
     private func configureLabels() {
         titleLabel.text = waypoint.name
         descriptionLabel.text = waypoint.info
+        distanceLabel.text = destinationDistanceInKilometer()
+    }
+
+    private func destinationDistanceInKilometer() -> String {
+        let destinationLocation = CLLocation(latitude: waypoint.coordinate.latitude,
+                                             longitude: waypoint.coordinate.longitude)
+        guard let distance = LocationManager.shared.location?.distance(from: destinationLocation) else {
+            return ""
+        }
+
+        return String(format: "%.1f km", distance / 1000)
     }
 
     private func configureLocationTypeView() {
