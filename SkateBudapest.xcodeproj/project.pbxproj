@@ -22,6 +22,8 @@
 		AC63325A20FA95C2007E5D98 /* SkateMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC63325820FA95C2007E5D98 /* SkateMap.storyboard */; };
 		AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC63325B20FA95C3007E5D98 /* Assets.xcassets */; };
 		AC63325F20FA95C3007E5D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */; };
+		AC9003FD2193704E0007F7E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9003FC2193704E0007F7E5 /* Main.storyboard */; };
+		AC900401219375B90007F7E5 /* SendPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC900400219375B90007F7E5 /* SendPlace.storyboard */; };
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
 		AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC907892212997F600FC0528 /* UIImageViewExtensions.swift */; };
 		AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */; };
@@ -51,6 +53,8 @@
 		AC63325B20FA95C3007E5D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC63325E20FA95C3007E5D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC63326020FA95C3007E5D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC9003FC2193704E0007F7E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AC900400219375B90007F7E5 /* SendPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendPlace.storyboard; sourceTree = "<group>"; };
 		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		AC907892212997F600FC0528 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewFullViewCell.swift; sourceTree = "<group>"; };
@@ -95,8 +99,11 @@
 		AC171D5E2103D7CA008747AB /* App flow */ = {
 			isa = PBXGroup;
 			children = (
+				AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */,
+				AC9003FC2193704E0007F7E5 /* Main.storyboard */,
 				AC171D5F2103D7D4008747AB /* SkateMap */,
 				AC0B89A72111FDBA006CDB7E /* LocationDetails */,
+				AC9003FE2193758A0007F7E5 /* SendPlace */,
 			);
 			path = "App flow";
 			sourceTree = "<group>";
@@ -114,7 +121,6 @@
 		AC171D602103D7E6008747AB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */,
 				AC63325820FA95C2007E5D98 /* SkateMap.storyboard */,
 			);
 			path = UI;
@@ -201,6 +207,22 @@
 				AC63325B20FA95C3007E5D98 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AC9003FE2193758A0007F7E5 /* SendPlace */ = {
+			isa = PBXGroup;
+			children = (
+				AC9003FF219375AD0007F7E5 /* UI */,
+			);
+			path = SendPlace;
+			sourceTree = "<group>";
+		};
+		AC9003FF219375AD0007F7E5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC900400219375B90007F7E5 /* SendPlace.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		AC975D3E212F10340021DC7A /* ImageViewer */ = {
@@ -295,7 +317,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC900401219375B90007F7E5 /* SendPlace.storyboard in Resources */,
 				AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */,
+				AC9003FD2193704E0007F7E5 /* Main.storyboard in Resources */,
 				AC63325F20FA95C3007E5D98 /* LaunchScreen.storyboard in Resources */,
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
 				AC63325A20FA95C2007E5D98 /* SkateMap.storyboard in Resources */,
