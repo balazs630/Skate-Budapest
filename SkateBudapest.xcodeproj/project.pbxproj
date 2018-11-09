@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC033FB12195D04B0005259B /* SkateMap.storyboard */; };
+		AC033FB42195D1200005259B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC033FB32195D1200005259B /* LaunchScreen.storyboard */; };
 		AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */; };
 		AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */; };
 		AC171D652103E0C0008747AB /* PlaceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC171D642103E0C0008747AB /* PlaceImage.swift */; };
@@ -19,9 +21,7 @@
 		AC4334AC21258FA400571802 /* GPXEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4334AB21258FA400571802 /* GPXEntry.swift */; };
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
 		AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */; };
-		AC63325A20FA95C2007E5D98 /* SkateMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC63325820FA95C2007E5D98 /* SkateMap.storyboard */; };
 		AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC63325B20FA95C3007E5D98 /* Assets.xcassets */; };
-		AC63325F20FA95C3007E5D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */; };
 		AC9003FD2193704E0007F7E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9003FC2193704E0007F7E5 /* Main.storyboard */; };
 		AC900401219375B90007F7E5 /* SendPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC900400219375B90007F7E5 /* SendPlace.storyboard */; };
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
@@ -36,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC033FB12195D04B0005259B /* SkateMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateMap.storyboard; sourceTree = "<group>"; };
+		AC033FB32195D1200005259B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 		AC171D642103E0C0008747AB /* PlaceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImage.swift; sourceTree = "<group>"; };
@@ -49,9 +51,7 @@
 		AC63325120FA95C2007E5D98 /* SkateBudapest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateBudapest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC63325420FA95C2007E5D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapViewController.swift; sourceTree = "<group>"; };
-		AC63325920FA95C2007E5D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SkateMap.storyboard; sourceTree = "<group>"; };
 		AC63325B20FA95C3007E5D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AC63325E20FA95C3007E5D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC63326020FA95C3007E5D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9003FC2193704E0007F7E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AC900400219375B90007F7E5 /* SendPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendPlace.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		AC171D5E2103D7CA008747AB /* App flow */ = {
 			isa = PBXGroup;
 			children = (
-				AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */,
+				AC033FB32195D1200005259B /* LaunchScreen.storyboard */,
 				AC9003FC2193704E0007F7E5 /* Main.storyboard */,
 				AC171D5F2103D7D4008747AB /* SkateMap */,
 				AC0B89A72111FDBA006CDB7E /* LocationDetails */,
@@ -121,7 +121,7 @@
 		AC171D602103D7E6008747AB /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				AC63325820FA95C2007E5D98 /* SkateMap.storyboard */,
+				AC033FB12195D04B0005259B /* SkateMap.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -320,9 +320,9 @@
 				AC900401219375B90007F7E5 /* SendPlace.storyboard in Resources */,
 				AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */,
 				AC9003FD2193704E0007F7E5 /* Main.storyboard in Resources */,
-				AC63325F20FA95C3007E5D98 /* LaunchScreen.storyboard in Resources */,
+				AC033FB42195D1200005259B /* LaunchScreen.storyboard in Resources */,
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
-				AC63325A20FA95C2007E5D98 /* SkateMap.storyboard in Resources */,
+				AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,25 +374,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AC63325820FA95C2007E5D98 /* SkateMap.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC63325920FA95C2007E5D98 /* Base */,
-			);
-			name = SkateMap.storyboard;
-			sourceTree = "<group>";
-		};
-		AC63325D20FA95C3007E5D98 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC63325E20FA95C3007E5D98 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AC63326120FA95C3007E5D98 /* Debug */ = {
