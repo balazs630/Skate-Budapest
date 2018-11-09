@@ -97,6 +97,14 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
+		AC033FED2195DEF50005259B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AC63325B20FA95C3007E5D98 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		AC0B89A72111FDBA006CDB7E /* LocationDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +231,7 @@
 		AC76CF8A20FA973C003ED70F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AC63325B20FA95C3007E5D98 /* Assets.xcassets */,
+				AC033FED2195DEF50005259B /* Images */,
 				AC033FDA2195DC3C0005259B /* Strings */,
 			);
 			path = Resources;
