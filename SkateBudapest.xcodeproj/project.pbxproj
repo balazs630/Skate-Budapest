@@ -12,6 +12,7 @@
 		AC033FDD2195DCEF0005259B /* SkateMap.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FDF2195DCEF0005259B /* SkateMap.strings */; };
 		AC033FE32195DD390005259B /* LocationDetails.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FE52195DD390005259B /* LocationDetails.strings */; };
 		AC033FE92195DD4F0005259B /* SendPlace.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FEB2195DD4F0005259B /* SendPlace.strings */; };
+		AC0340012195E18B0005259B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC0340032195E18B0005259B /* InfoPlist.strings */; };
 		AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */; };
 		AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */; };
 		AC171D652103E0C0008747AB /* PlaceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC171D642103E0C0008747AB /* PlaceImage.swift */; };
@@ -47,6 +48,8 @@
 		AC033FE62195DD3C0005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LocationDetails.strings; sourceTree = "<group>"; };
 		AC033FEA2195DD4F0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendPlace.strings; sourceTree = "<group>"; };
 		AC033FEC2195DD500005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/SendPlace.strings; sourceTree = "<group>"; };
+		AC0340022195E18B0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC0340042195E18C0005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 		AC171D642103E0C0008747AB /* PlaceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImage.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		AC033FDA2195DC3C0005259B /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				AC0340032195E18B0005259B /* InfoPlist.strings */,
 				AC033FDF2195DCEF0005259B /* SkateMap.strings */,
 				AC033FE52195DD390005259B /* LocationDetails.strings */,
 				AC033FEB2195DD4F0005259B /* SendPlace.strings */,
@@ -355,6 +359,7 @@
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
 				AC033FE32195DD390005259B /* LocationDetails.strings in Resources */,
 				AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */,
+				AC0340012195E18B0005259B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +438,15 @@
 				AC033FEC2195DD500005259B /* hu */,
 			);
 			name = SendPlace.strings;
+			sourceTree = "<group>";
+		};
+		AC0340032195E18B0005259B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC0340022195E18B0005259B /* en */,
+				AC0340042195E18C0005259B /* hu */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

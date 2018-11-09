@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  SkateBudapest
+
+  Created by Horváth Balázs on 2018. 11. 09..
+  Copyright © 2018. Horváth Balázs. All rights reserved.
+*/
+
+"NSLocationWhenInUseUsageDescription" = "We need to access your location to show your current location on a map.";
