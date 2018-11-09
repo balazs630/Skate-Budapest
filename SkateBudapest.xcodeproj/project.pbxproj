@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC033FB12195D04B0005259B /* SkateMap.storyboard */; };
 		AC033FB42195D1200005259B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC033FB32195D1200005259B /* LaunchScreen.storyboard */; };
+		AC033FDD2195DCEF0005259B /* SkateMap.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FDF2195DCEF0005259B /* SkateMap.strings */; };
+		AC033FE32195DD390005259B /* LocationDetails.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FE52195DD390005259B /* LocationDetails.strings */; };
+		AC033FE92195DD4F0005259B /* SendPlace.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FEB2195DD4F0005259B /* SendPlace.strings */; };
 		AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */; };
 		AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */; };
 		AC171D652103E0C0008747AB /* PlaceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC171D642103E0C0008747AB /* PlaceImage.swift */; };
@@ -38,6 +41,12 @@
 /* Begin PBXFileReference section */
 		AC033FB12195D04B0005259B /* SkateMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateMap.storyboard; sourceTree = "<group>"; };
 		AC033FB32195D1200005259B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC033FDE2195DCEF0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SkateMap.strings; sourceTree = "<group>"; };
+		AC033FE02195DCF10005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/SkateMap.strings; sourceTree = "<group>"; };
+		AC033FE42195DD390005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocationDetails.strings; sourceTree = "<group>"; };
+		AC033FE62195DD3C0005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LocationDetails.strings; sourceTree = "<group>"; };
+		AC033FEA2195DD4F0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendPlace.strings; sourceTree = "<group>"; };
+		AC033FEC2195DD500005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/SendPlace.strings; sourceTree = "<group>"; };
 		AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 		AC171D642103E0C0008747AB /* PlaceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImage.swift; sourceTree = "<group>"; };
@@ -78,6 +87,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC033FDA2195DC3C0005259B /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				AC033FDF2195DCEF0005259B /* SkateMap.strings */,
+				AC033FE52195DD390005259B /* LocationDetails.strings */,
+				AC033FEB2195DD4F0005259B /* SendPlace.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		AC0B89A72111FDBA006CDB7E /* LocationDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				AC63325B20FA95C3007E5D98 /* Assets.xcassets */,
+				AC033FDA2195DC3C0005259B /* Strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -296,11 +316,12 @@
 			};
 			buildConfigurationList = AC63324C20FA95C2007E5D98 /* Build configuration list for PBXProject "SkateBudapest" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = hu;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				hu,
+				en,
 				Base,
+				hu,
 			);
 			mainGroup = AC63324820FA95C2007E5D98;
 			productRefGroup = AC63325220FA95C2007E5D98 /* Products */;
@@ -318,10 +339,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC900401219375B90007F7E5 /* SendPlace.storyboard in Resources */,
+				AC033FDD2195DCEF0005259B /* SkateMap.strings in Resources */,
 				AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */,
+				AC033FE92195DD4F0005259B /* SendPlace.strings in Resources */,
 				AC9003FD2193704E0007F7E5 /* Main.storyboard in Resources */,
 				AC033FB42195D1200005259B /* LaunchScreen.storyboard in Resources */,
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
+				AC033FE32195DD390005259B /* LocationDetails.strings in Resources */,
 				AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +398,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AC033FDF2195DCEF0005259B /* SkateMap.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC033FDE2195DCEF0005259B /* en */,
+				AC033FE02195DCF10005259B /* hu */,
+			);
+			name = SkateMap.strings;
+			sourceTree = "<group>";
+		};
+		AC033FE52195DD390005259B /* LocationDetails.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC033FE42195DD390005259B /* en */,
+				AC033FE62195DD3C0005259B /* hu */,
+			);
+			name = LocationDetails.strings;
+			sourceTree = "<group>";
+		};
+		AC033FEB2195DD4F0005259B /* SendPlace.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC033FEA2195DD4F0005259B /* en */,
+				AC033FEC2195DD500005259B /* hu */,
+			);
+			name = SendPlace.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AC63326120FA95C3007E5D98 /* Debug */ = {
