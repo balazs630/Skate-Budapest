@@ -5,3 +5,11 @@
   Created by Horváth Balázs on 2018. 11. 09..
   Copyright © 2018. Horváth Balázs. All rights reserved.
 */
+
+"mapNavBarTitle" = "Térkép";
+"mapTabBarTitle" = "Térkép";
+"filteringClose" = "Bezárás";
+"filteringFilter" = "Szűrés";
+"filterTypeSkatepark" = "Deszkás pálya";
+"filterTypeSkatespot" = "Deszkás spot";
+"filterTypeSkateshop" = "Deszkás bolt";

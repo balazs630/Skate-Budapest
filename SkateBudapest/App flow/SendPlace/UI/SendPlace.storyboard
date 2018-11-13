@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add place-->
+        <!--Submit-->
         <scene sceneID="9o3-P5-uAh">
             <objects>
                 <viewController id="7bg-AW-tAE" sceneMemberID="viewController">
@@ -18,19 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add place screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXb-fS-KRx">
-                                <rect key="frame" x="121" y="323" width="133" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit place screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXb-fS-KRx">
+                                <rect key="frame" x="109.5" y="323" width="156" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wXb-fS-KRx" firstAttribute="centerX" secondItem="yQK-rB-MqZ" secondAttribute="centerX" id="epT-aJ-jcJ"/>
+                            <constraint firstItem="wXb-fS-KRx" firstAttribute="centerY" secondItem="yQK-rB-MqZ" secondAttribute="centerY" id="sz5-7d-OrU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gcv-q3-34E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add place" image="green" id="m8Z-Ld-7hf"/>
-                    <navigationItem key="navigationItem" title="Add place" id="kQK-Xx-eDV"/>
+                    <tabBarItem key="tabBarItem" title="Submit" image="green" id="m8Z-Ld-7hf"/>
+                    <navigationItem key="navigationItem" title="Submit" id="kQK-Xx-eDV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2np-sg-hSe" userLabel="First Responder" sceneMemberID="firstResponder"/>

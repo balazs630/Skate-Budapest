@@ -75,3 +75,25 @@ struct SegueIdentifier {
     static let showLocationPinDetails = "showLocationPinDetailsSegue"
     static let showImageViewer = "showImageViewerSegue"
 }
+
+struct Texts {
+    struct SkateMap {
+        static let mapNavBarTitle = "mapNavBarTitle"
+        static let mapTabBarTitle = "mapTabBarTitle"
+        static let filteringClose = "filteringClose"
+        static let filteringFilter = "filteringFilter"
+        static let filterTypeSkatepark = "filterTypeSkatepark"
+        static let filterTypeSkatespot = "filterTypeSkatespot"
+        static let filterTypeSkateshop = "filterTypeSkateshop"
+    }
+
+    struct LocationDetails {
+        static let mapNavigationEmptyViewText = "mapNavigationEmptyViewText"
+        static let mapNavigationEmptyViewButtonText = "mapNavigationEmptyViewButtonText"
+    }
+
+    struct SendSpace {
+        static let sendPlaceNavBarTitle = "sendPlaceNavBarTitle"
+        static let sendPlaceTabBarTitle = "sendPlaceTabBarTitle"
+    }
+}
