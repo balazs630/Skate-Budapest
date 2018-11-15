@@ -6,7 +6,6 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
-import UIKit
 import MapKit
 
 class RoutingViewController: UIViewController {
@@ -22,14 +21,24 @@ class RoutingViewController: UIViewController {
     @IBOutlet weak var drivingActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var walkingActivityIndicator: UIActivityIndicatorView!
 
+    @IBOutlet weak var enableLocationLabel: UILabel!
+    @IBOutlet weak var enableLocationButton: UIButton!
+
     // MARK: View lifecycle
     override func viewDidLoad() {
+        configureSelf()
         setObserverForUIApplicationDidBecomeActive()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupView()
+    }
+
+    // MARK: Screen configuration
+    private func configureSelf() {
+        enableLocationLabel.text = Texts.LocationDetails.mapNavigationEmptyViewText.localized
+        enableLocationButton.setTitle(Texts.LocationDetails.mapNavigationEmptyViewButtonText.localized, for: .normal)
     }
 
     private func setObserverForUIApplicationDidBecomeActive() {

@@ -6,10 +6,21 @@
   Copyright © 2018. Horváth Balázs. All rights reserved.
 */
 
+// MARK: SkateMapViewController
 "mapNavBarTitle" = "Térkép";
 "mapTabBarTitle" = "Térkép";
+
+// MARK: AnnotationFilterViewController
 "filteringClose" = "Bezárás";
 "filteringFilter" = "Szűrés";
 "filterTypeSkatepark" = "Deszkás pálya";
 "filterTypeSkatespot" = "Deszkás spot";
 "filterTypeSkateshop" = "Deszkás bolt";
+
+// MARK: RoutingViewController
+"mapNavigationEmptyViewText" = "Helymeghatározás bekapcsolása a navigációhoz";
+"mapNavigationEmptyViewButtonText" = "Bekapcsolás";
+
+// MARK: SendPlaceViewController
+"sendPlaceNavBarTitle" = "Beküldés";
+"sendPlaceTabBarTitle" = "Beküldés";

@@ -6,7 +6,6 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
-import UIKit
 import MapKit
 
 class SkateMapViewController: UIViewController {
@@ -16,10 +15,17 @@ class SkateMapViewController: UIViewController {
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureSelf()
 
         LocationManager.shared.startTracking()
         mapView.delegate = self
         loadMapWaypointsFrom(url: Constant.dataSourceGPXUrl)
+    }
+
+    // MARK: Screen configuration
+    private func configureSelf() {
+        navigationItem.title = NSLocalizedString("mapNavBarTitle", comment: "")
+        tabBarItem.title = Texts.SkateMap.mapTabBarTitle.localized
     }
 
     // MARK: Button actions
@@ -46,8 +52,10 @@ class SkateMapViewController: UIViewController {
 
         present(annotationFilterVC, animated: true, completion: nil)
     }
+}
 
-    // MARK: Map annotation operations
+// MARK: Map annotation operations
+extension SkateMapViewController {
     private func loadMapWaypointsFrom(url: URL) {
         clearWaypoints()
         GPXParser.parse(url: url) { gpx in

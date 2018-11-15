@@ -6,10 +6,21 @@
   Copyright © 2018. Horváth Balázs. All rights reserved.
 */
 
+// MARK: SkateMapViewController
 "mapNavBarTitle" = "Map";
 "mapTabBarTitle" = "Map";
+
+// MARK: AnnotationFilterViewController
 "filteringClose" = "Close";
 "filteringFilter" = "Filter";
 "filterTypeSkatepark" = "Skatepark";
 "filterTypeSkatespot" = "Streetspot";
 "filterTypeSkateshop" = "Skateshop";
+
+// MARK: RoutingViewController
+"mapNavigationEmptyViewText" = "Enable location to show navigation options";
+"mapNavigationEmptyViewButtonText" = "Enable";
+
+// MARK: SendPlaceViewController
+"sendPlaceNavBarTitle" = "Submit";
+"sendPlaceTabBarTitle" = "Submit";

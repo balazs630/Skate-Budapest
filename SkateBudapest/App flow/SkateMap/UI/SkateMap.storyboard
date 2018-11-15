@@ -129,78 +129,75 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DoT-zH-G0o">
-                                <rect key="frame" x="85.5" y="57" width="204" height="213"/>
+                                <rect key="frame" x="82.5" y="57" width="210" height="210"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkE-mX-m0G" userLabel="Skateshop View">
-                                        <rect key="frame" x="0.0" y="0.0" width="204" height="71"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skateshop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23S-su-V1B">
-                                                <rect key="frame" x="105" y="25.5" width="81" height="20.5"/>
+                                                <rect key="frame" x="105" y="25" width="81" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aeb-FG-sUq">
-                                                <rect key="frame" x="20" y="20" width="51" height="31"/>
+                                                <rect key="frame" x="20" y="19.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="23S-su-V1B" secondAttribute="trailing" constant="18" id="7Jd-TM-vuj"/>
                                             <constraint firstItem="Aeb-FG-sUq" firstAttribute="centerY" secondItem="kkE-mX-m0G" secondAttribute="centerY" id="9HO-Cb-b0o"/>
-                                            <constraint firstItem="23S-su-V1B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Aeb-FG-sUq" secondAttribute="trailing" constant="8" symbolic="YES" id="ErB-Ra-6SD"/>
                                             <constraint firstItem="Aeb-FG-sUq" firstAttribute="leading" secondItem="kkE-mX-m0G" secondAttribute="leading" constant="20" id="Oue-pB-X8I"/>
+                                            <constraint firstItem="23S-su-V1B" firstAttribute="leading" secondItem="Aeb-FG-sUq" secondAttribute="trailing" constant="36" id="e9L-lQ-akF"/>
                                             <constraint firstItem="23S-su-V1B" firstAttribute="centerY" secondItem="kkE-mX-m0G" secondAttribute="centerY" id="x7n-dv-whO"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UI3-AB-1wk" userLabel="Streetspot View">
-                                        <rect key="frame" x="0.0" y="71" width="204" height="71"/>
+                                        <rect key="frame" x="0.0" y="70" width="210" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streetspot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ad-co-URa">
-                                                <rect key="frame" x="105" y="25.5" width="80.5" height="20.5"/>
+                                                <rect key="frame" x="105" y="25" width="80.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjK-3k-qSI">
-                                                <rect key="frame" x="20" y="20" width="51" height="31"/>
+                                                <rect key="frame" x="20" y="19.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="4ad-co-URa" secondAttribute="trailing" constant="18.5" id="Omb-sq-jq6"/>
+                                            <constraint firstItem="4ad-co-URa" firstAttribute="leading" secondItem="mjK-3k-qSI" secondAttribute="trailing" constant="36" id="QeT-Zp-QZc"/>
                                             <constraint firstItem="mjK-3k-qSI" firstAttribute="leading" secondItem="UI3-AB-1wk" secondAttribute="leading" constant="20" id="XWY-Wu-tTT"/>
                                             <constraint firstItem="mjK-3k-qSI" firstAttribute="centerY" secondItem="UI3-AB-1wk" secondAttribute="centerY" id="mat-kK-hdd"/>
                                             <constraint firstItem="4ad-co-URa" firstAttribute="centerY" secondItem="UI3-AB-1wk" secondAttribute="centerY" id="nq2-Bn-h2n"/>
-                                            <constraint firstItem="4ad-co-URa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mjK-3k-qSI" secondAttribute="trailing" constant="8" symbolic="YES" id="qWw-AF-RzO"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psW-5U-HNR" userLabel="Skatepark View">
-                                        <rect key="frame" x="0.0" y="142" width="204" height="71"/>
+                                        <rect key="frame" x="0.0" y="140" width="210" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skatepark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciJ-h3-fzH">
-                                                <rect key="frame" x="105" y="25.5" width="77" height="20.5"/>
+                                                <rect key="frame" x="105" y="25" width="77" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRY-ls-57y">
-                                                <rect key="frame" x="20" y="20" width="51" height="31"/>
+                                                <rect key="frame" x="20" y="19.5" width="51" height="31"/>
                                             </switch>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="aRY-ls-57y" firstAttribute="centerY" secondItem="psW-5U-HNR" secondAttribute="centerY" id="4Uk-N7-xAw"/>
-                                            <constraint firstAttribute="trailing" secondItem="ciJ-h3-fzH" secondAttribute="trailing" constant="22" id="5yd-wn-llE"/>
+                                            <constraint firstItem="ciJ-h3-fzH" firstAttribute="leading" secondItem="aRY-ls-57y" secondAttribute="trailing" constant="36" id="6uJ-lh-935"/>
                                             <constraint firstItem="ciJ-h3-fzH" firstAttribute="centerY" secondItem="psW-5U-HNR" secondAttribute="centerY" id="HA0-Pn-0Ll"/>
-                                            <constraint firstItem="ciJ-h3-fzH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aRY-ls-57y" secondAttribute="trailing" constant="8" symbolic="YES" id="fjo-DF-CV1"/>
                                             <constraint firstItem="aRY-ls-57y" firstAttribute="leading" secondItem="psW-5U-HNR" secondAttribute="leading" constant="20" id="mF4-WG-Paw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="213" id="Nfb-ki-dkG"/>
-                                    <constraint firstAttribute="width" constant="204" id="QZU-H3-rfA"/>
+                                    <constraint firstAttribute="height" constant="210" id="Nfb-ki-dkG"/>
+                                    <constraint firstAttribute="width" constant="210" id="QZU-H3-rfA"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -216,9 +213,14 @@
                     </view>
                     <size key="freeformSize" width="375" height="280"/>
                     <connections>
-                        <outlet property="swSkatepark" destination="aRY-ls-57y" id="Tkm-rS-Eqf"/>
-                        <outlet property="swSkateshop" destination="Aeb-FG-sUq" id="uus-2V-ut6"/>
-                        <outlet property="swStreetspot" destination="mjK-3k-qSI" id="9KK-Ry-k2q"/>
+                        <outlet property="closeLabel" destination="PeH-nw-6QN" id="yYq-zk-Rnv"/>
+                        <outlet property="filterLabel" destination="Nfz-zP-xsa" id="lQd-eZ-fjR"/>
+                        <outlet property="skateparkLabel" destination="ciJ-h3-fzH" id="dfw-jI-C59"/>
+                        <outlet property="skateparkSwitch" destination="aRY-ls-57y" id="Tkm-rS-Eqf"/>
+                        <outlet property="skateshopLabel" destination="23S-su-V1B" id="f8I-Wc-Ra7"/>
+                        <outlet property="skateshopSwitch" destination="Aeb-FG-sUq" id="uus-2V-ut6"/>
+                        <outlet property="streetspotLabel" destination="4ad-co-URa" id="gec-tr-cra"/>
+                        <outlet property="streetspotSwitch" destination="mjK-3k-qSI" id="9KK-Ry-k2q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufK-f0-iP2" userLabel="First Responder" sceneMemberID="firstResponder"/>

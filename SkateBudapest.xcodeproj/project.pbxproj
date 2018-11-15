@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC033FB12195D04B0005259B /* SkateMap.storyboard */; };
 		AC033FB42195D1200005259B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC033FB32195D1200005259B /* LaunchScreen.storyboard */; };
-		AC033FDD2195DCEF0005259B /* SkateMap.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FDF2195DCEF0005259B /* SkateMap.strings */; };
-		AC033FE32195DD390005259B /* LocationDetails.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FE52195DD390005259B /* LocationDetails.strings */; };
-		AC033FE92195DD4F0005259B /* SendPlace.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FEB2195DD4F0005259B /* SendPlace.strings */; };
+		AC033FDD2195DCEF0005259B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FDF2195DCEF0005259B /* Localizable.strings */; };
 		AC0340012195E18B0005259B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC0340032195E18B0005259B /* InfoPlist.strings */; };
 		AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */; };
 		AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */; };
@@ -31,6 +29,7 @@
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
 		AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC907892212997F600FC0528 /* UIImageViewExtensions.swift */; };
 		AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */; };
+		AC947F68219E2BDD005007C4 /* SubmitPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC947F67219E2BDD005007C4 /* SubmitPlaceViewController.swift */; };
 		AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */; };
 		AC9FB99D210369E4002D4C37 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FB99C210369E4002D4C37 /* StringExtensions.swift */; };
 		AC9FB9A1210372C9002D4C37 /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9FB9A0210372C9002D4C37 /* Waypoint.swift */; };
@@ -42,12 +41,8 @@
 /* Begin PBXFileReference section */
 		AC033FB12195D04B0005259B /* SkateMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateMap.storyboard; sourceTree = "<group>"; };
 		AC033FB32195D1200005259B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AC033FDE2195DCEF0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SkateMap.strings; sourceTree = "<group>"; };
-		AC033FE02195DCF10005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/SkateMap.strings; sourceTree = "<group>"; };
-		AC033FE42195DD390005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocationDetails.strings; sourceTree = "<group>"; };
-		AC033FE62195DD3C0005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LocationDetails.strings; sourceTree = "<group>"; };
-		AC033FEA2195DD4F0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SendPlace.strings; sourceTree = "<group>"; };
-		AC033FEC2195DD500005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/SendPlace.strings; sourceTree = "<group>"; };
+		AC033FDE2195DCEF0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC033FE02195DCF10005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC0340022195E18B0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC0340042195E18C0005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +65,7 @@
 		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		AC907892212997F600FC0528 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewFullViewCell.swift; sourceTree = "<group>"; };
+		AC947F67219E2BDD005007C4 /* SubmitPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPlaceViewController.swift; sourceTree = "<group>"; };
 		AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		AC9FB99C210369E4002D4C37 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		AC9FB9A0210372C9002D4C37 /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
@@ -94,9 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				AC0340032195E18B0005259B /* InfoPlist.strings */,
-				AC033FDF2195DCEF0005259B /* SkateMap.strings */,
-				AC033FE52195DD390005259B /* LocationDetails.strings */,
-				AC033FEB2195DD4F0005259B /* SendPlace.strings */,
+				AC033FDF2195DCEF0005259B /* Localizable.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -245,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				AC9003FF219375AD0007F7E5 /* UI */,
+				AC947F66219E2BC7005007C4 /* SubmitPlaceScreen */,
 			);
 			path = SendPlace;
 			sourceTree = "<group>";
@@ -255,6 +250,14 @@
 				AC900400219375B90007F7E5 /* SendPlace.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		AC947F66219E2BC7005007C4 /* SubmitPlaceScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AC947F67219E2BDD005007C4 /* SubmitPlaceViewController.swift */,
+			);
+			path = SubmitPlaceScreen;
 			sourceTree = "<group>";
 		};
 		AC975D3E212F10340021DC7A /* ImageViewer */ = {
@@ -351,13 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC900401219375B90007F7E5 /* SendPlace.storyboard in Resources */,
-				AC033FDD2195DCEF0005259B /* SkateMap.strings in Resources */,
+				AC033FDD2195DCEF0005259B /* Localizable.strings in Resources */,
 				AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */,
-				AC033FE92195DD4F0005259B /* SendPlace.strings in Resources */,
 				AC9003FD2193704E0007F7E5 /* Main.storyboard in Resources */,
 				AC033FB42195D1200005259B /* LaunchScreen.storyboard in Resources */,
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
-				AC033FE32195DD390005259B /* LocationDetails.strings in Resources */,
 				AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */,
 				AC0340012195E18B0005259B /* InfoPlist.strings in Resources */,
 			);
@@ -390,6 +391,7 @@
 				AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
 				AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */,
+				AC947F68219E2BDD005007C4 /* SubmitPlaceViewController.swift in Sources */,
 				AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
 				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,
@@ -413,31 +415,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC033FDF2195DCEF0005259B /* SkateMap.strings */ = {
+		AC033FDF2195DCEF0005259B /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC033FDE2195DCEF0005259B /* en */,
 				AC033FE02195DCF10005259B /* hu */,
 			);
-			name = SkateMap.strings;
-			sourceTree = "<group>";
-		};
-		AC033FE52195DD390005259B /* LocationDetails.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC033FE42195DD390005259B /* en */,
-				AC033FE62195DD3C0005259B /* hu */,
-			);
-			name = LocationDetails.strings;
-			sourceTree = "<group>";
-		};
-		AC033FEB2195DD4F0005259B /* SendPlace.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC033FEA2195DD4F0005259B /* en */,
-				AC033FEC2195DD500005259B /* hu */,
-			);
-			name = SendPlace.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		AC0340032195E18B0005259B /* InfoPlist.strings */ = {

@@ -13,7 +13,7 @@
         <!--Submit-->
         <scene sceneID="9o3-P5-uAh">
             <objects>
-                <viewController id="7bg-AW-tAE" sceneMemberID="viewController">
+                <viewController id="7bg-AW-tAE" customClass="SubmitPlaceViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQK-rB-MqZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -366,7 +366,6 @@
                                         <rect key="frame" x="257" y="15" width="47" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ykp-un-hlq"/>
-                                            <constraint firstAttribute="width" constant="47" id="rdr-gn-9Ce"/>
                                         </constraints>
                                         <state key="normal" title="Enable"/>
                                         <connections>
@@ -388,8 +387,8 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="XFh-NF-VgP" secondAttribute="trailing" constant="15" id="VE6-Gc-n6x"/>
                                     <constraint firstItem="evm-qG-GUM" firstAttribute="centerY" secondItem="llG-j8-NNO" secondAttribute="centerY" id="bCM-Hv-PJt"/>
-                                    <constraint firstItem="XFh-NF-VgP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="evm-qG-GUM" secondAttribute="trailing" constant="20" id="its-4o-7um"/>
                                     <constraint firstItem="evm-qG-GUM" firstAttribute="leading" secondItem="llG-j8-NNO" secondAttribute="leading" constant="15" id="km9-l1-KYf"/>
+                                    <constraint firstItem="XFh-NF-VgP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="evm-qG-GUM" secondAttribute="trailing" constant="20" id="lmA-eh-Fi0"/>
                                     <constraint firstItem="XFh-NF-VgP" firstAttribute="centerY" secondItem="llG-j8-NNO" secondAttribute="centerY" id="lp4-be-hpu"/>
                                 </constraints>
                             </view>
@@ -415,6 +414,8 @@
                     <connections>
                         <outlet property="drivingActivityIndicator" destination="1x7-Kw-aGe" id="P21-Yy-Yba"/>
                         <outlet property="drivingRouteButton" destination="dDc-4e-KCV" id="4MP-QR-ioh"/>
+                        <outlet property="enableLocationButton" destination="XFh-NF-VgP" id="djR-Bb-PSc"/>
+                        <outlet property="enableLocationLabel" destination="evm-qG-GUM" id="47y-Md-Wyt"/>
                         <outlet property="transitActivityIndicator" destination="8C7-V4-KKd" id="Yga-3Y-gRa"/>
                         <outlet property="transitRouteButton" destination="Bl9-mM-U2R" id="yfT-H1-mmu"/>
                         <outlet property="walkingActivityIndicator" destination="M9l-S7-mMH" id="ZTL-NL-cs8"/>
