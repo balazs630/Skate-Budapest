@@ -108,24 +108,13 @@
                                             <action selector="filterButtonTap:" destination="afy-vZ-Nj2" eventType="touchUpInside" id="Qi5-St-gIT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeH-nw-6QN">
-                                        <rect key="frame" x="316" y="8" width="39" height="30"/>
-                                        <state key="normal" title="Close"/>
-                                        <connections>
-                                            <action selector="closeButtonTap:" destination="afy-vZ-Nj2" eventType="touchUpInside" id="552-3h-f9I"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.67450980390000004" green="0.92156862750000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="5Jx-bg-rPh"/>
-                                    <constraint firstAttribute="trailing" secondItem="PeH-nw-6QN" secondAttribute="trailing" constant="20" id="Krf-CM-tIB"/>
                                     <constraint firstItem="Nfz-zP-xsa" firstAttribute="top" secondItem="iA2-KA-hMo" secondAttribute="top" constant="8" id="TnA-5e-2jP"/>
                                     <constraint firstAttribute="bottom" secondItem="Nfz-zP-xsa" secondAttribute="bottom" constant="7" id="UiA-vy-vU4"/>
-                                    <constraint firstItem="PeH-nw-6QN" firstAttribute="top" secondItem="iA2-KA-hMo" secondAttribute="top" constant="8" id="Uut-yh-Ug1"/>
                                     <constraint firstItem="Nfz-zP-xsa" firstAttribute="leading" secondItem="iA2-KA-hMo" secondAttribute="leading" constant="20" id="om6-ds-jm3"/>
-                                    <constraint firstAttribute="bottom" secondItem="PeH-nw-6QN" secondAttribute="bottom" constant="7" id="psh-GO-Ggt"/>
-                                    <constraint firstItem="PeH-nw-6QN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nfz-zP-xsa" secondAttribute="trailing" constant="100" id="q7s-TJ-pzB"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DoT-zH-G0o">
@@ -204,6 +193,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="iA2-KA-hMo" firstAttribute="top" secondItem="ral-Ww-7aM" secondAttribute="top" id="3Kh-DA-AYO"/>
                             <constraint firstItem="DoT-zH-G0o" firstAttribute="centerX" secondItem="QPx-xG-oEm" secondAttribute="centerX" id="OwI-0Q-aLL"/>
@@ -212,10 +202,12 @@
                             <constraint firstItem="iA2-KA-hMo" firstAttribute="trailing" secondItem="ral-Ww-7aM" secondAttribute="trailing" id="tCV-Js-rdt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ral-Ww-7aM"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Hd9-Uc-mhg" appends="YES" id="y41-HE-w0z"/>
+                        </connections>
                     </view>
                     <size key="freeformSize" width="375" height="280"/>
                     <connections>
-                        <outlet property="closeLabel" destination="PeH-nw-6QN" id="yYq-zk-Rnv"/>
                         <outlet property="filterLabel" destination="Nfz-zP-xsa" id="lQd-eZ-fjR"/>
                         <outlet property="skateparkLabel" destination="ciJ-h3-fzH" id="dfw-jI-C59"/>
                         <outlet property="skateparkSwitch" destination="aRY-ls-57y" id="Tkm-rS-Eqf"/>
@@ -226,6 +218,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufK-f0-iP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Hd9-Uc-mhg">
+                    <connections>
+                        <action selector="panGestureRecognizerHandler:" destination="afy-vZ-Nj2" id="87J-59-6xR"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1862" y="331"/>
         </scene>

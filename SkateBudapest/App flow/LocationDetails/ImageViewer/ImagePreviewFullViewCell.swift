@@ -21,8 +21,8 @@ class ImagePreviewFullViewCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        scrollView.frame = self.bounds
-        imageView.frame = self.bounds
+        scrollView.frame = bounds
+        imageView.frame = bounds
     }
 
     override func prepareForReuse() {
@@ -71,6 +71,6 @@ extension ImagePreviewFullViewCell {
 // MARK: UIScrollViewDelegate methods
 extension ImagePreviewFullViewCell: UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return self.imageView
+        return imageView
     }
 }
