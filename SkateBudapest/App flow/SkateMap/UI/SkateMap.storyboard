@@ -135,7 +135,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="210" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skateshop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23S-su-V1B">
-                                                <rect key="frame" x="105" y="25" width="81" height="20.5"/>
+                                                <rect key="frame" x="105" y="25" width="85" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -149,6 +149,7 @@
                                             <constraint firstItem="Aeb-FG-sUq" firstAttribute="centerY" secondItem="kkE-mX-m0G" secondAttribute="centerY" id="9HO-Cb-b0o"/>
                                             <constraint firstItem="Aeb-FG-sUq" firstAttribute="leading" secondItem="kkE-mX-m0G" secondAttribute="leading" constant="20" id="Oue-pB-X8I"/>
                                             <constraint firstItem="23S-su-V1B" firstAttribute="leading" secondItem="Aeb-FG-sUq" secondAttribute="trailing" constant="36" id="e9L-lQ-akF"/>
+                                            <constraint firstAttribute="trailing" secondItem="23S-su-V1B" secondAttribute="trailing" constant="20" id="mRW-HP-qaN"/>
                                             <constraint firstItem="23S-su-V1B" firstAttribute="centerY" secondItem="kkE-mX-m0G" secondAttribute="centerY" id="x7n-dv-whO"/>
                                         </constraints>
                                     </view>
@@ -156,7 +157,7 @@
                                         <rect key="frame" x="0.0" y="70" width="210" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streetspot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ad-co-URa">
-                                                <rect key="frame" x="105" y="25" width="80.5" height="20.5"/>
+                                                <rect key="frame" x="105" y="25" width="85" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -167,6 +168,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="4ad-co-URa" secondAttribute="trailing" constant="20" id="C8B-41-TO8"/>
                                             <constraint firstItem="4ad-co-URa" firstAttribute="leading" secondItem="mjK-3k-qSI" secondAttribute="trailing" constant="36" id="QeT-Zp-QZc"/>
                                             <constraint firstItem="mjK-3k-qSI" firstAttribute="leading" secondItem="UI3-AB-1wk" secondAttribute="leading" constant="20" id="XWY-Wu-tTT"/>
                                             <constraint firstItem="mjK-3k-qSI" firstAttribute="centerY" secondItem="UI3-AB-1wk" secondAttribute="centerY" id="mat-kK-hdd"/>
@@ -177,7 +179,7 @@
                                         <rect key="frame" x="0.0" y="140" width="210" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skatepark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciJ-h3-fzH">
-                                                <rect key="frame" x="105" y="25" width="77" height="20.5"/>
+                                                <rect key="frame" x="105" y="25" width="85" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -191,13 +193,13 @@
                                             <constraint firstItem="aRY-ls-57y" firstAttribute="centerY" secondItem="psW-5U-HNR" secondAttribute="centerY" id="4Uk-N7-xAw"/>
                                             <constraint firstItem="ciJ-h3-fzH" firstAttribute="leading" secondItem="aRY-ls-57y" secondAttribute="trailing" constant="36" id="6uJ-lh-935"/>
                                             <constraint firstItem="ciJ-h3-fzH" firstAttribute="centerY" secondItem="psW-5U-HNR" secondAttribute="centerY" id="HA0-Pn-0Ll"/>
+                                            <constraint firstAttribute="trailing" secondItem="ciJ-h3-fzH" secondAttribute="trailing" constant="20" id="hAi-5w-p4u"/>
                                             <constraint firstItem="aRY-ls-57y" firstAttribute="leading" secondItem="psW-5U-HNR" secondAttribute="leading" constant="20" id="mF4-WG-Paw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="Nfb-ki-dkG"/>
-                                    <constraint firstAttribute="width" constant="210" id="QZU-H3-rfA"/>
                                 </constraints>
                             </stackView>
                         </subviews>
