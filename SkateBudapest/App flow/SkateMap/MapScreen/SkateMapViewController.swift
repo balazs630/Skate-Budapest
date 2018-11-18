@@ -29,7 +29,7 @@ class SkateMapViewController: UIViewController {
     }
 
     // MARK: Button actions
-    @IBAction func centerMapOnUserLocation(_ sender: Any) {
+    @IBAction func centerMapButtonTap(_ sender: Any) {
         if let userLocation = LocationManager.shared.location {
             let latitudinalMeters = CLLocationDistance(10000)
             let longitudinalMeters = CLLocationDistance(10000)
@@ -41,7 +41,7 @@ class SkateMapViewController: UIViewController {
         }
     }
 
-    @IBAction func filterAnnotations(_ sender: Any) {
+    @IBAction func filterButtonTap(_ sender: Any) {
         guard let annotationFilterVC = storyboard?.instantiateViewController(withIdentifier: Constant.annotationFilter)
             as? AnnotationFilterViewController else { return }
 

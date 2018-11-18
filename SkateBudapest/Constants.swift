@@ -80,10 +80,12 @@ struct Texts {
     struct SkateMap {
         static let mapNavBarTitle = "mapNavBarTitle"
         static let mapTabBarTitle = "mapTabBarTitle"
-        static let filteringFilter = "filteringFilter"
+
+        static let filterScreenTitle = "filterScreenTitle"
         static let filterTypeSkatepark = "filterTypeSkatepark"
         static let filterTypeSkatespot = "filterTypeSkatespot"
         static let filterTypeSkateshop = "filterTypeSkateshop"
+        static let filterButtonTitle = "filterButtonTitle"
     }
 
     struct LocationDetails {

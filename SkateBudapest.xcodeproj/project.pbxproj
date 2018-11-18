@@ -14,6 +14,7 @@
 		AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */; };
 		AC0B89AA21120E39006CDB7E /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */; };
 		AC171D652103E0C0008747AB /* PlaceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC171D642103E0C0008747AB /* PlaceImage.swift */; };
+		AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */; };
 		AC26A96C218DD51700641C84 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26A96B218DD51700641C84 /* LocationManager.swift */; };
 		AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */; };
 		AC2D9DAA21335558003A6263 /* AnnotationFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D9DA921335558003A6263 /* AnnotationFilterViewController.swift */; };
@@ -48,6 +49,7 @@
 		AC0B89A52111FDA8006CDB7E /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		AC0B89A921120E39006CDB7E /* LocationDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 		AC171D642103E0C0008747AB /* PlaceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImage.swift; sourceTree = "<group>"; };
+		AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		AC26A96B218DD51700641C84 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfScreenModalPresentationController.swift; sourceTree = "<group>"; };
 		AC2D9DA921335558003A6263 /* AnnotationFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationFilterViewController.swift; sourceTree = "<group>"; };
@@ -282,12 +284,13 @@
 		ACA489BE20FA9EBA0084D9F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AC9FB99C210369E4002D4C37 /* StringExtensions.swift */,
+				AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */,
+				AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */,
 				ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */,
 				AC907892212997F600FC0528 /* UIImageViewExtensions.swift */,
 				AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */,
 				AC2E12AA21171EF600A5B05E /* URLExtensions.swift */,
-				AC9FB99C210369E4002D4C37 /* StringExtensions.swift */,
-				AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				AC9FB99D210369E4002D4C37 /* StringExtensions.swift in Sources */,
 				AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */,
 				ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */,
+				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,
 				AC2E12AB21171EF600A5B05E /* URLExtensions.swift in Sources */,
 				AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */,
 				AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */,

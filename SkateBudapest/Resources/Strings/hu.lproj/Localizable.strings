@@ -11,10 +11,11 @@
 "mapTabBarTitle" = "Térkép";
 
 // MARK: AnnotationFilterViewController
-"filteringFilter" = "Szűrés";
+"filterScreenTitle" = "Szűrés a hely típusára";
 "filterTypeSkatepark" = "Deszkás pálya";
 "filterTypeSkatespot" = "Deszkás spot";
 "filterTypeSkateshop" = "Deszkás bolt";
+"filterButtonTitle" = "Szűrés";
 
 // MARK: RoutingViewController
 "mapNavigationEmptyViewText" = "Helymeghatározás bekapcsolása a navigációhoz";

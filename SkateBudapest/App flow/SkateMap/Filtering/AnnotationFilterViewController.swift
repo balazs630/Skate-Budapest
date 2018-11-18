@@ -18,34 +18,41 @@ class AnnotationFilterViewController: UIViewController {
     weak var delegate: AnnotationFilterDelegate?
 
     // MARK: Outlets
+    @IBOutlet weak var titleLabel: UILabel!
+
     @IBOutlet weak var skateparkSwitch: UISwitch!
     @IBOutlet weak var skateshopSwitch: UISwitch!
     @IBOutlet weak var streetspotSwitch: UISwitch!
-
-    @IBOutlet weak var filterLabel: UIButton!
 
     @IBOutlet weak var skateshopLabel: UILabel!
     @IBOutlet weak var streetspotLabel: UILabel!
     @IBOutlet weak var skateparkLabel: UILabel!
 
+    @IBOutlet weak var filterButton: UIButton!
+
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
+        addGestureRecognizers()
         loadFilterPreferences()
-
-        let gestureRecognizer = UIPanGestureRecognizer(target: self,
-                                                       action: #selector(panGestureRecognizerHandler(_:)))
-        view.addGestureRecognizer(gestureRecognizer)
     }
 
     // MARK: Screen configuration
     private func configureSelf() {
-        filterLabel.setTitle(Texts.SkateMap.filteringFilter.localized, for: .normal)
+        titleLabel.text = Texts.SkateMap.filterScreenTitle.localized
 
         skateshopLabel.text = Texts.SkateMap.filterTypeSkateshop.localized
         streetspotLabel.text = Texts.SkateMap.filterTypeSkatespot.localized
         skateparkLabel.text = Texts.SkateMap.filterTypeSkatepark.localized
+
+        filterButton.setTitle(Texts.SkateMap.filterButtonTitle.localized, for: .normal)
+    }
+
+    private func addGestureRecognizers() {
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self,
+                                                          action: #selector(panGestureRecognizerHandler(_:)))
+        view.addGestureRecognizer(panGestureRecognizer)
     }
 
     // MARK: Button actions
@@ -55,6 +62,7 @@ class AnnotationFilterViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    // MARK: Gesture recognizer actions
     @IBAction func panGestureRecognizerHandler(_ sender: UIPanGestureRecognizer) {
         let touchPoint = sender.location(in: view?.window)
         var initialTouchPoint = CGPoint.zero
@@ -65,6 +73,9 @@ class AnnotationFilterViewController: UIViewController {
         case .changed:
             if touchPoint.y > initialTouchPoint.y {
                 view.frame.origin.y = touchPoint.y - initialTouchPoint.y
+                if view.frame.origin.y < view.frame.height {
+                    dismiss(animated: true, completion: nil)
+                }
             }
         case .ended, .cancelled:
             if touchPoint.y - initialTouchPoint.y > 200 {

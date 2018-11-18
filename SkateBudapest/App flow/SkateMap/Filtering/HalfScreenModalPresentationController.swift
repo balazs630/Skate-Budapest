@@ -10,9 +10,12 @@ import UIKit
 
 class HalfScreenModalPresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
+        let modalViewHeight = CGFloat(360)
+        let calculatedViewHeight = modalViewHeight + UIApplication.SafeAreaInset.bottom
+
         return CGRect(x: 0,
-                      y: containerView!.bounds.height - 280,
+                      y: containerView!.bounds.height - calculatedViewHeight,
                       width: containerView!.bounds.width,
-                      height: 280)
+                      height: calculatedViewHeight)
     }
 }
