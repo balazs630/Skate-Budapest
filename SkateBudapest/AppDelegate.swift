@@ -34,8 +34,8 @@ extension AppDelegate {
                 UserDefaults.Key.Sw.streetspot: true
             ]
 
-            for item in firstTimeLaunchDefaults {
-                defaults.set(item.value, forKey: item.key)
+            firstTimeLaunchDefaults.forEach {
+                defaults.set($0.value, forKey: $0.key)
             }
 
             defaults.synchronize()
