@@ -9,10 +9,6 @@
 import Foundation
 
 extension String {
-    var trimmed: String {
-        return self.trimmingCharacters(in: .whitespacesAndNewlines)
-    }
-
     var localized: String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
     }

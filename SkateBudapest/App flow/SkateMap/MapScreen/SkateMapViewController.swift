@@ -9,6 +9,9 @@
 import MapKit
 
 class SkateMapViewController: UIViewController {
+    // MARK: Properties
+    private let placeService = PlaceService()
+
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
 
@@ -19,12 +22,12 @@ class SkateMapViewController: UIViewController {
 
         LocationManager.shared.startTracking()
         mapView.delegate = self
-        loadMapWaypointsFrom(url: Constant.dataSourceGPXUrl)
+        loadMapWaypoints()
     }
 
     // MARK: Screen configuration
     private func configureSelf() {
-        navigationItem.title = NSLocalizedString("mapNavBarTitle", comment: "")
+        navigationItem.title = NSLocalizedString(Texts.SkateMap.mapNavBarTitle, comment: "")
         tabBarItem.title = Texts.SkateMap.mapTabBarTitle.localized
     }
 
@@ -56,12 +59,11 @@ class SkateMapViewController: UIViewController {
 
 // MARK: Map annotation operations
 extension SkateMapViewController {
-    private func loadMapWaypointsFrom(url: URL) {
+    private func loadMapWaypoints() {
         clearWaypoints()
-        GPXParser.parse(url: url) { gpx in
-            if let waypoints = gpx?.waypoints {
-                self.add(waypoints: waypoints)
-            }
+        placeService.getWaypoints { waypoints, _ in
+            guard let waypoints = waypoints else { return }
+            self.add(waypoints: waypoints.filter { $0.status == .active })
         }
     }
 
@@ -69,14 +71,14 @@ extension SkateMapViewController {
         mapView.removeAnnotations(mapView.annotations)
     }
 
-    private func add(waypoints: [Waypoint]) {
+    private func add(waypoints: [Place]) {
         mapView.addAnnotations(waypoints)
         mapView.showAnnotations(waypoints, animated: true)
     }
 
-    private func filter(types: [LocationType]) {
-        for annotation in mapView.annotations {
-            if let waypoint = annotation as? Waypoint {
+    private func filter(types: [WaypointType]) {
+        mapView.annotations.forEach { annotation in
+            if let waypoint = annotation as? Place {
                 mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.type)
             }
         }
@@ -91,7 +93,7 @@ extension SkateMapViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let annotationView = sender as? MKAnnotationView
-        guard let waypoint = annotationView?.annotation as? Waypoint else { return }
+        guard let waypoint = annotationView?.annotation as? Place else { return }
         guard segue.identifier != nil else { return }
 
         switch segue.identifier {
@@ -113,7 +115,7 @@ extension SkateMapViewController: MKMapViewDelegate {
             return nil
         }
 
-        guard let waypoint = annotation as? Waypoint else {
+        guard let waypoint = annotation as? Place else {
             fatalError("Unable to cast MKAnnotation to Waypoint")
         }
 
@@ -126,7 +128,7 @@ extension SkateMapViewController: MKMapViewDelegate {
         return annotationView
     }
 
-    private func getWaypointImage(for type: LocationType) -> UIImage {
+    private func getWaypointImage(for type: WaypointType) -> UIImage {
         switch type {
         case .skatepark:
             return Theme.Icon.skateparkPin
@@ -139,7 +141,8 @@ extension SkateMapViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let leftCalloutAccessoryButton = view.leftCalloutAccessoryView as? UIButton,
-                let url = (view.annotation as? Waypoint)?.thumbnailImageUrl,
+                let urlString = (view.annotation as? Place)?.thumbnailUrl,
+                let url = URL(string: urlString),
                 let imageData = NSData(contentsOf: url),
                 let image = UIImage(data: imageData as Data) else {
                     return
@@ -167,7 +170,7 @@ extension SkateMapViewController: UIViewControllerTransitioningDelegate {
 
 // MARK: AnnotationFilterDelegate methods
 extension SkateMapViewController: AnnotationFilterDelegate {
-    func filterAnnotationsBy(types: [LocationType]) {
+    func filterAnnotationsBy(types: [WaypointType]) {
         return filter(types: types)
     }
 }

@@ -12,9 +12,9 @@ import CoreLocation
 class LocationDetailsViewController: UIViewController {
     // MARK: Properties
     fileprivate var routingViewController: RoutingViewController?
-    var waypoint: Waypoint!
-    var imageViews: [UIImageView]?
-    var imageOffset = IndexPath(row: 0, section: 0)
+    var waypoint: Place!
+    private var imageViews: [UIImageView]?
+    private var imageOffset = IndexPath(row: 0, section: 0)
 
     // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -129,11 +129,14 @@ extension LocationDetailsViewController {
     }
 
     private func configurePageControl() {
-        pageControl.numberOfPages = waypoint.displayImageUrls.count
+        pageControl.numberOfPages = waypoint.imageUrls.count
     }
 
     private func loadImageViews() -> [UIImageView] {
-        let images = waypoint.displayImageUrls.imagesFromURLs()
+        let images = waypoint.imageUrls
+            .map { URL(string: $0!) }
+            .imagesFromURLs()
+
         var imageViews = [UIImageView]()
         (0..<images.count).forEach { index in
             let imageView = UIImageView()

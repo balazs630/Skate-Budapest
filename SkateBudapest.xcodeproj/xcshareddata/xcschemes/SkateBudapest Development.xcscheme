@@ -64,7 +64,7 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference
-         identifier = "../../SkateBudapest/Supporting Files/Budapest, Hungary.gpx"
+         identifier = "../SkateBudapest/Supporting Files/Budapest, Hungary.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>

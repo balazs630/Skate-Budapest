@@ -9,12 +9,12 @@
 import UIKit
 
 protocol AnnotationFilterDelegate: class {
-    func filterAnnotationsBy(types: [LocationType])
+    func filterAnnotationsBy(types: [WaypointType])
 }
 
 class AnnotationFilterViewController: UIViewController {
     // MARK: Properties
-    let defaults = UserDefaults.standard
+    private let defaults = UserDefaults.standard
     weak var delegate: AnnotationFilterDelegate?
 
     // MARK: Outlets
@@ -96,18 +96,18 @@ class AnnotationFilterViewController: UIViewController {
 
 // MARK: Utility methods
 extension AnnotationFilterViewController {
-    private func selectedTypes() -> [LocationType] {
-        var filteredTypes = [LocationType]()
+    private func selectedTypes() -> [WaypointType] {
+        var filteredTypes = [WaypointType]()
         if skateparkSwitch.isOn {
-            filteredTypes.append(LocationType.skatepark)
+            filteredTypes.append(WaypointType.skatepark)
         }
 
         if skateshopSwitch.isOn {
-            filteredTypes.append(LocationType.skateshop)
+            filteredTypes.append(WaypointType.skateshop)
         }
 
         if streetspotSwitch.isOn {
-            filteredTypes.append(LocationType.streetspot)
+            filteredTypes.append(WaypointType.streetspot)
         }
 
         return filteredTypes
