@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71D139B1AAE373A160574D72 /* Pods_SkateBudapest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBF9272CB4FF371E86764D1 /* Pods_SkateBudapest.framework */; };
 		AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC033FB12195D04B0005259B /* SkateMap.storyboard */; };
 		AC033FB42195D1200005259B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC033FB32195D1200005259B /* LaunchScreen.storyboard */; };
 		AC033FDD2195DCEF0005259B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC033FDF2195DCEF0005259B /* Localizable.strings */; };
@@ -40,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BFA439337F32B88E74100A9 /* Pods-SkateBudapest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateBudapest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkateBudapest/Pods-SkateBudapest.debug.xcconfig"; sourceTree = "<group>"; };
+		8F4E8B82433073F1FF792AD8 /* Pods-SkateBudapest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateBudapest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkateBudapest/Pods-SkateBudapest.release.xcconfig"; sourceTree = "<group>"; };
 		AC033FB12195D04B0005259B /* SkateMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SkateMap.storyboard; sourceTree = "<group>"; };
 		AC033FB32195D1200005259B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC033FDE2195DCEF0005259B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		ACA489BA20FA9E890084D9F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Budapest, Hungary.gpx"; sourceTree = "<group>"; };
+		EDBF9272CB4FF371E86764D1 /* Pods_SkateBudapest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkateBudapest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,12 +86,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D139B1AAE373A160574D72 /* Pods_SkateBudapest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47704572B094EB0E34445C14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDBF9272CB4FF371E86764D1 /* Pods_SkateBudapest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC033FDA2195DC3C0005259B /* Strings */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +206,8 @@
 			children = (
 				AC63325320FA95C2007E5D98 /* SkateBudapest */,
 				AC63325220FA95C2007E5D98 /* Products */,
+				D3E59318DCC8C505C7AD5C3C /* Pods */,
+				47704572B094EB0E34445C14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,6 +310,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D3E59318DCC8C505C7AD5C3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA439337F32B88E74100A9 /* Pods-SkateBudapest.debug.xcconfig */,
+				8F4E8B82433073F1FF792AD8 /* Pods-SkateBudapest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,10 +326,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC63326320FA95C3007E5D98 /* Build configuration list for PBXNativeTarget "SkateBudapest" */;
 			buildPhases = (
+				3CCC1C06ACE1102EB937AF45 /* [CP] Check Pods Manifest.lock */,
 				AC76CF8B20FA977A003ED70F /* SwiftLint */,
 				AC63324D20FA95C2007E5D98 /* Sources */,
 				AC63324E20FA95C2007E5D98 /* Frameworks */,
 				AC63324F20FA95C2007E5D98 /* Resources */,
+				CA87A19D3985D1D7E59610EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,6 +396,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3CCC1C06ACE1102EB937AF45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkateBudapest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AC76CF8B20FA977A003ED70F /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +427,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#exit\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		CA87A19D3985D1D7E59610EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SkateBudapest/Pods-SkateBudapest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkateBudapest/Pods-SkateBudapest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -556,6 +618,7 @@
 		};
 		AC63326420FA95C3007E5D98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BFA439337F32B88E74100A9 /* Pods-SkateBudapest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -575,6 +638,7 @@
 		};
 		AC63326520FA95C3007E5D98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F4E8B82433073F1FF792AD8 /* Pods-SkateBudapest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
