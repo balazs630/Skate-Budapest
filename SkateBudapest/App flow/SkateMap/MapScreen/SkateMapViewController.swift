@@ -28,7 +28,8 @@ class SkateMapViewController: UIViewController {
     // MARK: Screen configuration
     private func configureSelf() {
         navigationItem.title = NSLocalizedString(Texts.SkateMap.mapNavBarTitle, comment: "")
-        tabBarItem.title = Texts.SkateMap.mapTabBarTitle.localized
+        configureTabBarTexts(with: [Texts.SkateMap.mapTabBarTitle.localized,
+                                    Texts.SendSpace.sendPlaceTabBarTitle.localized])
     }
 
     // MARK: Button actions

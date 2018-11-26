@@ -18,6 +18,5 @@ class SubmitPlaceViewController: UIViewController {
     // MARK: Screen configuration
     private func configureSelf() {
         navigationItem.title = Texts.SendSpace.sendPlaceNavBarTitle.localized
-        tabBarItem.title = Texts.SendSpace.sendPlaceTabBarTitle.localized
     }
 }

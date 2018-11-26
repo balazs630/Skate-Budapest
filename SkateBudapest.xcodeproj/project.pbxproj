@@ -39,6 +39,7 @@
 		ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */; };
 		ACAE55F521AADEEA00F38FF5 /* WaypointStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE55F221AADEEA00F38FF5 /* WaypointStatus.swift */; };
 		ACAE55F621AADEEA00F38FF5 /* WaypointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE55F321AADEEA00F38FF5 /* WaypointType.swift */; };
+		ACAE579721ACAB4400F38FF5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE579621ACAB4400F38FF5 /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		ACAE55F221AADEEA00F38FF5 /* WaypointStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointStatus.swift; sourceTree = "<group>"; };
 		ACAE55F321AADEEA00F38FF5 /* WaypointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointType.swift; sourceTree = "<group>"; };
+		ACAE579621ACAB4400F38FF5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Budapest, Hungary.gpx"; sourceTree = "<group>"; };
 		EDBF9272CB4FF371E86764D1 /* Pods_SkateBudapest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkateBudapest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -315,6 +317,7 @@
 				AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */,
 				ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */,
 				AC907892212997F600FC0528 /* UIImageViewExtensions.swift */,
+				ACAE579621ACAB4400F38FF5 /* UIViewControllerExtensions.swift */,
 				AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */,
 				AC2E12AA21171EF600A5B05E /* URLExtensions.swift */,
 			);
@@ -480,6 +483,7 @@
 				AC26A96C218DD51700641C84 /* LocationManager.swift in Sources */,
 				AC2C031121AADD1B00784F4E /* Place.swift in Sources */,
 				AC9FB99D210369E4002D4C37 /* StringExtensions.swift in Sources */,
+				ACAE579721ACAB4400F38FF5 /* UIViewControllerExtensions.swift in Sources */,
 				AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */,
 				ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */,
 				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,

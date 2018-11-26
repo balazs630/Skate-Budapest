@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="2001" y="107"/>
         </scene>
-        <!--Add place-->
+        <!--Submit-->
         <scene sceneID="K4r-qN-Vyb">
             <objects>
                 <viewController id="EdO-yI-Vbt" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4g0-Br-SfX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add place" image="green" id="c4X-B9-gDF"/>
+                    <tabBarItem key="tabBarItem" title="Submit" image="green" id="c4X-B9-gDF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52h-cZ-aya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
