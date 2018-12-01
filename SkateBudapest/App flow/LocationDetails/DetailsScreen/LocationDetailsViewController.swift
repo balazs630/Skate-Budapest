@@ -91,7 +91,7 @@ extension LocationDetailsViewController {
     private func destinationDistanceInKilometer() -> String {
         let destinationLocation = CLLocation(latitude: waypoint.coordinate.latitude,
                                              longitude: waypoint.coordinate.longitude)
-        guard let distance = LocationManager.shared.location?.distance(from: destinationLocation) else {
+        guard let distance = LocationService.shared.location?.distance(from: destinationLocation) else {
             return ""
         }
 

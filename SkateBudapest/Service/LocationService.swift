@@ -1,5 +1,5 @@
 //
-//  LocationManager.swift
+//  LocationService.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2018. 11. 03..
@@ -8,9 +8,9 @@
 
 import CoreLocation
 
-class LocationManager: NSObject {
+class LocationService: NSObject {
     // MARK: Properties
-    static let shared = LocationManager()
+    static let shared = LocationService()
     private var locationManager: CLLocationManager
 
     var location: CLLocation? {
@@ -30,7 +30,7 @@ class LocationManager: NSObject {
 }
 
 // MARK: Utility methods
-extension LocationManager {
+extension LocationService {
     func requestAuthorization() {
         if !locationGranted() {
             locationManager.requestWhenInUseAuthorization()
@@ -52,7 +52,7 @@ extension LocationManager {
 }
 
 // MARK: CLLocationManagerDelegate methods
-extension LocationManager: CLLocationManagerDelegate {
+extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
         debugPrint(error)

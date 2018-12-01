@@ -72,7 +72,7 @@ extension RoutingViewController {
 // MARK: UI Manipulation
 extension RoutingViewController {
     @objc private func setupView() {
-        if LocationManager.shared.location != nil {
+        if LocationService.shared.location != nil {
             presentEmptyView(false)
             requestETA(for: [.transit, .automobile, .walking])
         } else {
@@ -126,7 +126,7 @@ extension RoutingViewController {
 
     private func prepareTransitRequestInformations() -> MKDirections.Request {
         let request = MKDirections.Request()
-        request.source = MKMapItem(placemark: MKPlacemark(coordinate: LocationManager.shared.coordinates!))
+        request.source = MKMapItem(placemark: MKPlacemark(coordinate: LocationService.shared.coordinates!))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation))
         request.requestsAlternateRoutes = false
 
@@ -134,7 +134,7 @@ extension RoutingViewController {
     }
 
     private func openMaps(directionMode: String) {
-        guard let currentLocation = LocationManager.shared.coordinates else { return }
+        guard let currentLocation = LocationService.shared.coordinates else { return }
         let currentLocationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation))
         currentLocationMapItem.name = "Source"
 

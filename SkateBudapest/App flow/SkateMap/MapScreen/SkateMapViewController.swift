@@ -20,21 +20,21 @@ class SkateMapViewController: UIViewController {
         super.viewDidLoad()
         configureSelf()
 
-        LocationManager.shared.startTracking()
+        LocationService.shared.startTracking()
         mapView.delegate = self
         loadMapWaypoints()
     }
 
     // MARK: Screen configuration
     private func configureSelf() {
-        navigationItem.title = NSLocalizedString(Texts.SkateMap.mapNavBarTitle, comment: "")
+        navigationItem.title = Texts.SkateMap.mapNavBarTitle.localized
         configureTabBarTexts(with: [Texts.SkateMap.mapTabBarTitle.localized,
                                     Texts.SendSpace.sendPlaceTabBarTitle.localized])
     }
 
     // MARK: Button actions
     @IBAction func centerMapButtonTap(_ sender: Any) {
-        if let userLocation = LocationManager.shared.location {
+        if let userLocation = LocationService.shared.location {
             let latitudinalMeters = CLLocationDistance(10000)
             let longitudinalMeters = CLLocationDistance(10000)
 
