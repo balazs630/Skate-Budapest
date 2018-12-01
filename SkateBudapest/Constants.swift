@@ -96,4 +96,12 @@ struct Texts {
         static let sendPlaceNavBarTitle = "sendPlaceNavBarTitle"
         static let sendPlaceTabBarTitle = "sendPlaceTabBarTitle"
     }
+
+    struct NetworkError {
+        static let network = "networkError"
+        static let notConnectedToInternet = "notConnectedToInternetError"
+        static let networkConnectionLost = "networkConnectionLostError"
+        static let timedOut = "timedOutError"
+        static let unknown = "unknownError"
+    }
 }

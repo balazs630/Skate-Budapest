@@ -6,6 +6,8 @@
   Copyright © 2018. Horváth Balázs. All rights reserved.
 */
 
+// ** HUNGARIAN **
+
 // MARK: SkateMapViewController
 "mapNavBarTitle" = "Térkép";
 "mapTabBarTitle" = "Térkép";
@@ -24,3 +26,10 @@
 // MARK: SendPlaceViewController
 "sendPlaceNavBarTitle" = "Beküldés";
 "sendPlaceTabBarTitle" = "Beküldés";
+
+// MARK: NetworkError
+"networkError" = "Hálózati hiba";
+"notConnectedToInternetError" = "Nincs internetkapcsolat";
+"networkConnectionLostError" = "Megszakadt az internetkapcsolat";
+"timedOutError" = "Időtúllépés";
+"unknownError" = "Nem sikerült betölteni az adatokat";
