@@ -62,9 +62,15 @@ class SkateMapViewController: UIViewController {
 extension SkateMapViewController {
     private func loadMapWaypoints() {
         clearWaypoints()
-        placeService.getWaypoints { waypoints, _ in
-            guard let waypoints = waypoints else { return }
-            self.add(waypoints: waypoints.filter { $0.status == .active })
+        placeService.getWaypoints { result in
+            switch result {
+            case .success(let waypoints):
+                self.add(waypoints: waypoints.filter { $0.status == .active })
+            case .failure(let error):
+                let alertController = SimpleAlertDialog.build(title: Texts.NetworkError.network.localized,
+                                                              message: error.localizedDescription)
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
 

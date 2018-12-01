@@ -8,7 +8,7 @@
 
 import Alamofire
 
-class PlaceService {
+class PlaceService: BaseWebService {
     private let decoder = JSONDecoder()
 
     fileprivate enum Slug {
@@ -17,7 +17,7 @@ class PlaceService {
         static let placeDataInfoPath = "\(placePath)/info"
     }
 
-    func getWaypoints(completionHandler: @escaping ([Place]?, Error?) -> Void) {
+    func getWaypoints(completionHandler: @escaping (Result<[Place]>) -> Void) {
         guard let requestUrl = URL(string: "\(Constant.baseUrl)\(Slug.placePath)") else {
             return
         }
@@ -28,17 +28,17 @@ class PlaceService {
                 guard let data = response.data else { return }
                 do {
                     let places = try self.decoder.decode([Place].self, from: data)
-                    completionHandler(places, nil)
+                    completionHandler(Result.success(places))
                 } catch {
-                    completionHandler(nil, error)
+                    completionHandler(Result.failure(self.handle(error)))
                 }
             case .failure(let error):
-                completionHandler(nil, error)
+                completionHandler(Result.failure(self.handle(error)))
             }
         }
     }
 
-    func getplaceDataInfo(completionHandler: @escaping (PlaceDataInfo?, Error?) -> Void) {
+    func getPlaceDataInfo(completionHandler: @escaping (Result<PlaceDataInfo>) -> Void) {
         guard let requestUrl = URL(string: "\(Constant.baseUrl)\(Slug.placeDataInfoPath)") else {
             return
         }
@@ -49,12 +49,12 @@ class PlaceService {
                 guard let data = response.data else { return }
                 do {
                     let info = try self.decoder.decode(PlaceDataInfo.self, from: data)
-                    completionHandler(info, nil)
+                    completionHandler(Result.success(info))
                 } catch {
-                    completionHandler(nil, error)
+                    completionHandler(Result.failure(self.handle(error)))
                 }
             case .failure(let error):
-                completionHandler(nil, error)
+                completionHandler(Result.failure(self.handle(error)))
             }
         }
     }
