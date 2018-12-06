@@ -22,6 +22,8 @@
 // MARK: RoutingViewController
 "mapNavigationEmptyViewText" = "Helymeghatározás bekapcsolása a navigációhoz";
 "mapNavigationEmptyViewButtonText" = "Bekapcsolás";
+"hour" = "óra";
+"minutes" = "perc";
 
 // MARK: SendPlaceViewController
 "sendPlaceNavBarTitle" = "Beküldés";
