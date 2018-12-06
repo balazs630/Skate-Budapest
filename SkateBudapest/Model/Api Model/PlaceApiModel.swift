@@ -1,14 +1,12 @@
 //
-//  Place.swift
+//  PlaceApiModel.swift
 //  SkateBudapestBackend
 //
 //  Created by Horváth Balázs on 2018. 11. 21..
 //
 
-// swiftlint:disable identifier_name
-import MapKit
-
-final class Place: NSObject, Codable {
+// swiftlint:disable next identifier_name
+final class PlaceApiModel: Codable {
     var id: String
     var latitude: Double
     var longitude: Double
@@ -37,20 +35,5 @@ final class Place: NSObject, Codable {
         self.status = status
         self.thumbnailUrl = thumbnailUrl
         self.imageUrls = imageUrls
-    }
-}
-
-// MARK: MKAnnotation conformances
-extension Place: MKAnnotation {
-    var coordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-    }
-
-    var title: String? {
-        return name
-    }
-
-    var subtitle: String? {
-        return info
     }
 }

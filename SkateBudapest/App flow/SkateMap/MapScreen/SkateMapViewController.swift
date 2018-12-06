@@ -10,7 +10,7 @@ import MapKit
 
 class SkateMapViewController: UIViewController {
     // MARK: Properties
-    private let placeService = PlaceService()
+    private let placeWebService = PlaceWebService()
 
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -62,10 +62,13 @@ class SkateMapViewController: UIViewController {
 extension SkateMapViewController {
     private func loadMapWaypoints() {
         clearWaypoints()
-        placeService.getWaypoints { result in
+        placeWebService.getPlaces { result in
             switch result {
             case .success(let waypoints):
-                self.add(waypoints: waypoints.filter { $0.status == .active })
+                self.add(waypoints:
+                    waypoints
+                        .map { PlaceDisplayItem($0) }
+                        .filter { $0.status == .active })
             case .failure(let error):
                 let alertController = SimpleAlertDialog.build(title: Texts.NetworkError.network.localized,
                                                               message: error.localizedDescription)
@@ -78,14 +81,14 @@ extension SkateMapViewController {
         mapView.removeAnnotations(mapView.annotations)
     }
 
-    private func add(waypoints: [Place]) {
+    private func add(waypoints: [PlaceDisplayItem]) {
         mapView.addAnnotations(waypoints)
         mapView.showAnnotations(waypoints, animated: true)
     }
 
     private func filter(types: [WaypointType]) {
         mapView.annotations.forEach { annotation in
-            if let waypoint = annotation as? Place {
+            if let waypoint = annotation as? PlaceApiModel {
                 mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.type)
             }
         }
@@ -100,7 +103,7 @@ extension SkateMapViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let annotationView = sender as? MKAnnotationView
-        guard let waypoint = annotationView?.annotation as? Place else { return }
+        guard let waypoint = annotationView?.annotation as? PlaceDisplayItem else { return }
         guard segue.identifier != nil else { return }
 
         switch segue.identifier {
@@ -122,7 +125,7 @@ extension SkateMapViewController: MKMapViewDelegate {
             return nil
         }
 
-        guard let waypoint = annotation as? Place else {
+        guard let waypoint = annotation as? PlaceDisplayItem else {
             fatalError("Unable to cast MKAnnotation to Waypoint")
         }
 
@@ -148,7 +151,7 @@ extension SkateMapViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let leftCalloutAccessoryButton = view.leftCalloutAccessoryView as? UIButton,
-                let urlString = (view.annotation as? Place)?.thumbnailUrl,
+                let urlString = (view.annotation as? PlaceApiModel)?.thumbnailUrl,
                 let url = URL(string: urlString),
                 let imageData = NSData(contentsOf: url),
                 let image = UIImage(data: imageData as Data) else {

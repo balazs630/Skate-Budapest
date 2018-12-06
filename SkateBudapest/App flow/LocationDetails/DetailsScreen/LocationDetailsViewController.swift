@@ -12,7 +12,7 @@ import CoreLocation
 class LocationDetailsViewController: UIViewController {
     // MARK: Properties
     fileprivate var routingViewController: RoutingViewController?
-    var waypoint: Place!
+    var waypoint: PlaceDisplayItem!
     private var imageViews: [UIImageView]?
     private var imageOffset = IndexPath(row: 0, section: 0)
 

@@ -5,13 +5,14 @@
 //  Created by Horváth Balázs on 2018. 07. 14..
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
-// swiftlint:disable identifier_name
+
+// swiftlint:disable next identifier_name type_name
 
 import UIKit
 
 struct Constant {
     static let shortVersionString = "CFBundleShortVersionString"
-    static let baseUrl = "https://skate-budapest.vapor.cloud/"
+    static let baseUrl = "https://skate-budapest.vapor.cloud"
 
     static let calloutImageViewSize = CGRect(x: 0, y: 0, width: 59, height: 59)
     static let calloutViewIdentifier = "customMKAnnotationView"
@@ -61,7 +62,6 @@ extension UserDefaults {
         static let isAppAlreadyLaunchedOnce = "isAppAlreadyLaunchedOnce"
         static let appVersion = "appVersion"
 
-        // swiftlint:disable type_name
         struct Sw {
             static let skatepark = "skatepark"
             static let skateshop = "stateshop"
@@ -90,6 +90,8 @@ struct Texts {
     struct LocationDetails {
         static let mapNavigationEmptyViewText = "mapNavigationEmptyViewText"
         static let mapNavigationEmptyViewButtonText = "mapNavigationEmptyViewButtonText"
+        static let hour = "hour"
+        static let minutes = "minutes"
     }
 
     struct SendSpace {

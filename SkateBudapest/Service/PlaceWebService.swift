@@ -14,10 +14,10 @@ class PlaceWebService: BaseWebService {
     fileprivate enum Slug {
         static let apiVersionPath = "/v1"
         static let placePath = "\(apiVersionPath)/places"
-        static let placeDataInfoPath = "\(placePath)/info"
+        static let placeInfoPath = "\(placePath)/info"
     }
 
-    func getWaypoints(completionHandler: @escaping (Result<[PlaceApiModel]>) -> Void) {
+    func getPlaces(completionHandler: @escaping (Result<[PlaceApiModel]>) -> Void) {
         guard let requestUrl = URL(string: "\(Constant.baseUrl)\(Slug.placePath)") else {
             return
         }
@@ -38,8 +38,8 @@ class PlaceWebService: BaseWebService {
         }
     }
 
-    func getPlaceDataInfo(completionHandler: @escaping (Result<PlaceInfoApiModel>) -> Void) {
-        guard let requestUrl = URL(string: "\(Constant.baseUrl)\(Slug.placeDataInfoPath)") else {
+    func getPlaceInfo(completionHandler: @escaping (Result<PlaceInfoApiModel>) -> Void) {
+        guard let requestUrl = URL(string: "\(Constant.baseUrl)\(Slug.placeInfoPath)") else {
             return
         }
 
