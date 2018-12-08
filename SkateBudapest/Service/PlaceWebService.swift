@@ -17,44 +17,40 @@ class PlaceWebService: BaseWebService {
         static let placeInfoPath = "\(placePath)/info"
     }
 
-    func getPlaces(completionHandler: @escaping (Result<[PlaceApiModel]>) -> Void) {
-        guard let requestUrl = URL(string: "\(Constant.baseUrl)\(Slug.placePath)") else {
-            return
-        }
+    func getPlaces(completion: @escaping (Result<[PlaceApiModel]>) -> Void) {
+        let url = requestUrl(for: Slug.placePath)
 
-        Alamofire.request(requestUrl, method: .get).responseJSON { response in
+        Alamofire.request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success:
                 guard let data = response.data else { return }
                 do {
                     let places = try self.decoder.decode([PlaceApiModel].self, from: data)
-                    completionHandler(Result.success(places))
+                    completion(Result.success(places))
                 } catch {
-                    completionHandler(Result.failure(self.handle(error)))
+                    completion(Result.failure(self.handle(error)))
                 }
             case .failure(let error):
-                completionHandler(Result.failure(self.handle(error)))
+                completion(Result.failure(self.handle(error)))
             }
         }
     }
 
-    func getPlaceInfo(completionHandler: @escaping (Result<PlaceInfoApiModel>) -> Void) {
-        guard let requestUrl = URL(string: "\(Constant.baseUrl)\(Slug.placeInfoPath)") else {
-            return
-        }
+    func getPlaceInfo(completion: @escaping (Result<PlaceInfoApiModel>) -> Void) {
+        let url = requestUrl(for: Slug.placeInfoPath)
 
-        Alamofire.request(requestUrl, method: .get).responseJSON { response in
+        Alamofire.request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success:
                 guard let data = response.data else { return }
                 do {
                     let info = try self.decoder.decode(PlaceInfoApiModel.self, from: data)
-                    completionHandler(Result.success(info))
+                    completion(Result.success(info))
                 } catch {
-                    completionHandler(Result.failure(self.handle(error)))
+                    completion(Result.failure(self.handle(error)))
                 }
             case .failure(let error):
-                completionHandler(Result.failure(self.handle(error)))
+                completion(Result.failure(self.handle(error)))
             }
         }
     }

@@ -12,12 +12,19 @@ import UIKit
 
 struct Constant {
     static let shortVersionString = "CFBundleShortVersionString"
-    static let baseUrl = "https://skate-budapest.vapor.cloud"
 
     static let calloutImageViewSize = CGRect(x: 0, y: 0, width: 59, height: 59)
     static let calloutViewIdentifier = "customMKAnnotationView"
     static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
     static let annotationFilter = "AnnotationFilterViewController"
+}
+
+public enum APIUrl: String {
+    case production = "https://skate-budapest.vapor.cloud"
+
+    var url: String {
+        return rawValue
+    }
 }
 
 public enum Theme {

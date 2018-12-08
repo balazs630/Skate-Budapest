@@ -26,6 +26,10 @@ struct NetworkError: Error {
 }
 
 class BaseWebService {
+    func requestUrl(for path: String) -> String {
+        return APIUrl.production.url + path
+    }
+
     func handle(_ error: Error) -> NetworkError {
         guard let error = error as? URLError else { return NetworkError(message: Texts.NetworkError.unknown) }
 
