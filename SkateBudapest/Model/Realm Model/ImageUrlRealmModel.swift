@@ -15,4 +15,8 @@ class ImageUrlRealmModel: Object {
         self.init()
         self.name = name
     }
+
+    override class func primaryKey() -> String? {
+        return "name"
+    }
 }

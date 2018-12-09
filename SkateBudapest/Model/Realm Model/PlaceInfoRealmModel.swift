@@ -20,4 +20,8 @@ class PlaceInfoRealmModel: Object {
         self.init()
         self.dataVersion = placeInfoApiModel.dataVersion
     }
+
+    override class func primaryKey() -> String? {
+        return "dataVersion"
+    }
 }
