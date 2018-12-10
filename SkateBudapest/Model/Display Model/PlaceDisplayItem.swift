@@ -36,7 +36,7 @@ final class PlaceDisplayItem: NSObject {
         self.latitude = placeRealmModel.latitude
         self.longitude = placeRealmModel.longitude
         self.name = placeRealmModel.name
-        self.info = placeRealmModel.description
+        self.info = placeRealmModel.info
         self.type = placeRealmModel.type
         self.status = placeRealmModel.status
         self.thumbnailUrl = placeRealmModel.thumbnailUrl

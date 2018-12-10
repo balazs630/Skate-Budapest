@@ -10,7 +10,7 @@ import MapKit
 
 class SkateMapViewController: UIViewController {
     // MARK: Properties
-    private let placeWebService = PlaceWebService()
+    private let placeCachingService = PlaceCachingService()
 
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -62,18 +62,9 @@ class SkateMapViewController: UIViewController {
 extension SkateMapViewController {
     private func loadMapWaypoints() {
         clearWaypoints()
-        placeWebService.getPlaces { result in
-            switch result {
-            case .success(let waypoints):
-                self.add(waypoints:
-                    waypoints
-                        .map { PlaceDisplayItem($0) }
-                        .filter { $0.status == .active })
-            case .failure(let error):
-                let alertController = SimpleAlertDialog.build(title: Texts.NetworkError.network.localized,
-                                                              message: error.localizedDescription)
-                self.present(alertController, animated: true, completion: nil)
-            }
+        placeCachingService.getPlaces { result in
+            self.add(waypoints: result.filter { $0.status == .active })
+            // TODO: Error handling
         }
     }
 
@@ -151,7 +142,7 @@ extension SkateMapViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let leftCalloutAccessoryButton = view.leftCalloutAccessoryView as? UIButton,
-                let urlString = (view.annotation as? PlaceApiModel)?.thumbnailUrl,
+                let urlString = (view.annotation as? PlaceDisplayItem)?.thumbnailUrl,
                 let url = URL(string: urlString),
                 let imageData = NSData(contentsOf: url),
                 let image = UIImage(data: imageData as Data) else {

@@ -24,6 +24,7 @@
 		AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */; };
 		AC2E12AB21171EF600A5B05E /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E12AA21171EF600A5B05E /* URLExtensions.swift */; };
 		AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D6F41217DCE3200BCDC02 /* RoutingViewController.swift */; };
+		AC54EABE21B9CCF8008694CF /* PlaceCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */; };
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
 		AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */; };
 		AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC63325B20FA95C3007E5D98 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		AC2E12AA21171EF600A5B05E /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		AC3D6F41217DCE3200BCDC02 /* RoutingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingViewController.swift; sourceTree = "<group>"; };
+		AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCachingService.swift; sourceTree = "<group>"; };
 		AC63325120FA95C2007E5D98 /* SkateBudapest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateBudapest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC63325420FA95C2007E5D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				AC2C030821AADC6300784F4E /* PlaceWebService.swift */,
 				AC26A96B218DD51700641C84 /* LocationService.swift */,
 				AC6BD19221B08AA000C20451 /* RealmService.swift */,
+				AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				AC2D9DAA21335558003A6263 /* AnnotationFilterViewController.swift in Sources */,
 				AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */,
 				AC26A96C218DD51700641C84 /* LocationService.swift in Sources */,
+				AC54EABE21B9CCF8008694CF /* PlaceCachingService.swift in Sources */,
 				AC2C031121AADD1B00784F4E /* PlaceApiModel.swift in Sources */,
 				AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */,
 				AC9FB99D210369E4002D4C37 /* StringExtensions.swift in Sources */,
