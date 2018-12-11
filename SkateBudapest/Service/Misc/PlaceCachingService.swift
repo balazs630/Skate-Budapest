@@ -6,15 +6,13 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
-// swiftlint:disable next empty_enum_arguments
-
 import Foundation
 
 class PlaceCachingService {
-    private let placeWebService = PlaceWebService ()
+    private let placeWebService = PlaceWebService(environment: .production)
     private let realmService = RealmService()
 
-    func getPlaces(completion: @escaping ([PlaceDisplayItem]) -> Void) {
+    func getPlaces(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
         realmService.isPlacesDataPersisted { [weak self] isPlacesDataPersisted in
             guard let strongSelf = self else { return }
 
@@ -26,23 +24,23 @@ class PlaceCachingService {
         }
     }
 
-    private func getFromDatabase(completion: @escaping ([PlaceDisplayItem]) -> Void) {
+    private func getFromDatabase(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
         self.realmService.readPlaces { result in
             if let result = result {
-                completion(result)
+                completion(Result.success(result))
+            } else {
+                completion(Result.failure(RealmError(message: Texts.RealmError.dataNotExist)))
             }
-            // TODO: Error handling
         }
     }
 
-    private func getFromNetwork(completion: @escaping ([PlaceDisplayItem]) -> Void) {
+    private func getFromNetwork(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
         self.placeWebService.getPlaceInfo { result in
             switch result {
             case .success(let placeInfo):
                 self.realmService.overwritePlacesInfo(with: placeInfo)
-            case .failure(_):
-                // TODO: Error handling
-                break
+            case .failure(let error):
+                completion(Result.failure(NetworkError(message: error.message)))
             }
         }
 
@@ -50,10 +48,10 @@ class PlaceCachingService {
             switch result {
             case .success(let places):
                 self.realmService.overwritePlaces(with: places)
-                completion(places.map { PlaceDisplayItem($0) })
-            case .failure(_):
-                // TODO: Error handling
-                break
+                let placeDisplayItems = places.map { PlaceDisplayItem($0) }
+                completion(Result.success(placeDisplayItems))
+            case .failure(let error):
+                completion(Result.failure(NetworkError(message: error.message)))
             }
         }
     }

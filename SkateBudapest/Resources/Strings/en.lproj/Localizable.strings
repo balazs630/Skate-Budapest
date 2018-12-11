@@ -30,8 +30,13 @@
 "sendPlaceTabBarTitle" = "Submit";
 
 // MARK: NetworkError
-"networkError" = "Network error";
+"networkErrorTitle" = "Network error";
 "notConnectedToInternetError" = "Not connected to Internet";
 "networkConnectionLostError" = " Connection lost";
 "timedOutError" = "Timed out";
+"unknownError" = "Unable to load the data";
+
+// MARK: RealmError
+"realmErrorTitle" = "Database error";
+"dataNotExistError" = "Requested data not exist in the database";
 "unknownError" = "Unable to load the data";

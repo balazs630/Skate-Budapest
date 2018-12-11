@@ -8,26 +8,21 @@
 
 import Alamofire
 
-enum Result<Value> {
-    case success(Value)
-    case failure(NetworkError)
+protocol BaseWebService {
+    var environment: ApiEnvironment { get }
+    var decoder: JSONDecoder { get }
+
+    func requestUrl(for path: String) -> String
+    func handle(_ error: Error) -> NetworkError
 }
 
-struct NetworkError: Error {
-    private let message: String
-
-    var localizedDescription: String {
-        return message.localized
+extension BaseWebService {
+    var decoder: JSONDecoder {
+        return JSONDecoder()
     }
 
-    init(message: String) {
-        self.message = message
-    }
-}
-
-class BaseWebService {
     func requestUrl(for path: String) -> String {
-        return APIUrl.production.url + path
+        return environment.url + path
     }
 
     func handle(_ error: Error) -> NetworkError {

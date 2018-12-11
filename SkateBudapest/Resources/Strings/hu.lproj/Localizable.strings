@@ -30,8 +30,13 @@
 "sendPlaceTabBarTitle" = "Beküldés";
 
 // MARK: NetworkError
-"networkError" = "Hálózati hiba";
+"networkErrorTitle" = "Hálózati hiba";
 "notConnectedToInternetError" = "Nincs internetkapcsolat";
 "networkConnectionLostError" = "Megszakadt az internetkapcsolat";
 "timedOutError" = "Időtúllépés";
+"unknownError" = "Nem sikerült betölteni az adatokat";
+
+// MARK: RealmError
+"realmErrorTitle" = "Adatbázis hiba";
+"dataNotExistError" = "A kért adat nem található az adatbázisban";
 "unknownError" = "Nem sikerült betölteni az adatokat";

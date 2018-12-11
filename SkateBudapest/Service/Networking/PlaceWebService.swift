@@ -8,15 +8,24 @@
 
 import Alamofire
 
-class PlaceWebService: BaseWebService {
-    private let decoder = JSONDecoder()
-
+extension PlaceWebService {
     fileprivate enum Slug {
         static let apiVersionPath = "/v1"
         static let placePath = "\(apiVersionPath)/places"
         static let placeInfoPath = "\(placePath)/info"
     }
+}
 
+class PlaceWebService: BaseWebService {
+    // MARK: Properties
+    var environment: ApiEnvironment
+
+    // MARK: Initializers
+    init(environment: ApiEnvironment) {
+        self.environment = environment
+    }
+
+    // MARK: Network requests
     func getPlaces(completion: @escaping (Result<[PlaceApiModel]>) -> Void) {
         let url = requestUrl(for: Slug.placePath)
 

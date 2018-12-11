@@ -19,14 +19,6 @@ struct Constant {
     static let annotationFilter = "AnnotationFilterViewController"
 }
 
-public enum APIUrl: String {
-    case production = "https://skate-budapest.vapor.cloud"
-
-    var url: String {
-        return rawValue
-    }
-}
-
 public enum Theme {
     public enum Icon {
         public static let skateparkPin = UIImage(named: "yellow")!
@@ -107,10 +99,16 @@ struct Texts {
     }
 
     struct NetworkError {
-        static let network = "networkError"
+        static let title = "networkErrorTitle"
         static let notConnectedToInternet = "notConnectedToInternetError"
         static let networkConnectionLost = "networkConnectionLostError"
         static let timedOut = "timedOutError"
+        static let unknown = "unknownError"
+    }
+
+    struct RealmError {
+        static let title = "realmErrorTitle"
+        static let dataNotExist = "dataNotExistError"
         static let unknown = "unknownError"
     }
 }

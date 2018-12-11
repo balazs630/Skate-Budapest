@@ -28,6 +28,11 @@
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
 		AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */; };
 		AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC63325B20FA95C3007E5D98 /* Assets.xcassets */; };
+		AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905F821C073AF00A2088A /* NetworkError.swift */; };
+		AC6905FB21C073C900A2088A /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FA21C073C900A2088A /* RealmError.swift */; };
+		AC6905FD21C073E400A2088A /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FC21C073E400A2088A /* BaseError.swift */; };
+		AC69060321C0767800A2088A /* ApiEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69060221C0767800A2088A /* ApiEnvironment.swift */; };
+		AC69060521C0784300A2088A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69060421C0784300A2088A /* Result.swift */; };
 		AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */; };
 		AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19221B08AA000C20451 /* RealmService.swift */; };
 		AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19621B2B1A600C20451 /* BaseWebService.swift */; };
@@ -77,6 +82,11 @@
 		AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapViewController.swift; sourceTree = "<group>"; };
 		AC63325B20FA95C3007E5D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC63326020FA95C3007E5D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6905F821C073AF00A2088A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		AC6905FA21C073C900A2088A /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		AC6905FC21C073E400A2088A /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		AC69060221C0767800A2088A /* ApiEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEnvironment.swift; sourceTree = "<group>"; };
+		AC69060421C0784300A2088A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRealmModel.swift; sourceTree = "<group>"; };
 		AC6BD19221B08AA000C20451 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		AC6BD19621B2B1A600C20451 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
@@ -198,11 +208,10 @@
 		AC2C030721AADC4900784F4E /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				AC6BD19621B2B1A600C20451 /* BaseWebService.swift */,
-				AC2C030821AADC6300784F4E /* PlaceWebService.swift */,
-				AC26A96B218DD51700641C84 /* LocationService.swift */,
-				AC6BD19221B08AA000C20451 /* RealmService.swift */,
-				AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */,
+				AC6905FF21C0740E00A2088A /* Networking */,
+				AC69060121C0746C00A2088A /* Database */,
+				AC69060021C0742600A2088A /* Misc */,
+				AC6905FE21C073F800A2088A /* Error */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -276,6 +285,44 @@
 				AC76CF8920FA9729003ED70F /* Supporting Files */,
 			);
 			path = SkateBudapest;
+			sourceTree = "<group>";
+		};
+		AC6905FE21C073F800A2088A /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				AC6905FC21C073E400A2088A /* BaseError.swift */,
+				AC6905F821C073AF00A2088A /* NetworkError.swift */,
+				AC6905FA21C073C900A2088A /* RealmError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		AC6905FF21C0740E00A2088A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AC69060221C0767800A2088A /* ApiEnvironment.swift */,
+				AC6BD19621B2B1A600C20451 /* BaseWebService.swift */,
+				AC2C030821AADC6300784F4E /* PlaceWebService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AC69060021C0742600A2088A /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				AC69060421C0784300A2088A /* Result.swift */,
+				AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */,
+				AC26A96B218DD51700641C84 /* LocationService.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		AC69060121C0746C00A2088A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AC6BD19221B08AA000C20451 /* RealmService.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		AC6BD18F21B083B800C20451 /* Realm Model */ = {
@@ -536,10 +583,13 @@
 				ACE6F71721B899F7000ABDF1 /* PlaceInfoRealmModel.swift in Sources */,
 				AC947F68219E2BDD005007C4 /* SubmitPlaceViewController.swift in Sources */,
 				AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */,
+				AC69060521C0784300A2088A /* Result.swift in Sources */,
+				AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
 				AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */,
 				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,
 				AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */,
+				AC69060321C0767800A2088A /* ApiEnvironment.swift in Sources */,
 				ACA489BB20FA9E890084D9F3 /* Constants.swift in Sources */,
 				AC2C030921AADC6300784F4E /* PlaceWebService.swift in Sources */,
 				AC2C030F21AADD1B00784F4E /* PlaceInfoApiModel.swift in Sources */,
@@ -554,11 +604,13 @@
 				ACAE579721ACAB4400F38FF5 /* UIViewControllerExtensions.swift in Sources */,
 				AC0B89A62111FDA8006CDB7E /* LocationDetailsViewController.swift in Sources */,
 				ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */,
+				AC6905FB21C073C900A2088A /* RealmError.swift in Sources */,
 				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,
 				ACAE55F521AADEEA00F38FF5 /* WaypointStatus.swift in Sources */,
 				AC2E12AB21171EF600A5B05E /* URLExtensions.swift in Sources */,
 				AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */,
 				AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */,
+				AC6905FD21C073E400A2088A /* BaseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

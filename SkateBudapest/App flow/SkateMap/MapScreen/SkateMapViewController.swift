@@ -63,8 +63,14 @@ extension SkateMapViewController {
     private func loadMapWaypoints() {
         clearWaypoints()
         placeCachingService.getPlaces { result in
-            self.add(waypoints: result.filter { $0.status == .active })
-            // TODO: Error handling
+            switch result {
+            case .success(let waypoints):
+                self.add(waypoints: waypoints.filter { $0.status == .active })
+            case .failure(let error):
+                let alertController = SimpleAlertDialog.build(title: error.localisedTitle,
+                                                              message: error.localizedDescription)
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
 
@@ -79,7 +85,7 @@ extension SkateMapViewController {
 
     private func filter(types: [WaypointType]) {
         mapView.annotations.forEach { annotation in
-            if let waypoint = annotation as? PlaceApiModel {
+            if let waypoint = annotation as? PlaceDisplayItem {
                 mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.type)
             }
         }
