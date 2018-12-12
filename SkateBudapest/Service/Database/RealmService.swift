@@ -29,13 +29,13 @@ class RealmService {
         completion(placeInfo.first?.dataVersion)
     }
 
-    func overwritePlaces(with places: [PlaceApiModel]) {
+    func writePlaces(with places: [PlaceApiModel], update: Bool = false) {
         try! realm.write {
             realm.add(places.map { PlaceRealmModel($0) }, update: true)
         }
     }
 
-    func overwritePlacesInfo(with placesInfo: PlaceInfoApiModel) {
+    func writePlacesInfo(with placesInfo: PlaceInfoApiModel, update: Bool = false) {
         try! realm.write {
             realm.add(PlaceInfoRealmModel(placesInfo), update: true)
         }

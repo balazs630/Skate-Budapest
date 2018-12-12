@@ -6,6 +6,8 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
+//swiftlint:disable next empty_enum_arguments
+
 import Foundation
 
 class PlaceCachingService {
@@ -17,7 +19,14 @@ class PlaceCachingService {
             guard let strongSelf = self else { return }
 
             if isPlacesDataPersisted {
-                strongSelf.getFromDatabase(completion: completion)
+                strongSelf.isPlacesUpdateAvailable { [weak self] updateAvailable in
+                    guard let strongSelf = self else { return }
+                    if updateAvailable {
+                        strongSelf.getFromNetwork(completion: completion)
+                    } else {
+                        strongSelf.getFromDatabase(completion: completion)
+                    }
+                }
             } else {
                 strongSelf.getFromNetwork(completion: completion)
             }
@@ -35,23 +44,46 @@ class PlaceCachingService {
     }
 
     private func getFromNetwork(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
-        self.placeWebService.getPlaceInfo { result in
+        self.placeWebService.getPlaceInfo { [weak self] result in
+            guard let strongSelf = self else { return }
+
             switch result {
             case .success(let placeInfo):
-                self.realmService.overwritePlacesInfo(with: placeInfo)
+                strongSelf.realmService.writePlacesInfo(with: placeInfo, update: true)
             case .failure(let error):
                 completion(Result.failure(NetworkError(message: error.message)))
             }
         }
 
-        self.placeWebService.getPlaces { result in
+        self.placeWebService.getPlaces { [weak self] result in
+            guard let strongSelf = self else { return }
+
             switch result {
             case .success(let places):
-                self.realmService.overwritePlaces(with: places)
+                strongSelf.realmService.writePlaces(with: places, update: true)
                 let placeDisplayItems = places.map { PlaceDisplayItem($0) }
                 completion(Result.success(placeDisplayItems))
             case .failure(let error):
                 completion(Result.failure(NetworkError(message: error.message)))
+            }
+        }
+    }
+
+    private func isPlacesUpdateAvailable(completion: @escaping (Bool) -> Void) {
+        placeWebService.getPlaceInfo { [weak self] result in
+            guard let strongSelf = self else { return }
+
+            switch result {
+            case .success(let networkPlaceInfo):
+                strongSelf.realmService.readPlaceInfo { realmPlaceDataVersion in
+                    if realmPlaceDataVersion != networkPlaceInfo.dataVersion {
+                        completion(true)
+                    } else {
+                        completion(false)
+                    }
+                }
+            case .failure(_):
+                completion(false)
             }
         }
     }
