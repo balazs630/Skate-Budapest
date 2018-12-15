@@ -37,6 +37,7 @@
 		AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19221B08AA000C20451 /* RealmService.swift */; };
 		AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19621B2B1A600C20451 /* BaseWebService.swift */; };
 		AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */; };
+		AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F8B8D21C518BF00001551 /* ImageService.swift */; };
 		AC9003FD2193704E0007F7E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9003FC2193704E0007F7E5 /* Main.storyboard */; };
 		AC900401219375B90007F7E5 /* SendPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC900400219375B90007F7E5 /* SendPlace.storyboard */; };
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
@@ -91,6 +92,7 @@
 		AC6BD19221B08AA000C20451 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		AC6BD19621B2B1A600C20451 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertDialog.swift; sourceTree = "<group>"; };
+		AC8F8B8D21C518BF00001551 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		AC9003FC2193704E0007F7E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AC900400219375B90007F7E5 /* SendPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendPlace.storyboard; sourceTree = "<group>"; };
 		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				AC69060421C0784300A2088A /* Result.swift */,
 				AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */,
 				AC26A96B218DD51700641C84 /* LocationService.swift */,
+				AC8F8B8D21C518BF00001551 /* ImageService.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
 				ACE6F71221B897B4000ABDF1 /* PlaceDisplayItem.swift in Sources */,
 				ACAE55F621AADEEA00F38FF5 /* WaypointType.swift in Sources */,
+				AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */,
 				AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */,
 				ACE6F71721B899F7000ABDF1 /* PlaceInfoRealmModel.swift in Sources */,
 				AC947F68219E2BDD005007C4 /* SubmitPlaceViewController.swift in Sources */,

@@ -148,10 +148,8 @@ extension SkateMapViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         guard let leftCalloutAccessoryButton = view.leftCalloutAccessoryView as? UIButton,
-                let urlString = (view.annotation as? PlaceDisplayItem)?.thumbnailUrl,
-                let url = URL(string: urlString),
-                let imageData = NSData(contentsOf: url),
-                let image = UIImage(data: imageData as Data) else {
+                let imageData = (view.annotation as? PlaceDisplayItem)?.thumbnailImageData,
+                let image = UIImage(data: imageData) else {
                     return
         }
 

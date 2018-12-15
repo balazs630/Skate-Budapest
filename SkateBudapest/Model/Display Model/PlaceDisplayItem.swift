@@ -6,6 +6,7 @@
 //
 
 // swiftlint:disable next identifier_name
+
 import MapKit
 
 final class PlaceDisplayItem: NSObject {
@@ -16,20 +17,8 @@ final class PlaceDisplayItem: NSObject {
     var info: String
     var type: WaypointType
     var status: WaypointStatus
-    var thumbnailUrl: String?
+    var thumbnailImageData: Data
     var imageUrls: [String?]
-
-    init(_ placeApiModel: PlaceApiModel) {
-        self.id = placeApiModel.id
-        self.latitude = placeApiModel.latitude
-        self.longitude = placeApiModel.longitude
-        self.name = placeApiModel.name
-        self.info = placeApiModel.info
-        self.type = placeApiModel.type
-        self.status = placeApiModel.status
-        self.thumbnailUrl = placeApiModel.thumbnailUrl
-        self.imageUrls = placeApiModel.imageUrls
-    }
 
     init(_ placeRealmModel: PlaceRealmModel) {
         self.id = placeRealmModel.id
@@ -39,7 +28,7 @@ final class PlaceDisplayItem: NSObject {
         self.info = placeRealmModel.info
         self.type = placeRealmModel.type
         self.status = placeRealmModel.status
-        self.thumbnailUrl = placeRealmModel.thumbnailUrl
+        self.thumbnailImageData = placeRealmModel.thumbnailImageData
         self.imageUrls = placeRealmModel.imageUrls.map { $0.name }
     }
 }

@@ -5,17 +5,18 @@
 //  Created by Horváth Balázs on 2018. 11. 29..
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
+
 // swiftlint:disable next identifier_name
 
 import RealmSwift
 
-class PlaceRealmModel: Object {
+final class PlaceRealmModel: Object {
     @objc dynamic var id = ""
     @objc dynamic var latitude = 0.0
     @objc dynamic var longitude = 0.0
     @objc dynamic var name = ""
     @objc dynamic var info = ""
-    @objc dynamic var thumbnailUrl: String?
+    @objc dynamic var thumbnailImageData = Data()
     var imageUrls = List<ImageUrlRealmModel>()
 
     @objc private dynamic var typeEnum = WaypointType.skatepark.rawValue
@@ -30,27 +31,13 @@ class PlaceRealmModel: Object {
         set { statusEnum = newValue.rawValue }
     }
 
-    convenience init(id: String,
-                     latitude: Double,
-                     longitude: Double,
-                     name: String,
-                     info: String,
-                     thumbnailUrl: String?,
-                     imageUrls: List<ImageUrlRealmModel>,
-                     type: WaypointType,
-                     status: WaypointStatus) {
-        self.init()
-        self.id = id
-        self.latitude = latitude
-        self.longitude = longitude
-        self.name = name
-        self.info = info
-        self.thumbnailUrl = thumbnailUrl
-        self.imageUrls = imageUrls
-        self.type = type
-        self.status = status
+    override class func primaryKey() -> String? {
+        return "id"
     }
+}
 
+// MARK: Initializers
+extension PlaceRealmModel {
     convenience init(_ placeApiModel: PlaceApiModel) {
         self.init()
         self.id = placeApiModel.id
@@ -58,15 +45,11 @@ class PlaceRealmModel: Object {
         self.longitude = placeApiModel.longitude
         self.name = placeApiModel.name
         self.info = placeApiModel.info
-        self.thumbnailUrl = placeApiModel.thumbnailUrl
+        self.thumbnailImageData = ImageService.imageData(from: placeApiModel.thumbnailUrl, imageType: .thumbnail)
         placeApiModel.imageUrls.forEach { url in
             self.imageUrls.append(ImageUrlRealmModel(name: url ?? ""))
         }
         self.type = placeApiModel.type
         self.status = placeApiModel.status
-    }
-
-    override class func primaryKey() -> String? {
-        return "id"
     }
 }

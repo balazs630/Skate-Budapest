@@ -11,9 +11,13 @@
 import Foundation
 
 class PlaceCachingService {
+    // MARK: Properties
     private let placeWebService = PlaceWebService(environment: .production)
     private let realmService = RealmService()
+}
 
+// MARK: Retrieve data from network or database
+extension PlaceCachingService {
     func getPlaces(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
         realmService.isPlacesDataPersisted { [weak self] isPlacesDataPersisted in
             guard let strongSelf = self else { return }
@@ -61,14 +65,16 @@ class PlaceCachingService {
             switch result {
             case .success(let places):
                 strongSelf.realmService.writePlaces(with: places, update: true)
-                let placeDisplayItems = places.map { PlaceDisplayItem($0) }
-                completion(Result.success(placeDisplayItems))
+                strongSelf.getFromDatabase(completion: completion)
             case .failure(let error):
                 completion(Result.failure(NetworkError(message: error.message)))
             }
         }
     }
+}
 
+// MARK: Utility
+extension PlaceCachingService {
     private func isPlacesUpdateAvailable(completion: @escaping (Bool) -> Void) {
         placeWebService.getPlaceInfo { [weak self] result in
             guard let strongSelf = self else { return }
