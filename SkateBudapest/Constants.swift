@@ -30,6 +30,10 @@ public enum Theme {
         public static let streetSpotIcon = UIImage(named: "purple")!
     }
 
+    public enum Image {
+        public static let placeholderSquare = UIImage(named: "placeholder-square")!
+    }
+
     public enum Color {
         public static let skateparkColor = UIColor.color(red: 210, green: 64, blue: 140)
         public static let skateshopColor = UIColor.color(red: 64, green: 200, blue: 140)
