@@ -7,8 +7,4 @@
 
 final class PlaceInfoApiModel: Codable {
     var dataVersion: String
-
-    init(dataVersion: String) {
-        self.dataVersion = dataVersion
-    }
 }

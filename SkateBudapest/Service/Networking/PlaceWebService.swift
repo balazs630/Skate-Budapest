@@ -17,15 +17,15 @@ extension PlaceWebService {
 }
 
 class PlaceWebService: BaseWebService {
-    // MARK: Properties
     var environment: ApiEnvironment
 
-    // MARK: Initializers
     init(environment: ApiEnvironment) {
         self.environment = environment
     }
+}
 
-    // MARK: Network requests
+// MARK: Network requests
+extension PlaceWebService {
     func getPlaces(completion: @escaping (Result<[PlaceApiModel]>) -> Void) {
         let url = requestUrl(for: Slug.placePath)
 

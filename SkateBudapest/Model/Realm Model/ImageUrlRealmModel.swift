@@ -8,15 +8,18 @@
 
 import RealmSwift
 
-class ImageUrlRealmModel: Object {
+final class ImageUrlRealmModel: Object {
     @objc dynamic var name = ""
-
-    convenience init(name: String) {
-        self.init()
-        self.name = name
-    }
 
     override class func primaryKey() -> String? {
         return "name"
+    }
+}
+
+// MARK: Initializers
+extension ImageUrlRealmModel {
+    convenience init(name: String) {
+        self.init()
+        self.name = name
     }
 }

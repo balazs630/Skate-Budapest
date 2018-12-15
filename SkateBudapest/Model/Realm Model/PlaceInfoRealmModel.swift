@@ -8,20 +8,18 @@
 
 import RealmSwift
 
-class PlaceInfoRealmModel: Object {
+final class PlaceInfoRealmModel: Object {
     @objc dynamic var dataVersion = ""
-
-    convenience init(dataVersion: String) {
-        self.init()
-        self.dataVersion = dataVersion
-    }
-
-    convenience init(_ placeInfoApiModel: PlaceInfoApiModel) {
-        self.init()
-        self.dataVersion = placeInfoApiModel.dataVersion
-    }
 
     override class func primaryKey() -> String? {
         return "dataVersion"
+    }
+}
+
+// MARK: Initializers
+extension PlaceInfoRealmModel {
+    convenience init(_ placeInfoApiModel: PlaceInfoApiModel) {
+        self.init()
+        self.dataVersion = placeInfoApiModel.dataVersion
     }
 }
