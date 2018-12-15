@@ -17,7 +17,7 @@ final class PlaceRealmModel: Object {
     @objc dynamic var name = ""
     @objc dynamic var info = ""
     @objc dynamic var thumbnailImageData = Data()
-    var imageUrls = List<ImageUrlRealmModel>()
+    var imageDatas = List<Data?>()
 
     @objc private dynamic var typeEnum = WaypointType.skatepark.rawValue
     var type: WaypointType {
@@ -47,7 +47,7 @@ extension PlaceRealmModel {
         self.info = placeApiModel.info
         self.thumbnailImageData = ImageService.imageData(from: placeApiModel.thumbnailUrl, imageType: .thumbnail)
         placeApiModel.imageUrls.forEach { url in
-            self.imageUrls.append(ImageUrlRealmModel(name: url ?? ""))
+            self.imageDatas.append(ImageService.imageData(from: url, imageType: .gallery))
         }
         self.type = placeApiModel.type
         self.status = placeApiModel.status

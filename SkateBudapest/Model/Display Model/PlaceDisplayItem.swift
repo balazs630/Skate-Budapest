@@ -18,7 +18,7 @@ final class PlaceDisplayItem: NSObject {
     var type: WaypointType
     var status: WaypointStatus
     var thumbnailImageData: Data
-    var imageUrls: [String?]
+    var imageDatas: [Data?]
 
     init(_ placeRealmModel: PlaceRealmModel) {
         self.id = placeRealmModel.id
@@ -29,7 +29,7 @@ final class PlaceDisplayItem: NSObject {
         self.type = placeRealmModel.type
         self.status = placeRealmModel.status
         self.thumbnailImageData = placeRealmModel.thumbnailImageData
-        self.imageUrls = placeRealmModel.imageUrls.map { $0.name }
+        self.imageDatas = placeRealmModel.imageDatas.map { $0 }
     }
 }
 

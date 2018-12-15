@@ -129,13 +129,12 @@ extension LocationDetailsViewController {
     }
 
     private func configurePageControl() {
-        pageControl.numberOfPages = waypoint.imageUrls.count
+        pageControl.numberOfPages = waypoint.imageDatas.count
     }
 
     private func loadImageViews() -> [UIImageView] {
-        let images = waypoint.imageUrls
-            .map { URL(string: $0!) }
-            .imagesFromURLs()
+        let images = waypoint.imageDatas
+            .map { UIImage(data: $0 ?? Data()) }
 
         var imageViews = [UIImageView]()
         (0..<images.count).forEach { index in
