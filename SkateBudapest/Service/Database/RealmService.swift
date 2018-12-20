@@ -58,15 +58,13 @@ extension RealmService {
 
     private func isPlacesAvailable(completion: @escaping (Bool) -> Void) {
         self.readPlaces { result in
-            let isPlacesExist = result != nil ? true : false
-            completion(isPlacesExist)
+            completion(result != nil)
         }
     }
 
     private func isPlaceInfoAvailable(completion: @escaping (Bool) -> Void) {
         readPlaceInfo { result in
-            let isPlaceInfoExist = result != nil ? true : false
-            completion(isPlaceInfoExist)
+            completion(result != nil)
         }
     }
 }
