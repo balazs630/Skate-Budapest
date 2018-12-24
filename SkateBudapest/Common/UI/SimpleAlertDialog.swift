@@ -14,7 +14,7 @@ class SimpleAlertDialog {
                                                 message: message,
                                                 preferredStyle: .alert)
 
-        let defaultAction = UIAlertAction(title: "OK", style: .default) { _ in }
+        let defaultAction = UIAlertAction(title: Texts.General.ok.localized, style: .default) { _ in }
         alertController.addAction(defaultAction)
 
         return alertController

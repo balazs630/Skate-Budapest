@@ -10,15 +10,7 @@ class RealmError: BaseError {
     let title: String
     let message: String
 
-    var localizedDescription: String {
-        return message.localized
-    }
-
-    var localisedTitle: String {
-        return title.localized
-    }
-
-    init(title: String = Texts.RealmError.title, message: String) {
+    init(title: String = Texts.RealmError.defaultTitle.localized, message: String) {
         self.title = title
         self.message = message
     }

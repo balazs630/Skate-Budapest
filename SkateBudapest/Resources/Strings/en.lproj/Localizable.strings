@@ -8,35 +8,38 @@
 
 // ** ENGLISH **
 
-// MARK: SkateMapViewController
+// General:
+"ok" = "OK";
+
+// SkateMapViewController:
 "mapNavBarTitle" = "Map";
 "mapTabBarTitle" = "Map";
 
-// MARK: AnnotationFilterViewController
+// AnnotationFilterViewController:
 "filterScreenTitle" = "Filter by place type";
 "filterTypeSkatepark" = "Skatepark";
 "filterTypeSkatespot" = "Streetspot";
 "filterTypeSkateshop" = "Skateshop";
 "filterButtonTitle" = "Filter";
 
-// MARK: RoutingViewController
+// RoutingViewController:
 "mapNavigationEmptyViewText" = "Enable location to show navigation options";
 "mapNavigationEmptyViewButtonText" = "Enable";
 "hour" = "hour";
 "minutes" = "minute";
 
-// MARK: SendPlaceViewController
+// SendPlaceViewController:
 "sendPlaceNavBarTitle" = "Submit";
 "sendPlaceTabBarTitle" = "Submit";
 
-// MARK: NetworkError
+// NetworkError:
 "networkErrorTitle" = "Network error";
 "notConnectedToInternetError" = "Not connected to Internet";
 "networkConnectionLostError" = " Connection lost";
 "timedOutError" = "Timed out";
-"unknownError" = "Unable to load the data";
+"unknownNetworkError" = "Unable to load the data";
 
-// MARK: RealmError
+// RealmError:
 "realmErrorTitle" = "Database error";
 "dataNotExistError" = "Requested data not exist in the database";
-"unknownError" = "Unable to load the data";
+"unknownRealmError" = "Unable to load the data";

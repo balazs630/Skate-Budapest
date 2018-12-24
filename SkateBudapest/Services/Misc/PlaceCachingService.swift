@@ -42,7 +42,7 @@ extension PlaceCachingService {
             if let result = result {
                 completion(Result.success(result))
             } else {
-                completion(Result.failure(RealmError(message: Texts.RealmError.dataNotExist)))
+                completion(Result.failure(RealmError(message: Texts.RealmError.dataNotExist.localized)))
             }
         }
     }

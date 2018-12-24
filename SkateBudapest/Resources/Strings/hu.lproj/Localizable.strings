@@ -8,35 +8,38 @@
 
 // ** HUNGARIAN **
 
-// MARK: SkateMapViewController
+// General:
+"ok" = "OK";
+
+// SkateMapViewController:
 "mapNavBarTitle" = "Térkép";
 "mapTabBarTitle" = "Térkép";
 
-// MARK: AnnotationFilterViewController
+// AnnotationFilterViewController:
 "filterScreenTitle" = "Szűrés a hely típusára";
 "filterTypeSkatepark" = "Deszkás pálya";
 "filterTypeSkatespot" = "Deszkás spot";
 "filterTypeSkateshop" = "Deszkás bolt";
 "filterButtonTitle" = "Szűrés";
 
-// MARK: RoutingViewController
+// RoutingViewController:
 "mapNavigationEmptyViewText" = "Helymeghatározás bekapcsolása a navigációhoz";
 "mapNavigationEmptyViewButtonText" = "Bekapcsolás";
 "hour" = "óra";
 "minutes" = "perc";
 
-// MARK: SendPlaceViewController
+// SendPlaceViewController:
 "sendPlaceNavBarTitle" = "Beküldés";
 "sendPlaceTabBarTitle" = "Beküldés";
 
-// MARK: NetworkError
+// NetworkError:
 "networkErrorTitle" = "Hálózati hiba";
 "notConnectedToInternetError" = "Nincs internetkapcsolat";
 "networkConnectionLostError" = "Megszakadt az internetkapcsolat";
 "timedOutError" = "Időtúllépés";
-"unknownError" = "Nem sikerült betölteni az adatokat";
+"unknownNetworkError" = "Nem sikerült betölteni az adatokat";
 
-// MARK: RealmError
+// RealmError:
 "realmErrorTitle" = "Adatbázis hiba";
 "dataNotExistError" = "A kért adat nem található az adatbázisban";
-"unknownError" = "Nem sikerült betölteni az adatokat";
+"unknownRealmError" = "Nem sikerült betölteni az adatokat";

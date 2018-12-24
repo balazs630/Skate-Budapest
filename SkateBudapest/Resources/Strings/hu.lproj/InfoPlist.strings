@@ -6,4 +6,7 @@
   Copyright © 2018. Horváth Balázs. All rights reserved.
 */
 
-"NSLocationWhenInUseUsageDescription" = "A lokációra azért van szükségünk, hogy térképen megjeleníthessük az aktuális helyzeted.";
+// ** HUNGARIAN **
+
+// Location:
+"NSLocationWhenInUseUsageDescription" = "A lokációra azért van szükségem, hogy térképen megjeleníthessem az aktuális helyzeted.";

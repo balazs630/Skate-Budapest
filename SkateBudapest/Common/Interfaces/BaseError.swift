@@ -9,8 +9,4 @@
 protocol BaseError: Error {
     var title: String { get }
     var message: String { get }
-
-    var localizedDescription: String { get }
-
-    var localisedTitle: String { get }
 }

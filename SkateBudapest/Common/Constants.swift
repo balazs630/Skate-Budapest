@@ -6,7 +6,7 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
-// swiftlint:disable next identifier_name type_name
+// swiftlint:disable next type_name
 
 import UIKit
 
@@ -17,6 +17,14 @@ struct Constant {
     static let calloutViewIdentifier = "customMKAnnotationView"
     static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
     static let annotationFilter = "AnnotationFilterViewController"
+}
+
+enum ApiEnvironment: String {
+    case production = "https://skate-budapest.vapor.cloud"
+
+    var url: String {
+        return rawValue
+    }
 }
 
 public enum Theme {
@@ -41,25 +49,6 @@ public enum Theme {
     }
 }
 
-public enum GPX {
-    public enum Tag: String {
-        case waypoint = "wpt"
-        case latitude = "lat"
-        case longitude = "lon"
-        case id = "id"
-        case name
-        case description = "desc"
-        case status = "status"
-        case type = "type"
-        case image = "img"
-        case href
-        case imageType = "imgtype"
-        case smallImage = "thumbnail"
-        case largeImage = "large"
-        case version = "wpt-data-version"
-    }
-}
-
 extension UserDefaults {
     struct Key {
         static let isAppAlreadyLaunchedOnce = "isAppAlreadyLaunchedOnce"
@@ -76,43 +65,4 @@ extension UserDefaults {
 struct SegueIdentifier {
     static let showLocationPinDetails = "showLocationPinDetailsSegue"
     static let showImageViewer = "showImageViewerSegue"
-}
-
-struct Texts {
-    struct SkateMap {
-        static let mapNavBarTitle = "mapNavBarTitle"
-        static let mapTabBarTitle = "mapTabBarTitle"
-
-        static let filterScreenTitle = "filterScreenTitle"
-        static let filterTypeSkatepark = "filterTypeSkatepark"
-        static let filterTypeSkatespot = "filterTypeSkatespot"
-        static let filterTypeSkateshop = "filterTypeSkateshop"
-        static let filterButtonTitle = "filterButtonTitle"
-    }
-
-    struct LocationDetails {
-        static let mapNavigationEmptyViewText = "mapNavigationEmptyViewText"
-        static let mapNavigationEmptyViewButtonText = "mapNavigationEmptyViewButtonText"
-        static let hour = "hour"
-        static let minutes = "minutes"
-    }
-
-    struct SendSpace {
-        static let sendPlaceNavBarTitle = "sendPlaceNavBarTitle"
-        static let sendPlaceTabBarTitle = "sendPlaceTabBarTitle"
-    }
-
-    struct NetworkError {
-        static let title = "networkErrorTitle"
-        static let notConnectedToInternet = "notConnectedToInternetError"
-        static let networkConnectionLost = "networkConnectionLostError"
-        static let timedOut = "timedOutError"
-        static let unknown = "unknownError"
-    }
-
-    struct RealmError {
-        static let title = "realmErrorTitle"
-        static let dataNotExist = "dataNotExistError"
-        static let unknown = "unknownError"
-    }
 }

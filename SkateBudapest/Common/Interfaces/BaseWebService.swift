@@ -26,17 +26,17 @@ extension BaseWebService {
     }
 
     func handle(_ error: Error) -> NetworkError {
-        guard let error = error as? URLError else { return NetworkError(message: Texts.NetworkError.unknown) }
+        guard let error = error as? URLError else { return NetworkError(message: Texts.NetworkError.unknown.localized) }
 
         switch error.code {
         case .notConnectedToInternet:
-            return NetworkError(message: Texts.NetworkError.notConnectedToInternet)
+            return NetworkError(message: Texts.NetworkError.notConnectedToInternet.localized)
         case .networkConnectionLost:
-            return NetworkError(message: Texts.NetworkError.networkConnectionLost)
+            return NetworkError(message: Texts.NetworkError.networkConnectionLost.localized)
         case .timedOut:
-            return NetworkError(message: Texts.NetworkError.timedOut)
+            return NetworkError(message: Texts.NetworkError.timedOut.localized)
         default:
-            return NetworkError(message: Texts.NetworkError.unknown)
+            return NetworkError(message: Texts.NetworkError.unknown.localized)
         }
     }
 }
