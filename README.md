@@ -1,6 +1,4 @@
-<!--
-<img src="http://i.imgur.com/xxxxxxxxx.png" width="80px" />
--->
+<img src="http://i.imgur.com/fj7h1r6.png" width="80px" />
 <h1>Skate-Budapest</h1>
 
 iOS app that shows the skateparks, skate spots and skateshops located in Budapest. In the last few years many new skateparks being built which is a very good news for anyone doing extreme sports. Compared to the 3-4 skateparks in ~2010, we have over 15 skateparks now and this number is growing steadily.
