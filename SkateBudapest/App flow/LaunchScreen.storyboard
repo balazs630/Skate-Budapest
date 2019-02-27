@@ -20,7 +20,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="s0y-Uy-5A0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="green" id="LSa-pm-4RD"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="LSa-pm-4RD"/>
                     <navigationItem key="navigationItem" id="tHZ-xC-qvS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -38,7 +38,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4g0-Br-SfX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Submit" image="green" id="c4X-B9-gDF"/>
+                    <tabBarItem key="tabBarItem" title="Submit" image="addPin" id="c4X-B9-gDF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52h-cZ-aya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,6 +85,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="green" width="24" height="24"/>
+        <image name="addPin" width="25" height="25"/>
+        <image name="map" width="25" height="25"/>
     </resources>
 </document>

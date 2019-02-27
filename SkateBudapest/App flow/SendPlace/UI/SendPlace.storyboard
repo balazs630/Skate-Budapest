@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gcv-q3-34E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Submit" image="green" id="m8Z-Ld-7hf"/>
+                    <tabBarItem key="tabBarItem" title="Submit" image="addPin" id="m8Z-Ld-7hf"/>
                     <navigationItem key="navigationItem" title="Submit" id="kQK-Xx-eDV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -61,6 +61,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="green" width="24" height="24"/>
+        <image name="addPin" width="25" height="25"/>
     </resources>
 </document>
