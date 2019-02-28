@@ -18,7 +18,6 @@ class LocationDetailsViewController: UIViewController {
 
     // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var favouriteButton: UIButton!
     @IBOutlet weak var locationTypeView: UIView!
     @IBOutlet weak var locationTypeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
