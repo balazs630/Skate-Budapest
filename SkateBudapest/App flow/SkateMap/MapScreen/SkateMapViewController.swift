@@ -174,7 +174,7 @@ extension SkateMapViewController: UIViewControllerTransitioningDelegate {
 
 // MARK: AnnotationFilterDelegate methods
 extension SkateMapViewController: AnnotationFilterDelegate {
-    func filterAnnotationsBy(types: [WaypointType]) {
+    func filterAnnotations(by types: [WaypointType]) {
         return filter(types: types)
     }
 }

@@ -27,6 +27,7 @@
 "mapNavigationEmptyViewButtonText" = "Enable";
 "hour" = "hour";
 "minutes" = "minute";
+"directions" = "Directions";
 
 // SendPlaceViewController:
 "sendPlaceNavBarTitle" = "Submit";

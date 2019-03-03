@@ -27,6 +27,7 @@
 "mapNavigationEmptyViewButtonText" = "Bekapcsolás";
 "hour" = "óra";
 "minutes" = "perc";
+"directions" = "Útvonaltervezés";
 
 // SendPlaceViewController:
 "sendPlaceNavBarTitle" = "Beküldés";

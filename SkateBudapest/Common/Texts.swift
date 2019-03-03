@@ -29,6 +29,7 @@ struct Texts {
         case mapNavigationEmptyViewButtonText
         case hour
         case minutes
+        case directions
     }
 
     enum SendSpace: String, Localizable {

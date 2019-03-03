@@ -37,6 +37,10 @@ class RoutingViewController: UIViewController {
 
     // MARK: Screen configuration
     private func configureSelf() {
+        configureEmptyView()
+    }
+
+    private func configureEmptyView() {
         enableLocationLabel.text = Texts.LocationDetails.mapNavigationEmptyViewText.localized
         enableLocationButton.setTitle(Texts.LocationDetails.mapNavigationEmptyViewButtonText.localized, for: .normal)
     }
@@ -114,7 +118,9 @@ extension RoutingViewController {
             let directions = MKDirections(request: request)
             directions.calculateETA { (etaResponse, error) -> Void in
                 if let error = error {
-                    debugPrint("Not Available: \(error)")
+                    let alertController = SimpleAlertDialog.build(title: Texts.LocationDetails.directions.localized,
+                                                                  message: error.localizedDescription)
+                    self.present(alertController, animated: true, completion: nil)
                 } else {
                     if let travelTime = etaResponse?.expectedTravelTime {
                         self.setTransitTimeButtonTexts(for: transportType, travelTime: travelTime)

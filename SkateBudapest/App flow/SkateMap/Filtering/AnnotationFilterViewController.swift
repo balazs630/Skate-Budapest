@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AnnotationFilterDelegate: class {
-    func filterAnnotationsBy(types: [WaypointType])
+    func filterAnnotations(by types: [WaypointType])
 }
 
 class AnnotationFilterViewController: UIViewController {
@@ -57,7 +57,7 @@ class AnnotationFilterViewController: UIViewController {
 
     // MARK: Button actions
     @IBAction func filterButtonTap(_ sender: Any) {
-        delegate?.filterAnnotationsBy(types: selectedTypes())
+        delegate?.filterAnnotations(by: selectedTypes())
         saveFilterPreferences()
         dismiss(animated: true, completion: nil)
     }
