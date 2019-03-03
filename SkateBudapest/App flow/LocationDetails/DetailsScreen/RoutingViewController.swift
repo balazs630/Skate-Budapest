@@ -100,7 +100,8 @@ extension RoutingViewController {
             drivingRouteButton.setTitle(travelTime.stringTime, for: .normal)
             drivingActivityIndicator.isHidden = true
         case .walking:
-            walkingRouteButton.setTitle(travelTime.stringTime, for: .normal)
+            let skateSpeed = 2.0
+            walkingRouteButton.setTitle((travelTime / skateSpeed).stringTime, for: .normal)
             walkingActivityIndicator.isHidden = true
         default:
             debugPrint("Unknown transportType: \(transportType)")
