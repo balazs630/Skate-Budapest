@@ -47,7 +47,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" id="KLf-jp-gVs"/>
                     <navigationItem key="navigationItem" title="Map" id="H5Q-bW-M9d">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="filtering" id="vZ2-rK-0xo">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="filtering-empty" id="vZ2-rK-0xo">
                             <connections>
                                 <action selector="filterButtonTap:" destination="vZY-YY-T4n" id="tBH-pM-xLj"/>
                             </connections>
@@ -262,7 +262,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="filtering" width="22" height="22"/>
+        <image name="filtering-empty" width="22" height="22"/>
         <image name="location-arrow" width="128" height="128"/>
         <image name="map" width="25" height="25"/>
     </resources>

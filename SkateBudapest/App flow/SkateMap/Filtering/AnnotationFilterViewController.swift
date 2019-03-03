@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AnnotationFilterDelegate: class {
-    func filterAnnotations(by types: [WaypointType])
+    func filterAnnotations(by selectedTypes: [WaypointType])
 }
 
 class AnnotationFilterViewController: UIViewController {

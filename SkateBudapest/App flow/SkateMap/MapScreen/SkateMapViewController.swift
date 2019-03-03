@@ -82,12 +82,18 @@ extension SkateMapViewController {
         mapView.showAnnotations(waypoints, animated: true)
     }
 
-    private func filter(types: [WaypointType]) {
+    private func filter(by selectedTypes: [WaypointType]) {
         mapView.annotations.forEach { annotation in
             if let waypoint = annotation as? PlaceDisplayItem {
-                mapView.view(for: annotation)?.isHidden = !types.contains(waypoint.type)
+                mapView.view(for: annotation)?.isHidden = !selectedTypes.contains(waypoint.type)
             }
         }
+    }
+
+    private func changeFilteringIcon(isFiltered: Bool) {
+        let buttonItem = navigationItem.rightBarButtonItem
+        buttonItem?.image = isFiltered ? Theme.Icon.filteringFull : Theme.Icon.filteringEmpty
+        navigationItem.rightBarButtonItem = buttonItem
     }
 }
 
@@ -174,7 +180,8 @@ extension SkateMapViewController: UIViewControllerTransitioningDelegate {
 
 // MARK: AnnotationFilterDelegate methods
 extension SkateMapViewController: AnnotationFilterDelegate {
-    func filterAnnotations(by types: [WaypointType]) {
-        return filter(types: types)
+    func filterAnnotations(by selectedTypes: [WaypointType]) {
+        changeFilteringIcon(isFiltered: WaypointType.allCases.count != selectedTypes.count)
+        return filter(by: selectedTypes)
     }
 }

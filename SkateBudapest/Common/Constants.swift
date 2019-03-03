@@ -33,6 +33,9 @@ public enum Theme {
         public static let skateshopPin = UIImage(named: "map-pin-shop")!
         public static let streetSpotPin = UIImage(named: "map-pin-city")!
 
+        public static let filteringEmpty = UIImage(named: "filtering-empty")!
+        public static let filteringFull = UIImage(named: "filtering-full")!
+
         public static let skateparkIcon = UIImage(named: "yellow")!
         public static let skateshopIcon = UIImage(named: "green")!
         public static let streetSpotIcon = UIImage(named: "purple")!
