@@ -29,9 +29,9 @@ enum ApiEnvironment: String {
 
 public enum Theme {
     public enum Icon {
-        public static let skateparkPin = UIImage(named: "yellow")!
-        public static let skateshopPin = UIImage(named: "green")!
-        public static let streetSpotPin = UIImage(named: "purple")!
+        public static let skateparkPin = UIImage(named: "map-pin-skatepark")!
+        public static let skateshopPin = UIImage(named: "map-pin-shop")!
+        public static let streetSpotPin = UIImage(named: "map-pin-city")!
 
         public static let skateparkIcon = UIImage(named: "yellow")!
         public static let skateshopIcon = UIImage(named: "green")!
