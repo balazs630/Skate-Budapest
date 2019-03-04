@@ -14,6 +14,11 @@ extension PlaceWebService {
         static let placePath = "\(apiVersionPath)/places"
         static let placeInfoPath = "\(placePath)/info"
     }
+
+    fileprivate enum Parameter {
+        static let language = "lang"
+        static let defaultLanguageCode = "en"
+    }
 }
 
 class PlaceWebService: BaseWebService {
@@ -28,8 +33,11 @@ class PlaceWebService: BaseWebService {
 extension PlaceWebService {
     func getPlaces(completion: @escaping (Result<[PlaceApiModel]>) -> Void) {
         let url = requestUrl(for: Slug.placePath)
+        let queryParams: Parameters = [
+            Parameter.language: Locale.current.languageCode ?? Parameter.defaultLanguageCode
+        ]
 
-        Alamofire.request(url, method: .get).responseJSON { response in
+        Alamofire.request(url, method: .get, parameters: queryParams).responseJSON { response in
             switch response.result {
             case .success:
                 guard let data = response.data else { return }
