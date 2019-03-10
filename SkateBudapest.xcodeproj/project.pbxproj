@@ -37,16 +37,21 @@
 		AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19621B2B1A600C20451 /* BaseWebService.swift */; };
 		AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */; };
 		AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F8B8D21C518BF00001551 /* ImageService.swift */; };
-		AC900401219375B90007F7E5 /* SubmitPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC900400219375B90007F7E5 /* SubmitPlace.storyboard */; };
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
 		AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC907892212997F600FC0528 /* UIImageViewExtensions.swift */; };
 		AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */; };
-		AC947F68219E2BDD005007C4 /* SubmitPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC947F67219E2BDD005007C4 /* SubmitPlaceViewController.swift */; };
 		AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */; };
 		ACA489BB20FA9E890084D9F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BA20FA9E890084D9F3 /* Constants.swift */; };
 		ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */; };
 		ACAE55F521AADEEA00F38FF5 /* WaypointStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE55F221AADEEA00F38FF5 /* WaypointStatus.swift */; };
 		ACAE55F621AADEEA00F38FF5 /* WaypointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE55F321AADEEA00F38FF5 /* WaypointType.swift */; };
+		ACB292E8223541BF00DBB862 /* PlaceSuggestionApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */; };
+		ACB292F0223541F000DBB862 /* SubmitTextsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */; };
+		ACB292F1223541F000DBB862 /* SubmitPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */; };
+		ACB292F2223541F000DBB862 /* SubmitTypeSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292ED223541F000DBB862 /* SubmitTypeSelectorViewController.swift */; };
+		ACB292F3223541F000DBB862 /* SubmitSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EE223541F000DBB862 /* SubmitSummaryViewController.swift */; };
+		ACB292F4223541F000DBB862 /* SubmitImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */; };
+		ACB292F82235429F00DBB862 /* SubmitPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB292F72235429F00DBB862 /* SubmitPlace.storyboard */; };
 		ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18D2234260C00502D6B /* Coordinator.swift */; };
 		ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */; };
 		ACCAC1932234292900502D6B /* SkateMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC1922234292900502D6B /* SkateMapCoordinator.swift */; };
@@ -94,16 +99,21 @@
 		AC6BD19621B2B1A600C20451 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertDialog.swift; sourceTree = "<group>"; };
 		AC8F8B8D21C518BF00001551 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
-		AC900400219375B90007F7E5 /* SubmitPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubmitPlace.storyboard; sourceTree = "<group>"; };
 		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		AC907892212997F600FC0528 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewFullViewCell.swift; sourceTree = "<group>"; };
-		AC947F67219E2BDD005007C4 /* SubmitPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPlaceViewController.swift; sourceTree = "<group>"; };
 		AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		ACA489BA20FA9E890084D9F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		ACAE55F221AADEEA00F38FF5 /* WaypointStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointStatus.swift; sourceTree = "<group>"; };
 		ACAE55F321AADEEA00F38FF5 /* WaypointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointType.swift; sourceTree = "<group>"; };
+		ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSuggestionApiModel.swift; sourceTree = "<group>"; };
+		ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitTextsViewController.swift; sourceTree = "<group>"; };
+		ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPositionViewController.swift; sourceTree = "<group>"; };
+		ACB292ED223541F000DBB862 /* SubmitTypeSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitTypeSelectorViewController.swift; sourceTree = "<group>"; };
+		ACB292EE223541F000DBB862 /* SubmitSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitSummaryViewController.swift; sourceTree = "<group>"; };
+		ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitImagesViewController.swift; sourceTree = "<group>"; };
+		ACB292F72235429F00DBB862 /* SubmitPlace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubmitPlace.storyboard; sourceTree = "<group>"; };
 		ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Budapest, Hungary.gpx"; sourceTree = "<group>"; };
 		ACCAC18D2234260C00502D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
@@ -154,23 +164,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		AC0B89A72111FDBA006CDB7E /* PlaceDetails */ = {
+		AC0B89A72111FDBA006CDB7E /* PlaceDetailsScreen */ = {
 			isa = PBXGroup;
 			children = (
 				AC2D9DAD21335D91003A6263 /* DetailsScreen */,
 				AC975D3E212F10340021DC7A /* ImageViewer */,
-				ACF776F62234A1680067E3AA /* Navigation */,
-				AC0B89A82111FDCB006CDB7E /* UI */,
 			);
-			path = PlaceDetails;
-			sourceTree = "<group>";
-		};
-		AC0B89A82111FDCB006CDB7E /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				AC0B89A921120E39006CDB7E /* PlaceDetails.storyboard */,
-			);
-			path = UI;
+			path = PlaceDetailsScreen;
 			sourceTree = "<group>";
 		};
 		AC10B83421B896AF00C03E40 /* Api Model */ = {
@@ -178,6 +178,7 @@
 			children = (
 				AC2C030E21AADD1B00784F4E /* PlaceApiModel.swift */,
 				AC2C030C21AADD1B00784F4E /* PlaceInfoApiModel.swift */,
+				ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */,
 			);
 			path = "Api Model";
 			sourceTree = "<group>";
@@ -185,10 +186,9 @@
 		AC171D5E2103D7CA008747AB /* App flow */ = {
 			isa = PBXGroup;
 			children = (
-				AC273FD72234465300DF2AB9 /* LaunchScreen.storyboard */,
 				ACCAC19422342B9800502D6B /* MainCoordinator.swift */,
+				AC273FD72234465300DF2AB9 /* LaunchScreen.storyboard */,
 				AC171D5F2103D7D4008747AB /* SkateMap */,
-				AC0B89A72111FDBA006CDB7E /* PlaceDetails */,
 				AC9003FE2193758A0007F7E5 /* SendPlace */,
 			);
 			path = "App flow";
@@ -198,27 +198,21 @@
 			isa = PBXGroup;
 			children = (
 				AC2D9DAB21335D58003A6263 /* MapScreen */,
-				AC2D9DAC21335D70003A6263 /* Filtering */,
-				ACCAC1912234291700502D6B /* Navigation */,
-				AC171D602103D7E6008747AB /* UI */,
+				AC2D9DAC21335D70003A6263 /* FilteringScreen */,
+				AC0B89A72111FDBA006CDB7E /* PlaceDetailsScreen */,
+				ACB292F922358EE900DBB862 /* Coordinators */,
+				AC171D602103D7E6008747AB /* Storyboards */,
 			);
 			path = SkateMap;
 			sourceTree = "<group>";
 		};
-		AC171D602103D7E6008747AB /* UI */ = {
+		AC171D602103D7E6008747AB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				AC033FB12195D04B0005259B /* SkateMap.storyboard */,
+				AC0B89A921120E39006CDB7E /* PlaceDetails.storyboard */,
 			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		AC273FD42234436500DF2AB9 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */,
-			);
-			path = Navigation;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		AC2C030721AADC4900784F4E /* Services */ = {
@@ -250,13 +244,13 @@
 			path = MapScreen;
 			sourceTree = "<group>";
 		};
-		AC2D9DAC21335D70003A6263 /* Filtering */ = {
+		AC2D9DAC21335D70003A6263 /* FilteringScreen */ = {
 			isa = PBXGroup;
 			children = (
 				AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */,
 				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 			);
-			path = Filtering;
+			path = FilteringScreen;
 			sourceTree = "<group>";
 		};
 		AC2D9DAD21335D91003A6263 /* DetailsScreen */ = {
@@ -370,24 +364,28 @@
 			isa = PBXGroup;
 			children = (
 				AC947F66219E2BC7005007C4 /* SubmitPlaceScreen */,
-				AC273FD42234436500DF2AB9 /* Navigation */,
-				AC9003FF219375AD0007F7E5 /* UI */,
+				ACB292FA22358F0F00DBB862 /* Coordinators */,
+				AC9003FF219375AD0007F7E5 /* Storyboards */,
 			);
 			path = SendPlace;
 			sourceTree = "<group>";
 		};
-		AC9003FF219375AD0007F7E5 /* UI */ = {
+		AC9003FF219375AD0007F7E5 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				AC900400219375B90007F7E5 /* SubmitPlace.storyboard */,
+				ACB292F72235429F00DBB862 /* SubmitPlace.storyboard */,
 			);
-			path = UI;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		AC947F66219E2BC7005007C4 /* SubmitPlaceScreen */ = {
 			isa = PBXGroup;
 			children = (
-				AC947F67219E2BDD005007C4 /* SubmitPlaceViewController.swift */,
+				ACB292ED223541F000DBB862 /* SubmitTypeSelectorViewController.swift */,
+				ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */,
+				ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */,
+				ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */,
+				ACB292EE223541F000DBB862 /* SubmitSummaryViewController.swift */,
 			);
 			path = SubmitPlaceScreen;
 			sourceTree = "<group>";
@@ -414,12 +412,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		ACCAC1912234291700502D6B /* Navigation */ = {
+		ACB292F922358EE900DBB862 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				ACCAC1922234292900502D6B /* SkateMapCoordinator.swift */,
 			);
-			path = Navigation;
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		ACB292FA22358F0F00DBB862 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		ACD5CBB821D1953C00EDE3E0 /* UI */ = {
@@ -467,13 +473,6 @@
 				ACAE55F321AADEEA00F38FF5 /* WaypointType.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		ACF776F62234A1680067E3AA /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Navigation;
 			sourceTree = "<group>";
 		};
 		D3E59318DCC8C505C7AD5C3C /* Pods */ = {
@@ -548,7 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC900401219375B90007F7E5 /* SubmitPlace.storyboard in Resources */,
+				ACB292F82235429F00DBB862 /* SubmitPlace.storyboard in Resources */,
 				AC273FD82234465300DF2AB9 /* LaunchScreen.storyboard in Resources */,
 				AC033FDD2195DCEF0005259B /* Localizable.strings in Resources */,
 				AC0B89AA21120E39006CDB7E /* PlaceDetails.storyboard in Resources */,
@@ -622,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB292F0223541F000DBB862 /* SubmitTextsViewController.swift in Sources */,
 				AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */,
 				AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
@@ -630,16 +630,17 @@
 				ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */,
 				ACE6F71221B897B4000ABDF1 /* PlaceDisplayItem.swift in Sources */,
 				ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */,
+				ACB292E8223541BF00DBB862 /* PlaceSuggestionApiModel.swift in Sources */,
 				ACAE55F621AADEEA00F38FF5 /* WaypointType.swift in Sources */,
 				AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */,
 				AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */,
 				ACE6F71721B899F7000ABDF1 /* PlaceInfoRealmModel.swift in Sources */,
-				AC947F68219E2BDD005007C4 /* SubmitPlaceViewController.swift in Sources */,
 				AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */,
 				AC69060521C0784300A2088A /* Result.swift in Sources */,
 				AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
 				AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */,
+				ACB292F2223541F000DBB862 /* SubmitTypeSelectorViewController.swift in Sources */,
 				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,
 				AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */,
 				ACA489BB20FA9E890084D9F3 /* Constants.swift in Sources */,
@@ -655,8 +656,11 @@
 				AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */,
 				AC0B89A62111FDA8006CDB7E /* PlaceDetailsViewController.swift in Sources */,
 				ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */,
+				ACB292F4223541F000DBB862 /* SubmitImagesViewController.swift in Sources */,
 				AC6905FB21C073C900A2088A /* RealmError.swift in Sources */,
+				ACB292F3223541F000DBB862 /* SubmitSummaryViewController.swift in Sources */,
 				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,
+				ACB292F1223541F000DBB862 /* SubmitPositionViewController.swift in Sources */,
 				ACCAC19522342B9800502D6B /* MainCoordinator.swift in Sources */,
 				ACAE55F521AADEEA00F38FF5 /* WaypointStatus.swift in Sources */,
 				AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */,

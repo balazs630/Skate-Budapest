@@ -47,10 +47,10 @@ extension MainCoordinator {
     }
 
     private func makeSubmitScreen() -> UINavigationController {
-        let submitPlaceNavigationController = submitPlaceCoordinator.embedRootInNavigationController()
-        submitPlaceNavigationController.tabBarItem = UITabBarItem(title: Texts.SendSpace.sendPlaceTabBarTitle.localized,
+        let placeTypeSelectorViewController = submitPlaceCoordinator.embedRootInNavigationController()
+        placeTypeSelectorViewController.tabBarItem = UITabBarItem(title: Texts.SendSpace.sendPlaceTabBarTitle.localized,
                                                                   image: Theme.Icon.addPinIcon,
                                                                   selectedImage: Theme.Icon.addPinIcon)
-        return submitPlaceNavigationController
+        return placeTypeSelectorViewController
     }
 }

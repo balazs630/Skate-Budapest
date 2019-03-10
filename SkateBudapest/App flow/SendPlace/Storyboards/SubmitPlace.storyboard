@@ -13,7 +13,7 @@
         <!--Submit-->
         <scene sceneID="9o3-P5-uAh">
             <objects>
-                <viewController storyboardIdentifier="SubmitPlaceViewController" id="7bg-AW-tAE" customClass="SubmitPlaceViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubmitTypeSelectorViewController" id="7bg-AW-tAE" customClass="SubmitTypeSelectorViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQK-rB-MqZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2np-sg-hSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="181"/>
+            <point key="canvasLocation" x="-100" y="145"/>
         </scene>
     </scenes>
     <resources>

@@ -20,10 +20,23 @@ class SubmitPlaceCoordinator: Coordinator {
 
     // MARK: Setup root ViewController
     func embedRootInNavigationController() -> UINavigationController {
-        let rootViewController = SubmitPlaceViewController.instantiateViewController(from: .submitPlace)
+        let rootViewController = SubmitTypeSelectorViewController.instantiateViewController(from: .submitPlace)
         rootViewController.coordinator = self
         navigationController.pushViewController(rootViewController, animated: true)
 
         return navigationController
     }
+}
+
+// MARK: Navigation
+extension SubmitPlaceCoordinator {
+    func toSubmitPlaceTypeSelectorScreen() { }
+
+    func toSubmitTextsScreen() { }
+
+    func toSubmitImagesScreen() { }
+
+    func toSubmitPositionScreen() { }
+
+    func toSubmitSummaryScreen() { }
 }
