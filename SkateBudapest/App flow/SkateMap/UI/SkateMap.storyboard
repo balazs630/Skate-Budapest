@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dIy-t4-lLo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
+        <!--Skate Map View Controller-->
         <scene sceneID="b6i-ga-ztZ">
             <objects>
-                <viewController id="vZY-YY-T4n" customClass="SkateMapViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SkateMapViewController" id="vZY-YY-T4n" customClass="SkateMapViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PBO-0S-Vc3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkt-hd-d7o">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-ZP-jxx">
-                                <rect key="frame" x="325" y="568" width="25" height="25"/>
+                                <rect key="frame" x="325" y="617" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="BDS-Ck-PgG"/>
                                     <constraint firstAttribute="height" constant="25" id="EYR-O0-wjy"/>
@@ -41,59 +41,22 @@
                             <constraint firstItem="OPh-BF-67Z" firstAttribute="bottom" secondItem="NPG-ZP-jxx" secondAttribute="bottom" constant="25" id="o6R-e5-9zv"/>
                             <constraint firstItem="OPh-BF-67Z" firstAttribute="trailing" secondItem="NPG-ZP-jxx" secondAttribute="trailing" constant="25" id="tv5-yA-S9s"/>
                             <constraint firstAttribute="trailing" secondItem="kkt-hd-d7o" secondAttribute="trailing" id="uas-RH-fhl"/>
-                            <constraint firstItem="kkt-hd-d7o" firstAttribute="top" secondItem="PBO-0S-Vc3" secondAttribute="top" constant="20" id="wdv-yF-ehO"/>
+                            <constraint firstItem="kkt-hd-d7o" firstAttribute="top" secondItem="PBO-0S-Vc3" secondAttribute="top" id="wdv-yF-ehO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OPh-BF-67Z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="map" id="KLf-jp-gVs"/>
-                    <navigationItem key="navigationItem" title="Map" id="H5Q-bW-M9d">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="filtering-empty" id="vZ2-rK-0xo">
-                            <connections>
-                                <action selector="filterButtonTap:" destination="vZY-YY-T4n" id="tBH-pM-xLj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="kkt-hd-d7o" id="NwL-DQ-rrY"/>
-                        <segue destination="vHj-LK-PgP" kind="show" identifier="showLocationPinDetailsSegue" id="HKj-Pp-0za"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DLy-CO-RLO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="32.833583208395808"/>
+            <point key="canvasLocation" x="1026" y="33"/>
         </scene>
-        <!--LocationDetailsViewController-->
-        <scene sceneID="gmG-vn-UF2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LocationDetails" referencedIdentifier="LocationDetailsViewController" id="vHj-LK-PgP" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w8d-XM-ZRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1734" y="32"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="LuZ-B0-aAc">
-            <objects>
-                <navigationController storyboardIdentifier="SkateMapNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="dIy-t4-lLo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zJN-y8-dVI">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.62169867749999996" green="0.92023098469999998" blue="0.77081644540000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vZY-YY-T4n" kind="relationship" relationship="rootViewController" id="d5C-ME-A2X"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6fS-lL-U2j" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="82" y="33"/>
-        </scene>
-        <!--Annotation Filter View Controller-->
+        <!--Place Filter View Controller-->
         <scene sceneID="MXl-Y2-d5q">
             <objects>
-                <viewController storyboardIdentifier="AnnotationFilterViewController" id="afy-vZ-Nj2" customClass="AnnotationFilterViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaceFilterViewController" id="afy-vZ-Nj2" customClass="PlaceFilterViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QPx-xG-oEm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="360"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,12 +228,10 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1861.5999999999999" y="330.13493253373315"/>
+            <point key="canvasLocation" x="1868" y="171"/>
         </scene>
     </scenes>
     <resources>
-        <image name="filtering-empty" width="22" height="22"/>
         <image name="location-arrow" width="128" height="128"/>
-        <image name="map" width="25" height="25"/>
     </resources>
 </document>

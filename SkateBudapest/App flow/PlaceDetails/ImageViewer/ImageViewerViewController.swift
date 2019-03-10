@@ -12,7 +12,7 @@ protocol ImageViewerViewControllerDelegate: class {
     func updateImageOffset(indexPath: IndexPath)
 }
 
-class ImageViewerViewController: UIViewController {
+class ImageViewerViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     var images: [UIImage]!
     var imageOffset: IndexPath!

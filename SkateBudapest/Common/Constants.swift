@@ -16,7 +16,6 @@ struct Constant {
     static let calloutImageViewSize = CGRect(x: 0, y: 0, width: 59, height: 59)
     static let calloutViewIdentifier = "customMKAnnotationView"
     static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
-    static let annotationFilter = "AnnotationFilterViewController"
 }
 
 enum ApiEnvironment: String {
@@ -27,8 +26,17 @@ enum ApiEnvironment: String {
     }
 }
 
+enum StoryboardName: String {
+    case skateMap = "SkateMap"
+    case placeDetails = "PlaceDetails"
+    case submitPlace = "SubmitPlace"
+}
+
 public enum Theme {
     public enum Icon {
+        public static let mapIcon = UIImage(named: "map")!
+        public static let addPinIcon = UIImage(named: "addPin")!
+
         public static let skateparkPin = UIImage(named: "map-pin-skatepark")!
         public static let skateshopPin = UIImage(named: "map-pin-shop")!
         public static let streetSpotPin = UIImage(named: "map-pin-city")!
@@ -46,6 +54,7 @@ public enum Theme {
     }
 
     public enum Color {
+        public static let primaryTurquoise = UIColor.color(red: 172, green: 235, blue: 203)
         public static let skateparkColor = UIColor.color(red: 210, green: 64, blue: 140)
         public static let skateshopColor = UIColor.color(red: 64, green: 200, blue: 140)
         public static let streetSpotColor = UIColor.color(red: 135, green: 200, blue: 240)
@@ -63,9 +72,4 @@ extension UserDefaults {
             static let streetspot = "streetspot"
         }
     }
-}
-
-struct SegueIdentifier {
-    static let showLocationPinDetails = "showLocationPinDetailsSegue"
-    static let showImageViewer = "showImageViewerSegue"
 }

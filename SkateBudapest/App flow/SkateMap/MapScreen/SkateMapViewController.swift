@@ -8,9 +8,10 @@
 
 import MapKit
 
-class SkateMapViewController: UIViewController {
+class SkateMapViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     private let placeCachingService = PlaceCachingService()
+    weak var coordinator: SkateMapCoordinator?
 
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -27,9 +28,18 @@ class SkateMapViewController: UIViewController {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        navigationItem.title = Texts.SkateMap.mapNavBarTitle.localized
-        configureTabBarTexts(with: [Texts.SkateMap.mapTabBarTitle.localized,
-                                    Texts.SendSpace.sendPlaceTabBarTitle.localized])
+        configureNavigationBar()
+    }
+
+    private func configureNavigationBar() {
+        title = Texts.SkateMap.mapNavBarTitle.localized
+        navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: Theme.Icon.filteringEmpty,
+            style: .done,
+            target: self,
+            action: #selector(toFilteringScreen))
     }
 
     // MARK: Button actions
@@ -43,18 +53,6 @@ class SkateMapViewController: UIViewController {
                                                      longitudinalMeters: longitudinalMeters)
             mapView.setRegion(viewRegion, animated: true)
         }
-    }
-
-    @IBAction func filterButtonTap(_ sender: Any) {
-        guard let annotationFilterVC = storyboard?.instantiateViewController(withIdentifier: Constant.annotationFilter)
-            as? AnnotationFilterViewController else { return }
-
-        annotationFilterVC.modalPresentationStyle = .custom
-        annotationFilterVC.view.frame.size.width = view.frame.width
-        annotationFilterVC.transitioningDelegate = self
-        annotationFilterVC.delegate = self
-
-        present(annotationFilterVC, animated: true, completion: nil)
     }
 }
 
@@ -99,22 +97,13 @@ extension SkateMapViewController {
 
 // MARK: Navigation
 extension SkateMapViewController {
-    private func navigateToDetailsScreen(from view: UIView) {
-        performSegue(withIdentifier: SegueIdentifier.showLocationPinDetails, sender: view)
+    @objc private func toFilteringScreen() {
+        coordinator?.toFilteringScreen(using: self)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let annotationView = sender as? MKAnnotationView
-        guard let waypoint = annotationView?.annotation as? PlaceDisplayItem else { return }
-        guard segue.identifier != nil else { return }
-
-        switch segue.identifier {
-        case SegueIdentifier.showLocationPinDetails:
-            guard let destVC = segue.destination as? LocationDetailsViewController else { return }
-            destVC.waypoint = waypoint
-        default:
-            debugPrint("Unexpected segue identifier was given in: \(#file), line: \(#line)")
-        }
+    private func toDetailsScreen(from view: MKAnnotationView) {
+        guard let place = view.annotation as? PlaceDisplayItem else { return }
+        coordinator?.toPlaceDetailsScreen(place: place)
     }
 }
 
@@ -165,7 +154,7 @@ extension SkateMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView,
                  annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
-        navigateToDetailsScreen(from: view)
+        toDetailsScreen(from: view)
     }
 }
 
@@ -178,8 +167,8 @@ extension SkateMapViewController: UIViewControllerTransitioningDelegate {
     }
 }
 
-// MARK: AnnotationFilterDelegate methods
-extension SkateMapViewController: AnnotationFilterDelegate {
+// MARK: PlaceFilterDelegate methods
+extension SkateMapViewController: PlaceFilterDelegate {
     func filterAnnotations(by selectedTypes: [WaypointType]) {
         changeFilteringIcon(isFiltered: WaypointType.allCases.count != selectedTypes.count)
         return filter(by: selectedTypes)

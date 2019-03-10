@@ -1,5 +1,5 @@
 //
-//  LocationDetailsViewController.swift
+//  PlaceDetailsViewController.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2018. 08. 01..
@@ -9,12 +9,13 @@
 import UIKit
 import CoreLocation
 
-class LocationDetailsViewController: UIViewController {
+class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     fileprivate var routingViewController: RoutingViewController?
+    weak var coordinator: SkateMapCoordinator?
     var waypoint: PlaceDisplayItem!
-    private var imageViews: [UIImageView]?
-    private var imageOffset = IndexPath(row: 0, section: 0)
+    var imageViews: [UIImageView]?
+    var imageOffset = IndexPath(row: 0, section: 0)
 
     // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -41,7 +42,7 @@ class LocationDetailsViewController: UIViewController {
 }
 
 // MARK: - Setup view
-extension LocationDetailsViewController {
+extension PlaceDetailsViewController {
     private func configureSelf() {
         configureNavigationBarTitleView()
         configureLabels()
@@ -122,7 +123,7 @@ extension LocationDetailsViewController {
             imageScrollView.contentSize.width = imageScrollView.frame.width * CGFloat(imageViews.count)
         }
 
-        let imageTap = UITapGestureRecognizer(target: self, action: #selector(navigateToImageViewerScreen))
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(toImageViewerScreen))
         imageTap.cancelsTouchesInView = false
         imageScrollView.addGestureRecognizer(imageTap)
     }
@@ -153,37 +154,22 @@ extension LocationDetailsViewController {
 }
 
 // MARK: Navigation
-extension LocationDetailsViewController {
-    @objc private func navigateToImageViewerScreen() {
-        performSegue(withIdentifier: SegueIdentifier.showImageViewer, sender: nil)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier != nil else { return }
-
-        switch segue.identifier {
-        case SegueIdentifier.showImageViewer:
-            guard let destVC = segue.destination as? ImageViewerViewController else { return }
-
-            destVC.images = imageViews?.images()
-            imageOffset.row = pageControl.currentPage
-            destVC.imageOffset = imageOffset
-            destVC.delegate = self
-        default:
-            debugPrint("Unexpected segue identifier was given in: \(#file), line: \(#line)")
-        }
+extension PlaceDetailsViewController {
+    @objc private func toImageViewerScreen() {
+        imageOffset.row = pageControl.currentPage
+        coordinator?.toImageViewerScreen(using: self)
     }
 }
 
 // MARK: UIScrollViewDelegate methods
-extension LocationDetailsViewController: UIScrollViewDelegate {
+extension PlaceDetailsViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
     }
 }
 
 // MARK: ImageViewerViewControllerDelegate methods
-extension LocationDetailsViewController: ImageViewerViewControllerDelegate {
+extension PlaceDetailsViewController: ImageViewerViewControllerDelegate {
     func updateImageOffset(indexPath: IndexPath) {
         imageOffset = indexPath
     }

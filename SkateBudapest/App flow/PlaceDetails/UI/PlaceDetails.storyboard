@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AWZ-4X-6uK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,16 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Location Details View Controller-->
+        <!--Place Details View Controller-->
         <scene sceneID="6ZL-jG-2ai">
             <objects>
-                <viewController storyboardIdentifier="LocationDetailsViewController" id="o7c-Sh-F8G" customClass="LocationDetailsViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaceDetailsViewController" id="o7c-Sh-F8G" customClass="PlaceDetailsViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eKf-lW-Hgv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-Ls-kyh">
-                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eK5-Vm-Uue" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="538"/>
@@ -141,41 +141,22 @@
                         <outlet property="locationTypeView" destination="oyu-gA-vyS" id="6rs-D7-6yz"/>
                         <outlet property="pageControl" destination="cke-pk-tY0" id="quy-Yf-Nh7"/>
                         <outlet property="titleLabel" destination="14b-kQ-awA" id="MXF-BM-kZS"/>
-                        <segue destination="5nn-zZ-c5F" kind="show" identifier="showImageViewerSegue" animates="NO" id="Ww7-gq-2pb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mk-h8-sxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2853.5999999999999" y="182.60869565217394"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="UpF-M6-Efe">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AWZ-4X-6uK" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pIo-Th-1gs">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="o7c-Sh-F8G" kind="relationship" relationship="rootViewController" id="baR-l2-qjb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ic6-mP-PHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1888.8" y="32.833583208395808"/>
-        </scene>
         <!--Image Viewer View Controller-->
         <scene sceneID="Pja-92-Ri1">
             <objects>
-                <viewController id="5nn-zZ-c5F" customClass="ImageViewerViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageViewerViewController" id="5nn-zZ-c5F" customClass="ImageViewerViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JBX-S6-VHf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Ol-le-xCn">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uYz-KS-bFe">
                                     <size key="itemSize" width="265" height="261"/>
@@ -239,12 +220,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="609-gL-1px" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3798" y="363"/>
+            <point key="canvasLocation" x="3774" y="332"/>
         </scene>
         <!--Routing View Controller-->
         <scene sceneID="bh0-w1-kLc">
             <objects>
-                <viewController id="a6M-vz-oxu" customClass="RoutingViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoutingViewController" id="a6M-vz-oxu" customClass="RoutingViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jl1-71-4E2">
                         <rect key="frame" x="0.0" y="0.0" width="345" height="80"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

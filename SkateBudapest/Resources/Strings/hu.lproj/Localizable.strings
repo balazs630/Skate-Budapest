@@ -15,7 +15,7 @@
 "mapNavBarTitle" = "Térkép";
 "mapTabBarTitle" = "Térkép";
 
-// AnnotationFilterViewController:
+// PlaceFilterViewController:
 "filterScreenTitle" = "Szűrés a hely típusára";
 "filterTypeSkatepark" = "Deszkás pálya";
 "filterTypeSkatespot" = "Deszkás spot";

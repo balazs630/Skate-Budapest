@@ -10,13 +10,25 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
+    var coordinator: MainCoordinator?
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setUpMainNavigator()
         initUserDefaults()
         return true
+    }
+}
+
+// MARK: - Navigation setup
+extension AppDelegate {
+    func setUpMainNavigator() {
+        coordinator = MainCoordinator()
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = coordinator?.rootViewController
+        window?.makeKeyAndVisible()
     }
 }
 

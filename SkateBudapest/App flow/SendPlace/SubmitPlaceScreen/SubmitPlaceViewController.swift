@@ -8,7 +8,10 @@
 
 import UIKit
 
-class SubmitPlaceViewController: UIViewController {
+class SubmitPlaceViewController: UIViewController, StoryboardLoadable {
+    // MARK: Properties
+    weak var coordinator: SubmitPlaceCoordinator?
+
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +20,7 @@ class SubmitPlaceViewController: UIViewController {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        navigationItem.title = Texts.SendSpace.sendPlaceNavBarTitle.localized
+        title = Texts.SendSpace.sendPlaceNavBarTitle.localized
+        navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
     }
 }

@@ -1,5 +1,5 @@
 //
-//  AnnotationFilterViewController.swift
+//  PlaceFilterViewController.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2018. 08. 26..
@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol AnnotationFilterDelegate: class {
+protocol PlaceFilterDelegate: class {
     func filterAnnotations(by selectedTypes: [WaypointType])
 }
 
-class AnnotationFilterViewController: UIViewController {
+class PlaceFilterViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     private let defaults = UserDefaults.standard
-    weak var delegate: AnnotationFilterDelegate?
+    weak var delegate: PlaceFilterDelegate?
 
     // MARK: Outlets
     @IBOutlet weak var titleLabel: UILabel!
@@ -95,7 +95,7 @@ class AnnotationFilterViewController: UIViewController {
 }
 
 // MARK: Utility methods
-extension AnnotationFilterViewController {
+extension PlaceFilterViewController {
     private func selectedTypes() -> [WaypointType] {
         var filteredTypes = [WaypointType]()
         if skateparkSwitch.isOn {
