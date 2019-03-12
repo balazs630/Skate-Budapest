@@ -11,7 +11,6 @@ import CoreLocation
 
 class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
-    fileprivate var routingViewController: RoutingViewController?
     weak var coordinator: SkateMapCoordinator?
     var waypoint: PlaceDisplayItem!
     var imageViews: [UIImageView]?
@@ -24,6 +23,7 @@ class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    @IBOutlet weak var routingContainerView: UIView!
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
 
@@ -31,7 +31,7 @@ class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
-        setupChildViewControllers()
+        addChildViewControllers()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -51,16 +51,14 @@ extension PlaceDetailsViewController {
         configurePageControl()
     }
 
-    private func setupChildViewControllers() {
-        setupRoutingViewController()
+    private func addChildViewControllers() {
+        addRoutingViewController()
     }
 
-    private func setupRoutingViewController() {
-        routingViewController = children
-            .filter { $0.isKind(of: RoutingViewController.self) }
-            .first as? RoutingViewController
-
-        routingViewController?.destinationLocation = waypoint.coordinate
+    private func addRoutingViewController() {
+        let routingViewController = RoutingViewController.instantiateViewController(from: .placeDetails)
+        routingViewController.destinationLocation = waypoint.coordinate
+        add(routingViewController, to: routingContainerView)
     }
 
     private func configureNavigationBarTitleView() {

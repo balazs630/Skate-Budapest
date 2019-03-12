@@ -20,41 +20,44 @@ class SkateMapCoordinator: Coordinator {
 
     // MARK: Setup root ViewController
     func embedRootInNavigationController() -> UINavigationController {
-        let rootViewController = SkateMapViewController.instantiateViewController(from: .skateMap)
-        rootViewController.coordinator = self
-        navigationController.pushViewController(rootViewController, animated: true)
-
+        toSkateMapScreen()
         return navigationController
     }
 }
 
 // MARK: Navigation
 extension SkateMapCoordinator {
+    func toSkateMapScreen() {
+        let skateMapScreen = SkateMapViewController.instantiateViewController(from: .skateMap)
+        skateMapScreen.coordinator = self
+        navigationController.pushViewController(skateMapScreen, animated: true)
+    }
+
     func toFilteringScreen(using sourceViewController: SkateMapViewController) {
-        let filteringViewController = PlaceFilterViewController.instantiateViewController(from: .skateMap)
+        let filteringScreen = PlaceFilterViewController.instantiateViewController(from: .skateMap)
 
-        filteringViewController.modalPresentationStyle = .custom
-        filteringViewController.view.frame.size.width = sourceViewController.view.frame.width
-        filteringViewController.transitioningDelegate = sourceViewController
-        filteringViewController.delegate = sourceViewController
+        filteringScreen.modalPresentationStyle = .custom
+        filteringScreen.view.frame.size.width = sourceViewController.view.frame.width
+        filteringScreen.transitioningDelegate = sourceViewController
+        filteringScreen.delegate = sourceViewController
 
-        navigationController.present(filteringViewController, animated: true, completion: nil)
+        navigationController.present(filteringScreen, animated: true, completion: nil)
     }
 
     func toPlaceDetailsScreen(place: PlaceDisplayItem) {
-        let placeDetails = PlaceDetailsViewController.instantiateViewController(from: .placeDetails)
-        placeDetails.coordinator = self
-        placeDetails.waypoint = place
+        let placeDetailsScreen = PlaceDetailsViewController.instantiateViewController(from: .placeDetails)
+        placeDetailsScreen.coordinator = self
+        placeDetailsScreen.waypoint = place
 
-        navigationController.pushViewController(placeDetails, animated: true)
+        navigationController.pushViewController(placeDetailsScreen, animated: true)
     }
 
     func toImageViewerScreen(using sourceViewController: PlaceDetailsViewController) {
-        let imageViewController = ImageViewerViewController.instantiateViewController(from: .placeDetails)
-        imageViewController.images = sourceViewController.imageViews?.images()
-        imageViewController.imageOffset = sourceViewController.imageOffset
-        imageViewController.delegate = sourceViewController
+        let imageViewerScreen = ImageViewerViewController.instantiateViewController(from: .placeDetails)
+        imageViewerScreen.images = sourceViewController.imageViews?.images()
+        imageViewerScreen.imageOffset = sourceViewController.imageOffset
+        imageViewerScreen.delegate = sourceViewController
 
-        navigationController.pushViewController(imageViewController, animated: true)
+        navigationController.pushViewController(imageViewerScreen, animated: true)
     }
 }

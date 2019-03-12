@@ -84,9 +84,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" id="jSx-wa-rLx"/>
                                                 </constraints>
-                                                <connections>
-                                                    <segue destination="a6M-vz-oxu" kind="embed" id="3bp-JI-gfQ"/>
-                                                </connections>
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -131,7 +128,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5ha-Ph-44X"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WHH-zp-U4I"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="nsw-2y-29Y" id="JS9-Np-Dti"/>
@@ -140,6 +136,7 @@
                         <outlet property="locationTypeLabel" destination="vbv-xf-aQj" id="JXC-9r-Nbg"/>
                         <outlet property="locationTypeView" destination="oyu-gA-vyS" id="6rs-D7-6yz"/>
                         <outlet property="pageControl" destination="cke-pk-tY0" id="quy-Yf-Nh7"/>
+                        <outlet property="routingContainerView" destination="OcE-4b-2iA" id="c4B-a5-t3W"/>
                         <outlet property="titleLabel" destination="14b-kQ-awA" id="MXF-BM-kZS"/>
                     </connections>
                 </viewController>
@@ -213,7 +210,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tI1-tJ-KPP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SGc-Gr-T2t"/>
                     <connections>
                         <outlet property="imageCollectionView" destination="4Ol-le-xCn" id="22C-ZS-ZN1"/>
                     </connections>
@@ -221,6 +217,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="609-gL-1px" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3774" y="332"/>
+        </scene>
+        <!--Routing Empty View Controller-->
+        <scene sceneID="NAe-er-CP4">
+            <objects>
+                <viewController storyboardIdentifier="RoutingEmptyViewController" id="FBU-dG-5NS" customClass="RoutingEmptyViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uF1-1U-WdU">
+                        <rect key="frame" x="0.0" y="0.0" width="345" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llG-j8-NNO" userLabel="Empty View">
+                                <rect key="frame" x="0.0" y="0.0" width="345" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFh-NF-VgP">
+                                        <rect key="frame" x="283" y="25" width="47" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ykp-un-hlq"/>
+                                        </constraints>
+                                        <state key="normal" title="Enable"/>
+                                        <connections>
+                                            <action selector="enableLocationTap:" destination="FBU-dG-5NS" eventType="touchUpInside" id="NDw-bi-2wV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable location to show navigation options" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evm-qG-GUM">
+                                        <rect key="frame" x="15" y="7.5" width="182" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="182" id="Tzo-2c-7WI"/>
+                                            <constraint firstAttribute="height" constant="65" id="pZ4-QE-62o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XFh-NF-VgP" secondAttribute="trailing" constant="15" id="VE6-Gc-n6x"/>
+                                    <constraint firstItem="evm-qG-GUM" firstAttribute="centerY" secondItem="llG-j8-NNO" secondAttribute="centerY" id="bCM-Hv-PJt"/>
+                                    <constraint firstItem="evm-qG-GUM" firstAttribute="leading" secondItem="llG-j8-NNO" secondAttribute="leading" constant="15" id="km9-l1-KYf"/>
+                                    <constraint firstItem="XFh-NF-VgP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="evm-qG-GUM" secondAttribute="trailing" constant="20" id="lmA-eh-Fi0"/>
+                                    <constraint firstItem="XFh-NF-VgP" firstAttribute="centerY" secondItem="llG-j8-NNO" secondAttribute="centerY" id="lp4-be-hpu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="llG-j8-NNO" firstAttribute="top" secondItem="kXU-VW-JSH" secondAttribute="top" id="MyM-Hb-uG2"/>
+                            <constraint firstItem="llG-j8-NNO" firstAttribute="trailing" secondItem="kXU-VW-JSH" secondAttribute="trailing" id="NqO-sZ-4Ob"/>
+                            <constraint firstItem="llG-j8-NNO" firstAttribute="leading" secondItem="kXU-VW-JSH" secondAttribute="leading" id="jtj-VD-cyN"/>
+                            <constraint firstItem="llG-j8-NNO" firstAttribute="bottom" secondItem="kXU-VW-JSH" secondAttribute="bottom" id="rxM-Qi-r43"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kXU-VW-JSH"/>
+                    </view>
+                    <size key="freeformSize" width="345" height="80"/>
+                    <connections>
+                        <outlet property="enableLocationButton" destination="XFh-NF-VgP" id="XCk-DJ-2gD"/>
+                        <outlet property="enableLocationLabel" destination="evm-qG-GUM" id="qX6-LE-pUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJs-bn-vuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3774" y="-101"/>
         </scene>
         <!--Routing View Controller-->
         <scene sceneID="bh0-w1-kLc">
@@ -388,50 +445,13 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llG-j8-NNO" userLabel="Empty View">
-                                <rect key="frame" x="0.0" y="0.0" width="345" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFh-NF-VgP">
-                                        <rect key="frame" x="283" y="25" width="47" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Ykp-un-hlq"/>
-                                        </constraints>
-                                        <state key="normal" title="Enable"/>
-                                        <connections>
-                                            <action selector="enableLocationTap:" destination="a6M-vz-oxu" eventType="touchUpInside" id="XcE-wD-ajE"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable location to show navigation options" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evm-qG-GUM">
-                                        <rect key="frame" x="15" y="7.5" width="182" height="65"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="182" id="Tzo-2c-7WI"/>
-                                            <constraint firstAttribute="height" constant="65" id="pZ4-QE-62o"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="XFh-NF-VgP" secondAttribute="trailing" constant="15" id="VE6-Gc-n6x"/>
-                                    <constraint firstItem="evm-qG-GUM" firstAttribute="centerY" secondItem="llG-j8-NNO" secondAttribute="centerY" id="bCM-Hv-PJt"/>
-                                    <constraint firstItem="evm-qG-GUM" firstAttribute="leading" secondItem="llG-j8-NNO" secondAttribute="leading" constant="15" id="km9-l1-KYf"/>
-                                    <constraint firstItem="XFh-NF-VgP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="evm-qG-GUM" secondAttribute="trailing" constant="20" id="lmA-eh-Fi0"/>
-                                    <constraint firstItem="XFh-NF-VgP" firstAttribute="centerY" secondItem="llG-j8-NNO" secondAttribute="centerY" id="lp4-be-hpu"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="F7Q-14-JWL" secondAttribute="trailing" constant="13" id="2Kh-HE-WGp"/>
                             <constraint firstAttribute="bottom" secondItem="F7Q-14-JWL" secondAttribute="bottom" constant="10" id="Ahf-sD-AHx"/>
-                            <constraint firstItem="vCM-iR-Dxg" firstAttribute="trailing" secondItem="llG-j8-NNO" secondAttribute="trailing" id="E3Z-GT-GKj"/>
                             <constraint firstItem="F7Q-14-JWL" firstAttribute="leading" secondItem="Jl1-71-4E2" secondAttribute="leading" constant="13" id="V5J-Yl-uXz"/>
-                            <constraint firstItem="llG-j8-NNO" firstAttribute="leading" secondItem="vCM-iR-Dxg" secondAttribute="leading" id="lXi-Ei-Doe"/>
                             <constraint firstItem="F7Q-14-JWL" firstAttribute="top" secondItem="Jl1-71-4E2" secondAttribute="top" constant="10" id="whj-2z-atK"/>
-                            <constraint firstAttribute="bottom" secondItem="llG-j8-NNO" secondAttribute="bottom" id="x88-qc-XTK"/>
-                            <constraint firstItem="llG-j8-NNO" firstAttribute="top" secondItem="vCM-iR-Dxg" secondAttribute="top" id="xS1-zf-oHm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vCM-iR-Dxg"/>
                         <userDefinedRuntimeAttributes>
@@ -440,10 +460,10 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <size key="freeformSize" width="345" height="80"/>
                     <connections>
                         <outlet property="drivingActivityIndicator" destination="1x7-Kw-aGe" id="P21-Yy-Yba"/>
                         <outlet property="drivingRouteButton" destination="dDc-4e-KCV" id="4MP-QR-ioh"/>
-                        <outlet property="enableLocationButton" destination="XFh-NF-VgP" id="djR-Bb-PSc"/>
                         <outlet property="enableLocationLabel" destination="evm-qG-GUM" id="47y-Md-Wyt"/>
                         <outlet property="transitActivityIndicator" destination="8C7-V4-KKd" id="Yga-3Y-gRa"/>
                         <outlet property="transitRouteButton" destination="Bl9-mM-U2R" id="yfT-H1-mmu"/>
@@ -453,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKP-0M-H9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3773.5999999999999" y="-126.83658170914543"/>
+            <point key="canvasLocation" x="3774" y="-231"/>
         </scene>
     </scenes>
     <resources>

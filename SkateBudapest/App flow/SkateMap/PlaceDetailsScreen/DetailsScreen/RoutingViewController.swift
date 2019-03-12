@@ -8,8 +8,9 @@
 
 import MapKit
 
-class RoutingViewController: UIViewController {
+class RoutingViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
+    fileprivate var routingEmptyViewController: RoutingEmptyViewController?
     var destinationLocation: CLLocationCoordinate2D!
 
     // MARK: Outlets
@@ -21,30 +22,18 @@ class RoutingViewController: UIViewController {
     @IBOutlet weak var drivingActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var walkingActivityIndicator: UIActivityIndicatorView!
 
-    @IBOutlet weak var enableLocationLabel: UILabel!
-    @IBOutlet weak var enableLocationButton: UIButton!
-
     // MARK: View lifecycle
     override func viewDidLoad() {
-        configureSelf()
         setObserverForUIApplicationDidBecomeActive()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
         setupView()
     }
 
     // MARK: Screen configuration
-    private func configureSelf() {
-        configureEmptyView()
-    }
-
-    private func configureEmptyView() {
-        enableLocationLabel.text = Texts.LocationDetails.mapNavigationEmptyViewText.localized
-        enableLocationButton.setTitle(Texts.LocationDetails.mapNavigationEmptyViewButtonText.localized, for: .normal)
-    }
-
     private func setObserverForUIApplicationDidBecomeActive() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(setupView),
@@ -66,29 +55,18 @@ extension RoutingViewController {
     @IBAction func walkingButtonTap(_ sender: Any) {
         openMaps(directionMode: MKLaunchOptionsDirectionsModeWalking)
     }
-
-    @IBAction func enableLocationTap(_ sender: Any) {
-        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-        UIApplication.shared.open(settingsUrl)
-    }
 }
 
 // MARK: UI Manipulation
 extension RoutingViewController {
     @objc private func setupView() {
         if LocationService.shared.location != nil {
-            presentEmptyView(false)
+            routingEmptyViewController?.remove()
             requestETA(for: [.transit, .automobile, .walking])
         } else {
-            presentEmptyView(true)
+            routingEmptyViewController = RoutingEmptyViewController.instantiateViewController(from: .placeDetails)
+            add(routingEmptyViewController!, to: view)
         }
-    }
-
-    private func presentEmptyView(_ state: Bool) {
-        let emptyViewTag = 1
-        view.subviews
-            .filter { $0.tag == emptyViewTag }
-            .forEach { $0.isHidden = !state }
     }
 
     private func setTransitTimeButtonTexts(for transportType: MKDirectionsTransportType, travelTime: TimeInterval) {
