@@ -22,26 +22,21 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        title = "Type selector"
+        navigationItem.title = Texts.SubmitPlace.submitTypeNavBarTitle.localized
+        navigationItem.hidesBackButton = true
         navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
     }
 
     // MARK: Actions
     @IBAction func skateParkTypeTap(_ sender: Any) {
-        Master.type = "skatepark"
+        coordinator?.toSubmitTextsScreen()
     }
 
     @IBAction func streetSpotTypeTap(_ sender: Any) {
-        Master.type = "streetspot"
+        coordinator?.toSubmitTextsScreen()
     }
 
     @IBAction func skateshopTypeTap(_ sender: Any) {
-        Master.type = "skateshop"
+        coordinator?.toSubmitTextsScreen()
     }
-}
-
-public struct Master {
-    static var type: String!
-    static var title: String!
-    static var info: String!
 }

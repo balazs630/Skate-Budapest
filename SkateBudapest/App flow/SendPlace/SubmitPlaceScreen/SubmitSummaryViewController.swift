@@ -20,6 +20,12 @@ class SubmitSummaryViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        title = "Summary"
+        navigationItem.title = Texts.SubmitPlace.submitSummaryNavBarTitle.localized
+        navigationItem.hidesBackButton = true
+    }
+
+    // MARK: Actions:
+    @IBAction func nextButton(_ sender: Any) {
+        coordinator?.toSubmitPlaceTypeSelectorScreen()
     }
 }

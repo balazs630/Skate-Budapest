@@ -32,9 +32,13 @@ struct Texts {
         case directions
     }
 
-    enum SendSpace: String, Localizable {
-        case sendPlaceNavBarTitle
-        case sendPlaceTabBarTitle
+    enum SubmitPlace: String, Localizable {
+        case submit
+        case submitTypeNavBarTitle
+        case submitTextsNavBarTitle
+        case submitImagesNavBarTitle
+        case submitPositionNavBarTitle
+        case submitSummaryNavBarTitle
     }
 
     enum NetworkError: String, Localizable {

@@ -20,6 +20,11 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        title = "Texts"
+        navigationItem.title = Texts.SubmitPlace.submitTextsNavBarTitle.localized
+    }
+
+    // MARK: Actions:
+    @IBAction func nextButton(_ sender: Any) {
+        coordinator?.toSubmitImagesScreen()
     }
 }

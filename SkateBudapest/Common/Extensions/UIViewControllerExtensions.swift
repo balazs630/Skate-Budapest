@@ -9,9 +9,11 @@
 import UIKit
 
 extension UIViewController {
-    func add(_ child: UIViewController, to containerView: UIView) {
-        child.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        child.view.frame = containerView.bounds
+    func add(_ child: UIViewController, to containerView: UIView, fillContainer: Bool = true) {
+        if fillContainer {
+            child.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            child.view.frame = containerView.bounds
+        }
 
         containerView.addSubview(child.view)
         addChild(child)

@@ -30,8 +30,12 @@
 "directions" = "Directions";
 
 // SendPlaceViewController:
-"sendPlaceNavBarTitle" = "Submit";
-"sendPlaceTabBarTitle" = "Submit";
+"submit" = "Submit";
+"submitTypeNavBarTitle" = "Type selector";
+"submitTextsNavBarTitle" = "Info";
+"submitImagesNavBarTitle" = "Images";
+"submitPositionNavBarTitle" = "Position";
+"submitSummaryNavBarTitle" = "Summary";
 
 // NetworkError:
 "networkErrorTitle" = "Network error";

@@ -20,6 +20,11 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        title = "Map"
+        navigationItem.title = Texts.SubmitPlace.submitPositionNavBarTitle.localized
+    }
+
+    // MARK: Actions:
+    @IBAction func nextButton(_ sender: Any) {
+        coordinator?.toSubmitSummaryScreen()
     }
 }

@@ -30,8 +30,12 @@
 "directions" = "Útvonaltervezés";
 
 // SendPlaceViewController:
-"sendPlaceNavBarTitle" = "Beküldés";
-"sendPlaceTabBarTitle" = "Beküldés";
+"submit" = "Beküldés";
+"submitTypeNavBarTitle" = "Típus választó";
+"submitTextsNavBarTitle" = "Információk";
+"submitImagesNavBarTitle" = "Képek";
+"submitPositionNavBarTitle" = "Pozíció";
+"submitSummaryNavBarTitle" = "Összegző";
 
 // NetworkError:
 "networkErrorTitle" = "Hálózati hiba";
