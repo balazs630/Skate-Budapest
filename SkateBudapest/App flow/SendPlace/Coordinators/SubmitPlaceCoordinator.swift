@@ -20,23 +20,40 @@ class SubmitPlaceCoordinator: Coordinator {
 
     // MARK: Setup root ViewController
     func embedRootInNavigationController() -> UINavigationController {
-        let rootViewController = SubmitTypeSelectorViewController.instantiateViewController(from: .submitPlace)
-        rootViewController.coordinator = self
-        navigationController.pushViewController(rootViewController, animated: true)
-
+        toSubmitPlaceTypeSelectorScreen()
         return navigationController
     }
 }
 
 // MARK: Navigation
 extension SubmitPlaceCoordinator {
-    func toSubmitPlaceTypeSelectorScreen() { }
+    func toSubmitPlaceTypeSelectorScreen() {
+        let submitPlaceTypeScreen = SubmitTypeSelectorViewController.instantiateViewController(from: .submitPlace)
+        submitPlaceTypeScreen.coordinator = self
+        navigationController.pushViewController(submitPlaceTypeScreen, animated: true)
+    }
 
-    func toSubmitTextsScreen() { }
+    func toSubmitTextsScreen() {
+        let submitTextualScreen = SubmitTextsViewController.instantiateViewController(from: .submitPlace)
+        submitTextualScreen.coordinator = self
+        navigationController.pushViewController(submitTextualScreen, animated: true)
+    }
 
-    func toSubmitImagesScreen() { }
+    func toSubmitImagesScreen() {
+        let submitImagesScreen = SubmitImagesViewController.instantiateViewController(from: .submitPlace)
+        submitImagesScreen.coordinator = self
+        navigationController.pushViewController(submitImagesScreen, animated: true)
+    }
 
-    func toSubmitPositionScreen() { }
+    func toSubmitPositionScreen() {
+        let sumitPositionScreen = SubmitPositionViewController.instantiateViewController(from: .submitPlace)
+        sumitPositionScreen.coordinator = self
+        navigationController.pushViewController(sumitPositionScreen, animated: true)
+    }
 
-    func toSubmitSummaryScreen() { }
+    func toSubmitSummaryScreen() {
+        let submitSummaryScreen = SubmitSummaryViewController.instantiateViewController(from: .submitPlace)
+        submitSummaryScreen.coordinator = self
+        navigationController.pushViewController(submitSummaryScreen, animated: true)
+    }
 }
