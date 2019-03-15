@@ -19,9 +19,15 @@ class SkateMapCoordinator: Coordinator {
     }
 
     // MARK: Setup root ViewController
-    func embedRootInNavigationController() -> UINavigationController {
+    func embedRootScreenInNavigationController() -> UINavigationController {
         toSkateMapScreen()
         return navigationController
+    }
+
+    func configureTabBarItem(on viewController: UINavigationController) {
+        viewController.tabBarItem = UITabBarItem(title: Texts.SkateMap.mapTabBarTitle.localized,
+                                                 image: Theme.Icon.mapIcon,
+                                                 selectedImage: Theme.Icon.mapIcon)
     }
 }
 

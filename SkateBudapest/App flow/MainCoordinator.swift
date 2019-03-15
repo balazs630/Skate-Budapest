@@ -29,28 +29,30 @@ final class MainCoordinator: NSObject, UITabBarControllerDelegate {
         submitPlaceCoordinator = SubmitPlaceCoordinator(navigationController: UINavigationController())
         super.init()
 
-        let viewControllers: [UIViewController] = [makeMapScreen(), makeSubmitScreen()]
-        tabBarController.viewControllers = viewControllers
+        configureTabBarController()
+    }
+
+    // Screen configuration
+    private func configureTabBarController() {
+        let mapScreen = createMapScreen()
+        skateMapCoordinator.configureTabBarItem(on: mapScreen)
+
+        let submitScreen = createSubmitScreen()
+        submitPlaceCoordinator.configureTabBarItem(on: submitScreen)
+
+        tabBarController.viewControllers = [mapScreen, submitScreen]
         tabBarController.tabBar.isTranslucent = false
         tabBarController.delegate = self
     }
 }
 
-// MARK: Create ViewControllers for tab bar
+// MARK: Create ViewControllers for Tab Bar
 extension MainCoordinator {
-    private func makeMapScreen() -> UINavigationController {
-        let skateMapNavigationController = skateMapCoordinator.embedRootInNavigationController()
-        skateMapNavigationController.tabBarItem = UITabBarItem(title: Texts.SkateMap.mapTabBarTitle.localized,
-                                                               image: Theme.Icon.mapIcon,
-                                                               selectedImage: Theme.Icon.mapIcon)
-        return skateMapNavigationController
+    private func createMapScreen() -> UINavigationController {
+        return skateMapCoordinator.embedRootScreenInNavigationController()
     }
 
-    private func makeSubmitScreen() -> UINavigationController {
-        let placeTypeSelectorViewController = submitPlaceCoordinator.embedRootInNavigationController()
-        placeTypeSelectorViewController.tabBarItem = UITabBarItem(title: Texts.SubmitPlace.submit.localized,
-                                                                  image: Theme.Icon.addPinIcon,
-                                                                  selectedImage: Theme.Icon.addPinIcon)
-        return placeTypeSelectorViewController
+    private func createSubmitScreen() -> UINavigationController {
+        return submitPlaceCoordinator.embedRootScreenInNavigationController()
     }
 }

@@ -14,5 +14,5 @@ protocol Coordinator {
 
     init(navigationController: UINavigationController)
 
-    func embedRootInNavigationController() -> UINavigationController
+    func embedRootScreenInNavigationController() -> UINavigationController
 }

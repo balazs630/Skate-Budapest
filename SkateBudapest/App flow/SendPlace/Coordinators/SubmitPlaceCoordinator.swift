@@ -19,9 +19,15 @@ class SubmitPlaceCoordinator: Coordinator {
     }
 
     // MARK: Setup root ViewController
-    func embedRootInNavigationController() -> UINavigationController {
+    func embedRootScreenInNavigationController() -> UINavigationController {
         toSubmitPlaceTypeSelectorScreen()
         return navigationController
+    }
+
+    func configureTabBarItem(on viewController: UINavigationController) {
+        viewController.tabBarItem = UITabBarItem(title: Texts.SubmitPlace.submit.localized,
+                                                 image: Theme.Icon.addPinIcon,
+                                                 selectedImage: Theme.Icon.addPinIcon)
     }
 }
 
@@ -30,30 +36,39 @@ extension SubmitPlaceCoordinator {
     func toSubmitPlaceTypeSelectorScreen() {
         let submitPlaceTypeScreen = SubmitTypeSelectorViewController.instantiateViewController(from: .submitPlace)
         submitPlaceTypeScreen.coordinator = self
+
         navigationController.pushViewController(submitPlaceTypeScreen, animated: true)
     }
 
-    func toSubmitTextsScreen() {
+    func toSubmitTextsScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
         let submitTextualScreen = SubmitTextsViewController.instantiateViewController(from: .submitPlace)
         submitTextualScreen.coordinator = self
+        submitTextualScreen.placeSuggestionDisplayItem = placeSuggestion
+
         navigationController.pushViewController(submitTextualScreen, animated: true)
     }
 
-    func toSubmitImagesScreen() {
+    func toSubmitImagesScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
         let submitImagesScreen = SubmitImagesViewController.instantiateViewController(from: .submitPlace)
         submitImagesScreen.coordinator = self
+        submitImagesScreen.placeSuggestionDisplayItem = placeSuggestion
+
         navigationController.pushViewController(submitImagesScreen, animated: true)
     }
 
-    func toSubmitPositionScreen() {
+    func toSubmitPositionScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
         let sumitPositionScreen = SubmitPositionViewController.instantiateViewController(from: .submitPlace)
         sumitPositionScreen.coordinator = self
+        sumitPositionScreen.placeSuggestionDisplayItem = placeSuggestion
+
         navigationController.pushViewController(sumitPositionScreen, animated: true)
     }
 
-    func toSubmitSummaryScreen() {
+    func toSubmitSummaryScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
         let submitSummaryScreen = SubmitSummaryViewController.instantiateViewController(from: .submitPlace)
         submitSummaryScreen.coordinator = self
+        submitSummaryScreen.placeSuggestionDisplayItem = placeSuggestion
+
         navigationController.pushViewController(submitSummaryScreen, animated: true)
     }
 }
