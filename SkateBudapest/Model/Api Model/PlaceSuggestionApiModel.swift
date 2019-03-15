@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct PlaceSuggestionRequestDTO: Codable {
-    let latitude: Double
-    let longitude: Double
-    let name: String
-    let info: String
-    let type: String
-    let senderEmail: String
-    let image1: Data
-    let image2: Data
-    let image3: Data?
-    let image4: Data?
+struct PlaceSuggestionApiModel: Codable {
+    var latitude: Double
+    var longitude: Double
+    var name: String
+    var info: String
+    var type: String
+    var senderEmail: String
+    var image1: Data
+    var image2: Data
+    var image3: Data?
+    var image4: Data?
 }

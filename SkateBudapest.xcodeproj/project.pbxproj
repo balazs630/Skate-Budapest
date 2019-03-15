@@ -13,6 +13,7 @@
 		AC0340012195E18B0005259B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC0340032195E18B0005259B /* InfoPlist.strings */; };
 		AC0B89A62111FDA8006CDB7E /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B89A52111FDA8006CDB7E /* PlaceDetailsViewController.swift */; };
 		AC0B89AA21120E39006CDB7E /* PlaceDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* PlaceDetails.storyboard */; };
+		AC18D5C5223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C4223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift */; };
 		AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */; };
 		AC26A96C218DD51700641C84 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26A96B218DD51700641C84 /* LocationService.swift */; };
 		AC273FD62234437500DF2AB9 /* SubmitPlaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */; };
@@ -75,6 +76,7 @@
 		AC0340042195E18C0005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC0B89A52111FDA8006CDB7E /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		AC0B89A921120E39006CDB7E /* PlaceDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaceDetails.storyboard; sourceTree = "<group>"; };
+		AC18D5C4223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSuggestionDisplayItem.swift; sourceTree = "<group>"; };
 		AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		AC26A96B218DD51700641C84 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPlaceCoordinator.swift; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE6F71121B897B4000ABDF1 /* PlaceDisplayItem.swift */,
+				AC18D5C4223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift */,
 			);
 			path = "Display Model";
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				AC2C030F21AADD1B00784F4E /* PlaceInfoApiModel.swift in Sources */,
 				AC2D9DAA21335558003A6263 /* PlaceFilterViewController.swift in Sources */,
 				AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */,
+				AC18D5C5223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift in Sources */,
 				AC26A96C218DD51700641C84 /* LocationService.swift in Sources */,
 				AC273FD62234437500DF2AB9 /* SubmitPlaceCoordinator.swift in Sources */,
 				AC54EABE21B9CCF8008694CF /* PlaceCachingService.swift in Sources */,

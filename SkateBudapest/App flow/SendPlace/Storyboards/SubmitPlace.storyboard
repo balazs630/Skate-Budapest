@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.47450980390000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="skateParkTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="dg5-C0-SGN"/>
+                                    <action selector="skateparkTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="dRJ-x5-auh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfA-1d-EIv">
@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.47450980390000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="streetSpotTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="RfY-V5-CML"/>
+                                    <action selector="streetSpotTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="ujX-iE-e0h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-IN-hkL">
@@ -39,7 +39,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.058823529409999999" green="0.47450980390000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="skateshopTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="DJq-xZ-tqf"/>
+                                    <action selector="skateshopTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="11e-uu-Lei"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,7 +91,7 @@
                                 <rect key="frame" x="289" y="597" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="nextButton:" destination="fn8-l0-3fE" eventType="touchUpInside" id="dBp-zE-GwZ"/>
+                                    <action selector="nextButtonTap:" destination="fn8-l0-3fE" eventType="touchUpInside" id="dBp-zE-GwZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wx-Nm-e7F">
@@ -116,6 +116,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OBL-1N-1xb"/>
                     </view>
+                    <connections>
+                        <outlet property="contactEmailTextField" destination="8w4-pH-Ozs" id="hUH-uP-ozy"/>
+                        <outlet property="infoTextView" destination="vOB-WT-ayt" id="601-bL-dKj"/>
+                        <outlet property="titleTextField" destination="TBX-oJ-RDD" id="fub-ZD-KlS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rc-Bf-kAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +138,7 @@
                                 <rect key="frame" x="289" y="597" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="nextButton:" destination="y7p-su-TgN" eventType="touchUpInside" id="1EX-t7-BSZ"/>
+                                    <action selector="nextButtonTap:" destination="y7p-su-TgN" eventType="touchUpInside" id="1EX-t7-BSZ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mH9-2g-u4k">
@@ -184,7 +189,7 @@
                                 <rect key="frame" x="289" y="597" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="nextButton:" destination="yek-2l-Amz" eventType="touchUpInside" id="TML-dP-nJA"/>
+                                    <action selector="nextButtonTap:" destination="yek-2l-Amz" eventType="touchUpInside" id="TML-dP-nJA"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ks3-RT-KyB">
@@ -224,7 +229,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="nextButton:" destination="mg5-fR-0So" eventType="touchUpInside" id="vfC-Nu-7dv"/>
+                                    <action selector="nextButtonTap:" destination="mg5-fR-0So" eventType="touchUpInside" id="vfC-Nu-7dv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTd-30-aIx">

@@ -11,6 +11,7 @@ import UIKit
 class SubmitPositionViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
+    var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
 
     // MARK: View Lifecycle
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Actions:
-    @IBAction func nextButton(_ sender: Any) {
-        coordinator?.toSubmitSummaryScreen()
+    @IBAction func nextButtonTap(_ sender: Any) {
+        coordinator?.toSubmitSummaryScreen(with: placeSuggestionDisplayItem)
     }
 }

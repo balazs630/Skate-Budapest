@@ -32,7 +32,7 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
     }
 
     private func configureNavigationBar() {
-        title = Texts.SkateMap.mapNavBarTitle.localized
+        navigationItem.title = Texts.SkateMap.mapNavBarTitle.localized
         navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(

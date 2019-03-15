@@ -17,8 +17,10 @@ class SkateMapCoordinator: Coordinator {
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+}
 
-    // MARK: Setup root ViewController
+// MARK: Configuration
+extension SkateMapCoordinator {
     func embedRootScreenInNavigationController() -> UINavigationController {
         toSkateMapScreen()
         return navigationController

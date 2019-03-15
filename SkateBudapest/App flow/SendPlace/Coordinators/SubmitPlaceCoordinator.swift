@@ -17,8 +17,10 @@ class SubmitPlaceCoordinator: Coordinator {
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+}
 
-    // MARK: Setup root ViewController
+// MARK: Configuration
+extension SubmitPlaceCoordinator {
     func embedRootScreenInNavigationController() -> UINavigationController {
         toSubmitPlaceTypeSelectorScreen()
         return navigationController

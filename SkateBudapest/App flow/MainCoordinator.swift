@@ -31,8 +31,10 @@ final class MainCoordinator: NSObject, UITabBarControllerDelegate {
 
         configureTabBarController()
     }
+}
 
-    // Screen configuration
+// MARK: Configuration
+extension MainCoordinator {
     private func configureTabBarController() {
         let mapScreen = createMapScreen()
         skateMapCoordinator.configureTabBarItem(on: mapScreen)

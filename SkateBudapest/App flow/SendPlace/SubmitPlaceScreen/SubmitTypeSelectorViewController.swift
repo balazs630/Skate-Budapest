@@ -11,13 +11,17 @@ import UIKit
 class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
-
-    // MARK: Outlets
+    var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
 
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
+        clearPlaceSuggestionModel()
+    }
+
+    private func clearPlaceSuggestionModel() {
+        placeSuggestionDisplayItem = PlaceSuggestionDisplayItem()
     }
 
     // MARK: Screen configuration
@@ -28,15 +32,25 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Actions
-    @IBAction func skateParkTypeTap(_ sender: Any) {
-        coordinator?.toSubmitTextsScreen()
+    @IBAction func skateparkTypeTap(_ sender: Any) {
+        saveUserInput(type: "skatepark")
+        coordinator?.toSubmitTextsScreen(with: placeSuggestionDisplayItem)
     }
 
     @IBAction func streetSpotTypeTap(_ sender: Any) {
-        coordinator?.toSubmitTextsScreen()
+        saveUserInput(type: "streetspot")
+        coordinator?.toSubmitTextsScreen(with: placeSuggestionDisplayItem)
     }
 
     @IBAction func skateshopTypeTap(_ sender: Any) {
-        coordinator?.toSubmitTextsScreen()
+        saveUserInput(type: "skateshop")
+        coordinator?.toSubmitTextsScreen(with: placeSuggestionDisplayItem)
+    }
+}
+
+// MARK: User input handling
+extension SubmitTypeSelectorViewController {
+    private func saveUserInput(type: String) {
+        placeSuggestionDisplayItem?.type = type
     }
 }
