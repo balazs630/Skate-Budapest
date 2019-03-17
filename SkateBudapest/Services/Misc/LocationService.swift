@@ -25,28 +25,28 @@ class LocationService: NSObject {
     private override init() {
         locationManager = CLLocationManager()
         super.init()
-        requestAuthorization()
     }
 }
 
 // MARK: Utility methods
 extension LocationService {
-    func requestAuthorization() {
-        if !locationGranted() {
+    func startTracking() {
+        requestLocationPermission()
+        locationManager.startUpdatingLocation()
+    }
+
+    private func requestLocationPermission() {
+        if !isAccessGranted() {
             locationManager.requestWhenInUseAuthorization()
         }
     }
 
-    func startTracking() {
-        locationManager.startUpdatingLocation()
-    }
-
-    func locationGranted() -> Bool {
+    private func isAccessGranted() -> Bool {
         switch CLLocationManager.authorizationStatus() {
-        case .notDetermined, .restricted, .denied:
-            return false
         case .authorizedAlways, .authorizedWhenInUse:
             return true
+        case .notDetermined, .restricted, .denied:
+            return false
         }
     }
 }
