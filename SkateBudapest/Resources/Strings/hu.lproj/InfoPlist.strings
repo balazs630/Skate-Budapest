@@ -10,3 +10,5 @@
 
 // Location:
 "NSLocationWhenInUseUsageDescription" = "A lokációra azért van szükségem, hogy térképen megjeleníthessem az aktuális helyzeted.";
+"NSPhotoLibraryUsageDescription" = "A fotókra azért van szükségem, hogy képeket csatolhass.";
+"NSCameraUsageDescription" = "A kamerára azért van szükségem, hogy fotókat készíthess a csatoláshoz.";

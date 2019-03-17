@@ -25,7 +25,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need to access your location to show your current location on a map.</string>
+	<string>I need to access your location to show your current location on a map.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>I need to access your photo library to able to attach photos.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>I need to access your camera to take pictures to attach.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

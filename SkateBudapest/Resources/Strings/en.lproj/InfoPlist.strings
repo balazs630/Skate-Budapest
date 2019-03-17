@@ -10,3 +10,5 @@
 
 // Location:
 "NSLocationWhenInUseUsageDescription" = "I need to access your location to show your current location on a map.";
+"NSPhotoLibraryUsageDescription" = "I need to access your photo library to able to attach photos.";
+"NSCameraUsageDescription" = "I need to access your camera to take pictures to attach.";
