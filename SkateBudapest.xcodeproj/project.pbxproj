@@ -15,6 +15,8 @@
 		AC0B89AA21120E39006CDB7E /* PlaceDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* PlaceDetails.storyboard */; };
 		AC18D5C5223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C4223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift */; };
 		AC18D5C7223F074100CB7243 /* MediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C6223F074100CB7243 /* MediaService.swift */; };
+		AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C82241801000CB7243 /* LoadingViewController.swift */; };
+		AC18D5CB2242DC3900CB7243 /* UIResponderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */; };
 		AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */; };
 		AC26A96C218DD51700641C84 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26A96B218DD51700641C84 /* LocationService.swift */; };
 		AC273FD62234437500DF2AB9 /* SubmitPlaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */; };
@@ -79,6 +81,8 @@
 		AC0B89A921120E39006CDB7E /* PlaceDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaceDetails.storyboard; sourceTree = "<group>"; };
 		AC18D5C4223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSuggestionDisplayItem.swift; sourceTree = "<group>"; };
 		AC18D5C6223F074100CB7243 /* MediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaService.swift; sourceTree = "<group>"; };
+		AC18D5C82241801000CB7243 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtensions.swift; sourceTree = "<group>"; };
 		AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		AC26A96B218DD51700641C84 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPlaceCoordinator.swift; sourceTree = "<group>"; };
@@ -419,6 +423,7 @@
 				AC907892212997F600FC0528 /* UIImageViewExtensions.swift */,
 				AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */,
 				AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */,
+				AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */,
+				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -635,6 +641,7 @@
 			files = (
 				ACB292F0223541F000DBB862 /* SubmitTextsViewController.swift in Sources */,
 				AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */,
+				AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */,
 				AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
 				ACD5CBB721D190FE00EDE3E0 /* StringExtensions.swift in Sources */,
@@ -654,6 +661,7 @@
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
 				AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */,
 				ACB292F2223541F000DBB862 /* SubmitTypeSelectorViewController.swift in Sources */,
+				AC18D5CB2242DC3900CB7243 /* UIResponderExtensions.swift in Sources */,
 				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,
 				AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */,
 				AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */,

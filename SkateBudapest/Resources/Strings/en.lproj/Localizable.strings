@@ -10,6 +10,7 @@
 
 // General:
 "ok" = "OK";
+"loading" = "Loading";
 
 // SkateMapViewController:
 "mapNavBarTitle" = "Map";

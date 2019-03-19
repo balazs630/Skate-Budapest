@@ -29,4 +29,15 @@ extension UIViewController {
         view.removeFromSuperview()
         removeFromParent()
     }
+
+    func addActivityIndicator(title: String) {
+        add(LoadingViewController(title: title), to: view)
+    }
+
+    func removeActivityIndicator() {
+        _ = view
+            .subviews
+            .filter { $0.parentViewController is LoadingViewController }
+            .map { $0.removeFromSuperview() }
+    }
 }

@@ -11,6 +11,7 @@
 struct Texts {
     enum General: String, Localizable {
         case ok
+        case loading
     }
 
     enum SkateMap: String, Localizable {

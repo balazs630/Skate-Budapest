@@ -60,7 +60,11 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
 extension SkateMapViewController {
     private func loadMapWaypoints() {
         clearWaypoints()
+        addActivityIndicator(title: Texts.General.loading.localized)
+
         placeCachingService.getPlaces { result in
+            self.removeActivityIndicator()
+
             switch result {
             case .success(let waypoints):
                 self.add(waypoints: waypoints.filter { $0.status == .active })
