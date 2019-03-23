@@ -41,9 +41,9 @@ extension AppDelegate {
             let firstTimeLaunchDefaults: [String: Any] = [
                 UserDefaults.Key.isAppAlreadyLaunchedOnce: true,
 
-                UserDefaults.Key.Sw.skatepark: true,
-                UserDefaults.Key.Sw.skateshop: true,
-                UserDefaults.Key.Sw.streetspot: true
+                UserDefaults.Key.Switch.skatepark: true,
+                UserDefaults.Key.Switch.skateshop: true,
+                UserDefaults.Key.Switch.streetspot: true
             ]
 
             firstTimeLaunchDefaults.forEach {

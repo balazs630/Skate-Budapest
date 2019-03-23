@@ -104,11 +104,11 @@ extension PlaceDetailsViewController {
     private func getLocationColor() -> UIColor {
         switch waypoint.type {
         case .skatepark:
-            return Theme.Color.skateparkColor
+            return Theme.Color.skatepark
         case .streetspot:
-            return Theme.Color.streetSpotColor
+            return Theme.Color.streetSpot
         case .skateshop:
-            return Theme.Color.skateshopColor
+            return Theme.Color.skateshop
         }
     }
 

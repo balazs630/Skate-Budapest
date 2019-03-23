@@ -98,31 +98,23 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
 extension PlaceFilterViewController {
     private func selectedTypes() -> [WaypointType] {
         var filteredTypes = [WaypointType]()
-        if skateparkSwitch.isOn {
-            filteredTypes.append(WaypointType.skatepark)
-        }
-
-        if skateshopSwitch.isOn {
-            filteredTypes.append(WaypointType.skateshop)
-        }
-
-        if streetspotSwitch.isOn {
-            filteredTypes.append(WaypointType.streetspot)
-        }
+        if skateparkSwitch.isOn { filteredTypes.append(WaypointType.skatepark) }
+        if skateshopSwitch.isOn { filteredTypes.append(WaypointType.skateshop) }
+        if streetspotSwitch.isOn { filteredTypes.append(WaypointType.streetspot) }
 
         return filteredTypes
     }
 
     private func loadFilterPreferences() {
-        skateparkSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Sw.skatepark)
-        skateshopSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Sw.skateshop)
-        streetspotSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Sw.streetspot)
+        skateparkSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Switch.skatepark)
+        skateshopSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Switch.skateshop)
+        streetspotSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Switch.streetspot)
     }
 
     private func saveFilterPreferences() {
-        defaults.set(skateparkSwitch.isOn, forKey: UserDefaults.Key.Sw.skatepark)
-        defaults.set(skateshopSwitch.isOn, forKey: UserDefaults.Key.Sw.skateshop)
-        defaults.set(streetspotSwitch.isOn, forKey: UserDefaults.Key.Sw.streetspot)
+        defaults.set(skateparkSwitch.isOn, forKey: UserDefaults.Key.Switch.skatepark)
+        defaults.set(skateshopSwitch.isOn, forKey: UserDefaults.Key.Switch.skateshop)
+        defaults.set(streetspotSwitch.isOn, forKey: UserDefaults.Key.Switch.streetspot)
 
         defaults.synchronize()
     }

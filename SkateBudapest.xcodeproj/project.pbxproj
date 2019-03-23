@@ -17,6 +17,7 @@
 		AC18D5C7223F074100CB7243 /* MediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C6223F074100CB7243 /* MediaService.swift */; };
 		AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C82241801000CB7243 /* LoadingViewController.swift */; };
 		AC18D5CB2242DC3900CB7243 /* UIResponderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */; };
+		AC18D5CD22468CDA00CB7243 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5CC22468CDA00CB7243 /* Theme.swift */; };
 		AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */; };
 		AC26A96C218DD51700641C84 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26A96B218DD51700641C84 /* LocationService.swift */; };
 		AC273FD62234437500DF2AB9 /* SubmitPlaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */; };
@@ -83,6 +84,7 @@
 		AC18D5C6223F074100CB7243 /* MediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaService.swift; sourceTree = "<group>"; };
 		AC18D5C82241801000CB7243 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtensions.swift; sourceTree = "<group>"; };
+		AC18D5CC22468CDA00CB7243 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		AC26A96B218DD51700641C84 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPlaceCoordinator.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				ACA489BA20FA9E890084D9F3 /* Constants.swift */,
+				AC18D5CC22468CDA00CB7243 /* Theme.swift */,
 				ACD5CBBC21D195E700EDE3E0 /* Texts.swift */,
 				ACD5CBB921D1955300EDE3E0 /* Interfaces */,
 				ACD5CBBE21D1989400EDE3E0 /* Implementation */,
@@ -683,6 +686,7 @@
 				AC6905FB21C073C900A2088A /* RealmError.swift in Sources */,
 				AC18D5C7223F074100CB7243 /* MediaService.swift in Sources */,
 				ACB292F3223541F000DBB862 /* SubmitSummaryViewController.swift in Sources */,
+				AC18D5CD22468CDA00CB7243 /* Theme.swift in Sources */,
 				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,
 				ACB292F1223541F000DBB862 /* SubmitPositionViewController.swift in Sources */,
 				ACCAC19522342B9800502D6B /* MainCoordinator.swift in Sources */,
