@@ -16,7 +16,7 @@ class MediaService {
     private init() { }
 }
 
-// MARK: Utility methods
+// MARK: Request permissions
 extension MediaService {
     func requestPhotosPermission(_ closure: @escaping ((Bool) -> Void) ) {
         guard !isPhotosAccessGranted() else { return closure(true) }
@@ -33,7 +33,10 @@ extension MediaService {
             granted ? closure(true) : closure(false)
         }
     }
+}
 
+// MARK: Utility methods
+extension MediaService {
     private func isPhotosAccessGranted() -> Bool {
         switch PHPhotoLibrary.authorizationStatus() {
         case .authorized:

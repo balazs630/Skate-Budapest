@@ -32,19 +32,17 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Actions:
     @IBAction func nextButtonTap(_ sender: Any) {
-        saveUserInput(name: titleTextField.text,
-                  info: infoTextView.text,
-                  senderEmail: contactEmailTextField.text)
+        saveUserInput()
         coordinator?.toSubmitImagesScreen(with: placeSuggestionDisplayItem)
     }
 }
 
 // MARK: User input handling
 extension SubmitTextsViewController {
-    private func saveUserInput(name: String?, info: String?, senderEmail: String?) {
-        placeSuggestionDisplayItem?.name = name ?? ""
-        placeSuggestionDisplayItem?.info = info ?? ""
-        placeSuggestionDisplayItem?.senderEmail = senderEmail ?? ""
+    private func saveUserInput() {
+        placeSuggestionDisplayItem?.name = titleTextField.text ?? ""
+        placeSuggestionDisplayItem?.info = infoTextView.text ?? ""
+        placeSuggestionDisplayItem?.senderEmail = contactEmailTextField.text ?? ""
     }
 
     private func loadUserInput() {

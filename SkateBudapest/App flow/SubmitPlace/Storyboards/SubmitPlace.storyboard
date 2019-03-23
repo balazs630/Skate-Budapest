@@ -141,21 +141,41 @@
                                     <action selector="nextButtonTap:" destination="y7p-su-TgN" eventType="touchUpInside" id="1EX-t7-BSZ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mH9-2g-u4k">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mH9-2g-u4k">
                                 <rect key="frame" x="43" y="73" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="O70-8x-Btg" appends="YES" id="jrc-w6-7ax"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Br1-w7-xSy">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Br1-w7-xSy">
                                 <rect key="frame" x="201" y="73" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hIx-6O-Cyi" appends="YES" id="T7e-Yz-9ms"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pme-AQ-iHf">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pme-AQ-iHf">
                                 <rect key="frame" x="43" y="234" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qqZ-Vh-9qT" appends="YES" id="oZd-uJ-9si"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dh2-6d-uyR">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dh2-6d-uyR">
                                 <rect key="frame" x="201" y="234" width="125" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="be9-5v-vQ8" appends="YES" id="6Kt-fj-Q11"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dow-Ml-ovW">
                                 <rect key="frame" x="46" y="393" width="42" height="21"/>
@@ -172,8 +192,35 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JGi-y3-fsw"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="dow-Ml-ovW" id="Yhl-77-mPe"/>
+                        <outlet property="imageView1" destination="mH9-2g-u4k" id="PDS-6i-Ldy"/>
+                        <outlet property="imageView2" destination="Br1-w7-xSy" id="ppZ-Ky-8vm"/>
+                        <outlet property="imageView3" destination="Pme-AQ-iHf" id="q9a-8g-8Li"/>
+                        <outlet property="imageView4" destination="Dh2-6d-uyR" id="R23-Bn-QA7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4e-Vl-jfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="O70-8x-Btg">
+                    <connections>
+                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="jwP-F6-oWc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hIx-6O-Cyi">
+                    <connections>
+                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="X8z-kT-chE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="qqZ-Vh-9qT">
+                    <connections>
+                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="jsF-aN-b6E"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="be9-5v-vQ8">
+                    <connections>
+                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="XIT-jH-ReK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1420" y="142.57871064467767"/>
         </scene>

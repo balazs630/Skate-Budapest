@@ -203,7 +203,7 @@
 				ACCAC19422342B9800502D6B /* MainCoordinator.swift */,
 				AC273FD72234465300DF2AB9 /* LaunchScreen.storyboard */,
 				AC171D5F2103D7D4008747AB /* SkateMap */,
-				AC9003FE2193758A0007F7E5 /* SendPlace */,
+				AC9003FE2193758A0007F7E5 /* SubmitPlace */,
 			);
 			path = "App flow";
 			sourceTree = "<group>";
@@ -377,14 +377,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		AC9003FE2193758A0007F7E5 /* SendPlace */ = {
+		AC9003FE2193758A0007F7E5 /* SubmitPlace */ = {
 			isa = PBXGroup;
 			children = (
 				AC947F66219E2BC7005007C4 /* SubmitPlaceScreen */,
 				ACB292FA22358F0F00DBB862 /* Coordinators */,
 				AC9003FF219375AD0007F7E5 /* Storyboards */,
 			);
-			path = SendPlace;
+			path = SubmitPlace;
 			sourceTree = "<group>";
 		};
 		AC9003FF219375AD0007F7E5 /* Storyboards */ = {
