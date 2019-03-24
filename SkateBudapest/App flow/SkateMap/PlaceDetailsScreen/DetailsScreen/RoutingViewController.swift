@@ -29,7 +29,6 @@ class RoutingViewController: UIViewController, StoryboardLoadable {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         setupView()
     }
 
@@ -99,7 +98,7 @@ extension RoutingViewController {
                 if let error = error {
                     let alertController = SimpleAlertDialog.build(title: Texts.LocationDetails.directions.localized,
                                                                   message: error.localizedDescription)
-                    self.present(alertController, animated: true, completion: nil)
+                    self.present(alertController, animated: true)
                 } else {
                     if let travelTime = etaResponse?.expectedTravelTime {
                         self.setTransitTimeButtonTexts(for: transportType, travelTime: travelTime)

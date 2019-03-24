@@ -21,7 +21,15 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
     }
 
     private func clearPlaceSuggestionModel() {
-        placeSuggestionDisplayItem = PlaceSuggestionDisplayItem()
+        placeSuggestionDisplayItem = PlaceSuggestionDisplayItem(
+            name: "",
+            info: "",
+            type: "",
+            senderEmail: "",
+            image1: UIImage(),
+            image2: UIImage(),
+            coordinate: Constant.defaultCityCoordinate
+        )
     }
 
     // MARK: Screen configuration

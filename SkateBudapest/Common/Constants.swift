@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 struct Constant {
     static let shortVersionString = "CFBundleShortVersionString"
@@ -14,6 +15,8 @@ struct Constant {
     static let calloutImageViewSize = CGRect(x: 0, y: 0, width: 59, height: 59)
     static let calloutViewIdentifier = "customMKAnnotationView"
     static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
+
+    static let defaultCityCoordinate = CLLocationCoordinate2D(latitude: 47.499567, longitude: 19.046496)
 }
 
 enum ApiEnvironment: String {

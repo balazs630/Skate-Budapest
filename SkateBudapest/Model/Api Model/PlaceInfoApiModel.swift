@@ -5,6 +5,6 @@
 //  Created by Horváth Balázs on 2018. 11. 23..
 //
 
-final class PlaceInfoApiModel: Codable {
+struct PlaceInfoApiModel: Codable {
     var dataVersion: String
 }

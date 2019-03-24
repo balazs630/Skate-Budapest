@@ -116,10 +116,7 @@ extension SkateMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKAnnotationView(annotation: annotation,
                                               reuseIdentifier: Constant.calloutViewIdentifier)
-        if annotation.isKind(of: MKUserLocation.self) {
-            return nil
-        }
-
+        guard !annotation.isKind(of: MKUserLocation.self) else { return nil }
         guard let waypoint = annotation as? PlaceDisplayItem else {
             fatalError("Unable to cast MKAnnotation to Waypoint")
         }

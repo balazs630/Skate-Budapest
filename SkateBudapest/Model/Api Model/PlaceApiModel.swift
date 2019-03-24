@@ -7,7 +7,7 @@
 
 // swiftlint:disable next identifier_name
 
-final class PlaceApiModel: Codable {
+struct PlaceApiModel: Codable {
     var id: String
     var latitude: Double
     var longitude: Double

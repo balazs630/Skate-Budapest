@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
 struct PlaceSuggestionDisplayItem {
-    var latitude: Double
-    var longitude: Double
     var name: String
     var info: String
     var type: String
@@ -19,22 +18,21 @@ struct PlaceSuggestionDisplayItem {
     var image2: UIImage
     var image3: UIImage?
     var image4: UIImage?
+    var coordinate: CLLocationCoordinate2D
 
-    init(latitude: Double = 0.0,
-         longitude: Double = 0.0,
-         name: String = "",
-         info: String = "",
-         type: String = "",
-         senderEmail: String = "",
-         image1: UIImage = UIImage(),
-         image2: UIImage = UIImage()) {
-        self.latitude = latitude
-        self.longitude = longitude
+    init(name: String,
+         info: String,
+         type: String,
+         senderEmail: String,
+         image1: UIImage,
+         image2: UIImage,
+         coordinate: CLLocationCoordinate2D) {
         self.name = name
         self.info = info
         self.type = type
         self.senderEmail = senderEmail
         self.image1 = image1
         self.image2 = image2
+        self.coordinate = coordinate
     }
 }
