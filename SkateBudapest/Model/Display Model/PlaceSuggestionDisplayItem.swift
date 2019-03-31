@@ -26,7 +26,27 @@ struct PlaceSuggestionDisplayItem {
          senderEmail: String,
          image1: UIImage,
          image2: UIImage,
+         image3: UIImage?,
+         image4: UIImage?,
          coordinate: CLLocationCoordinate2D) {
+        self.name = name
+        self.info = info
+        self.type = type
+        self.senderEmail = senderEmail
+        self.image1 = image1
+        self.image2 = image2
+        self.image3 = image3
+        self.image4 = image4
+        self.coordinate = coordinate
+    }
+
+    init(name: String = "",
+         info: String = "",
+         type: String = "",
+         senderEmail: String = "",
+         image1: UIImage = UIImage(),
+         image2: UIImage = UIImage(),
+         coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)) {
         self.name = name
         self.info = info
         self.type = type

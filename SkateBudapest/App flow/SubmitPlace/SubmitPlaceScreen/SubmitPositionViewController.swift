@@ -26,6 +26,14 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
         zoomOnLocationPin()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isMovingFromParent {
+            saveUserInput()
+            coordinator?.updateImagesScreen(with: placeSuggestionDisplayItem)
+        }
+    }
+
     // MARK: Screen configuration
     private func configureSelf() {
         navigationItem.title = Texts.SubmitPlace.submitPositionNavBarTitle.localized

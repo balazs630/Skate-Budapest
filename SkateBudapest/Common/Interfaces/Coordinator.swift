@@ -15,4 +15,15 @@ protocol Coordinator {
     init(navigationController: UINavigationController)
 
     func embedRootScreenInNavigationController() -> UINavigationController
+    func firstViewController<T: UIViewController>(for type: T.Type) -> T?
+}
+
+extension Coordinator {
+    func firstViewController<T: UIViewController>(for type: T.Type) -> T? {
+        return navigationController
+            .viewControllers
+            .filter { $0 is T }
+            .compactMap { $0 as? T }
+            .first
+    }
 }

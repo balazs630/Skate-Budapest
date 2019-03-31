@@ -25,6 +25,14 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
         loadUserInput()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isMovingFromParent {
+            saveUserInput()
+            coordinator?.updateSubmitTypeSelectorScreen(with: placeSuggestionDisplayItem)
+        }
+    }
+
     // MARK: Screen configuration
     private func configureSelf() {
         navigationItem.title = Texts.SubmitPlace.submitTextsNavBarTitle.localized

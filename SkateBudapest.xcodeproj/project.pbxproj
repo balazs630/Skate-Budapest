@@ -424,9 +424,9 @@
 				AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */,
 				ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */,
 				AC907892212997F600FC0528 /* UIImageViewExtensions.swift */,
+				AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */,
 				AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */,
 				AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */,
-				AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

@@ -38,6 +38,9 @@ extension SubmitPlaceCoordinator {
     func toSubmitPlaceTypeSelectorScreen() {
         let submitPlaceTypeScreen = SubmitTypeSelectorViewController.instantiateViewController(from: .submitPlace)
         submitPlaceTypeScreen.coordinator = self
+        submitPlaceTypeScreen.placeSuggestionDisplayItem = PlaceSuggestionDisplayItem(
+            coordinate: Constant.defaultCityCoordinate
+        )
 
         navigationController.pushViewController(submitPlaceTypeScreen, animated: true)
     }
@@ -72,5 +75,23 @@ extension SubmitPlaceCoordinator {
         submitSummaryScreen.placeSuggestionDisplayItem = placeSuggestion
 
         navigationController.pushViewController(submitSummaryScreen, animated: true)
+    }
+}
+
+// MARK: Back navigation actions
+extension SubmitPlaceCoordinator {
+    func updateSubmitTypeSelectorScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
+        let previousScreen = firstViewController(for: SubmitTypeSelectorViewController.self)
+        previousScreen?.placeSuggestionDisplayItem = placeSuggestion
+    }
+
+    func updateSubmitTextsScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
+        let previousScreen = firstViewController(for: SubmitTextsViewController.self)
+        previousScreen?.placeSuggestionDisplayItem = placeSuggestion
+    }
+
+    func updateImagesScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
+        let previousScreen = firstViewController(for: SubmitImagesViewController.self)
+        previousScreen?.placeSuggestionDisplayItem = placeSuggestion
     }
 }
