@@ -81,6 +81,8 @@ extension PlaceWebService {
             multipartFormData: { multipartFormData in
                 multipartFormData.append("\(newPlace.name)".data(using: .utf8)!, withName: "name")
                 multipartFormData.append("\(newPlace.info)".data(using: .utf8)!, withName: "info")
+                multipartFormData.append("\(newPlace.type)".data(using: .utf8)!, withName: "type")
+                multipartFormData.append("\(newPlace.senderEmail)".data(using: .utf8)!, withName: "senderEmail")
                 multipartFormData.append(withUnsafeBytes(of: newPlace.latitude) { Data($0) }, withName: "latitude")
                 multipartFormData.append(withUnsafeBytes(of: newPlace.longitude) { Data($0) }, withName: "longitude")
                 multipartFormData.append(newPlace.image1, withName: "image1")

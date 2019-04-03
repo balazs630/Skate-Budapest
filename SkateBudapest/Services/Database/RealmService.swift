@@ -47,7 +47,7 @@ extension RealmService {
     func isPlacesDataPersisted(completion: @escaping (Bool) -> Void) {
         isPlacesAvailable { isPlacesAvailable in
             self.isPlaceInfoAvailable { isPlaceInfoAvailable in
-                if isPlacesAvailable && isPlaceInfoAvailable {
+                if isPlacesAvailable, isPlaceInfoAvailable {
                     completion(true)
                 } else {
                     completion(false)
