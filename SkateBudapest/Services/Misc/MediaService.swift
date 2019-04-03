@@ -43,6 +43,8 @@ extension MediaService {
             return true
         case .notDetermined, .restricted, .denied:
             return false
+        @unknown default:
+            return false
         }
     }
 
@@ -51,6 +53,8 @@ extension MediaService {
         case .authorized:
             return true
         case .notDetermined, .restricted, .denied:
+            return false
+        @unknown default:
             return false
         }
     }

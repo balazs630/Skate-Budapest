@@ -47,6 +47,8 @@ extension LocationService {
             return true
         case .notDetermined, .restricted, .denied:
             return false
+        @unknown default:
+            return false
         }
     }
 }
@@ -65,6 +67,8 @@ extension LocationService: CLLocationManagerDelegate {
         case .restricted, .denied:
             locationManager.stopUpdatingLocation()
         case .notDetermined, .authorizedAlways:
+            break
+        @unknown default:
             break
         }
     }

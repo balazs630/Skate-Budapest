@@ -540,7 +540,7 @@
 				TargetAttributes = {
 					AC63325020FA95C2007E5D98 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -853,7 +853,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.balazs630.SkateBudapest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -873,7 +873,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.balazs630.SkateBudapest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

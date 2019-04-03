@@ -90,6 +90,8 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
             }
         case .failed, .possible:
             break
+        @unknown default:
+            break
         }
     }
 }
