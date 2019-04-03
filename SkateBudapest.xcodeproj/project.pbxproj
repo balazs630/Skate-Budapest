@@ -33,6 +33,7 @@
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
 		AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */; };
 		AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC63325B20FA95C3007E5D98 /* Assets.xcassets */; };
+		AC64A9AE225558F7006728D6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9AD225558F7006728D6 /* UIImageExtension.swift */; };
 		AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905F821C073AF00A2088A /* NetworkError.swift */; };
 		AC6905FB21C073C900A2088A /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FA21C073C900A2088A /* RealmError.swift */; };
 		AC6905FD21C073E400A2088A /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FC21C073E400A2088A /* BaseError.swift */; };
@@ -102,6 +103,7 @@
 		AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapViewController.swift; sourceTree = "<group>"; };
 		AC63325B20FA95C3007E5D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC63326020FA95C3007E5D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC64A9AD225558F7006728D6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		AC6905F821C073AF00A2088A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AC6905FA21C073C900A2088A /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
 		AC6905FC21C073E400A2088A /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 				AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */,
 				AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */,
 				ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */,
+				AC64A9AD225558F7006728D6 /* UIImageExtension.swift */,
 				AC907892212997F600FC0528 /* UIImageViewExtensions.swift */,
 				AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */,
 				AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */,
@@ -647,6 +650,7 @@
 				AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */,
 				AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
+				AC64A9AE225558F7006728D6 /* UIImageExtension.swift in Sources */,
 				ACD5CBB721D190FE00EDE3E0 /* StringExtensions.swift in Sources */,
 				ACD5CBBD21D195E700EDE3E0 /* Texts.swift in Sources */,
 				ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */,
