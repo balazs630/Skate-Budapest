@@ -62,8 +62,8 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
 // MARK: User input handling
 extension SubmitImagesViewController {
     private func saveUserInput() {
-        placeSuggestionDisplayItem?.image1 = imageView1.image ?? UIImage()
-        placeSuggestionDisplayItem?.image2 = imageView2.image ?? UIImage()
+        placeSuggestionDisplayItem?.image1 = imageView1.image!
+        placeSuggestionDisplayItem?.image2 = imageView2.image!
         placeSuggestionDisplayItem?.image3 = imageView3.image
         placeSuggestionDisplayItem?.image4 = imageView4.image
     }
@@ -81,7 +81,7 @@ extension SubmitImagesViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        currentImageView?.image = image
+        currentImageView?.image = image.compressSizeBelow(kiloByte: 300)
         picker.dismiss(animated: true, completion: nil)
     }
 }

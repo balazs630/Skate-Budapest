@@ -26,6 +26,6 @@ extension UIImage {
             }
         }
 
-        return UIImage(data: imageData ?? self.jpegData(compressionQuality: 0.5)!) ?? self
+        return UIImage(data: imageData ?? self.jpegData(compressionQuality: 0.5)!)!
     }
 }
