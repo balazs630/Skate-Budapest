@@ -18,3 +18,11 @@ struct PlaceApiModel: Codable {
     var thumbnailUrl: String?
     var imageUrls: [String?]
 }
+
+enum WaypointType: String, CaseIterable, Codable {
+    case skatepark, skateshop, streetspot
+}
+
+enum WaypointStatus: String, Codable {
+    case active, inactive, pending
+}
