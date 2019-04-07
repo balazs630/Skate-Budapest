@@ -34,6 +34,15 @@
 		AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */; };
 		AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC63325B20FA95C3007E5D98 /* Assets.xcassets */; };
 		AC64A9AE225558F7006728D6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9AD225558F7006728D6 /* UIImageExtension.swift */; };
+		AC64A9B0225880B7006728D6 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9AF225880B7006728D6 /* UITextFieldExtensions.swift */; };
+		AC64A9B222588177006728D6 /* ValidatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9B122588177006728D6 /* ValidatorFactory.swift */; };
+		AC64A9B52258891B006728D6 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9B42258891B006728D6 /* ValidationError.swift */; };
+		AC64A9B722588942006728D6 /* EmailFormatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9B622588942006728D6 /* EmailFormatValidator.swift */; };
+		AC64A9BA22588A8A006728D6 /* TextLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9B922588A8A006728D6 /* TextLengthValidator.swift */; };
+		AC64A9BE22588CFF006728D6 /* UITextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9BD22588CFF006728D6 /* UITextViewExtensions.swift */; };
+		AC64A9C022589932006728D6 /* ImageSizeBiggerThanValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9BF22589932006728D6 /* ImageSizeBiggerThanValidator.swift */; };
+		AC64A9C22258DCE7006728D6 /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9C12258DCE7006728D6 /* CGSizeExtension.swift */; };
+		AC64A9C4225AA27E006728D6 /* ImageIsRequiredValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64A9C3225AA27D006728D6 /* ImageIsRequiredValidator.swift */; };
 		AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905F821C073AF00A2088A /* NetworkError.swift */; };
 		AC6905FB21C073C900A2088A /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FA21C073C900A2088A /* RealmError.swift */; };
 		AC6905FD21C073E400A2088A /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FC21C073E400A2088A /* BaseError.swift */; };
@@ -51,8 +60,6 @@
 		AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */; };
 		ACA489BB20FA9E890084D9F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BA20FA9E890084D9F3 /* Constants.swift */; };
 		ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */; };
-		ACAE55F521AADEEA00F38FF5 /* WaypointStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE55F221AADEEA00F38FF5 /* WaypointStatus.swift */; };
-		ACAE55F621AADEEA00F38FF5 /* WaypointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAE55F321AADEEA00F38FF5 /* WaypointType.swift */; };
 		ACB292E8223541BF00DBB862 /* PlaceSuggestionApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */; };
 		ACB292F0223541F000DBB862 /* SubmitTextsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */; };
 		ACB292F1223541F000DBB862 /* SubmitPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */; };
@@ -104,6 +111,15 @@
 		AC63325B20FA95C3007E5D98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC63326020FA95C3007E5D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC64A9AD225558F7006728D6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		AC64A9AF225880B7006728D6 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		AC64A9B122588177006728D6 /* ValidatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorFactory.swift; sourceTree = "<group>"; };
+		AC64A9B42258891B006728D6 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		AC64A9B622588942006728D6 /* EmailFormatValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFormatValidator.swift; sourceTree = "<group>"; };
+		AC64A9B922588A8A006728D6 /* TextLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLengthValidator.swift; sourceTree = "<group>"; };
+		AC64A9BD22588CFF006728D6 /* UITextViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewExtensions.swift; sourceTree = "<group>"; };
+		AC64A9BF22589932006728D6 /* ImageSizeBiggerThanValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSizeBiggerThanValidator.swift; sourceTree = "<group>"; };
+		AC64A9C12258DCE7006728D6 /* CGSizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
+		AC64A9C3225AA27D006728D6 /* ImageIsRequiredValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIsRequiredValidator.swift; sourceTree = "<group>"; };
 		AC6905F821C073AF00A2088A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AC6905FA21C073C900A2088A /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
 		AC6905FC21C073E400A2088A /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
@@ -121,8 +137,6 @@
 		AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		ACA489BA20FA9E890084D9F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		ACAE55F221AADEEA00F38FF5 /* WaypointStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointStatus.swift; sourceTree = "<group>"; };
-		ACAE55F321AADEEA00F38FF5 /* WaypointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointType.swift; sourceTree = "<group>"; };
 		ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSuggestionApiModel.swift; sourceTree = "<group>"; };
 		ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitTextsViewController.swift; sourceTree = "<group>"; };
 		ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPositionViewController.swift; sourceTree = "<group>"; };
@@ -311,6 +325,27 @@
 			path = SkateBudapest;
 			sourceTree = "<group>";
 		};
+		AC64A9B3225881E7006728D6 /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				AC64A9B822588A70006728D6 /* Validators */,
+				AC64A9B42258891B006728D6 /* ValidationError.swift */,
+				AC64A9B122588177006728D6 /* ValidatorFactory.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		AC64A9B822588A70006728D6 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				AC64A9BF22589932006728D6 /* ImageSizeBiggerThanValidator.swift */,
+				AC64A9C3225AA27D006728D6 /* ImageIsRequiredValidator.swift */,
+				AC64A9B922588A8A006728D6 /* TextLengthValidator.swift */,
+				AC64A9B622588942006728D6 /* EmailFormatValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		AC6905FF21C0740E00A2088A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,13 +385,13 @@
 		AC6BD19A21B2B61B00C20451 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				ACA489BA20FA9E890084D9F3 /* Constants.swift */,
-				AC18D5CC22468CDA00CB7243 /* Theme.swift */,
-				ACD5CBBC21D195E700EDE3E0 /* Texts.swift */,
-				ACD5CBB921D1955300EDE3E0 /* Interfaces */,
-				ACD5CBBE21D1989400EDE3E0 /* Implementation */,
 				ACA489BE20FA9EBA0084D9F3 /* Extensions */,
+				ACD5CBB921D1955300EDE3E0 /* Interfaces */,
 				ACD5CBB821D1953C00EDE3E0 /* UI */,
+				AC64A9B3225881E7006728D6 /* Validation */,
+				ACA489BA20FA9E890084D9F3 /* Constants.swift */,
+				ACD5CBBC21D195E700EDE3E0 /* Texts.swift */,
+				AC18D5CC22468CDA00CB7243 /* Theme.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -421,6 +456,7 @@
 		ACA489BE20FA9EBA0084D9F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AC64A9C12258DCE7006728D6 /* CGSizeExtension.swift */,
 				ACD5CBB621D190FE00EDE3E0 /* StringExtensions.swift */,
 				AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */,
 				AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */,
@@ -428,6 +464,8 @@
 				AC64A9AD225558F7006728D6 /* UIImageExtension.swift */,
 				AC907892212997F600FC0528 /* UIImageViewExtensions.swift */,
 				AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */,
+				AC64A9AF225880B7006728D6 /* UITextFieldExtensions.swift */,
+				AC64A9BD22588CFF006728D6 /* UITextViewExtensions.swift */,
 				AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */,
 				AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */,
 			);
@@ -453,8 +491,8 @@
 		ACD5CBB821D1953C00EDE3E0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */,
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
+				AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -462,23 +500,13 @@
 		ACD5CBB921D1955300EDE3E0 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				AC6BD19621B2B1A600C20451 /* BaseWebService.swift */,
 				AC6905FC21C073E400A2088A /* BaseError.swift */,
-				ACD5CBBA21D195B300EDE3E0 /* Localizable.swift */,
+				AC6BD19621B2B1A600C20451 /* BaseWebService.swift */,
 				ACCAC18D2234260C00502D6B /* Coordinator.swift */,
+				ACD5CBBA21D195B300EDE3E0 /* Localizable.swift */,
 				ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */,
 			);
 			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		ACD5CBBE21D1989400EDE3E0 /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				AC69060421C0784300A2088A /* Result.swift */,
-				AC6905F821C073AF00A2088A /* NetworkError.swift */,
-				AC6905FA21C073C900A2088A /* RealmError.swift */,
-			);
-			path = Implementation;
 			sourceTree = "<group>";
 		};
 		ACE6F71021B8975A000ABDF1 /* Display Model */ = {
@@ -493,8 +521,9 @@
 		ACE6F71321B89861000ABDF1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				ACAE55F221AADEEA00F38FF5 /* WaypointStatus.swift */,
-				ACAE55F321AADEEA00F38FF5 /* WaypointType.swift */,
+				AC6905FA21C073C900A2088A /* RealmError.swift */,
+				AC6905F821C073AF00A2088A /* NetworkError.swift */,
+				AC69060421C0784300A2088A /* Result.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -647,29 +676,35 @@
 			files = (
 				ACB292F0223541F000DBB862 /* SubmitTextsViewController.swift in Sources */,
 				AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */,
+				AC64A9C022589932006728D6 /* ImageSizeBiggerThanValidator.swift in Sources */,
 				AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */,
 				AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
+				AC64A9BA22588A8A006728D6 /* TextLengthValidator.swift in Sources */,
 				AC64A9AE225558F7006728D6 /* UIImageExtension.swift in Sources */,
+				AC64A9B222588177006728D6 /* ValidatorFactory.swift in Sources */,
 				ACD5CBB721D190FE00EDE3E0 /* StringExtensions.swift in Sources */,
 				ACD5CBBD21D195E700EDE3E0 /* Texts.swift in Sources */,
 				ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */,
 				ACE6F71221B897B4000ABDF1 /* PlaceDisplayItem.swift in Sources */,
 				ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */,
 				ACB292E8223541BF00DBB862 /* PlaceSuggestionApiModel.swift in Sources */,
-				ACAE55F621AADEEA00F38FF5 /* WaypointType.swift in Sources */,
 				AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */,
 				AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */,
 				ACE6F71721B899F7000ABDF1 /* PlaceInfoRealmModel.swift in Sources */,
+				AC64A9BE22588CFF006728D6 /* UITextViewExtensions.swift in Sources */,
 				AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */,
 				AC69060521C0784300A2088A /* Result.swift in Sources */,
 				AC7F33CB22386C7F0015B1C8 /* UIViewControllerExtensions.swift in Sources */,
 				AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */,
+				AC64A9C22258DCE7006728D6 /* CGSizeExtension.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
 				AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */,
 				ACB292F2223541F000DBB862 /* SubmitTypeSelectorViewController.swift in Sources */,
 				AC18D5CB2242DC3900CB7243 /* UIResponderExtensions.swift in Sources */,
 				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,
+				AC64A9B52258891B006728D6 /* ValidationError.swift in Sources */,
+				AC64A9B722588942006728D6 /* EmailFormatValidator.swift in Sources */,
 				AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */,
 				AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */,
 				ACA489BB20FA9E890084D9F3 /* Constants.swift in Sources */,
@@ -692,9 +727,10 @@
 				ACB292F3223541F000DBB862 /* SubmitSummaryViewController.swift in Sources */,
 				AC18D5CD22468CDA00CB7243 /* Theme.swift in Sources */,
 				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,
+				AC64A9B0225880B7006728D6 /* UITextFieldExtensions.swift in Sources */,
 				ACB292F1223541F000DBB862 /* SubmitPositionViewController.swift in Sources */,
 				ACCAC19522342B9800502D6B /* MainCoordinator.swift in Sources */,
-				ACAE55F521AADEEA00F38FF5 /* WaypointStatus.swift in Sources */,
+				AC64A9C4225AA27E006728D6 /* ImageIsRequiredValidator.swift in Sources */,
 				AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */,
 				AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */,
 				ACD5CBBB21D195B300EDE3E0 /* Localizable.swift in Sources */,
