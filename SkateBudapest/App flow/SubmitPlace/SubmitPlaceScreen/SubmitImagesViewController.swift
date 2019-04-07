@@ -43,10 +43,15 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
         navigationItem.title = Texts.SubmitPlace.submitImagesNavBarTitle.localized
     }
 
-    // MARK: Actions:
+    // MARK: Actions
     @IBAction func nextButtonTap(_ sender: Any) {
-        saveUserInput()
-        coordinator?.toSubmitPositionScreen(with: placeSuggestionDisplayItem)
+        do {
+            try validateInput()
+            saveUserInput()
+            coordinator?.toSubmitPositionScreen(with: placeSuggestionDisplayItem)
+        } catch let error as ValidationError {
+            present(SimpleAlertDialog.build(title: error.title, message: error.message), animated: true)
+        } catch { }
     }
 
     @IBAction func imageViewTap(_ sender: UITapGestureRecognizer) {
@@ -55,12 +60,23 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
 
         imagePickerController.delegate = self
         imagePickerController.sourceType = .photoLibrary
-        self.present(imagePickerController, animated: true)
+        present(imagePickerController, animated: true)
     }
 }
 
 // MARK: User input handling
 extension SubmitImagesViewController {
+    private func validateInput() throws {
+        try imageView1.validate(.imageIsRequired)
+        try imageView2.validate(.imageIsRequired)
+
+        let minImageSize = CGSize(width: 400, height: 400)
+        try imageView1.validate(.imageSizeBiggerThan(minImageSize))
+        try imageView2.validate(.imageSizeBiggerThan(minImageSize))
+        try imageView3.validate(.imageSizeBiggerThan(minImageSize))
+        try imageView4.validate(.imageSizeBiggerThan(minImageSize))
+    }
+
     private func saveUserInput() {
         placeSuggestionDisplayItem?.image1 = imageView1.image!
         placeSuggestionDisplayItem?.image2 = imageView2.image!
@@ -82,6 +98,7 @@ extension SubmitImagesViewController: UIImagePickerControllerDelegate {
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
         currentImageView?.image = image.compressSizeBelow(kiloByte: 300)
+        currentImageView?.clearValidationErrorBorder()
         picker.dismiss(animated: true, completion: nil)
     }
 }

@@ -47,7 +47,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
         mapView.setRegion(viewRegion, animated: true)
     }
 
-    // MARK: Actions:
+    // MARK: Actions
     @IBAction func nextButtonTap(_ sender: Any) {
         saveUserInput()
         coordinator?.toSubmitSummaryScreen(with: placeSuggestionDisplayItem)

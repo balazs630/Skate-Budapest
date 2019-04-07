@@ -25,7 +25,7 @@ class SubmitSummaryViewController: UIViewController, StoryboardLoadable {
         navigationItem.hidesBackButton = true
     }
 
-    // MARK: Actions:
+    // MARK: Actions
     @IBAction func nextButtonTap(_ sender: Any) {
         coordinator?.toSubmitPlaceTypeSelectorScreen()
     }
