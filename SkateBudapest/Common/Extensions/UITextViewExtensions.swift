@@ -1,30 +1,20 @@
 //
-//  UIImageViewExtensions.swift
+//  UITextViewExtensions.swift
 //  SkateBudapest
 //
-//  Created by Horváth Balázs on 2018. 08. 19..
-//  Copyright © 2018. Horváth Balázs. All rights reserved.
+//  Created by Horváth Balázs on 2019. 04. 06..
+//  Copyright © 2019. Horváth Balázs. All rights reserved.
 //
 
 import UIKit
 
-extension Array where Element == UIImageView {
-    func images() -> [UIImage] {
-        var images = [UIImage]()
-        self.forEach { imageView in
-            images.append(imageView.image!)
-        }
-        return images
-    }
-}
-
-extension UIImageView {
+extension UITextView {
     func validate(_ validatorType: ValidatorType) throws {
         let validator = ValidatorFactory.validator(for: validatorType)
-        guard let image = self.image else { return }
+        guard let text = self.text else { return }
 
         do {
-            try validator.validate(image)
+            try validator.validate(text)
             clearValidationErrorBorder()
         } catch let error {
             showValidationErrorBorder()
