@@ -9,7 +9,7 @@
 import Alamofire
 
 protocol BaseWebService {
-    var environment: ApiEnvironment { get }
+    var defaultEnvironment: ApiEnvironment { get }
     var decoder: JSONDecoder { get }
 
     func requestUrl(for path: String) -> String
@@ -21,8 +21,12 @@ extension BaseWebService {
         return JSONDecoder()
     }
 
+    var defaultEnvironment: ApiEnvironment {
+        return .production
+    }
+
     func requestUrl(for path: String) -> String {
-        return environment.url + path
+        return defaultEnvironment.url + path
     }
 
     func handle(_ error: Error) -> NetworkError {

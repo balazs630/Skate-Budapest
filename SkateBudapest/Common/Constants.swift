@@ -20,6 +20,7 @@ struct Constant {
 }
 
 enum ApiEnvironment: String {
+    case development = "http://localhost:8080"
     case production = "https://skate-budapest.vapor.cloud"
 
     var url: String {

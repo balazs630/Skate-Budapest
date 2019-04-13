@@ -12,7 +12,7 @@ import Foundation
 
 class PlaceCachingService {
     // MARK: Properties
-    private let placeWebService = PlaceWebService(environment: .production)
+    private let placeWebService = PlaceWebService()
     private let realmService = RealmService()
 }
 

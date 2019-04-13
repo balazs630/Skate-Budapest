@@ -8,6 +8,8 @@
 
 import Alamofire
 
+final class PlaceWebService: BaseWebService { }
+
 extension PlaceWebService {
     fileprivate enum Slug {
         static let apiVersionPath = "/v1"
@@ -19,14 +21,6 @@ extension PlaceWebService {
     fileprivate enum Parameter {
         static let language = "lang"
         static let defaultLanguageCode = "en"
-    }
-}
-
-class PlaceWebService: BaseWebService {
-    var environment: ApiEnvironment
-
-    init(environment: ApiEnvironment) {
-        self.environment = environment
     }
 }
 
