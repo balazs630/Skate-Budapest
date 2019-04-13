@@ -64,7 +64,7 @@
 		ACB292F0223541F000DBB862 /* SubmitTextsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */; };
 		ACB292F1223541F000DBB862 /* SubmitPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */; };
 		ACB292F2223541F000DBB862 /* SubmitTypeSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292ED223541F000DBB862 /* SubmitTypeSelectorViewController.swift */; };
-		ACB292F3223541F000DBB862 /* SubmitSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EE223541F000DBB862 /* SubmitSummaryViewController.swift */; };
+		ACB292F3223541F000DBB862 /* SubmitResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EE223541F000DBB862 /* SubmitResultViewController.swift */; };
 		ACB292F4223541F000DBB862 /* SubmitImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */; };
 		ACB292F82235429F00DBB862 /* SubmitPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB292F72235429F00DBB862 /* SubmitPlace.storyboard */; };
 		ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18D2234260C00502D6B /* Coordinator.swift */; };
@@ -76,6 +76,7 @@
 		ACD5CBBD21D195E700EDE3E0 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5CBBC21D195E700EDE3E0 /* Texts.swift */; };
 		ACE6F71221B897B4000ABDF1 /* PlaceDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE6F71121B897B4000ABDF1 /* PlaceDisplayItem.swift */; };
 		ACE6F71721B899F7000ABDF1 /* PlaceInfoRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE6F71621B899F7000ABDF1 /* PlaceInfoRealmModel.swift */; };
+		ACEB8C8622623AF400873D0A /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB8C8522623AF400873D0A /* DoubleExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,7 +142,7 @@
 		ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitTextsViewController.swift; sourceTree = "<group>"; };
 		ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPositionViewController.swift; sourceTree = "<group>"; };
 		ACB292ED223541F000DBB862 /* SubmitTypeSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitTypeSelectorViewController.swift; sourceTree = "<group>"; };
-		ACB292EE223541F000DBB862 /* SubmitSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitSummaryViewController.swift; sourceTree = "<group>"; };
+		ACB292EE223541F000DBB862 /* SubmitResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitResultViewController.swift; sourceTree = "<group>"; };
 		ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitImagesViewController.swift; sourceTree = "<group>"; };
 		ACB292F72235429F00DBB862 /* SubmitPlace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubmitPlace.storyboard; sourceTree = "<group>"; };
 		ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Budapest, Hungary.gpx"; sourceTree = "<group>"; };
@@ -154,6 +155,7 @@
 		ACD5CBBC21D195E700EDE3E0 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		ACE6F71121B897B4000ABDF1 /* PlaceDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDisplayItem.swift; sourceTree = "<group>"; };
 		ACE6F71621B899F7000ABDF1 /* PlaceInfoRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoRealmModel.swift; sourceTree = "<group>"; };
+		ACEB8C8522623AF400873D0A /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		EDBF9272CB4FF371E86764D1 /* Pods_SkateBudapest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkateBudapest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -439,7 +441,7 @@
 				ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */,
 				ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */,
 				ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */,
-				ACB292EE223541F000DBB862 /* SubmitSummaryViewController.swift */,
+				ACB292EE223541F000DBB862 /* SubmitResultViewController.swift */,
 			);
 			path = SubmitPlaceScreen;
 			sourceTree = "<group>";
@@ -457,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				AC64A9C12258DCE7006728D6 /* CGSizeExtension.swift */,
+				ACEB8C8522623AF400873D0A /* DoubleExtensions.swift */,
 				ACD5CBB621D190FE00EDE3E0 /* StringExtensions.swift */,
 				AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */,
 				AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */,
@@ -696,6 +699,7 @@
 				AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */,
 				AC69060521C0784300A2088A /* Result.swift in Sources */,
 				AC7F33CB22386C7F0015B1C8 /* UIViewControllerExtensions.swift in Sources */,
+				ACEB8C8622623AF400873D0A /* DoubleExtensions.swift in Sources */,
 				AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */,
 				AC64A9C22258DCE7006728D6 /* CGSizeExtension.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
@@ -724,7 +728,7 @@
 				ACB292F4223541F000DBB862 /* SubmitImagesViewController.swift in Sources */,
 				AC6905FB21C073C900A2088A /* RealmError.swift in Sources */,
 				AC18D5C7223F074100CB7243 /* MediaService.swift in Sources */,
-				ACB292F3223541F000DBB862 /* SubmitSummaryViewController.swift in Sources */,
+				ACB292F3223541F000DBB862 /* SubmitResultViewController.swift in Sources */,
 				AC18D5CD22468CDA00CB7243 /* Theme.swift in Sources */,
 				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,
 				AC64A9B0225880B7006728D6 /* UITextFieldExtensions.swift in Sources */,

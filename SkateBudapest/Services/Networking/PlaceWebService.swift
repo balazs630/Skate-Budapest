@@ -73,22 +73,23 @@ extension PlaceWebService {
 
         Alamofire.upload(
             multipartFormData: { multipartFormData in
-                multipartFormData.append("\(newPlace.name)".data(using: .utf8)!, withName: "name")
-                multipartFormData.append("\(newPlace.info)".data(using: .utf8)!, withName: "info")
-                multipartFormData.append("\(newPlace.type)".data(using: .utf8)!, withName: "type")
-                multipartFormData.append("\(newPlace.senderEmail)".data(using: .utf8)!, withName: "senderEmail")
-                multipartFormData.append(withUnsafeBytes(of: newPlace.latitude) { Data($0) }, withName: "latitude")
-                multipartFormData.append(withUnsafeBytes(of: newPlace.longitude) { Data($0) }, withName: "longitude")
-                multipartFormData.append(newPlace.image1, withName: "image1")
-                multipartFormData.append(newPlace.image2, withName: "image2")
+                multipartFormData.append(newPlace.name.data, withName: "name")
+                multipartFormData.append(newPlace.info.data, withName: "info")
+                multipartFormData.append(newPlace.type.data, withName: "type")
+                multipartFormData.append(newPlace.senderEmail.data, withName: "senderEmail")
+                multipartFormData.append(newPlace.latitude.data, withName: "latitude")
+                multipartFormData.append(newPlace.longitude.data, withName: "longitude")
+                multipartFormData.append(newPlace.image1, withName: "image1", mimeType: "image/jpeg")
+                multipartFormData.append(newPlace.image2, withName: "image2", mimeType: "image/jpeg")
                 if let image3 = newPlace.image3 {
-                    multipartFormData.append(image3, withName: "image3")
+                    multipartFormData.append(image3, withName: "image3", mimeType: "image/jpeg")
                 }
                 if let image4 = newPlace.image4 {
-                    multipartFormData.append(image4, withName: "image4")
+                    multipartFormData.append(image4, withName: "image4", mimeType: "image/jpeg")
                 }
             },
             to: url,
+            method: .post,
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):

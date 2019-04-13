@@ -9,6 +9,14 @@
 import Foundation
 
 extension String {
+    var data: Data {
+        guard let data = self.data(using: .utf8) else {
+            return Data()
+        }
+
+        return data
+    }
+
     func localized(bundle: Bundle = .main, tableName: String = "Localizable") -> String {
         return NSLocalizedString(self, tableName: tableName, value: "", comment: "")
     }

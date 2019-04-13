@@ -10,6 +10,7 @@ import MapKit
 
 class SubmitPositionViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
+    private let placeWebService = PlaceWebService()
     weak var coordinator: SubmitPlaceCoordinator?
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
     lazy var locationPin = MKPointAnnotation()
@@ -48,9 +49,28 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Actions
-    @IBAction func nextButtonTap(_ sender: Any) {
+    @IBAction func submitButtonTap(_ sender: Any) {
         saveUserInput()
-        coordinator?.toSubmitSummaryScreen(with: placeSuggestionDisplayItem)
+        sendPlaceSuggestion()
+    }
+
+    private func sendPlaceSuggestion() {
+        addActivityIndicator(title: Texts.General.loading.localized)
+
+        guard let displayItem = placeSuggestionDisplayItem else { return }
+        let placeSuggestionApiModel = PlaceSuggestionApiModel(displayItem: displayItem)
+
+        placeWebService.postPlaceSuggestion(newPlace: placeSuggestionApiModel) { result in
+            self.removeActivityIndicator()
+
+            switch result {
+            case .success:
+                self.coordinator?.toSubmitSummaryScreen(with: self.placeSuggestionDisplayItem)
+            case .failure(let error):
+                let alertController = SimpleAlertDialog.build(title: error.title, message: error.message)
+                self.present(alertController, animated: true)
+            }
+        }
     }
 }
 

@@ -70,9 +70,8 @@ extension SubmitPlaceCoordinator {
     }
 
     func toSubmitSummaryScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
-        let submitSummaryScreen = SubmitSummaryViewController.instantiateViewController(from: .submitPlace)
+        let submitSummaryScreen = SubmitResultViewController.instantiateViewController(from: .submitPlace)
         submitSummaryScreen.coordinator = self
-        submitSummaryScreen.placeSuggestionDisplayItem = placeSuggestion
 
         navigationController.pushViewController(submitSummaryScreen, animated: true)
     }

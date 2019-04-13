@@ -1,5 +1,5 @@
 //
-//  SubmitSummaryViewController.swift
+//  SubmitResultViewController.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2019. 03. 06..
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class SubmitSummaryViewController: UIViewController, StoryboardLoadable {
+class SubmitResultViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
-    var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
 
     // MARK: View Lifecycle
     override func viewDidLoad() {
@@ -26,7 +25,7 @@ class SubmitSummaryViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Actions
-    @IBAction func nextButtonTap(_ sender: Any) {
+    @IBAction func doneButtonTap(_ sender: Any) {
         coordinator?.toSubmitPlaceTypeSelectorScreen()
     }
 }
