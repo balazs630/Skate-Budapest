@@ -41,6 +41,12 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     // MARK: Screen configuration
     private func configureSelf() {
         navigationItem.title = Texts.SubmitPlace.submitImagesNavBarTitle.localized
+        configureImagePickerConstoller()
+    }
+
+    private func configureImagePickerConstoller() {
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
     }
 
     // MARK: Actions
@@ -57,9 +63,6 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     @IBAction func imageViewTap(_ sender: UITapGestureRecognizer) {
         guard let imageView = sender.view as? UIImageView else { return }
         currentImageView = imageView
-
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .photoLibrary
         present(imagePickerController, animated: true)
     }
 }
@@ -67,14 +70,13 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
 // MARK: User input handling
 extension SubmitImagesViewController {
     private func validateInput() throws {
-        try imageView1.validate(.imageIsRequired)
-        try imageView2.validate(.imageIsRequired)
+        try [imageView1, imageView2].forEach { view in
+            try view.validate(.imageIsRequired)
+        }
 
-        let minImageSize = CGSize(width: 400, height: 400)
-        try imageView1.validate(.imageSizeBiggerThan(minImageSize))
-        try imageView2.validate(.imageSizeBiggerThan(minImageSize))
-        try imageView3.validate(.imageSizeBiggerThan(minImageSize))
-        try imageView4.validate(.imageSizeBiggerThan(minImageSize))
+        try [imageView1, imageView2, imageView3, imageView4].forEach { view in
+            try view.validate(.imageSizeBiggerThan(CGSize(width: 600, height: 600)))
+        }
     }
 
     private func saveUserInput() {
@@ -97,8 +99,14 @@ extension SubmitImagesViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        currentImageView?.image = image.compressSizeBelow(kiloByte: 300)
+
+        currentImageView?.image = image.compress(rate: .low)
         currentImageView?.clearValidationErrorBorder()
+        [imageView1, imageView2, imageView3, imageView4]
+            .filter { $0 == currentImageView }
+            .first
+            .map { $0?.image = currentImageView?.image }
+
         picker.dismiss(animated: true, completion: nil)
     }
 }

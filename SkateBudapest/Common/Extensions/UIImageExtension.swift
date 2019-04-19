@@ -8,24 +8,50 @@
 
 import UIKit
 
-extension UIImage {
-    func compressSizeBelow(kiloByte: Int) -> UIImage {
-        let sizeInBytes = kiloByte * 1024
-        var needCompress = true
-        var imageData: Data?
-        var compressingValue = CGFloat(1.0)
+enum ImageCompressionRate {
+    case low
+    case regular
 
-        while needCompress, compressingValue > 0 {
-            if let data = self.jpegData(compressionQuality: compressingValue) {
-                if data.count < sizeInBytes {
-                    needCompress = false
-                    imageData = data
-                } else {
-                    compressingValue -= 0.2
-                }
-            }
+    func compressionQulity() -> CGFloat {
+        switch self {
+        case .low:
+            return 0.8
+        case .regular:
+            return 0.6
         }
+    }
 
-        return UIImage(data: imageData ?? self.jpegData(compressionQuality: 0.5)!)!
+    func imageDimension() -> CGSize {
+        switch self {
+        case .low:
+            return CGSize(width: 2048, height: 2048)
+        case .regular:
+            return CGSize(width: 1024, height: 1024)
+        }
+    }
+}
+
+extension UIImage {
+    func compress(rate: ImageCompressionRate) -> UIImage {
+        return compressBelow(rect: rate.imageDimension()).compress(compressionQuality: rate.compressionQulity())
+    }
+
+    func compress(compressionQuality: CGFloat) -> UIImage {
+        return UIImage(data: self.jpegData(compressionQuality: compressionQuality)!)!
+    }
+
+    func compressBelow(rect: CGSize) -> UIImage {
+        guard size.width > rect.width, size.height > rect.height else {
+            return self
+        }
+        let resizeFactor = size.width > size.height ? size.width / rect.width : size.height / rect.height
+        let canvasImageSize = CGSize(width: size.width / resizeFactor,
+                                     height: size.height / resizeFactor)
+
+        UIGraphicsBeginImageContextWithOptions(canvasImageSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasImageSize))
+
+        return UIGraphicsGetImageFromCurrentImageContext()!
     }
 }

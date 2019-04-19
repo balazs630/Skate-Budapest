@@ -10,6 +10,6 @@ import CoreGraphics
 
 extension CGSize {
     func isGreaterOrEqual(to size: CGSize) -> Bool {
-        return width >= size.width && height >= size.height
+        return width >= size.width || height >= size.height
     }
 }
