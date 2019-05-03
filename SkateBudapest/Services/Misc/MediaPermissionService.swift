@@ -1,5 +1,5 @@
 //
-//  MediaService.swift
+//  MediaPermissionService.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2019. 03. 17..
@@ -8,16 +8,16 @@
 
 import Photos
 
-class MediaService {
+class MediaPermissionService {
     // MARK: Properties
-    static let shared = MediaService()
+    static let shared = MediaPermissionService()
 
     // MARK: Initializers
     private init() { }
 }
 
 // MARK: Request permissions
-extension MediaService {
+extension MediaPermissionService {
     func requestPhotosPermission(_ closure: @escaping ((Bool) -> Void) ) {
         guard !isPhotosAccessGranted() else { return closure(true) }
 
@@ -36,7 +36,7 @@ extension MediaService {
 }
 
 // MARK: Utility methods
-extension MediaService {
+extension MediaPermissionService {
     private func isPhotosAccessGranted() -> Bool {
         switch PHPhotoLibrary.authorizationStatus() {
         case .authorized:

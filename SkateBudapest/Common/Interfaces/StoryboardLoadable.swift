@@ -6,8 +6,6 @@
 //  Copyright © 2019. Horváth Balázs. All rights reserved.
 //
 
-// swiftlint:disable next identifier_name force_cast
-
 import UIKit
 
 protocol StoryboardLoadable {
@@ -16,9 +14,10 @@ protocol StoryboardLoadable {
 
 extension StoryboardLoadable where Self: UIViewController {
     static func instantiateViewController(from storyboardName: StoryboardName) -> Self {
-        let id = String(describing: self)
+        let identifier = String(describing: self)
         let storyboard = UIStoryboard(name: storyboardName.rawValue, bundle: Bundle.main)
 
-        return storyboard.instantiateViewController(withIdentifier: id) as! Self
+        // swiftlint:disable:next force_cast
+        return storyboard.instantiateViewController(withIdentifier: identifier) as! Self
     }
 }

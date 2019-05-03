@@ -5,9 +5,8 @@
 //  Created by Horváth Balázs on 2018. 11. 21..
 //
 
-// swiftlint:disable next identifier_name
-
 struct PlaceApiModel: Codable {
+    // swiftlint:disable:next identifier_name
     var id: String
     var latitude: Double
     var longitude: Double

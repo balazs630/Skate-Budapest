@@ -41,10 +41,10 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     // MARK: Screen configuration
     private func configureSelf() {
         navigationItem.title = Texts.SubmitPlace.submitImagesNavBarTitle.localized
-        configureImagePickerConstoller()
+        configureImagePickerController()
     }
 
-    private func configureImagePickerConstoller() {
+    private func configureImagePickerController() {
         imagePickerController.delegate = self
         imagePickerController.sourceType = .photoLibrary
     }

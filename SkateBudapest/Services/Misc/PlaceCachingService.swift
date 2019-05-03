@@ -6,8 +6,6 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
-//swiftlint:disable next empty_enum_arguments
-
 import Foundation
 
 class PlaceCachingService {
@@ -88,6 +86,7 @@ extension PlaceCachingService {
                         completion(false)
                     }
                 }
+            //swiftlint:disable:next empty_enum_arguments
             case .failure(_):
                 completion(false)
             }

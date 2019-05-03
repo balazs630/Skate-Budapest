@@ -6,10 +6,9 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
-//swiftlint:disable next identifier_name
-
 struct Texts {
     enum General: String, Localizable {
+        // swiftlint:disable:next identifier_name
         case ok
         case loading
     }
