@@ -17,7 +17,7 @@ extension ImageIsRequiredValidator: ValidatorConvertible {
             let image = value as? UIImage,
             image.cgImage != nil
             else {
-                throw ValidationError(message: "You must add an image for here!")
+                throw ValidationError(message: Texts.Validation.imageRequired.localized)
         }
     }
 }

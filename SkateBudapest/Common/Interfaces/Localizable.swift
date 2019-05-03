@@ -9,6 +9,7 @@
 protocol Localizable {
     var tableName: String { get }
     var localized: String { get }
+    func localizedWithParameter(_ orderedParameters: CVarArg...) -> String
 }
 
 extension Localizable where Self: RawRepresentable, Self.RawValue == String {
@@ -18,5 +19,9 @@ extension Localizable where Self: RawRepresentable, Self.RawValue == String {
 
     var localized: String {
         return rawValue.localized()
+    }
+
+    func localizedWithParameter(_ orderedParameters: CVarArg...) -> String {
+        return String(format: localized, arguments: orderedParameters)
     }
 }

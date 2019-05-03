@@ -38,6 +38,13 @@
 "submitPositionNavBarTitle" = "Position";
 "submitSummaryNavBarTitle" = "Summary";
 
+// Validation:
+"invalidEmailFormat" = "Invalid e-mail address format!";
+"imageRequired" = "You must add an image for here!";
+"imageSizeTooSmall" = "Image should be bigger than %dx%d pixel!";
+"textTooShort" = "Text should be longer than %d character!";
+"textTooLong" = "Text should be shorter than %d character!";
+
 // NetworkError:
 "networkErrorTitle" = "Network error";
 "notConnectedToInternetError" = "Not connected to Internet";

@@ -340,10 +340,10 @@
 		AC64A9B822588A70006728D6 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				AC64A9BF22589932006728D6 /* ImageSizeBiggerThanValidator.swift */,
-				AC64A9C3225AA27D006728D6 /* ImageIsRequiredValidator.swift */,
-				AC64A9B922588A8A006728D6 /* TextLengthValidator.swift */,
 				AC64A9B622588942006728D6 /* EmailFormatValidator.swift */,
+				AC64A9C3225AA27D006728D6 /* ImageIsRequiredValidator.swift */,
+				AC64A9BF22589932006728D6 /* ImageSizeBiggerThanValidator.swift */,
+				AC64A9B922588A8A006728D6 /* TextLengthValidator.swift */,
 			);
 			path = Validators;
 			sourceTree = "<group>";

@@ -22,9 +22,9 @@ extension TextLengthValidator: ValidatorConvertible {
         guard let text = value as? String else { return }
 
         if text.count < range.lowerBound {
-            throw ValidationError(message: "Text should be longer than \(range.lowerBound) character!")
+            throw ValidationError(message: Texts.Validation.textTooShort.localizedWithParameter(range.lowerBound))
         } else if text.count > range.upperBound {
-            throw ValidationError(message: "Text should be shorter than \(range.upperBound) character!")
+            throw ValidationError(message: Texts.Validation.textTooLong.localizedWithParameter(range.upperBound))
         }
     }
 }

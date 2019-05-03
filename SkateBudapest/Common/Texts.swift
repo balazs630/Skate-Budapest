@@ -42,6 +42,14 @@ struct Texts {
         case submitSummaryNavBarTitle
     }
 
+    enum Validation: String, Localizable {
+        case invalidEmailFormat
+        case imageRequired
+        case imageSizeTooSmall
+        case textTooShort
+        case textTooLong
+    }
+
     enum NetworkError: String, Localizable {
         case defaultTitle = "networkErrorTitle"
         case notConnectedToInternet = "notConnectedToInternetError"

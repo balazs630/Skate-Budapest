@@ -38,6 +38,13 @@
 "submitPositionNavBarTitle" = "Pozíció";
 "submitSummaryNavBarTitle" = "Összegző";
 
+// Validation:
+"invalidEmailFormat" = "Helytelen e-mail cím formátum!";
+"imageRequired" = "Kötelező képet megadni ide!";
+"imageSizeTooSmall" = "A képnek nagyobbnak kell lennie mint %dx%d pixel!";
+"textTooShort" = "A szövegnek %d karakternél hosszabbnak kell lennie!";
+"textTooLong" = "A szövegnek %d karakternél rövidebbnek kell lennie!";
+
 // NetworkError:
 "networkErrorTitle" = "Hálózati hiba";
 "notConnectedToInternetError" = "Nincs internetkapcsolat";

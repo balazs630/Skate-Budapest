@@ -16,7 +16,7 @@ extension EmailFormatValidator: ValidatorConvertible {
             let text = value as? String,
             text.range(of: pattern, options: .regularExpression) != nil
             else {
-                throw ValidationError(message: "Invalid e-mail address format!")
+                throw ValidationError(message: Texts.Validation.invalidEmailFormat.localized)
         }
     }
 }

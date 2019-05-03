@@ -25,7 +25,12 @@ extension ImageSizeBiggerThanValidator: ValidatorConvertible {
             let image = value as? UIImage,
             image.size.isGreaterOrEqual(to: size)
             else {
-                throw ValidationError(message: "Image should be bigger than \(size.width)x\(size.height) pixel!")
+                throw ValidationError(
+                    message: Texts.Validation.imageSizeTooSmall.localizedWithParameter(
+                        Int(size.width),
+                        Int(size.height)
+                    )
+                )
         }
     }
 }
