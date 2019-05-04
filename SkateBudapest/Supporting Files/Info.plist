@@ -19,22 +19,22 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>3</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>I need to access your camera to take pictures to attach.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>I need to access your location to show your current location on a map.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>I need to access your photo library to able to attach photos.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>I need to access your camera to take pictures to attach.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

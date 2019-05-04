@@ -15,6 +15,7 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var centerLocationButton: UIButton!
 
     // MARK: View Lifecycle
     override func viewDidLoad() {
@@ -22,12 +23,12 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
         configureSelf()
 
         LocationService.shared.startTracking()
-        mapView.delegate = self
         loadMapWaypoints()
     }
 
     // MARK: Screen configuration
     private func configureSelf() {
+        mapView.delegate = self
         configureNavigationBar()
     }
 
@@ -44,19 +45,12 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Button actions
     @IBAction func centerMapButtonTap(_ sender: Any) {
-        if let userLocation = LocationService.shared.location {
-            let latitudinalMeters = CLLocationDistance(10000)
-            let longitudinalMeters = CLLocationDistance(10000)
-
-            let viewRegion = MKCoordinateRegion.init(center: userLocation.coordinate,
-                                                     latitudinalMeters: latitudinalMeters,
-                                                     longitudinalMeters: longitudinalMeters)
-            mapView.setRegion(viewRegion, animated: true)
-        }
+        guard LocationService.shared.location != nil else { return }
+        mapView.toggleUserTrackingMode()
     }
 }
 
-// MARK: Map annotation operations
+// MARK: Waypoint actions
 extension SkateMapViewController {
     private func loadMapWaypoints() {
         clearWaypoints()
@@ -72,6 +66,17 @@ extension SkateMapViewController {
                 let alertController = SimpleAlertDialog.build(title: error.title, message: error.message)
                 self.present(alertController, animated: true)
             }
+        }
+    }
+
+    private func getWaypointImage(for type: WaypointType) -> UIImage {
+        switch type {
+        case .skatepark:
+            return Theme.Icon.skateparkPin
+        case .skateshop:
+            return Theme.Icon.skateshopPin
+        case .streetspot:
+            return Theme.Icon.streetSpotPin
         }
     }
 
@@ -130,14 +135,16 @@ extension SkateMapViewController: MKMapViewDelegate {
         return annotationView
     }
 
-    private func getWaypointImage(for type: WaypointType) -> UIImage {
-        switch type {
-        case .skatepark:
-            return Theme.Icon.skateparkPin
-        case .skateshop:
-            return Theme.Icon.skateshopPin
-        case .streetspot:
-            return Theme.Icon.streetSpotPin
+    func mapView(_ mapView: MKMapView, didChange mode: MKUserTrackingMode, animated: Bool) {
+        switch mode {
+        case .none:
+            centerLocationButton.setImage(Theme.Icon.locationTrackingNone, for: .normal)
+        case .follow:
+            centerLocationButton.setImage(Theme.Icon.locationTrackingFollow, for: .normal)
+        case .followWithHeading:
+            centerLocationButton.setImage(Theme.Icon.locationTrackingHeading, for: .normal)
+        @unknown default:
+            break
         }
     }
 

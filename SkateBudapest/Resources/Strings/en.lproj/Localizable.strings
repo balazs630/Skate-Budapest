@@ -29,6 +29,8 @@
 "hour" = "hour";
 "minutes" = "minute";
 "directions" = "Directions";
+"start" = "Start";
+"destination" = "Destination";
 
 // SendPlaceViewController:
 "submit" = "Submit";

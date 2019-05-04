@@ -51,6 +51,7 @@
 		AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19221B08AA000C20451 /* RealmService.swift */; };
 		AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19621B2B1A600C20451 /* BaseWebService.swift */; };
 		AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */; };
+		AC7B3690227E266B000A2C9C /* MKMapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B368F227E266B000A2C9C /* MKMapViewExtensions.swift */; };
 		AC7F33CB22386C7F0015B1C8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */; };
 		AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8597752236F6B9009C0D6F /* RoutingEmptyViewController.swift */; };
 		AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F8B8D21C518BF00001551 /* ImageService.swift */; };
@@ -129,6 +130,7 @@
 		AC6BD19221B08AA000C20451 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		AC6BD19621B2B1A600C20451 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertDialog.swift; sourceTree = "<group>"; };
+		AC7B368F227E266B000A2C9C /* MKMapViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtensions.swift; sourceTree = "<group>"; };
 		AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		AC8597752236F6B9009C0D6F /* RoutingEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingEmptyViewController.swift; sourceTree = "<group>"; };
 		AC8F8B8D21C518BF00001551 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 			children = (
 				AC64A9C12258DCE7006728D6 /* CGSizeExtension.swift */,
 				ACEB8C8522623AF400873D0A /* DoubleExtensions.swift */,
+				AC7B368F227E266B000A2C9C /* MKMapViewExtensions.swift */,
 				ACD5CBB621D190FE00EDE3E0 /* StringExtensions.swift */,
 				AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */,
 				AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */,
@@ -729,6 +732,7 @@
 				AC6905FB21C073C900A2088A /* RealmError.swift in Sources */,
 				AC18D5C7223F074100CB7243 /* MediaPermissionService.swift in Sources */,
 				ACB292F3223541F000DBB862 /* SubmitResultViewController.swift in Sources */,
+				AC7B3690227E266B000A2C9C /* MKMapViewExtensions.swift in Sources */,
 				AC18D5CD22468CDA00CB7243 /* Theme.swift in Sources */,
 				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,
 				AC64A9B0225880B7006728D6 /* UITextFieldExtensions.swift in Sources */,

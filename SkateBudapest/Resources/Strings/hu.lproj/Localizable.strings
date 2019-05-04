@@ -29,6 +29,8 @@
 "hour" = "óra";
 "minutes" = "perc";
 "directions" = "Útvonaltervezés";
+"start" = "Indulás";
+"destination" = "Cél";
 
 // SendPlaceViewController:
 "submit" = "Beküldés";

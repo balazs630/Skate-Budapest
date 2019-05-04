@@ -30,6 +30,8 @@ struct Texts {
         case hour
         case minutes
         case directions
+        case start
+        case destination
     }
 
     enum SubmitPlace: String, Localizable {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,13 +22,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-ZP-jxx">
-                                <rect key="frame" x="325" y="617" width="25" height="25"/>
+                                <rect key="frame" x="315" y="607" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="BDS-Ck-PgG"/>
-                                    <constraint firstAttribute="height" constant="25" id="EYR-O0-wjy"/>
+                                    <constraint firstAttribute="width" constant="35" id="BDS-Ck-PgG"/>
+                                    <constraint firstAttribute="height" constant="35" id="EYR-O0-wjy"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="location-arrow"/>
+                                <state key="normal" image="location-tracking-follow"/>
                                 <connections>
                                     <action selector="centerMapButtonTap:" destination="vZY-YY-T4n" eventType="touchUpInside" id="4Qw-94-zzD"/>
                                 </connections>
@@ -46,6 +46,7 @@
                         <viewLayoutGuide key="safeArea" id="OPh-BF-67Z"/>
                     </view>
                     <connections>
+                        <outlet property="centerLocationButton" destination="NPG-ZP-jxx" id="0m0-Bm-dJ3"/>
                         <outlet property="mapView" destination="kkt-hd-d7o" id="NwL-DQ-rrY"/>
                     </connections>
                 </viewController>
@@ -232,6 +233,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="location-arrow" width="128" height="128"/>
+        <image name="location-tracking-follow" width="128" height="128"/>
     </resources>
 </document>

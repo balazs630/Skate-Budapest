@@ -23,6 +23,10 @@ public enum Theme {
         public static let skateparkIcon = UIImage(named: "yellow")!
         public static let skateshopIcon = UIImage(named: "green")!
         public static let streetSpotIcon = UIImage(named: "purple")!
+
+        public static let locationTrackingNone = UIImage(named: "location-tracking-none")!
+        public static let locationTrackingFollow = UIImage(named: "location-tracking-follow")!
+        public static let locationTrackingHeading = UIImage(named: "location-tracking-heading")!
     }
 
     public enum Image {

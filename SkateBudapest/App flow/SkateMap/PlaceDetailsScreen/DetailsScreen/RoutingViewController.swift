@@ -120,10 +120,10 @@ extension RoutingViewController {
     private func openMaps(directionMode: String) {
         guard let currentLocation = LocationService.shared.coordinates else { return }
         let currentLocationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation))
-        currentLocationMapItem.name = "Source"
+        currentLocationMapItem.name = Texts.LocationDetails.start.localized
 
         let destinationLocationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation))
-        destinationLocationMapItem.name = "Destination"
+        destinationLocationMapItem.name = Texts.LocationDetails.destination.localized
 
         MKMapItem.openMaps(with: [currentLocationMapItem, destinationLocationMapItem],
                            launchOptions: [MKLaunchOptionsDirectionsModeKey: directionMode])
