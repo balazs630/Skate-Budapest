@@ -14,5 +14,5 @@ workspace 'SkateBudapest.xcworkspace'
 ## Inject pods
 target 'SkateBudapest' do
   pod 'Alamofire', '~> 4.8.2'
-  pod 'RealmSwift', '~> 3.14.0'
+  pod 'RealmSwift', '~> 3.14.2'
 end
