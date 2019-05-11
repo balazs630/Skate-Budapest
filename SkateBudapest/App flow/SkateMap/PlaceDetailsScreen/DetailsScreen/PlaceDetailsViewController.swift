@@ -39,6 +39,10 @@ class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
         pageControl.currentPage = imageOffset.row
         imageScrollView.setContentOffset(CGPoint(x: xOffset, y: 0), animated: false)
     }
+
+    override func willMove(toParent parent: UIViewController?) {
+        coordinator?.backToSkateMapScreen()
+    }
 }
 
 // MARK: - Setup view
@@ -62,22 +66,9 @@ extension PlaceDetailsViewController {
     }
 
     private func configureNavigationBarTitleView() {
-        let image = getLocationIcon()
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = image
-        navigationItem.titleView = imageView
-    }
-
-    private func getLocationIcon() -> UIImage {
-        switch waypoint.type {
-        case .skatepark:
-            return Theme.Icon.skateparkIcon
-        case .streetspot:
-            return Theme.Icon.streetSpotIcon
-        case .skateshop:
-            return Theme.Icon.skateshopIcon
-        }
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = Theme.Color.lightGrey
     }
 
     private func configureLabels() {

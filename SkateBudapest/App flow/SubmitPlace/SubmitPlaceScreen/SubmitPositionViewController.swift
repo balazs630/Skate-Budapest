@@ -31,7 +31,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
         super.viewWillDisappear(animated)
         if isMovingFromParent {
             saveUserInput()
-            coordinator?.updateImagesScreen(with: placeSuggestionDisplayItem)
+            coordinator?.backToImagesScreen(with: placeSuggestionDisplayItem)
         }
     }
 

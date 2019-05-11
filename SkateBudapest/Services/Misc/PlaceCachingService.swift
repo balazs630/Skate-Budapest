@@ -18,19 +18,19 @@ class PlaceCachingService {
 extension PlaceCachingService {
     func getPlaces(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
         realmService.isPlacesDataPersisted { [weak self] isPlacesDataPersisted in
-            guard let strongSelf = self else { return }
+            guard let `self` = self else { return }
 
             if isPlacesDataPersisted {
-                strongSelf.isPlacesUpdateAvailable { [weak self] updateAvailable in
-                    guard let strongSelf = self else { return }
+                self.isPlacesUpdateAvailable { [weak self] updateAvailable in
+                    guard let `self` = self else { return }
                     if updateAvailable {
-                        strongSelf.getFromNetwork(completion: completion)
+                        self.getFromNetwork(completion: completion)
                     } else {
-                        strongSelf.getFromDatabase(completion: completion)
+                        self.getFromDatabase(completion: completion)
                     }
                 }
             } else {
-                strongSelf.getFromNetwork(completion: completion)
+                self.getFromNetwork(completion: completion)
             }
         }
     }
@@ -47,23 +47,23 @@ extension PlaceCachingService {
 
     private func getFromNetwork(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
         self.placeWebService.getPlaceInfo { [weak self] result in
-            guard let strongSelf = self else { return }
+            guard let `self` = self else { return }
 
             switch result {
             case .success(let placeInfo):
-                strongSelf.realmService.writePlacesInfo(with: placeInfo, update: true)
+                self.realmService.writePlacesInfo(with: placeInfo, update: true)
             case .failure(let error):
                 completion(Result.failure(NetworkError(message: error.message)))
             }
         }
 
         self.placeWebService.getPlaces { [weak self] result in
-            guard let strongSelf = self else { return }
+            guard let `self` = self else { return }
 
             switch result {
             case .success(let places):
-                strongSelf.realmService.writePlaces(with: places, update: true)
-                strongSelf.getFromDatabase(completion: completion)
+                self.realmService.writePlaces(with: places, update: true)
+                self.getFromDatabase(completion: completion)
             case .failure(let error):
                 completion(Result.failure(NetworkError(message: error.message)))
             }
@@ -75,11 +75,11 @@ extension PlaceCachingService {
 extension PlaceCachingService {
     private func isPlacesUpdateAvailable(completion: @escaping (Bool) -> Void) {
         placeWebService.getPlaceInfo { [weak self] result in
-            guard let strongSelf = self else { return }
+            guard let `self` = self else { return }
 
             switch result {
             case .success(let networkPlaceInfo):
-                strongSelf.realmService.readPlaceInfo { realmPlaceDataVersion in
+                self.realmService.readPlaceInfo { realmPlaceDataVersion in
                     if realmPlaceDataVersion != networkPlaceInfo.dataVersion {
                         completion(true)
                     } else {

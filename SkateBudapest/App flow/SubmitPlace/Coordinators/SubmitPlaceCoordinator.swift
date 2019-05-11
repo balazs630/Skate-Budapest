@@ -79,17 +79,17 @@ extension SubmitPlaceCoordinator {
 
 // MARK: Back navigation actions
 extension SubmitPlaceCoordinator {
-    func updateSubmitTypeSelectorScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
+    func backToSubmitTypeSelectorScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
         let previousScreen: SubmitTypeSelectorViewController? = firstViewController()
         previousScreen?.placeSuggestionDisplayItem = placeSuggestion
     }
 
-    func updateSubmitTextsScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
+    func backToSubmitTextsScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
         let previousScreen: SubmitTextsViewController? = firstViewController()
         previousScreen?.placeSuggestionDisplayItem = placeSuggestion
     }
 
-    func updateImagesScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
+    func backToImagesScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
         let previousScreen: SubmitImagesViewController? = firstViewController()
         previousScreen?.placeSuggestionDisplayItem = placeSuggestion
     }

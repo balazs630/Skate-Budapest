@@ -29,7 +29,7 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
         super.viewWillDisappear(animated)
         if isMovingFromParent {
             saveUserInput()
-            coordinator?.updateSubmitTypeSelectorScreen(with: placeSuggestionDisplayItem)
+            coordinator?.backToSubmitTypeSelectorScreen(with: placeSuggestionDisplayItem)
         }
     }
 

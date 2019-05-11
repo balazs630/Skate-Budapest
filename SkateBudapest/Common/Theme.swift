@@ -39,5 +39,6 @@ public enum Theme {
         public static let skatepark = UIColor.color(red: 210, green: 64, blue: 140)
         public static let skateshop = UIColor.color(red: 64, green: 200, blue: 140)
         public static let streetSpot = UIColor.color(red: 135, green: 200, blue: 240)
+        public static let lightGrey = UIColor.color(red: 248, green: 248, blue: 248)
     }
 }
