@@ -1,5 +1,5 @@
 //
-//  PlaceInfoRealmModel.swift
+//  PlaceDataVersionRealmModel.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2018. 12. 06..
@@ -8,7 +8,7 @@
 
 import RealmSwift
 
-final class PlaceInfoRealmModel: Object {
+final class PlaceDataVersionRealmModel: Object {
     @objc dynamic var dataVersion = ""
 
     override class func primaryKey() -> String? {
@@ -17,9 +17,9 @@ final class PlaceInfoRealmModel: Object {
 }
 
 // MARK: Initializers
-extension PlaceInfoRealmModel {
-    convenience init(_ placeInfoApiModel: PlaceInfoApiModel) {
+extension PlaceDataVersionRealmModel {
+    convenience init(_ placeDataVersionApiModel: PlaceDataVersionApiModel) {
         self.init()
-        self.dataVersion = placeInfoApiModel.dataVersion
+        self.dataVersion = placeDataVersionApiModel.dataVersion
     }
 }

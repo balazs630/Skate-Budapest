@@ -1,10 +1,10 @@
 //
-//  PlaceInfoApiModel.swift
+//  PlaceDataVersionApiModel.swift
 //  SkateBudapestBackend
 //
 //  Created by Horváth Balázs on 2018. 11. 23..
 //
 
-struct PlaceInfoApiModel: Codable {
+struct PlaceDataVersionApiModel: Codable {
     var dataVersion: String
 }

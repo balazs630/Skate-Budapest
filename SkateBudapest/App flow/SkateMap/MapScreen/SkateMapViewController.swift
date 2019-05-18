@@ -61,7 +61,7 @@ extension SkateMapViewController {
 
             switch result {
             case .success(let waypoints):
-                self.add(waypoints: waypoints.filter { $0.status == .active })
+                self.add(waypoints: waypoints)
             case .failure(let error):
                 let alertController = SimpleAlertDialog.build(title: error.title, message: error.message)
                 self.present(alertController, animated: true)

@@ -14,12 +14,13 @@ extension PlaceWebService {
     fileprivate enum Slug {
         static let apiVersionPath = "/v1"
         static let placePath = "\(apiVersionPath)/places"
-        static let placeInfoPath = "\(placePath)/info"
+        static let placeDataVersionPath = "\(placePath)/dataversion"
         static let placeSuggestionPath = "\(apiVersionPath)/suggestplace"
     }
 
     fileprivate enum Parameter {
         static let language = "lang"
+        static let status = "status"
         static let defaultLanguageCode = "en"
     }
 }
@@ -29,7 +30,8 @@ extension PlaceWebService {
     func getPlaces(completion: @escaping (Result<[PlaceApiModel]>) -> Void) {
         let url = requestUrl(for: Slug.placePath)
         let queryParams: Parameters = [
-            Parameter.language: Locale.current.languageCode ?? Parameter.defaultLanguageCode
+            Parameter.language: Locale.current.languageCode ?? Parameter.defaultLanguageCode,
+            Parameter.status: WaypointStatus.active.rawValue
         ]
 
         Alamofire.request(url, method: .get, parameters: queryParams).responseJSON { response in
@@ -48,15 +50,15 @@ extension PlaceWebService {
         }
     }
 
-    func getPlaceInfo(completion: @escaping (Result<PlaceInfoApiModel>) -> Void) {
-        let url = requestUrl(for: Slug.placeInfoPath)
+    func getPlaceDataVersion(completion: @escaping (Result<PlaceDataVersionApiModel>) -> Void) {
+        let url = requestUrl(for: Slug.placeDataVersionPath)
 
         Alamofire.request(url, method: .get).responseJSON { response in
             switch response.result {
             case .success:
                 guard let data = response.data else { return }
                 do {
-                    let info = try self.decoder.decode(PlaceInfoApiModel.self, from: data)
+                    let info = try self.decoder.decode(PlaceDataVersionApiModel.self, from: data)
                     completion(Result.success(info))
                 } catch {
                     completion(Result.failure(self.handle(error)))

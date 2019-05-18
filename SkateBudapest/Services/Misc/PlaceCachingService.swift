@@ -46,12 +46,12 @@ extension PlaceCachingService {
     }
 
     private func getFromNetwork(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
-        self.placeWebService.getPlaceInfo { [weak self] result in
+        self.placeWebService.getPlaceDataVersion { [weak self] result in
             guard let `self` = self else { return }
 
             switch result {
-            case .success(let placeInfo):
-                self.realmService.writePlacesInfo(with: placeInfo, update: true)
+            case .success(let dataVersion):
+                self.realmService.writePlaceDataVersion(with: dataVersion, update: true)
             case .failure(let error):
                 completion(Result.failure(NetworkError(message: error.message)))
             }
@@ -74,20 +74,19 @@ extension PlaceCachingService {
 // MARK: Utility
 extension PlaceCachingService {
     private func isPlacesUpdateAvailable(completion: @escaping (Bool) -> Void) {
-        placeWebService.getPlaceInfo { [weak self] result in
+        placeWebService.getPlaceDataVersion { [weak self] result in
             guard let `self` = self else { return }
 
             switch result {
-            case .success(let networkPlaceInfo):
-                self.realmService.readPlaceInfo { realmPlaceDataVersion in
-                    if realmPlaceDataVersion != networkPlaceInfo.dataVersion {
+            case .success(let networkPlaceDataVersion):
+                self.realmService.readPlaceDataVersion { realmPlaceDataVersion in
+                    if realmPlaceDataVersion != networkPlaceDataVersion.dataVersion {
                         completion(true)
                     } else {
                         completion(false)
                     }
                 }
-            //swiftlint:disable:next empty_enum_arguments
-            case .failure(_):
+            case .failure:
                 completion(false)
             }
         }

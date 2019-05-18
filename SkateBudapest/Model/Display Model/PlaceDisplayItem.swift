@@ -15,7 +15,6 @@ final class PlaceDisplayItem: NSObject {
     var name: String
     var info: String
     var type: WaypointType
-    var status: WaypointStatus
     var thumbnailImageData: Data
     var imageDatas: [Data?]
 
@@ -26,7 +25,6 @@ final class PlaceDisplayItem: NSObject {
         self.name = placeRealmModel.name
         self.info = placeRealmModel.info
         self.type = placeRealmModel.type
-        self.status = placeRealmModel.status
         self.thumbnailImageData = placeRealmModel.thumbnailImageData
         self.imageDatas = placeRealmModel.imageDatas.map { $0 }
     }

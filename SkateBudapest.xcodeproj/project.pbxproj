@@ -23,7 +23,7 @@
 		AC273FD62234437500DF2AB9 /* SubmitPlaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */; };
 		AC273FD82234465300DF2AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC273FD72234465300DF2AB9 /* LaunchScreen.storyboard */; };
 		AC2C030921AADC6300784F4E /* PlaceWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C030821AADC6300784F4E /* PlaceWebService.swift */; };
-		AC2C030F21AADD1B00784F4E /* PlaceInfoApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C030C21AADD1B00784F4E /* PlaceInfoApiModel.swift */; };
+		AC2C030F21AADD1B00784F4E /* PlaceDataVersionApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C030C21AADD1B00784F4E /* PlaceDataVersionApiModel.swift */; };
 		AC2C031121AADD1B00784F4E /* PlaceApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C030E21AADD1B00784F4E /* PlaceApiModel.swift */; };
 		AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */; };
 		AC2D9DAA21335558003A6263 /* PlaceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */; };
@@ -76,7 +76,7 @@
 		ACD5CBBB21D195B300EDE3E0 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5CBBA21D195B300EDE3E0 /* Localizable.swift */; };
 		ACD5CBBD21D195E700EDE3E0 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5CBBC21D195E700EDE3E0 /* Texts.swift */; };
 		ACE6F71221B897B4000ABDF1 /* PlaceDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE6F71121B897B4000ABDF1 /* PlaceDisplayItem.swift */; };
-		ACE6F71721B899F7000ABDF1 /* PlaceInfoRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE6F71621B899F7000ABDF1 /* PlaceInfoRealmModel.swift */; };
+		ACE6F71721B899F7000ABDF1 /* PlaceDataVersionRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE6F71621B899F7000ABDF1 /* PlaceDataVersionRealmModel.swift */; };
 		ACEB8C8622623AF400873D0A /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB8C8522623AF400873D0A /* DoubleExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +100,7 @@
 		AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPlaceCoordinator.swift; sourceTree = "<group>"; };
 		AC273FD72234465300DF2AB9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC2C030821AADC6300784F4E /* PlaceWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceWebService.swift; sourceTree = "<group>"; };
-		AC2C030C21AADD1B00784F4E /* PlaceInfoApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceInfoApiModel.swift; sourceTree = "<group>"; };
+		AC2C030C21AADD1B00784F4E /* PlaceDataVersionApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDataVersionApiModel.swift; sourceTree = "<group>"; };
 		AC2C030E21AADD1B00784F4E /* PlaceApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceApiModel.swift; sourceTree = "<group>"; };
 		AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfScreenModalPresentationController.swift; sourceTree = "<group>"; };
 		AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFilterViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		ACD5CBBA21D195B300EDE3E0 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		ACD5CBBC21D195E700EDE3E0 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		ACE6F71121B897B4000ABDF1 /* PlaceDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDisplayItem.swift; sourceTree = "<group>"; };
-		ACE6F71621B899F7000ABDF1 /* PlaceInfoRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoRealmModel.swift; sourceTree = "<group>"; };
+		ACE6F71621B899F7000ABDF1 /* PlaceDataVersionRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDataVersionRealmModel.swift; sourceTree = "<group>"; };
 		ACEB8C8522623AF400873D0A /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		EDBF9272CB4FF371E86764D1 /* Pods_SkateBudapest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkateBudapest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -211,7 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				AC2C030E21AADD1B00784F4E /* PlaceApiModel.swift */,
-				AC2C030C21AADD1B00784F4E /* PlaceInfoApiModel.swift */,
+				AC2C030C21AADD1B00784F4E /* PlaceDataVersionApiModel.swift */,
 				ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */,
 			);
 			path = "Api Model";
@@ -381,7 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */,
-				ACE6F71621B899F7000ABDF1 /* PlaceInfoRealmModel.swift */,
+				ACE6F71621B899F7000ABDF1 /* PlaceDataVersionRealmModel.swift */,
 			);
 			path = "Realm Model";
 			sourceTree = "<group>";
@@ -697,7 +697,7 @@
 				ACB292E8223541BF00DBB862 /* PlaceSuggestionApiModel.swift in Sources */,
 				AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */,
 				AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */,
-				ACE6F71721B899F7000ABDF1 /* PlaceInfoRealmModel.swift in Sources */,
+				ACE6F71721B899F7000ABDF1 /* PlaceDataVersionRealmModel.swift in Sources */,
 				AC64A9BE22588CFF006728D6 /* UITextViewExtensions.swift in Sources */,
 				AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */,
 				AC69060521C0784300A2088A /* Result.swift in Sources */,
@@ -716,7 +716,7 @@
 				AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */,
 				ACA489BB20FA9E890084D9F3 /* Constants.swift in Sources */,
 				AC2C030921AADC6300784F4E /* PlaceWebService.swift in Sources */,
-				AC2C030F21AADD1B00784F4E /* PlaceInfoApiModel.swift in Sources */,
+				AC2C030F21AADD1B00784F4E /* PlaceDataVersionApiModel.swift in Sources */,
 				AC2D9DAA21335558003A6263 /* PlaceFilterViewController.swift in Sources */,
 				AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */,
 				AC18D5C5223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift in Sources */,

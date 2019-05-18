@@ -24,9 +24,9 @@ class RealmService {
         }
     }
 
-    func readPlaceInfo(completion: @escaping (String?) -> Void) {
-        let placeInfo = Array(realm.objects(PlaceInfoRealmModel.self))
-        completion(placeInfo.first?.dataVersion)
+    func readPlaceDataVersion(completion: @escaping (String?) -> Void) {
+        let placeDataVersion = Array(realm.objects(PlaceDataVersionRealmModel.self))
+        completion(placeDataVersion.first?.dataVersion)
     }
 
     func writePlaces(with places: [PlaceApiModel], update: Bool = false) {
@@ -35,9 +35,9 @@ class RealmService {
         }
     }
 
-    func writePlacesInfo(with placesInfo: PlaceInfoApiModel, update: Bool = false) {
+    func writePlaceDataVersion(with placeDataVersion: PlaceDataVersionApiModel, update: Bool = false) {
         try! realm.write {
-            realm.add(PlaceInfoRealmModel(placesInfo), update: true)
+            realm.add(PlaceDataVersionRealmModel(placeDataVersion), update: true)
         }
     }
 }
@@ -46,8 +46,8 @@ class RealmService {
 extension RealmService {
     func isPlacesDataPersisted(completion: @escaping (Bool) -> Void) {
         isPlacesAvailable { isPlacesAvailable in
-            self.isPlaceInfoAvailable { isPlaceInfoAvailable in
-                if isPlacesAvailable, isPlaceInfoAvailable {
+            self.isPlaceDataVersionAvailable { isPlaceDataVersionAvailable in
+                if isPlacesAvailable, isPlaceDataVersionAvailable {
                     completion(true)
                 } else {
                     completion(false)
@@ -62,8 +62,8 @@ extension RealmService {
         }
     }
 
-    private func isPlaceInfoAvailable(completion: @escaping (Bool) -> Void) {
-        readPlaceInfo { result in
+    private func isPlaceDataVersionAvailable(completion: @escaping (Bool) -> Void) {
+        readPlaceDataVersion { result in
             completion(result != nil)
         }
     }

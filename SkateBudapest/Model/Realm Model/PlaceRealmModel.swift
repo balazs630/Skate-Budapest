@@ -24,12 +24,6 @@ final class PlaceRealmModel: Object {
         set { typeEnum = newValue.rawValue }
     }
 
-    @objc private dynamic var statusEnum = WaypointStatus.active.rawValue
-    var status: WaypointStatus {
-        get { return WaypointStatus(rawValue: statusEnum) ?? .active }
-        set { statusEnum = newValue.rawValue }
-    }
-
     override class func primaryKey() -> String? {
         return "id"
     }
@@ -49,6 +43,5 @@ extension PlaceRealmModel {
             self.imageDatas.append(ImageService.imageData(from: url, imageType: .gallery))
         }
         self.type = placeApiModel.type
-        self.status = placeApiModel.status
     }
 }
