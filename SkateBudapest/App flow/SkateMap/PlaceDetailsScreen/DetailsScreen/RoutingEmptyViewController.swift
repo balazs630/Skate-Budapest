@@ -26,7 +26,6 @@ class RoutingEmptyViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Actions
     @IBAction func enableLocationTap(_ sender: Any) {
-        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-        UIApplication.shared.open(settingsUrl)
+        UIApplication.openSettings()
     }
 }
