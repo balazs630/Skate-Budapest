@@ -67,8 +67,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
             case .success:
                 self.coordinator?.toSubmitSummaryScreen(with: self.placeSuggestionDisplayItem)
             case .failure(let error):
-                let alertController = SimpleAlertDialog.build(title: error.title, message: error.message)
-                self.present(alertController, animated: true)
+                self.present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
             }
         }
     }

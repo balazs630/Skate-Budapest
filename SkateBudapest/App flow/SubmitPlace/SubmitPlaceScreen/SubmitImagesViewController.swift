@@ -60,7 +60,7 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
             saveUserInput()
             coordinator?.toSubmitPositionScreen(with: placeSuggestionDisplayItem)
         } catch let error as ValidationError {
-            present(SimpleAlertDialog.build(title: error.title, message: error.message), animated: true)
+            present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
         } catch { }
     }
 

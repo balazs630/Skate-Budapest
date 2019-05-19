@@ -53,7 +53,7 @@
 		AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */; };
 		AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19221B08AA000C20451 /* RealmService.swift */; };
 		AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19621B2B1A600C20451 /* BaseWebService.swift */; };
-		AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */; };
+		AC6BD19C21B2B63C00C20451 /* ResultAlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */; };
 		AC7B3690227E266B000A2C9C /* MKMapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B368F227E266B000A2C9C /* MKMapViewExtensions.swift */; };
 		AC7F33CB22386C7F0015B1C8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */; };
 		AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8597752236F6B9009C0D6F /* RoutingEmptyViewController.swift */; };
@@ -135,7 +135,7 @@
 		AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRealmModel.swift; sourceTree = "<group>"; };
 		AC6BD19221B08AA000C20451 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		AC6BD19621B2B1A600C20451 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
-		AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlertDialog.swift; sourceTree = "<group>"; };
+		AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAlertDialog.swift; sourceTree = "<group>"; };
 		AC7B368F227E266B000A2C9C /* MKMapViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtensions.swift; sourceTree = "<group>"; };
 		AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		AC8597752236F6B9009C0D6F /* RoutingEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingEmptyViewController.swift; sourceTree = "<group>"; };
@@ -505,7 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
-				AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */,
+				AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */,
 				AC11F26C2290C971008ECBDD /* ActionAlertDialog.swift */,
 				AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */,
 			);
@@ -716,7 +716,7 @@
 				AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */,
 				AC64A9C22258DCE7006728D6 /* CGSizeExtension.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
-				AC6BD19C21B2B63C00C20451 /* SimpleAlertDialog.swift in Sources */,
+				AC6BD19C21B2B63C00C20451 /* ResultAlertDialog.swift in Sources */,
 				ACB292F2223541F000DBB862 /* SubmitTypeSelectorViewController.swift in Sources */,
 				AC18D5CB2242DC3900CB7243 /* UIResponderExtensions.swift in Sources */,
 				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,

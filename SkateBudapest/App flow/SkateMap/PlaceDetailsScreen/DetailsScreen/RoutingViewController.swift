@@ -96,9 +96,8 @@ extension RoutingViewController {
             let directions = MKDirections(request: request)
             directions.calculateETA { (etaResponse, error) -> Void in
                 if let error = error {
-                    let alertController = SimpleAlertDialog.build(title: Texts.LocationDetails.directions.localized,
-                                                                  message: error.localizedDescription)
-                    self.present(alertController, animated: true)
+                    self.present(ResultAlertDialog.build(title: Texts.LocationDetails.directions.localized,
+                                                         message: error.localizedDescription), animated: true)
                 } else {
                     if let travelTime = etaResponse?.expectedTravelTime {
                         self.setTransitTimeButtonTexts(for: transportType, travelTime: travelTime)

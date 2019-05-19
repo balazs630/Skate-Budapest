@@ -1,5 +1,5 @@
 //
-//  SimpleAlertDialog.swift
+//  ResultAlertDialog.swift
 //  SkateBudapest
 //
 //  Created by Horváth Balázs on 2018. 12. 01..
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SimpleAlertDialog {
+class ResultAlertDialog {
     static func build(title: String, message: String) -> UIAlertController {
         let alertController = UIAlertController(title: title,
                                                 message: message,
