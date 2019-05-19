@@ -13,7 +13,7 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     weak var coordinator: SubmitPlaceCoordinator?
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
     private var currentImageView: UIImageView?
-    private lazy var imagePickerController = UIImagePickerController()
+    private lazy var mediaAlertController = MediaAlertController()
 
     // MARK: Outlets
     @IBOutlet weak var imageView1: UIImageView!
@@ -41,12 +41,16 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     // MARK: Screen configuration
     private func configureSelf() {
         navigationItem.title = Texts.SubmitPlace.submitImagesNavBarTitle.localized
-        configureImagePickerController()
+        configureMediaAlertController()
     }
 
-    private func configureImagePickerController() {
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .photoLibrary
+    private func configureMediaAlertController() {
+        mediaAlertController.delegate = self
+        mediaAlertController.presenter = self
+
+        mediaAlertController.addDeleteAlertAction {
+            self.updateImage(to: nil)
+        }
     }
 
     // MARK: Actions
@@ -63,7 +67,7 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     @IBAction func imageViewTap(_ sender: UITapGestureRecognizer) {
         guard let imageView = sender.view as? UIImageView else { return }
         currentImageView = imageView
-        present(imagePickerController, animated: true)
+        present(mediaAlertController, animated: true)
     }
 }
 
@@ -92,6 +96,13 @@ extension SubmitImagesViewController {
         imageView3.image = placeSuggestionDisplayItem?.image3
         imageView4.image = placeSuggestionDisplayItem?.image4
     }
+
+    private func updateImage(to image: UIImage?) {
+        [imageView1, imageView2, imageView3, imageView4]
+            .filter { $0 == currentImageView }
+            .first
+            .map { $0.image = image }
+    }
 }
 
 // MARK: UIImagePickerControllerDelegate methods
@@ -102,10 +113,7 @@ extension SubmitImagesViewController: UIImagePickerControllerDelegate {
 
         currentImageView?.image = image.compress(rate: .low)
         currentImageView?.clearValidationErrorBorder()
-        [imageView1, imageView2, imageView3, imageView4]
-            .filter { $0 == currentImageView }
-            .first
-            .map { $0?.image = currentImageView?.image }
+        updateImage(to: currentImageView?.image)
 
         picker.dismiss(animated: true, completion: nil)
     }

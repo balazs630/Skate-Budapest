@@ -8,13 +8,7 @@
 
 import Photos
 
-class MediaPermissionService {
-    // MARK: Properties
-    static let shared = MediaPermissionService()
-
-    // MARK: Initializers
-    private init() { }
-}
+class MediaPermissionService { }
 
 // MARK: Request permissions
 extension MediaPermissionService {

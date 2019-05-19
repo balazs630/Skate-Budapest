@@ -11,6 +11,15 @@
 // General:
 "ok" = "OK";
 "loading" = "Loading";
+"cancel" = "Cancel";
+"delete" = "Delete";
+"settings" = "Settings";
+
+"photoLibrary" = "Photo library";
+"takePhoto" = "Camera";
+"turnOnPhotosInSettings" = "The application does not have permission to access your photos. To enable access, go to settings and turn on Photos.";
+"turnOnCameraInSettings" = "The application does not have permission to access your camera. To enable access, go to settings and turn on Camera.";
+"permissionDenied" = "Permission denied";
 
 // SkateMapViewController:
 "mapNavBarTitle" = "Map";

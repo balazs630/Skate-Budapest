@@ -13,6 +13,9 @@
 		AC0340012195E18B0005259B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC0340032195E18B0005259B /* InfoPlist.strings */; };
 		AC0B89A62111FDA8006CDB7E /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0B89A52111FDA8006CDB7E /* PlaceDetailsViewController.swift */; };
 		AC0B89AA21120E39006CDB7E /* PlaceDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC0B89A921120E39006CDB7E /* PlaceDetails.storyboard */; };
+		AC11F2692290BC5D008ECBDD /* MediaAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */; };
+		AC11F26B2290BDCA008ECBDD /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11F26A2290BDCA008ECBDD /* UIApplicationExtensions.swift */; };
+		AC11F26D2290C971008ECBDD /* ActionAlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11F26C2290C971008ECBDD /* ActionAlertDialog.swift */; };
 		AC18D5C5223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C4223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift */; };
 		AC18D5C7223F074100CB7243 /* MediaPermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C6223F074100CB7243 /* MediaPermissionService.swift */; };
 		AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5C82241801000CB7243 /* LoadingViewController.swift */; };
@@ -90,6 +93,9 @@
 		AC0340042195E18C0005259B /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC0B89A52111FDA8006CDB7E /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		AC0B89A921120E39006CDB7E /* PlaceDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaceDetails.storyboard; sourceTree = "<group>"; };
+		AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaAlertController.swift; sourceTree = "<group>"; };
+		AC11F26A2290BDCA008ECBDD /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		AC11F26C2290C971008ECBDD /* ActionAlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionAlertDialog.swift; sourceTree = "<group>"; };
 		AC18D5C4223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSuggestionDisplayItem.swift; sourceTree = "<group>"; };
 		AC18D5C6223F074100CB7243 /* MediaPermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPermissionService.swift; sourceTree = "<group>"; };
 		AC18D5C82241801000CB7243 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -466,6 +472,7 @@
 				ACD5CBB621D190FE00EDE3E0 /* StringExtensions.swift */,
 				AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */,
 				AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */,
+				AC11F26A2290BDCA008ECBDD /* UIApplicationExtensions.swift */,
 				ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */,
 				AC64A9AD225558F7006728D6 /* UIImageExtension.swift */,
 				AC907892212997F600FC0528 /* UIImageViewExtensions.swift */,
@@ -499,6 +506,8 @@
 			children = (
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
 				AC6BD19B21B2B63C00C20451 /* SimpleAlertDialog.swift */,
+				AC11F26C2290C971008ECBDD /* ActionAlertDialog.swift */,
+				AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -686,6 +695,7 @@
 				AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */,
 				AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
+				AC11F26B2290BDCA008ECBDD /* UIApplicationExtensions.swift in Sources */,
 				AC64A9BA22588A8A006728D6 /* TextLengthValidator.swift in Sources */,
 				AC64A9AE225558F7006728D6 /* UIImageExtension.swift in Sources */,
 				AC64A9B222588177006728D6 /* ValidatorFactory.swift in Sources */,
@@ -711,6 +721,7 @@
 				AC18D5CB2242DC3900CB7243 /* UIResponderExtensions.swift in Sources */,
 				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,
 				AC64A9B52258891B006728D6 /* ValidationError.swift in Sources */,
+				AC11F26D2290C971008ECBDD /* ActionAlertDialog.swift in Sources */,
 				AC64A9B722588942006728D6 /* EmailFormatValidator.swift in Sources */,
 				AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */,
 				AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */,
@@ -729,6 +740,7 @@
 				AC0B89A62111FDA8006CDB7E /* PlaceDetailsViewController.swift in Sources */,
 				ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */,
 				ACB292F4223541F000DBB862 /* SubmitImagesViewController.swift in Sources */,
+				AC11F2692290BC5D008ECBDD /* MediaAlertController.swift in Sources */,
 				AC6905FB21C073C900A2088A /* RealmError.swift in Sources */,
 				AC18D5C7223F074100CB7243 /* MediaPermissionService.swift in Sources */,
 				ACB292F3223541F000DBB862 /* SubmitResultViewController.swift in Sources */,

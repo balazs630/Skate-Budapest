@@ -21,7 +21,6 @@ extension Array where Element == UIImageView {
 extension UIImageView {
     func validate(_ validatorType: ValidatorType) throws {
         let validator = ValidatorFactory.validator(for: validatorType)
-        guard let image = self.image else { return }
 
         do {
             try validator.validate(image)

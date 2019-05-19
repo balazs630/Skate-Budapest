@@ -11,6 +11,15 @@ struct Texts {
         // swiftlint:disable:next identifier_name
         case ok
         case loading
+        case cancel
+        case delete
+        case settings
+
+        case photoLibrary
+        case takePhoto
+        case turnOnPhotosInSettings
+        case turnOnCameraInSettings
+        case permissionDenied
     }
 
     enum SkateMap: String, Localizable {

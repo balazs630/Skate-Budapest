@@ -11,6 +11,15 @@
 // General:
 "ok" = "OK";
 "loading" = "Betöltés";
+"cancel" = "Mégse";
+"delete" = "Törlés";
+"settings" = "Beállítások";
+
+"photoLibrary" = "Fotótár";
+"takePhoto" = "Kamera";
+"turnOnPhotosInSettings" = "A fotótár hozzáférés nincs engedélyezve. Az engedélyezéshez az alkalmazás beállításainál kapcsold be a fotótár hozzáférést.";
+"turnOnCameraInSettings" = "A kamera hozzáférés nincs engedélyezve. Az engedélyezéshez az alkalmazás beállításainál kapcsold be a kamera hozzáférést.";
+"permissionDenied" = "Hozzáférés megtagadva";
 
 // SkateMapViewController:
 "mapNavBarTitle" = "Térkép";

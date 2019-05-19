@@ -21,6 +21,7 @@ struct ImageSizeBiggerThanValidator {
 // MARK: Validation
 extension ImageSizeBiggerThanValidator: ValidatorConvertible {
     func validate(_ value: Any?) throws {
+        guard value != nil else { return }
         guard
             let image = value as? UIImage,
             image.size.isGreaterOrEqual(to: size)
