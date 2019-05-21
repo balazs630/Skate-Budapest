@@ -15,4 +15,5 @@ workspace 'SkateBudapest.xcworkspace'
 target 'SkateBudapest' do
   pod 'Alamofire', '~> 4.8.2'
   pod 'RealmSwift', '~> 3.14.2'
+  pod 'IQKeyboardManagerSwift', '~> 6.2.1'
 end

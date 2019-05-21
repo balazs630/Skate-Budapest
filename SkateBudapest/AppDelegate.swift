@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setUpMainNavigator()
         initUserDefaults()
+        enableKeyboardManager()
+
         return true
     }
 }
@@ -52,5 +55,12 @@ extension AppDelegate {
 
             defaults.synchronize()
         }
+    }
+}
+
+// MARK: - IQKeyboardManagerSwift pod methods
+extension AppDelegate {
+    private func enableKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
     }
 }
