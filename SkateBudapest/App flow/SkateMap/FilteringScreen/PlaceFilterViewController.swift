@@ -42,9 +42,9 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
     private func configureSelf() {
         titleLabel.text = Texts.SkateMap.filterScreenTitle.localized
 
-        skateshopLabel.text = Texts.SkateMap.filterTypeSkateshop.localized
-        streetspotLabel.text = Texts.SkateMap.filterTypeSkatespot.localized
-        skateparkLabel.text = Texts.SkateMap.filterTypeSkatepark.localized
+        skateshopLabel.text = Texts.SkateMap.skateshopType.localized
+        streetspotLabel.text = Texts.SkateMap.streetspotType.localized
+        skateparkLabel.text = Texts.SkateMap.skateparkType.localized
 
         filterButton.setTitle(Texts.SkateMap.filterButtonTitle.localized, for: .normal)
     }

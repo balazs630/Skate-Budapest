@@ -18,36 +18,185 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-s2-fM9">
-                                <rect key="frame" x="35" y="81" width="304" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.058823529409999999" green="0.47450980390000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="skateparkTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="dRJ-x5-auh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfA-1d-EIv">
-                                <rect key="frame" x="35" y="255" width="304" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.058823529409999999" green="0.47450980390000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="streetSpotTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="ujX-iE-e0h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsu-IN-hkL">
-                                <rect key="frame" x="35" y="426" width="304" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.058823529409999999" green="0.47450980390000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="skateshopTypeTap:" destination="7bg-AW-tAE" eventType="touchUpInside" id="11e-uu-Lei"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-A7-jUd" userLabel="Container view">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8sa-0o-1aI">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="607"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtT-Q3-GKJ" userLabel="Skatepark view">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-EQ-8By" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-lD-oQt" userLabel="Filter Layer">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-YG-3Bw">
+                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstItem="mUq-EQ-8By" firstAttribute="leading" secondItem="vtT-Q3-GKJ" secondAttribute="leading" id="3Gc-Ze-Rbu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mUq-EQ-8By" secondAttribute="trailing" id="FbC-j4-3A3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="eOI-lD-oQt" secondAttribute="bottom" id="LOG-9u-7m6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Rj6-YG-3Bw" secondAttribute="trailing" constant="20" id="Pk5-ye-5lv"/>
+                                                    <constraint firstItem="eOI-lD-oQt" firstAttribute="leading" secondItem="vtT-Q3-GKJ" secondAttribute="leading" id="eUl-fE-9H3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mUq-EQ-8By" secondAttribute="bottom" id="iNP-A0-Dmp"/>
+                                                    <constraint firstItem="eOI-lD-oQt" firstAttribute="top" secondItem="vtT-Q3-GKJ" secondAttribute="top" id="iT8-Rf-1bi"/>
+                                                    <constraint firstItem="mUq-EQ-8By" firstAttribute="top" secondItem="vtT-Q3-GKJ" secondAttribute="top" id="jTj-Gs-ETH"/>
+                                                    <constraint firstItem="Rj6-YG-3Bw" firstAttribute="centerY" secondItem="vtT-Q3-GKJ" secondAttribute="centerY" id="kGf-10-8gB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eOI-lD-oQt" secondAttribute="trailing" id="mGC-ul-H8N"/>
+                                                    <constraint firstItem="Rj6-YG-3Bw" firstAttribute="leading" secondItem="vtT-Q3-GKJ" secondAttribute="leading" constant="20" id="wpp-dX-HM5"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Md7-RG-x3a" appends="YES" id="AI0-fG-YYG"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faH-3G-vAg" userLabel="Streetspot view">
+                                                <rect key="frame" x="0.0" y="209" width="375" height="189"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDJ-At-ghh" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5g0-Te-yeI" userLabel="Filter Layer">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <gestureRecognizers/>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nky-rg-094">
+                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33.5" id="ZOG-l2-xwF"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="5g0-Te-yeI" secondAttribute="bottom" id="4tG-Iy-Bub"/>
+                                                    <constraint firstItem="HDJ-At-ghh" firstAttribute="leading" secondItem="faH-3G-vAg" secondAttribute="leading" id="7JH-3w-fvG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HDJ-At-ghh" secondAttribute="bottom" id="FIL-p6-VXG"/>
+                                                    <constraint firstItem="HDJ-At-ghh" firstAttribute="top" secondItem="faH-3G-vAg" secondAttribute="top" id="Ytn-xZ-M8Z"/>
+                                                    <constraint firstItem="5g0-Te-yeI" firstAttribute="leading" secondItem="faH-3G-vAg" secondAttribute="leading" id="Zs6-uQ-thz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Nky-rg-094" secondAttribute="trailing" constant="20" id="as0-44-Z5m"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HDJ-At-ghh" secondAttribute="trailing" id="dr9-uQ-b2N"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5g0-Te-yeI" secondAttribute="trailing" id="hYf-oy-OMD"/>
+                                                    <constraint firstItem="Nky-rg-094" firstAttribute="centerY" secondItem="faH-3G-vAg" secondAttribute="centerY" id="hpu-Dy-WlX"/>
+                                                    <constraint firstItem="5g0-Te-yeI" firstAttribute="top" secondItem="faH-3G-vAg" secondAttribute="top" id="jfJ-Ef-CEJ"/>
+                                                    <constraint firstItem="Nky-rg-094" firstAttribute="leading" secondItem="faH-3G-vAg" secondAttribute="leading" constant="20" id="tD9-fH-RPd"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="w5c-jk-htk" appends="YES" id="acr-gy-XFi"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-BV-TaM" userLabel="Skateshop view">
+                                                <rect key="frame" x="0.0" y="418" width="375" height="189"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oao-AN-7pS" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-Lg-d4A" userLabel="Filter Layer">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <gestureRecognizers/>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkM-BQ-Gt1">
+                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="33.5" id="c3W-Ov-zbi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstItem="gyP-Lg-d4A" firstAttribute="top" secondItem="QO1-BV-TaM" secondAttribute="top" id="30b-8a-JNM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Oao-AN-7pS" secondAttribute="trailing" id="4nk-zc-MlZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gyP-Lg-d4A" secondAttribute="trailing" id="8Yw-Ua-3Fr"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gyP-Lg-d4A" secondAttribute="bottom" id="R9h-gW-RXj"/>
+                                                    <constraint firstItem="hkM-BQ-Gt1" firstAttribute="leading" secondItem="QO1-BV-TaM" secondAttribute="leading" constant="20" id="RId-cd-6iU"/>
+                                                    <constraint firstItem="Oao-AN-7pS" firstAttribute="leading" secondItem="QO1-BV-TaM" secondAttribute="leading" id="SLc-sw-dpv"/>
+                                                    <constraint firstItem="Oao-AN-7pS" firstAttribute="top" secondItem="QO1-BV-TaM" secondAttribute="top" id="Siv-Jo-aDp"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Oao-AN-7pS" secondAttribute="bottom" id="elb-lt-3hf"/>
+                                                    <constraint firstItem="gyP-Lg-d4A" firstAttribute="leading" secondItem="QO1-BV-TaM" secondAttribute="leading" id="fS3-GE-pMb"/>
+                                                    <constraint firstItem="hkM-BQ-Gt1" firstAttribute="centerY" secondItem="QO1-BV-TaM" secondAttribute="centerY" id="mKm-9l-P3h"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hkM-BQ-Gt1" secondAttribute="trailing" constant="20" id="wot-L2-K7N"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="92M-7g-JJj" appends="YES" id="bbr-FI-fP9"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vtT-Q3-GKJ" firstAttribute="leading" secondItem="8sa-0o-1aI" secondAttribute="leading" id="7m9-DW-Nf2"/>
+                                            <constraint firstAttribute="trailing" secondItem="vtT-Q3-GKJ" secondAttribute="trailing" id="mLB-zJ-Blz"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8sa-0o-1aI" secondAttribute="bottom" constant="20" id="0Gs-nJ-ybr"/>
+                                    <constraint firstAttribute="trailing" secondItem="8sa-0o-1aI" secondAttribute="trailing" id="2GZ-yv-O4v"/>
+                                    <constraint firstItem="8sa-0o-1aI" firstAttribute="leading" secondItem="IFO-A7-jUd" secondAttribute="leading" id="h7G-9b-vUb"/>
+                                    <constraint firstItem="8sa-0o-1aI" firstAttribute="top" secondItem="IFO-A7-jUd" secondAttribute="top" constant="20" id="zzp-yt-MYH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IFO-A7-jUd" firstAttribute="bottom" secondItem="gcv-q3-34E" secondAttribute="bottom" id="QAF-07-SGc"/>
+                            <constraint firstItem="IFO-A7-jUd" firstAttribute="top" secondItem="gcv-q3-34E" secondAttribute="top" id="Zmo-ZK-V0f"/>
+                            <constraint firstItem="IFO-A7-jUd" firstAttribute="trailing" secondItem="gcv-q3-34E" secondAttribute="trailing" id="pGG-U5-bFV"/>
+                            <constraint firstItem="IFO-A7-jUd" firstAttribute="leading" secondItem="gcv-q3-34E" secondAttribute="leading" id="tC3-bB-0kt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gcv-q3-34E"/>
                     </view>
+                    <connections>
+                        <outlet property="skateparkLabel" destination="Rj6-YG-3Bw" id="k6q-XB-Zvk"/>
+                        <outlet property="skateparkVideoView" destination="mUq-EQ-8By" id="wgG-9s-jnx"/>
+                        <outlet property="skateshopLabel" destination="hkM-BQ-Gt1" id="zkV-ik-I5x"/>
+                        <outlet property="skateshopVideoView" destination="Oao-AN-7pS" id="af3-O3-aPC"/>
+                        <outlet property="skatespotVideoView" destination="HDJ-At-ghh" id="Y9e-I0-SCS"/>
+                        <outlet property="stackView" destination="8sa-0o-1aI" id="wwO-Rf-hvb"/>
+                        <outlet property="streetspotLabel" destination="Nky-rg-094" id="CfM-j4-i2R"/>
+                        <outletCollection property="videoViewCollection" destination="Oao-AN-7pS" collectionClass="NSMutableArray" id="Enq-Dy-b3R"/>
+                        <outletCollection property="videoViewCollection" destination="HDJ-At-ghh" collectionClass="NSMutableArray" id="Atd-Yc-dL3"/>
+                        <outletCollection property="videoViewCollection" destination="mUq-EQ-8By" collectionClass="NSMutableArray" id="Xrw-Yh-VPT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2np-sg-hSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Md7-RG-x3a" userLabel="Skatepark Gesture Recognizer">
+                    <connections>
+                        <action selector="skateparkTypeTap:" destination="7bg-AW-tAE" id="8ot-EB-7WL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="w5c-jk-htk" userLabel="Streetspot Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="streetSpotTypeTap:" destination="7bg-AW-tAE" id="w0S-JV-TiD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="92M-7g-JJj" userLabel="Skateshop Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="skateshopTypeTap:" destination="7bg-AW-tAE" id="70q-J1-MEX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-100" y="144.3778110944528"/>
         </scene>

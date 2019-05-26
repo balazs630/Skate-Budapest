@@ -25,12 +25,12 @@
 "mapNavBarTitle" = "Térkép";
 "mapTabBarTitle" = "Térkép";
 
-// PlaceFilterViewController:
 "filterScreenTitle" = "Szűrés a hely típusára";
-"filterTypeSkatepark" = "Deszkás pálya";
-"filterTypeSkatespot" = "Deszkás spot";
-"filterTypeSkateshop" = "Deszkás bolt";
 "filterButtonTitle" = "Szűrés";
+
+"skateparkType" = "Deszkás pálya";
+"streetspotType" = "Deszkás spot";
+"skateshopType" = "Deszkás bolt";
 
 // RoutingViewController:
 "mapNavigationEmptyViewText" = "Helymeghatározás bekapcsolása a navigációhoz";

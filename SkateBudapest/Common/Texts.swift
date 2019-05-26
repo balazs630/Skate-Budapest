@@ -27,10 +27,11 @@ struct Texts {
         case mapTabBarTitle
 
         case filterScreenTitle
-        case filterTypeSkatepark
-        case filterTypeSkatespot
-        case filterTypeSkateshop
         case filterButtonTitle
+
+        case skateparkType
+        case streetspotType
+        case skateshopType
     }
 
     enum LocationDetails: String, Localizable {

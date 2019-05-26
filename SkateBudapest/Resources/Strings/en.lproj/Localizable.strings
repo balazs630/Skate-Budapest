@@ -25,12 +25,12 @@
 "mapNavBarTitle" = "Map";
 "mapTabBarTitle" = "Map";
 
-// PlaceFilterViewController:
 "filterScreenTitle" = "Filter by place type";
-"filterTypeSkatepark" = "Skatepark";
-"filterTypeSkatespot" = "Streetspot";
-"filterTypeSkateshop" = "Skateshop";
 "filterButtonTitle" = "Filter";
+
+"skateparkType" = "Skatepark";
+"streetspotType" = "Streetspot";
+"skateshopType" = "Skateshop";
 
 // RoutingViewController:
 "mapNavigationEmptyViewText" = "Enable location to show navigation options";
