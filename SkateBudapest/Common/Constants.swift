@@ -17,6 +17,12 @@ struct Constant {
     static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
 
     static let defaultCityCoordinate = CLLocationCoordinate2D(latitude: 47.499567, longitude: 19.046496)
+
+    struct Video {
+        static let skatepark = "skatepark-preview"
+        static let streetspot = "streetspot-preview"
+        static let skateshop = "skateshop-preview"
+    }
 }
 
 enum ApiEnvironment: String {

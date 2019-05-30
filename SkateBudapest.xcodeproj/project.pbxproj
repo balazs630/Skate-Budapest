@@ -72,6 +72,9 @@
 		ACB292F3223541F000DBB862 /* SubmitResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EE223541F000DBB862 /* SubmitResultViewController.swift */; };
 		ACB292F4223541F000DBB862 /* SubmitImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */; };
 		ACB292F82235429F00DBB862 /* SubmitPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB292F72235429F00DBB862 /* SubmitPlace.storyboard */; };
+		ACB3919022A064AB00E017AF /* skateshop-preview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACB3918D22A064AA00E017AF /* skateshop-preview.mp4 */; };
+		ACB3919122A064AB00E017AF /* streetspot-preview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACB3918E22A064AA00E017AF /* streetspot-preview.mp4 */; };
+		ACB3919222A064AB00E017AF /* skatepark-preview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACB3918F22A064AB00E017AF /* skatepark-preview.mp4 */; };
 		ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18D2234260C00502D6B /* Coordinator.swift */; };
 		ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */; };
 		ACCAC1932234292900502D6B /* SkateMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC1922234292900502D6B /* SkateMapCoordinator.swift */; };
@@ -155,6 +158,9 @@
 		ACB292EE223541F000DBB862 /* SubmitResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitResultViewController.swift; sourceTree = "<group>"; };
 		ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitImagesViewController.swift; sourceTree = "<group>"; };
 		ACB292F72235429F00DBB862 /* SubmitPlace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubmitPlace.storyboard; sourceTree = "<group>"; };
+		ACB3918D22A064AA00E017AF /* skateshop-preview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "skateshop-preview.mp4"; sourceTree = "<group>"; };
+		ACB3918E22A064AA00E017AF /* streetspot-preview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "streetspot-preview.mp4"; sourceTree = "<group>"; };
+		ACB3918F22A064AB00E017AF /* skatepark-preview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "skatepark-preview.mp4"; sourceTree = "<group>"; };
 		ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Budapest, Hungary.gpx"; sourceTree = "<group>"; };
 		ACCAC18D2234260C00502D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
@@ -420,6 +426,7 @@
 		AC76CF8A20FA973C003ED70F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ACB3918C22A0649A00E017AF /* Videos */,
 				AC033FED2195DEF50005259B /* Images */,
 				AC033FDA2195DC3C0005259B /* Strings */,
 			);
@@ -501,6 +508,16 @@
 				AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		ACB3918C22A0649A00E017AF /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				ACB3918F22A064AB00E017AF /* skatepark-preview.mp4 */,
+				ACB3918E22A064AA00E017AF /* streetspot-preview.mp4 */,
+				ACB3918D22A064AA00E017AF /* skateshop-preview.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		ACD5CBB821D1953C00EDE3E0 /* UI */ = {
@@ -624,6 +641,9 @@
 				AC0B89AA21120E39006CDB7E /* PlaceDetails.storyboard in Resources */,
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
 				AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */,
+				ACB3919022A064AB00E017AF /* skateshop-preview.mp4 in Resources */,
+				ACB3919122A064AB00E017AF /* streetspot-preview.mp4 in Resources */,
+				ACB3919222A064AB00E017AF /* skatepark-preview.mp4 in Resources */,
 				AC0340012195E18B0005259B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

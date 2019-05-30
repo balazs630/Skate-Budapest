@@ -21,7 +21,7 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
     @IBOutlet weak var skateshopLabel: UILabel!
 
     @IBOutlet weak var skateparkVideoView: VideoView!
-    @IBOutlet weak var skatespotVideoView: VideoView!
+    @IBOutlet weak var streetSpotVideoView: VideoView!
     @IBOutlet weak var skateshopVideoView: VideoView!
     @IBOutlet var videoViewCollection: [VideoView]!
 
@@ -65,9 +65,9 @@ extension SubmitTypeSelectorViewController {
     }
 
     private func configureVideoViews() {
-        skateparkVideoView.configure(filename: "skate")
-        skatespotVideoView.configure(filename: "skate")
-        skateshopVideoView.configure(filename: "skate")
+        skateparkVideoView.configure(filename: Constant.Video.skatepark)
+        streetSpotVideoView.configure(filename: Constant.Video.streetspot)
+        skateshopVideoView.configure(filename: Constant.Video.skateshop)
     }
 }
 
