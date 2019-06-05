@@ -8,37 +8,40 @@
 
 import UIKit
 
-public enum Theme {
-    public enum Icon {
-        public static let mapIcon = UIImage(named: "map")!
-        public static let addPinIcon = UIImage(named: "addPin")!
+enum Theme {
+    enum Icon {
+        static let mapIcon = UIImage(named: "map")!
+        static let addPinIcon = UIImage(named: "addPin")!
 
-        public static let skateparkPin = UIImage(named: "map-pin-skatepark")!
-        public static let skateshopPin = UIImage(named: "map-pin-shop")!
-        public static let streetSpotPin = UIImage(named: "map-pin-city")!
+        static let skateparkPin = UIImage(named: "map-pin-skatepark")!
+        static let skateshopPin = UIImage(named: "map-pin-shop")!
+        static let streetSpotPin = UIImage(named: "map-pin-city")!
 
-        public static let filteringEmpty = UIImage(named: "filtering-empty")!
-        public static let filteringFull = UIImage(named: "filtering-full")!
+        static let filteringEmpty = UIImage(named: "filtering-empty")!
+        static let filteringFull = UIImage(named: "filtering-full")!
 
-        public static let skateparkIcon = UIImage(named: "yellow")!
-        public static let skateshopIcon = UIImage(named: "green")!
-        public static let streetSpotIcon = UIImage(named: "purple")!
+        static let skateparkIcon = UIImage(named: "yellow")!
+        static let skateshopIcon = UIImage(named: "green")!
+        static let streetSpotIcon = UIImage(named: "purple")!
 
-        public static let locationTrackingNone = UIImage(named: "location-tracking-none")!
-        public static let locationTrackingFollow = UIImage(named: "location-tracking-follow")!
-        public static let locationTrackingHeading = UIImage(named: "location-tracking-heading")!
+        static let locationTrackingNone = UIImage(named: "location-tracking-none")!
+        static let locationTrackingFollow = UIImage(named: "location-tracking-follow")!
+        static let locationTrackingHeading = UIImage(named: "location-tracking-heading")!
     }
 
-    public enum Image {
-        public static let placeholderSquare = UIImage(named: "placeholder-square")!
+    enum Image {
+        static let placeholderSquare = UIImage(named: "placeholder-square")!
+        static let submitPlaceGraphics = UIImage(named: "add-place")
     }
 
-    public enum Color {
-        public static let primaryTurquoise = UIColor.color(red: 172, green: 235, blue: 203)
-        public static let loadingViewDark = UIColor.color(red: 50, green: 50, blue: 50)
-        public static let skatepark = UIColor.color(red: 210, green: 64, blue: 140)
-        public static let skateshop = UIColor.color(red: 64, green: 200, blue: 140)
-        public static let streetSpot = UIColor.color(red: 135, green: 200, blue: 240)
-        public static let lightGrey = UIColor.color(red: 248, green: 248, blue: 248)
+    enum Color {
+        static let primaryTurquoise = UIColor.color(red: 172, green: 235, blue: 203)
+        static let textDark = UIColor.color(red: 40, green: 40, blue: 40)
+        static let loadingViewDark = UIColor.color(red: 50, green: 50, blue: 50)
+        static let navbarLightGrey = UIColor.color(red: 248, green: 248, blue: 248)
+
+        static let skatepark = UIColor.color(red: 210, green: 64, blue: 140)
+        static let skateshop = UIColor.color(red: 64, green: 200, blue: 140)
+        static let streetSpot = UIColor.color(red: 135, green: 200, blue: 240)
     }
 }

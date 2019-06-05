@@ -43,11 +43,15 @@
 
 // SendPlaceViewController:
 "submit" = "Beküldés";
+"submitPlaceDescription" = "Hiányos a térkép? Ismersz egy jó spotot, parkot vagy boltot ami nem szerepel az appban? Új helyek hozzáadásával nagyban segítheted a deszkás térkép bővülését.\n\nA beküldéshez nincs más dolgod mint írni egy rövid leírást, megadni a hely pontos pozícióját és feltölteni pár saját képet róla.\n\nA leírásnál hasznos információ lehet a többiek számára a talaj minősége, a spot/skatepark állapota, az hogy mennyire forgalmas a hely, milyen a rágurulás a spotra, stb... Gondolkozz deszkásként.";
+"next" = "Tovább";
+
+"submitDescriptionNavBarTitle" = "Hely beküldése";
 "submitTypeNavBarTitle" = "Típus választó";
 "submitTextsNavBarTitle" = "Információk";
 "submitImagesNavBarTitle" = "Képek";
 "submitPositionNavBarTitle" = "Pozíció";
-"submitSummaryNavBarTitle" = "Összegző";
+"submitResultNavBarTitle" = "Összegző";
 
 // Validation:
 "invalidEmailFormat" = "Helytelen e-mail cím formátum!";

@@ -20,7 +20,7 @@ class SubmitResultViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        navigationItem.title = Texts.SubmitPlace.submitSummaryNavBarTitle.localized
+        navigationItem.title = Texts.SubmitPlace.submitResultNavBarTitle.localized
         navigationItem.hidesBackButton = true
     }
 

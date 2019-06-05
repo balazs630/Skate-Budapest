@@ -1,38 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Submit Type Selector View Controller Scene-->
+        <!--Submit Place Description View Controller-->
+        <scene sceneID="wTt-cW-rOM">
+            <objects>
+                <viewController storyboardIdentifier="SubmitPlaceDescriptionViewController" id="8AG-WO-z8M" customClass="SubmitPlaceDescriptionViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qvk-nX-jli">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ZK-Ol-1DI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beE-yM-J8f">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="368.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mN6-FQ-bVI">
+                                                <rect key="frame" x="16" y="32" width="343" height="180"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="NVG-bZ-cJ2"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="n92-Rc-eeM"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUU-Uo-jL8">
+                                                <rect key="frame" x="24" y="244" width="327" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7T-oq-vvf" customClass="Button" customModule="SkateBudapest" customModuleProvider="target">
+                                                <rect key="frame" x="297" y="296.5" width="46" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="JTH-1b-Emk"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="nextButtonTap:" destination="8AG-WO-z8M" eventType="touchUpInside" id="r1o-Le-F1M"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LUU-Uo-jL8" firstAttribute="leading" secondItem="beE-yM-J8f" secondAttribute="leading" constant="24" id="A99-uP-ztb"/>
+                                            <constraint firstAttribute="trailing" secondItem="mN6-FQ-bVI" secondAttribute="trailing" constant="16" id="Etk-wB-TRx"/>
+                                            <constraint firstAttribute="trailing" secondItem="D7T-oq-vvf" secondAttribute="trailing" constant="32" id="F46-i0-QW4"/>
+                                            <constraint firstAttribute="trailing" secondItem="LUU-Uo-jL8" secondAttribute="trailing" constant="24" id="MfR-S9-OnS"/>
+                                            <constraint firstItem="mN6-FQ-bVI" firstAttribute="leading" secondItem="beE-yM-J8f" secondAttribute="leading" constant="16" id="N7e-6a-K27"/>
+                                            <constraint firstItem="LUU-Uo-jL8" firstAttribute="top" secondItem="mN6-FQ-bVI" secondAttribute="bottom" constant="32" id="T1n-KO-M4w"/>
+                                            <constraint firstItem="mN6-FQ-bVI" firstAttribute="top" secondItem="beE-yM-J8f" secondAttribute="top" constant="32" id="mby-tM-iJq"/>
+                                            <constraint firstItem="D7T-oq-vvf" firstAttribute="top" secondItem="LUU-Uo-jL8" secondAttribute="bottom" constant="32" id="vM2-bN-Ahm"/>
+                                            <constraint firstAttribute="bottom" secondItem="D7T-oq-vvf" secondAttribute="bottom" constant="32" id="yqt-sj-v29"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="beE-yM-J8f" firstAttribute="height" secondItem="9ZK-Ol-1DI" secondAttribute="height" priority="250" id="9y5-5L-XrP"/>
+                                    <constraint firstItem="beE-yM-J8f" firstAttribute="leading" secondItem="9ZK-Ol-1DI" secondAttribute="leading" id="CvA-7U-G06"/>
+                                    <constraint firstAttribute="trailing" secondItem="beE-yM-J8f" secondAttribute="trailing" id="bEI-sk-mne"/>
+                                    <constraint firstItem="beE-yM-J8f" firstAttribute="top" secondItem="9ZK-Ol-1DI" secondAttribute="top" id="k8p-cH-Vu7"/>
+                                    <constraint firstAttribute="bottom" secondItem="beE-yM-J8f" secondAttribute="bottom" id="vdI-1x-O8a"/>
+                                    <constraint firstItem="beE-yM-J8f" firstAttribute="width" secondItem="9ZK-Ol-1DI" secondAttribute="width" id="viT-UC-xoM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9ZK-Ol-1DI" firstAttribute="top" secondItem="sh1-ID-oJ7" secondAttribute="top" id="6o3-SN-mJ7"/>
+                            <constraint firstItem="9ZK-Ol-1DI" firstAttribute="leading" secondItem="sh1-ID-oJ7" secondAttribute="leading" id="Cfg-l7-4JU"/>
+                            <constraint firstItem="sh1-ID-oJ7" firstAttribute="bottom" secondItem="9ZK-Ol-1DI" secondAttribute="bottom" id="Fkf-Uk-Wao"/>
+                            <constraint firstItem="sh1-ID-oJ7" firstAttribute="trailing" secondItem="9ZK-Ol-1DI" secondAttribute="trailing" id="aXw-k3-tba"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sh1-ID-oJ7"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="LUU-Uo-jL8" id="kig-Mj-tmD"/>
+                        <outlet property="graphicsImageView" destination="mN6-FQ-bVI" id="hJ5-bk-OvO"/>
+                        <outlet property="nextButton" destination="D7T-oq-vvf" id="lBi-hb-T3y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4J1-IJ-gHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-874" y="293"/>
+        </scene>
+        <!--Submit Type Selector View Controller-->
         <scene sceneID="9o3-P5-uAh">
             <objects>
-                <viewController storyboardIdentifier="SubmitTypeSelectorViewController" id="7bg-AW-tAE" userLabel="Submit Type Selector View Controller Scene" customClass="SubmitTypeSelectorViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubmitTypeSelectorViewController" id="7bg-AW-tAE" customClass="SubmitTypeSelectorViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQK-rB-MqZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-A7-jUd" userLabel="Container view">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8sa-0o-1aI">
-                                        <rect key="frame" x="0.0" y="20" width="600" height="540"/>
+                                        <rect key="frame" x="0.0" y="20" width="375" height="607"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtT-Q3-GKJ" userLabel="Skatepark view">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="166.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-EQ-8By" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="166.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-lD-oQt" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="166.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-YG-3Bw">
-                                                        <rect key="frame" x="20" y="66.5" width="560" height="33.5"/>
+                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -58,19 +144,19 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faH-3G-vAg" userLabel="Streetspot view">
-                                                <rect key="frame" x="0.0" y="186.5" width="600" height="167"/>
+                                                <rect key="frame" x="0.0" y="209" width="375" height="189"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDJ-At-ghh" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="167"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5g0-Te-yeI" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="167"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nky-rg-094">
-                                                        <rect key="frame" x="20" y="67" width="560" height="33.5"/>
+                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33.5" id="ZOG-l2-xwF"/>
                                                         </constraints>
@@ -99,19 +185,19 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-BV-TaM" userLabel="Skateshop view">
-                                                <rect key="frame" x="0.0" y="373.5" width="600" height="166.5"/>
+                                                <rect key="frame" x="0.0" y="418" width="375" height="189"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oao-AN-7pS" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="166.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-Lg-d4A" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="166.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkM-BQ-Gt1">
-                                                        <rect key="frame" x="20" y="66.5" width="560" height="33.5"/>
+                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33.5" id="c3W-Ov-zbi"/>
                                                         </constraints>
@@ -201,7 +287,7 @@
             <objects>
                 <viewController storyboardIdentifier="SubmitTextsViewController" id="fn8-l0-3fE" customClass="SubmitTextsViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gPQ-oe-94w">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIK-4B-DSY">
@@ -233,7 +319,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpq-At-YVI">
-                                <rect key="frame" x="514" y="530" width="46" height="30"/>
+                                <rect key="frame" x="297" y="605" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTap:" destination="fn8-l0-3fE" eventType="touchUpInside" id="dBp-zE-GwZ"/>
@@ -256,8 +342,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OBL-1N-1xb" firstAttribute="bottom" secondItem="hpq-At-YVI" secondAttribute="bottom" constant="40" id="MOa-Rx-Elf"/>
-                            <constraint firstItem="OBL-1N-1xb" firstAttribute="trailing" secondItem="hpq-At-YVI" secondAttribute="trailing" constant="40" id="cmY-xO-XwU"/>
+                            <constraint firstItem="OBL-1N-1xb" firstAttribute="bottom" secondItem="hpq-At-YVI" secondAttribute="bottom" constant="32" id="MOa-Rx-Elf"/>
+                            <constraint firstItem="OBL-1N-1xb" firstAttribute="trailing" secondItem="hpq-At-YVI" secondAttribute="trailing" constant="32" id="cmY-xO-XwU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OBL-1N-1xb"/>
                     </view>
@@ -276,11 +362,11 @@
             <objects>
                 <viewController storyboardIdentifier="SubmitImagesViewController" id="y7p-su-TgN" customClass="SubmitImagesViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XU2-cH-oFN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqY-kt-yZ1">
-                                <rect key="frame" x="514" y="530" width="46" height="30"/>
+                                <rect key="frame" x="297" y="605" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="nextButtonTap:" destination="y7p-su-TgN" eventType="touchUpInside" id="1EX-t7-BSZ"/>
@@ -332,8 +418,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JGi-y3-fsw" firstAttribute="bottom" secondItem="NqY-kt-yZ1" secondAttribute="bottom" constant="40" id="Ilb-KG-KmY"/>
-                            <constraint firstItem="JGi-y3-fsw" firstAttribute="trailing" secondItem="NqY-kt-yZ1" secondAttribute="trailing" constant="40" id="szG-qs-d2S"/>
+                            <constraint firstItem="JGi-y3-fsw" firstAttribute="bottom" secondItem="NqY-kt-yZ1" secondAttribute="bottom" constant="32" id="Ilb-KG-KmY"/>
+                            <constraint firstItem="JGi-y3-fsw" firstAttribute="trailing" secondItem="NqY-kt-yZ1" secondAttribute="trailing" constant="32" id="szG-qs-d2S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JGi-y3-fsw"/>
                     </view>
@@ -374,18 +460,18 @@
             <objects>
                 <viewController storyboardIdentifier="SubmitPositionViewController" id="yek-2l-Amz" customClass="SubmitPositionViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IDm-al-vJN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXH-fU-nRL">
-                                <rect key="frame" x="514" y="530" width="46" height="30"/>
+                                <rect key="frame" x="297" y="605" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="submitButtonTap:" destination="yek-2l-Amz" eventType="touchUpInside" id="TML-dP-nJA"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ks3-RT-KyB">
-                                <rect key="frame" x="0.0" y="20" width="600" height="400"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="Udo-LS-TBZ"/>
                                 </constraints>
@@ -408,8 +494,8 @@
                             <constraint firstItem="JWC-Qm-oz9" firstAttribute="trailing" secondItem="ks3-RT-KyB" secondAttribute="trailing" id="FVe-1N-llX"/>
                             <constraint firstItem="ks3-RT-KyB" firstAttribute="leading" secondItem="JWC-Qm-oz9" secondAttribute="leading" id="Fm6-Zm-n2y"/>
                             <constraint firstItem="ks3-RT-KyB" firstAttribute="top" secondItem="JWC-Qm-oz9" secondAttribute="top" id="Rb8-1h-Es8"/>
-                            <constraint firstItem="JWC-Qm-oz9" firstAttribute="bottom" secondItem="UXH-fU-nRL" secondAttribute="bottom" constant="40" id="m1N-eE-8sH"/>
-                            <constraint firstItem="JWC-Qm-oz9" firstAttribute="trailing" secondItem="UXH-fU-nRL" secondAttribute="trailing" constant="40" id="nPZ-De-P6T"/>
+                            <constraint firstItem="JWC-Qm-oz9" firstAttribute="bottom" secondItem="UXH-fU-nRL" secondAttribute="bottom" constant="32" id="m1N-eE-8sH"/>
+                            <constraint firstItem="JWC-Qm-oz9" firstAttribute="trailing" secondItem="UXH-fU-nRL" secondAttribute="trailing" constant="32" id="nPZ-De-P6T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JWC-Qm-oz9"/>
                     </view>
@@ -427,7 +513,7 @@
             <objects>
                 <viewController storyboardIdentifier="SubmitResultViewController" id="mg5-fR-0So" customClass="SubmitResultViewController" customModule="SkateBudapest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZVv-Dd-GCV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ciq-D8-EtF">

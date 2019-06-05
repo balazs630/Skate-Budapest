@@ -75,6 +75,9 @@
 		ACB3919022A064AB00E017AF /* skateshop-preview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACB3918D22A064AA00E017AF /* skateshop-preview.mp4 */; };
 		ACB3919122A064AB00E017AF /* streetspot-preview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACB3918E22A064AA00E017AF /* streetspot-preview.mp4 */; };
 		ACB3919222A064AB00E017AF /* skatepark-preview.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACB3918F22A064AB00E017AF /* skatepark-preview.mp4 */; };
+		ACB3919422A06F8F00E017AF /* SubmitPlaceDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3919322A06F8F00E017AF /* SubmitPlaceDescriptionViewController.swift */; };
+		ACC509D922AC7435005E99E0 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC509D822AC7435005E99E0 /* Button.swift */; };
+		ACC509DB22ADC3AC005E99E0 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */; };
 		ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18D2234260C00502D6B /* Coordinator.swift */; };
 		ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */; };
 		ACCAC1932234292900502D6B /* SkateMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC1922234292900502D6B /* SkateMapCoordinator.swift */; };
@@ -161,7 +164,10 @@
 		ACB3918D22A064AA00E017AF /* skateshop-preview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "skateshop-preview.mp4"; sourceTree = "<group>"; };
 		ACB3918E22A064AA00E017AF /* streetspot-preview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "streetspot-preview.mp4"; sourceTree = "<group>"; };
 		ACB3918F22A064AB00E017AF /* skatepark-preview.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "skatepark-preview.mp4"; sourceTree = "<group>"; };
+		ACB3919322A06F8F00E017AF /* SubmitPlaceDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPlaceDescriptionViewController.swift; sourceTree = "<group>"; };
 		ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Budapest, Hungary.gpx"; sourceTree = "<group>"; };
+		ACC509D822AC7435005E99E0 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		ACCAC18D2234260C00502D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
 		ACCAC1922234292900502D6B /* SkateMapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapCoordinator.swift; sourceTree = "<group>"; };
@@ -436,7 +442,7 @@
 		AC9003FE2193758A0007F7E5 /* SubmitPlace */ = {
 			isa = PBXGroup;
 			children = (
-				AC947F66219E2BC7005007C4 /* SubmitPlaceScreen */,
+				AC947F66219E2BC7005007C4 /* SubmitPlaceScreens */,
 				ACB292FA22358F0F00DBB862 /* Coordinators */,
 				AC9003FF219375AD0007F7E5 /* Storyboards */,
 			);
@@ -451,16 +457,17 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		AC947F66219E2BC7005007C4 /* SubmitPlaceScreen */ = {
+		AC947F66219E2BC7005007C4 /* SubmitPlaceScreens */ = {
 			isa = PBXGroup;
 			children = (
+				ACB3919322A06F8F00E017AF /* SubmitPlaceDescriptionViewController.swift */,
 				ACB292ED223541F000DBB862 /* SubmitTypeSelectorViewController.swift */,
 				ACB292EB223541F000DBB862 /* SubmitTextsViewController.swift */,
 				ACB292EF223541F000DBB862 /* SubmitImagesViewController.swift */,
 				ACB292EC223541F000DBB862 /* SubmitPositionViewController.swift */,
 				ACB292EE223541F000DBB862 /* SubmitResultViewController.swift */,
 			);
-			path = SubmitPlaceScreen;
+			path = SubmitPlaceScreens;
 			sourceTree = "<group>";
 		};
 		AC975D3E212F10340021DC7A /* ImageViewer */ = {
@@ -523,10 +530,12 @@
 		ACD5CBB821D1953C00EDE3E0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
-				AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */,
 				AC11F26C2290C971008ECBDD /* ActionAlertDialog.swift */,
+				ACC509D822AC7435005E99E0 /* Button.swift */,
+				ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */,
+				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
 				AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */,
+				AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */,
 				AC7E33392299CD4C0011B36F /* VideoView.swift */,
 			);
 			path = UI;
@@ -720,6 +729,7 @@
 				ACD5CBB721D190FE00EDE3E0 /* StringExtensions.swift in Sources */,
 				ACD5CBBD21D195E700EDE3E0 /* Texts.swift in Sources */,
 				ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */,
+				ACC509DB22ADC3AC005E99E0 /* ButtonStyle.swift in Sources */,
 				ACE6F71221B897B4000ABDF1 /* PlaceDisplayItem.swift in Sources */,
 				ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */,
 				ACB292E8223541BF00DBB862 /* PlaceSuggestionApiModel.swift in Sources */,
@@ -739,6 +749,7 @@
 				ACB292F2223541F000DBB862 /* SubmitTypeSelectorViewController.swift in Sources */,
 				AC18D5CB2242DC3900CB7243 /* UIResponderExtensions.swift in Sources */,
 				AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */,
+				ACC509D922AC7435005E99E0 /* Button.swift in Sources */,
 				AC64A9B52258891B006728D6 /* ValidationError.swift in Sources */,
 				AC11F26D2290C971008ECBDD /* ActionAlertDialog.swift in Sources */,
 				AC64A9B722588942006728D6 /* EmailFormatValidator.swift in Sources */,
@@ -772,6 +783,7 @@
 				AC64A9C4225AA27E006728D6 /* ImageIsRequiredValidator.swift in Sources */,
 				AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */,
 				AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */,
+				ACB3919422A06F8F00E017AF /* SubmitPlaceDescriptionViewController.swift in Sources */,
 				ACD5CBBB21D195B300EDE3E0 /* Localizable.swift in Sources */,
 				AC6905FD21C073E400A2088A /* BaseError.swift in Sources */,
 			);

@@ -68,12 +68,13 @@ extension PlaceDetailsViewController {
     private func configureNavigationBarTitleView() {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = Theme.Color.lightGrey
+        navigationController?.navigationBar.barTintColor = Theme.Color.navbarLightGrey
     }
 
     private func configureLabels() {
         titleLabel.text = waypoint.name
         descriptionLabel.text = waypoint.info
+        descriptionLabel.textColor = Theme.Color.textDark
         distanceLabel.text = destinationDistanceInKilometer()
     }
 

@@ -21,6 +21,7 @@ class RoutingEmptyViewController: UIViewController, StoryboardLoadable {
     // MARK: Screen configuration
     private func configureSelf() {
         enableLocationLabel.text = Texts.LocationDetails.mapNavigationEmptyViewText.localized
+        enableLocationLabel.textColor = Theme.Color.textDark
         enableLocationButton.setTitle(Texts.LocationDetails.mapNavigationEmptyViewButtonText.localized, for: .normal)
     }
 

@@ -54,8 +54,6 @@ extension SubmitTypeSelectorViewController {
 
     private func configureNavigationBar() {
         navigationItem.title = Texts.SubmitPlace.submitTypeNavBarTitle.localized
-        navigationItem.hidesBackButton = true
-        navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
     }
 
     private func configureLabels() {

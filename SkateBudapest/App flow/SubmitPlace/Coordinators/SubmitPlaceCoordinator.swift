@@ -22,7 +22,7 @@ class SubmitPlaceCoordinator: Coordinator {
 // MARK: Configuration
 extension SubmitPlaceCoordinator {
     func embedRootScreenInNavigationController() -> UINavigationController {
-        toSubmitPlaceTypeSelectorScreen()
+        toSubmitPlaceDescriptionScreen()
         return navigationController
     }
 
@@ -35,6 +35,13 @@ extension SubmitPlaceCoordinator {
 
 // MARK: Navigation
 extension SubmitPlaceCoordinator {
+    func toSubmitPlaceDescriptionScreen() {
+        let submitDescriptionScreen = SubmitPlaceDescriptionViewController.instantiateViewController(from: .submitPlace)
+        submitDescriptionScreen.coordinator = self
+
+        navigationController.pushViewController(submitDescriptionScreen, animated: true)
+    }
+
     func toSubmitPlaceTypeSelectorScreen() {
         let submitPlaceTypeScreen = SubmitTypeSelectorViewController.instantiateViewController(from: .submitPlace)
         submitPlaceTypeScreen.coordinator = self

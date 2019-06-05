@@ -43,11 +43,15 @@
 
 // SendPlaceViewController:
 "submit" = "Submit";
+"submitPlaceDescription" = "Are you missing something from the map? Do you know a good spot, park or shop that isn't in the app? Adding new locations can greatly help you expand this skatemap.\n\nAll you need to do is write a short description, specify the exact position of the place, and upload some self made picture.\n\nIt might be useful information if you write about the quality of the ground, the condition of the spot, how busy the place is, how much place you have before the obstacles, etc... Think of it as a skater.";
+"next" = "Next";
+
+"submitDescriptionNavBarTitle" = "Submit place";
 "submitTypeNavBarTitle" = "Type selector";
 "submitTextsNavBarTitle" = "Info";
 "submitImagesNavBarTitle" = "Images";
 "submitPositionNavBarTitle" = "Position";
-"submitSummaryNavBarTitle" = "Summary";
+"submitResultNavBarTitle" = "Summary";
 
 // Validation:
 "invalidEmailFormat" = "Invalid e-mail address format!";
