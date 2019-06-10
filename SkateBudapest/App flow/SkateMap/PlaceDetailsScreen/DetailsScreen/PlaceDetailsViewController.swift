@@ -133,7 +133,7 @@ extension PlaceDetailsViewController {
             imageView.contentMode = .scaleAspectFit
             imageView.frame = CGRect(x: view.frame.width * CGFloat(index),
                                      y: 0,
-                                     width: imageScrollView.frame.width,
+                                     width: UIScreen.main.bounds.width,
                                      height: imageScrollView.frame.height)
 
             imageViews.append(imageView)
