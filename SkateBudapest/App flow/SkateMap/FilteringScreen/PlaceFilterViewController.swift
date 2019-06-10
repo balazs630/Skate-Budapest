@@ -28,7 +28,7 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
     @IBOutlet weak var streetspotLabel: UILabel!
     @IBOutlet weak var skateparkLabel: UILabel!
 
-    @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var filterButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -46,6 +46,7 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
         streetspotLabel.text = Texts.SkateMap.streetspotType.localized
         skateparkLabel.text = Texts.SkateMap.skateparkType.localized
 
+        filterButton.style = .action
         filterButton.setTitle(Texts.SkateMap.filterButtonTitle.localized, for: .normal)
     }
 

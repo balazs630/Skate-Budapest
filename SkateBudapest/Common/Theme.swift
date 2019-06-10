@@ -36,6 +36,7 @@ enum Theme {
 
     enum Color {
         static let primaryTurquoise = UIColor.color(red: 172, green: 235, blue: 203)
+        static let lightBlue = UIColor.color(red: 15, green: 121, blue: 252)
         static let textDark = UIColor.color(red: 40, green: 40, blue: 40)
         static let loadingViewDark = UIColor.color(red: 50, green: 50, blue: 50)
         static let navbarLightGrey = UIColor.color(red: 248, green: 248, blue: 248)

@@ -23,9 +23,10 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
     @IBOutlet weak var skateparkVideoView: VideoView!
     @IBOutlet weak var streetSpotVideoView: VideoView!
     @IBOutlet weak var skateshopVideoView: VideoView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet var videoViewCollection: [VideoView]!
 
-    // MARK: View Lifecycle
+    // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
@@ -57,6 +58,8 @@ extension SubmitTypeSelectorViewController {
     }
 
     private func configureLabels() {
+        descriptionLabel.text = Texts.SubmitPlace.submitTypeDescription.localized
+
         skateparkLabel.text = Texts.SkateMap.skateparkType.localized
         streetspotLabel.text = Texts.SkateMap.streetspotType.localized
         skateshopLabel.text = Texts.SkateMap.skateshopType.localized

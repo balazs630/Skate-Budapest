@@ -22,23 +22,28 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beE-yM-J8f">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="368.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="429.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mN6-FQ-bVI">
-                                                <rect key="frame" x="16" y="32" width="343" height="180"/>
+                                                <rect key="frame" x="24" y="32" width="327" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="NVG-bZ-cJ2"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="n92-Rc-eeM"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUU-Uo-jL8">
-                                                <rect key="frame" x="24" y="244" width="327" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUU-Uo-jL8">
+                                                <rect key="frame" x="24" y="244" width="327" height="81.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7T-oq-vvf" customClass="Button" customModule="SkateBudapest" customModuleProvider="target">
-                                                <rect key="frame" x="297" y="296.5" width="46" height="40"/>
+                                                <rect key="frame" x="297" y="357.5" width="46" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="JTH-1b-Emk"/>
                                                 </constraints>
@@ -48,13 +53,13 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="LUU-Uo-jL8" firstAttribute="leading" secondItem="beE-yM-J8f" secondAttribute="leading" constant="24" id="A99-uP-ztb"/>
-                                            <constraint firstAttribute="trailing" secondItem="mN6-FQ-bVI" secondAttribute="trailing" constant="16" id="Etk-wB-TRx"/>
+                                            <constraint firstAttribute="trailing" secondItem="mN6-FQ-bVI" secondAttribute="trailing" constant="24" id="Etk-wB-TRx"/>
                                             <constraint firstAttribute="trailing" secondItem="D7T-oq-vvf" secondAttribute="trailing" constant="32" id="F46-i0-QW4"/>
                                             <constraint firstAttribute="trailing" secondItem="LUU-Uo-jL8" secondAttribute="trailing" constant="24" id="MfR-S9-OnS"/>
-                                            <constraint firstItem="mN6-FQ-bVI" firstAttribute="leading" secondItem="beE-yM-J8f" secondAttribute="leading" constant="16" id="N7e-6a-K27"/>
+                                            <constraint firstItem="mN6-FQ-bVI" firstAttribute="leading" secondItem="beE-yM-J8f" secondAttribute="leading" constant="24" id="N7e-6a-K27"/>
                                             <constraint firstItem="LUU-Uo-jL8" firstAttribute="top" secondItem="mN6-FQ-bVI" secondAttribute="bottom" constant="32" id="T1n-KO-M4w"/>
                                             <constraint firstItem="mN6-FQ-bVI" firstAttribute="top" secondItem="beE-yM-J8f" secondAttribute="top" constant="32" id="mby-tM-iJq"/>
                                             <constraint firstItem="D7T-oq-vvf" firstAttribute="top" secondItem="LUU-Uo-jL8" secondAttribute="bottom" constant="32" id="vM2-bN-Ahm"/>
@@ -62,6 +67,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="beE-yM-J8f" firstAttribute="height" secondItem="9ZK-Ol-1DI" secondAttribute="height" priority="250" id="9y5-5L-XrP"/>
                                     <constraint firstItem="beE-yM-J8f" firstAttribute="leading" secondItem="9ZK-Ol-1DI" secondAttribute="leading" id="CvA-7U-G06"/>
@@ -72,7 +78,6 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9ZK-Ol-1DI" firstAttribute="top" secondItem="sh1-ID-oJ7" secondAttribute="top" id="6o3-SN-mJ7"/>
                             <constraint firstItem="9ZK-Ol-1DI" firstAttribute="leading" secondItem="sh1-ID-oJ7" secondAttribute="leading" id="Cfg-l7-4JU"/>
@@ -104,21 +109,21 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8sa-0o-1aI">
-                                        <rect key="frame" x="0.0" y="20" width="375" height="607"/>
+                                        <rect key="frame" x="24" y="66" width="327" height="545"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtT-Q3-GKJ" userLabel="Skatepark view">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="168.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-EQ-8By" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="168.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-lD-oQt" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="168.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-YG-3Bw">
-                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
+                                                        <rect key="frame" x="20" y="67.5" width="287" height="33.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -144,19 +149,19 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faH-3G-vAg" userLabel="Streetspot view">
-                                                <rect key="frame" x="0.0" y="209" width="375" height="189"/>
+                                                <rect key="frame" x="0.0" y="188.5" width="327" height="168"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDJ-At-ghh" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="168"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5g0-Te-yeI" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="168"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nky-rg-094">
-                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
+                                                        <rect key="frame" x="20" y="67.5" width="287" height="33.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33.5" id="ZOG-l2-xwF"/>
                                                         </constraints>
@@ -185,19 +190,19 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-BV-TaM" userLabel="Skateshop view">
-                                                <rect key="frame" x="0.0" y="418" width="375" height="189"/>
+                                                <rect key="frame" x="0.0" y="376.5" width="327" height="168.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oao-AN-7pS" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="168.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-Lg-d4A" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="168.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkM-BQ-Gt1">
-                                                        <rect key="frame" x="20" y="78" width="335" height="33.5"/>
+                                                        <rect key="frame" x="20" y="67.5" width="287" height="33.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33.5" id="c3W-Ov-zbi"/>
                                                         </constraints>
@@ -231,17 +236,41 @@
                                             <constraint firstAttribute="trailing" secondItem="vtT-Q3-GKJ" secondAttribute="trailing" id="mLB-zJ-Blz"/>
                                         </constraints>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIc-kp-qbj">
+                                        <rect key="frame" x="20" y="20" width="58" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-rR-sqM">
+                                                <rect key="frame" x="8" y="5" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.84892265980000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Vst-rR-sqM" firstAttribute="top" secondItem="hIc-kp-qbj" secondAttribute="top" constant="5" id="XOn-Ws-NNk"/>
+                                            <constraint firstAttribute="height" constant="30" id="aYj-ar-GWJ"/>
+                                            <constraint firstItem="Vst-rR-sqM" firstAttribute="leading" secondItem="hIc-kp-qbj" secondAttribute="leading" constant="8" id="eK1-7U-LTS"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vst-rR-sqM" secondAttribute="trailing" constant="8" id="iu0-5F-xpD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="8sa-0o-1aI" secondAttribute="bottom" constant="20" id="0Gs-nJ-ybr"/>
-                                    <constraint firstAttribute="trailing" secondItem="8sa-0o-1aI" secondAttribute="trailing" id="2GZ-yv-O4v"/>
-                                    <constraint firstItem="8sa-0o-1aI" firstAttribute="leading" secondItem="IFO-A7-jUd" secondAttribute="leading" id="h7G-9b-vUb"/>
-                                    <constraint firstItem="8sa-0o-1aI" firstAttribute="top" secondItem="IFO-A7-jUd" secondAttribute="top" constant="20" id="zzp-yt-MYH"/>
+                                    <constraint firstAttribute="bottom" secondItem="8sa-0o-1aI" secondAttribute="bottom" constant="36" id="0Gs-nJ-ybr"/>
+                                    <constraint firstAttribute="trailing" secondItem="8sa-0o-1aI" secondAttribute="trailing" constant="24" id="2GZ-yv-O4v"/>
+                                    <constraint firstItem="hIc-kp-qbj" firstAttribute="leading" secondItem="IFO-A7-jUd" secondAttribute="leading" constant="20" id="ISP-3p-gbd"/>
+                                    <constraint firstItem="hIc-kp-qbj" firstAttribute="top" secondItem="IFO-A7-jUd" secondAttribute="top" constant="20" id="QjP-u0-51c"/>
+                                    <constraint firstItem="8sa-0o-1aI" firstAttribute="leading" secondItem="IFO-A7-jUd" secondAttribute="leading" constant="24" id="h7G-9b-vUb"/>
+                                    <constraint firstItem="8sa-0o-1aI" firstAttribute="top" secondItem="hIc-kp-qbj" secondAttribute="bottom" constant="16" id="ng0-WJ-9oL"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IFO-A7-jUd" firstAttribute="bottom" secondItem="gcv-q3-34E" secondAttribute="bottom" id="QAF-07-SGc"/>
                             <constraint firstItem="IFO-A7-jUd" firstAttribute="top" secondItem="gcv-q3-34E" secondAttribute="top" id="Zmo-ZK-V0f"/>
@@ -251,6 +280,7 @@
                         <viewLayoutGuide key="safeArea" id="gcv-q3-34E"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="Vst-rR-sqM" id="WCF-kI-qMl"/>
                         <outlet property="skateparkLabel" destination="Rj6-YG-3Bw" id="k6q-XB-Zvk"/>
                         <outlet property="skateparkVideoView" destination="mUq-EQ-8By" id="wgG-9s-jnx"/>
                         <outlet property="skateshopLabel" destination="hkM-BQ-Gt1" id="zkV-ik-I5x"/>

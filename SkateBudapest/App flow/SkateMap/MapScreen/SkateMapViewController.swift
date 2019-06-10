@@ -17,7 +17,7 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var centerLocationButton: UIButton!
 
-    // MARK: View Lifecycle
+    // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
@@ -43,14 +43,14 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
             action: #selector(toFilteringScreen))
     }
 
-    // MARK: Button actions
+    // MARK: Actions
     @IBAction func centerMapButtonTap(_ sender: Any) {
         guard LocationService.shared.location != nil else { return }
         mapView.toggleUserTrackingMode()
     }
 }
 
-// MARK: Waypoint actions
+// MARK: Waypoint operations
 extension SkateMapViewController {
     private func loadMapWaypoints() {
         clearWaypoints()

@@ -73,8 +73,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-KA-hMo" userLabel="Header View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter by place type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAA-4R-A3s">
-                                        <rect key="frame" x="16" y="12.5" width="149" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAA-4R-A3s">
+                                        <rect key="frame" x="16" y="12.5" width="43" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkE-mX-m0G" userLabel="Skateshop View">
                                         <rect key="frame" x="0.0" y="0.0" width="235" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skateshop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23S-su-V1B">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23S-su-V1B">
                                                 <rect key="frame" x="20" y="25" width="130" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="EjZ-J2-vbh"/>
@@ -119,7 +119,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjK-3k-qSI">
                                                 <rect key="frame" x="166" y="19.5" width="51" height="31"/>
                                             </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streetspot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ad-co-URa">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ad-co-URa">
                                                 <rect key="frame" x="20" y="25" width="130" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="BCh-Q5-Zob"/>
@@ -142,7 +142,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRY-ls-57y">
                                                 <rect key="frame" x="166" y="19.5" width="51" height="31"/>
                                             </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skatepark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciJ-h3-fzH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciJ-h3-fzH">
                                                 <rect key="frame" x="20" y="25" width="130" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="130" id="4X4-Dq-udF"/>
@@ -164,23 +164,20 @@
                                     <constraint firstAttribute="height" constant="210" id="Nfb-ki-dkG"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9g-5v-Wxb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9g-5v-Wxb" customClass="Button" customModule="SkateBudapest" customModuleProvider="target">
                                 <rect key="frame" x="40" y="292" width="295" height="36"/>
-                                <color key="backgroundColor" red="0.058823529409999999" green="0.47450980390000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="j2Y-l5-teS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Filter">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="filterButtonTap:" destination="afy-vZ-Nj2" eventType="touchUpInside" id="6d9-T7-mWB"/>
+                                    <action selector="filterButtonTap:" destination="afy-vZ-Nj2" eventType="touchUpInside" id="Chn-lU-XrD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -212,7 +209,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="360"/>
                     <connections>
-                        <outlet property="filterButton" destination="k9g-5v-Wxb" id="PLt-0t-fPL"/>
+                        <outlet property="filterButton" destination="k9g-5v-Wxb" id="JsA-7y-RUR"/>
                         <outlet property="skateparkLabel" destination="ciJ-h3-fzH" id="dfw-jI-C59"/>
                         <outlet property="skateparkSwitch" destination="aRY-ls-57y" id="Tkm-rS-Eqf"/>
                         <outlet property="skateshopLabel" destination="23S-su-V1B" id="f8I-Wc-Ra7"/>

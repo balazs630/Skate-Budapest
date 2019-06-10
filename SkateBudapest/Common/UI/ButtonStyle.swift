@@ -9,19 +9,23 @@
 import UIKit
 
 enum ButtonStyle {
-    case primary
-    case secondary
+    case next
+    case action
 
     var appearance: ButtonAppearance {
         switch self {
-        case .primary:
+        case .next:
             return ButtonAppearance(font: .systemFont(ofSize: 20, weight: .medium),
-                                    textColor: .black,
-                                    backgroundColor: Theme.Color.primaryTurquoise)
-        case .secondary:
-            return ButtonAppearance(font: .systemFont(ofSize: 18, weight: .medium),
-                                    textColor: .black,
-                                    backgroundColor: .lightGray)
+                                    textColor: .white,
+                                    backgroundColor: Theme.Color.lightBlue,
+                                    radious: 20,
+                                    contentInsets: UIEdgeInsets(top: 16, left: 32, bottom: 16, right: 32))
+        case .action:
+            return ButtonAppearance(font: .systemFont(ofSize: 20, weight: .medium),
+                                    textColor: .white,
+                                    backgroundColor: Theme.Color.lightBlue,
+                                    radious: 10,
+                                    contentInsets: UIEdgeInsets())
         }
     }
 }
@@ -38,8 +42,8 @@ struct ButtonAppearance {
     init(font: UIFont,
          textColor: UIColor,
          backgroundColor: UIColor,
-         radious: CGFloat = 20,
-         contentInsets: UIEdgeInsets = UIEdgeInsets(top: 16, left: 32, bottom: 16, right: 32)) {
+         radious: CGFloat,
+         contentInsets: UIEdgeInsets) {
         self.font = font
         self.textColor = textColor
         self.backgroundColor = backgroundColor

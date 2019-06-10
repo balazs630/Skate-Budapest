@@ -17,7 +17,7 @@ class SubmitPlaceDescriptionViewController: UIViewController, StoryboardLoadable
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var nextButton: Button!
 
-    // MARK: View Lifecycle
+    // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
@@ -54,6 +54,7 @@ extension SubmitPlaceDescriptionViewController {
     }
 
     private func configureButtons() {
+        nextButton.style = .next
         nextButton.setTitle(Texts.SubmitPlace.next.localized, for: .normal)
     }
 }

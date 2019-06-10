@@ -12,7 +12,7 @@ class SubmitResultViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
 
-    // MARK: View Lifecycle
+    // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()

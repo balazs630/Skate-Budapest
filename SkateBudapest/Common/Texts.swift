@@ -46,8 +46,9 @@ struct Texts {
 
     enum SubmitPlace: String, Localizable {
         case submit
-        case submitPlaceDescription
         case next
+        case submitPlaceDescription
+        case submitTypeDescription
 
         case submitDescriptionNavBarTitle
         case submitTypeNavBarTitle

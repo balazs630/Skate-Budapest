@@ -10,7 +10,7 @@ import UIKit
 
 class Button: UIButton {
     // MARK: Properties
-    var style: ButtonStyle = .primary {
+    var style: ButtonStyle = .action {
         didSet {
             setupAppearance()
         }

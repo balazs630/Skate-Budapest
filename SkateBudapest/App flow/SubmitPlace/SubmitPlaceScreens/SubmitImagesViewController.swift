@@ -23,7 +23,7 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
 
     @IBOutlet weak var descriptionLabel: UILabel!
 
-    // MARK: View Lifecycle
+    // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()

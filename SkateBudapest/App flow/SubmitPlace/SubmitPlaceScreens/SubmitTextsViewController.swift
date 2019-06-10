@@ -18,7 +18,7 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
     @IBOutlet weak var infoTextView: UITextView!
     @IBOutlet weak var contactEmailTextField: UITextField!
 
-    // MARK: View Lifecycle
+    // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
