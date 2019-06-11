@@ -14,6 +14,7 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
 
     // MARK: Outlets
+    @IBOutlet weak var descriptionLabel: DescriptionLabel!
     @IBOutlet weak var stackView: UIStackView!
 
     @IBOutlet weak var skateparkLabel: UILabel!
@@ -23,7 +24,6 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
     @IBOutlet weak var skateparkVideoView: VideoView!
     @IBOutlet weak var streetSpotVideoView: VideoView!
     @IBOutlet weak var skateshopVideoView: VideoView!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet var videoViewCollection: [VideoView]!
 
     // MARK: View lifecycle
@@ -59,7 +59,6 @@ extension SubmitTypeSelectorViewController {
 
     private func configureLabels() {
         descriptionLabel.text = Texts.SubmitPlace.submitTypeDescription.localized
-
         skateparkLabel.text = Texts.SkateMap.skateparkType.localized
         streetspotLabel.text = Texts.SkateMap.streetspotType.localized
         skateshopLabel.text = Texts.SkateMap.skateshopType.localized

@@ -46,6 +46,10 @@
 "next" = "Next";
 "submitPlaceDescription" = "Are you missing something from the map? Do you know a good spot, park or shop that isn't in the app? Adding new locations can greatly help you expand this skatemap.\n\nAll you need to do is write a short description, specify the exact position of the place, and upload some self made picture.\n\nIt might be useful information if you write about the quality of the ground, the condition of the spot, how busy the place is, how much place you have before the obstacles, etc... Think of it as a skater.";
 "submitTypeDescription" = "Select the type of the place!";
+"submitTextsTitle" = "Title:";
+"submitTextsDescription" = "Description:";
+"submitTextsEmail" = "E-mail:";
+"submitTextsEmailDescription" = "If I have any questions about this place, I can reach you by e-mail.";
 
 "submitDescriptionNavBarTitle" = "Submit place";
 "submitTypeNavBarTitle" = "Type selector";

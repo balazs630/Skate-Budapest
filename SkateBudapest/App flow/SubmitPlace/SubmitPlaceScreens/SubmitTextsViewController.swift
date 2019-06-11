@@ -14,9 +14,16 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
 
     // MARK: Outlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var emailDescriptionLabel: DescriptionLabel!
+
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var infoTextView: UITextView!
+    @IBOutlet weak var infoTextView: TextView!
     @IBOutlet weak var contactEmailTextField: UITextField!
+
+    @IBOutlet weak var nextButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -35,11 +42,32 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        navigationItem.title = Texts.SubmitPlace.submitTextsNavBarTitle.localized
+        configureNavigationBar()
+        configureLabels()
+        configureInputFields()
+        configureButtons()
+    }
 
+    private func configureNavigationBar() {
+        navigationItem.title = Texts.SubmitPlace.submitTextsNavBarTitle.localized
+    }
+
+    private func configureLabels() {
+        titleLabel.text = Texts.SubmitPlace.submitTextsTitle.localized
+        descriptionLabel.text = Texts.SubmitPlace.submitTextsDescription.localized
+        emailLabel.text = Texts.SubmitPlace.submitTextsEmail.localized
+        emailDescriptionLabel.text = Texts.SubmitPlace.submitTextsEmailDescription.localized
+    }
+
+    private func configureInputFields() {
         titleTextField.delegate = self
         contactEmailTextField.delegate = self
         infoTextView.delegate = self
+    }
+
+    private func configureButtons() {
+        nextButton.style = .next
+        nextButton.setTitle(Texts.SubmitPlace.next.localized, for: .normal)
     }
 
     // MARK: Actions

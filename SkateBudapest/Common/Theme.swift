@@ -40,6 +40,7 @@ enum Theme {
         static let textDark = UIColor.color(red: 40, green: 40, blue: 40)
         static let loadingViewDark = UIColor.color(red: 50, green: 50, blue: 50)
         static let navbarLightGrey = UIColor.color(red: 248, green: 248, blue: 248)
+        static let descriptionLabelLightGray = UIColor.color(red: 216, green: 216, blue: 216)
 
         static let skatepark = UIColor.color(red: 210, green: 64, blue: 140)
         static let skateshop = UIColor.color(red: 64, green: 200, blue: 140)

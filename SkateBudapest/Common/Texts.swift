@@ -49,6 +49,10 @@ struct Texts {
         case next
         case submitPlaceDescription
         case submitTypeDescription
+        case submitTextsTitle
+        case submitTextsDescription
+        case submitTextsEmail
+        case submitTextsEmailDescription
 
         case submitDescriptionNavBarTitle
         case submitTypeNavBarTitle
