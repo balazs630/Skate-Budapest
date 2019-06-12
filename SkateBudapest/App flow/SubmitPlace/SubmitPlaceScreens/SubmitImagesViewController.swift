@@ -13,15 +13,18 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     weak var coordinator: SubmitPlaceCoordinator?
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
     private var currentImageView: UIImageView?
+    private lazy var placeholderImage = Theme.Image.addImagePlaceholder
     private lazy var mediaAlertController = MediaAlertController()
 
     // MARK: Outlets
+    @IBOutlet weak var imageContainerStackView: UIStackView!
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var imageView3: UIImageView!
     @IBOutlet weak var imageView4: UIImageView!
 
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: DescriptionLabel!
+    @IBOutlet weak var nextButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -40,8 +43,15 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        navigationItem.title = Texts.SubmitPlace.submitImagesNavBarTitle.localized
+        configureNavigationBar()
         configureMediaAlertController()
+        configureImageViews()
+        configureLabels()
+        configureButtons()
+    }
+
+    private func configureNavigationBar() {
+        navigationItem.title = Texts.SubmitPlace.submitImagesNavBarTitle.localized
     }
 
     private func configureMediaAlertController() {
@@ -49,8 +59,24 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
         mediaAlertController.presenter = self
 
         mediaAlertController.addDeleteAlertAction {
-            self.updateImage(to: nil)
+            self.updateImage(to: self.placeholderImage)
         }
+    }
+
+    private func configureImageViews() {
+        imageContainerStackView.layoutIfNeeded()
+        NSLayoutConstraint.activate([
+            imageContainerStackView.heightAnchor.constraint(equalToConstant: imageContainerStackView.frame.width)
+        ])
+    }
+
+    private func configureLabels() {
+        descriptionLabel.text = Texts.SubmitPlace.submitImagesDescription.localized
+    }
+
+    private func configureButtons() {
+        nextButton.style = .next
+        nextButton.setTitle(Texts.SubmitPlace.next.localized, for: .normal)
     }
 
     // MARK: Actions
@@ -91,10 +117,17 @@ extension SubmitImagesViewController {
     }
 
     private func loadUserInput() {
-        imageView1.image = placeSuggestionDisplayItem?.image1
-        imageView2.image = placeSuggestionDisplayItem?.image2
-        imageView3.image = placeSuggestionDisplayItem?.image3
-        imageView4.image = placeSuggestionDisplayItem?.image4
+        imageView1.image = load(image: placeSuggestionDisplayItem?.image1)
+        imageView2.image = load(image: placeSuggestionDisplayItem?.image2)
+        imageView3.image = load(image: placeSuggestionDisplayItem?.image3)
+        imageView4.image = load(image: placeSuggestionDisplayItem?.image4)
+    }
+
+    private func load(image: UIImage?) -> UIImage {
+        guard let image = image,
+            image.size.width > 0 else { return placeholderImage }
+
+        return image
     }
 
     private func updateImage(to image: UIImage?) {

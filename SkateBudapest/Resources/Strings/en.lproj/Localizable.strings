@@ -50,6 +50,7 @@
 "submitTextsDescription" = "Description:";
 "submitTextsEmail" = "E-mail:";
 "submitTextsEmailDescription" = "If I have any questions about this place, I can reach you by e-mail.";
+"submitImagesDescription" = "Plase upload your own pictures of the place from multiple angles. Adding at least two image is required.";
 
 "submitDescriptionNavBarTitle" = "Submit place";
 "submitTypeNavBarTitle" = "Type selector";

@@ -50,6 +50,7 @@
 "submitTextsDescription" = "Leírás:";
 "submitTextsEmail" = "E-mail:";
 "submitTextsEmailDescription" = "Ha kérdésem merülne fel a hellyel kapcsolatban, ezen a címen tudlak elérni.";
+"submitImagesDescription" = "Kérlek töltsd fel a saját képeidet a helyről, több szemszögből. Legalább két kép hozzáadása kötelező.";
 
 "submitDescriptionNavBarTitle" = "Hely beküldése";
 "submitTypeNavBarTitle" = "Típus választó";

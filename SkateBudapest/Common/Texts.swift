@@ -53,6 +53,7 @@ struct Texts {
         case submitTextsDescription
         case submitTextsEmail
         case submitTextsEmailDescription
+        case submitImagesDescription
 
         case submitDescriptionNavBarTitle
         case submitTypeNavBarTitle

@@ -31,7 +31,8 @@ enum Theme {
 
     enum Image {
         static let placeholderSquare = UIImage(named: "placeholder-square")!
-        static let submitPlaceGraphics = UIImage(named: "add-place")
+        static let submitPlaceGraphics = UIImage(named: "add-place")!
+        static let addImagePlaceholder = UIImage(named: "add-image")!
     }
 
     enum Color {
