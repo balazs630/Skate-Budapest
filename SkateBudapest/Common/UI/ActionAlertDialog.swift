@@ -9,7 +9,7 @@
 import UIKit
 
 class ActionAlertDialog {
-    static func build(title: String, message: String, primaryAction: UIAlertAction) -> UIAlertController {
+    static func build(title: String = "", message: String = "", primaryAction: UIAlertAction) -> UIAlertController {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)

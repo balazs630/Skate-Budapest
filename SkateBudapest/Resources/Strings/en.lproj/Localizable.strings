@@ -11,6 +11,7 @@
 // General:
 "ok" = "OK";
 "loading" = "Loading";
+"uploading" = "Uploading";
 "cancel" = "Cancel";
 "delete" = "Delete";
 "settings" = "Settings";
@@ -50,7 +51,8 @@
 "submitTextsDescription" = "Description:";
 "submitTextsEmail" = "E-mail:";
 "submitTextsEmailDescription" = "If I have any questions about this place, I can reach you by e-mail.";
-"submitImagesDescription" = "Plase upload your own pictures of the place from multiple angles. Adding at least two image is required.";
+"submitImagesDescription" = "Please upload your own pictures of the place from multiple angles. Adding at least two image is required.";
+"submitPositionDescription" = "Please drag the red pin on the map to the exact position of the new place.";
 
 "submitDescriptionNavBarTitle" = "Submit place";
 "submitTypeNavBarTitle" = "Type selector";
@@ -65,6 +67,7 @@
 "imageSizeTooSmall" = "Image should be bigger than %dx%d pixel!";
 "textTooShort" = "Text should be longer than %d character!";
 "textTooLong" = "Text should be shorter than %d character!";
+"mustChangeCoordinates" = "Set the position of the red pin before submit!";
 
 // NetworkError:
 "networkErrorTitle" = "Network error";

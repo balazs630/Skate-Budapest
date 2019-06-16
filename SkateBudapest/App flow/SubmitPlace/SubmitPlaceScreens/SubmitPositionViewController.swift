@@ -17,12 +17,16 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var centerLocationButton: UIButton!
+    @IBOutlet weak var descriptionLabel: DescriptionLabel!
+    @IBOutlet weak var submitButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
+
+        LocationService.shared.startTracking()
         loadUserInput()
         zoomOnLocationPin()
     }
@@ -37,8 +41,30 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
+        configureNavigationBar()
+        configureMapView()
+        configureLabels()
+        configureButtons()
+    }
+
+    private func configureNavigationBar() {
         navigationItem.title = Texts.SubmitPlace.submitPositionNavBarTitle.localized
+    }
+
+    private func configureMapView() {
         mapView.delegate = self
+        NSLayoutConstraint.activate([
+            mapView.heightAnchor.constraint(equalToConstant: view.frame.height * 0.6)
+        ])
+    }
+
+    private func configureLabels() {
+        descriptionLabel.text = Texts.SubmitPlace.submitPositionDescription.localized
+    }
+
+    private func configureButtons() {
+        submitButton.style = .next
+        submitButton.setTitle(Texts.SubmitPlace.submit.localized, for: .normal)
     }
 
     private func zoomOnLocationPin() {
@@ -50,12 +76,22 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Actions
     @IBAction func submitButtonTap(_ sender: Any) {
-        saveUserInput()
-        sendPlaceSuggestion()
+        do {
+            try validateInput()
+            saveUserInput()
+            sendPlaceSuggestion()
+        } catch let error as ValidationError {
+            present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
+        } catch { }
+    }
+
+    @IBAction func centerMapButtonTap(_ sender: Any) {
+        guard LocationService.shared.location != nil else { return }
+        mapView.toggleUserTrackingMode()
     }
 
     private func sendPlaceSuggestion() {
-        addActivityIndicator(title: Texts.General.loading.localized)
+        addActivityIndicator(title: Texts.General.uploading.localized)
 
         guard let displayItem = placeSuggestionDisplayItem else { return }
         let placeSuggestionApiModel = PlaceSuggestionApiModel(displayItem: displayItem)
@@ -75,6 +111,12 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
 
 // MARK: User input handling
 extension SubmitPositionViewController {
+    private func validateInput() throws {
+        if locationPin.coordinate == Constant.defaultCityCoordinate {
+            throw ValidationError(message: Texts.Validation.mustChangeCoordinates.localized)
+        }
+    }
+
     private func saveUserInput() {
         placeSuggestionDisplayItem?.coordinate = locationPin.coordinate
     }
@@ -98,5 +140,18 @@ extension SubmitPositionViewController: MKMapViewDelegate {
         }
 
         return nil
+    }
+
+    func mapView(_ mapView: MKMapView, didChange mode: MKUserTrackingMode, animated: Bool) {
+        switch mode {
+        case .none:
+            centerLocationButton.setImage(Theme.Icon.locationTrackingNone, for: .normal)
+        case .follow:
+            centerLocationButton.setImage(Theme.Icon.locationTrackingFollow, for: .normal)
+        case .followWithHeading:
+            centerLocationButton.setImage(Theme.Icon.locationTrackingHeading, for: .normal)
+        @unknown default:
+            break
+        }
     }
 }

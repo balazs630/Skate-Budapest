@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultAlertDialog {
-    static func build(title: String, message: String) -> UIAlertController {
+    static func build(title: String = "", message: String = "") -> UIAlertController {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)

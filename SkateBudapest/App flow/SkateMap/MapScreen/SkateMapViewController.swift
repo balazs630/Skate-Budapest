@@ -127,7 +127,6 @@ extension SkateMapViewController: MKMapViewDelegate {
 
         annotationView.canShowCallout = true
         annotationView.image = getWaypointImage(for: waypoint.type)
-
         annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.calloutImageViewSize)
         annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
 

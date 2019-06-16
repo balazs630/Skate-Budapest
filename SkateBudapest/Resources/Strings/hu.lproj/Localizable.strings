@@ -11,6 +11,7 @@
 // General:
 "ok" = "OK";
 "loading" = "Betöltés";
+"uploading" = "Feltöltés";
 "cancel" = "Mégse";
 "delete" = "Törlés";
 "settings" = "Beállítások";
@@ -51,6 +52,7 @@
 "submitTextsEmail" = "E-mail:";
 "submitTextsEmailDescription" = "Ha kérdésem merülne fel a hellyel kapcsolatban, ezen a címen tudlak elérni.";
 "submitImagesDescription" = "Kérlek töltsd fel a saját képeidet a helyről, több szemszögből. Legalább két kép hozzáadása kötelező.";
+"submitPositionDescription" = "Kérlek húzd a piros pin-t a térképen a hely pontos pozíciójára.";
 
 "submitDescriptionNavBarTitle" = "Hely beküldése";
 "submitTypeNavBarTitle" = "Típus választó";
@@ -65,6 +67,7 @@
 "imageSizeTooSmall" = "A képnek nagyobbnak kell lennie mint %dx%d pixel!";
 "textTooShort" = "A szövegnek %d karakternél hosszabbnak kell lennie!";
 "textTooLong" = "A szövegnek %d karakternél rövidebbnek kell lennie!";
+"mustChangeCoordinates" = "Állítsd be a piros pin helyzetét a beküldés előtt!";
 
 // NetworkError:
 "networkErrorTitle" = "Hálózati hiba";

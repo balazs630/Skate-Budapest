@@ -11,6 +11,7 @@ struct Texts {
         // swiftlint:disable:next identifier_name
         case ok
         case loading
+        case uploading
         case cancel
         case delete
         case settings
@@ -54,6 +55,7 @@ struct Texts {
         case submitTextsEmail
         case submitTextsEmailDescription
         case submitImagesDescription
+        case submitPositionDescription
 
         case submitDescriptionNavBarTitle
         case submitTypeNavBarTitle
@@ -69,6 +71,7 @@ struct Texts {
         case imageSizeTooSmall
         case textTooShort
         case textTooLong
+        case mustChangeCoordinates
     }
 
     enum NetworkError: String, Localizable {
