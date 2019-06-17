@@ -21,7 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ZK-Ol-1DI">
                                 <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beE-yM-J8f">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beE-yM-J8f" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="429.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mN6-FQ-bVI">
@@ -105,10 +105,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-A7-jUd" userLabel="Container view">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-A7-jUd" userLabel="Content view">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-6o-uWs">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-6o-uWs" userLabel="Description Label View">
                                         <rect key="frame" x="24" y="24" width="327" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoB-oX-3ni" customClass="DescriptionLabel" customModule="SkateBudapest" customModuleProvider="target">
@@ -318,7 +318,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbC-DH-ETY">
                                 <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggA-aq-SCW">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggA-aq-SCW" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="565.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXJ-Hr-Xld">
@@ -366,7 +366,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-vf-gJH">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-vf-gJH" userLabel="Description Label View">
                                                 <rect key="frame" x="24" y="441" width="319" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpO-Et-0fb" customClass="DescriptionLabel" customModule="SkateBudapest" customModuleProvider="target">
@@ -469,36 +469,9 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awy-2S-iaJ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5D-Pd-JUV">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5D-Pd-JUV" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="504.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lm-fP-7lY">
-                                                <rect key="frame" x="24" y="380" width="319" height="30"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDn-5e-u1m" customClass="DescriptionLabel" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="ZDn-5e-u1m" firstAttribute="top" secondItem="6lm-fP-7lY" secondAttribute="top" id="VfK-q8-vHS"/>
-                                                    <constraint firstAttribute="height" constant="30" id="hw8-qp-KJC"/>
-                                                    <constraint firstItem="ZDn-5e-u1m" firstAttribute="leading" secondItem="6lm-fP-7lY" secondAttribute="leading" id="mDq-sk-gJx"/>
-                                                </constraints>
-                                            </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TQ-VR-fcc" customClass="Button" customModule="SkateBudapest" customModuleProvider="target">
-                                                <rect key="frame" x="297" y="432.5" width="46" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="v0F-KV-tfR"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <action selector="nextButtonTap:" destination="y7p-su-TgN" eventType="touchUpInside" id="pOv-Av-dBK"/>
-                                                </connections>
-                                            </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AEu-XS-KhA">
                                                 <rect key="frame" x="24" y="20" width="319" height="340"/>
                                                 <subviews>
@@ -550,6 +523,33 @@
                                                     <constraint firstAttribute="height" constant="340" placeholder="YES" id="NVD-6v-HT1"/>
                                                 </constraints>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lm-fP-7lY" userLabel="Description Label View">
+                                                <rect key="frame" x="24" y="380" width="319" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDn-5e-u1m" customClass="DescriptionLabel" customModule="SkateBudapest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ZDn-5e-u1m" firstAttribute="top" secondItem="6lm-fP-7lY" secondAttribute="top" id="VfK-q8-vHS"/>
+                                                    <constraint firstAttribute="height" constant="30" id="hw8-qp-KJC"/>
+                                                    <constraint firstItem="ZDn-5e-u1m" firstAttribute="leading" secondItem="6lm-fP-7lY" secondAttribute="leading" id="mDq-sk-gJx"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TQ-VR-fcc" customClass="Button" customModule="SkateBudapest" customModuleProvider="target">
+                                                <rect key="frame" x="297" y="432.5" width="46" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="v0F-KV-tfR"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="nextButtonTap:" destination="y7p-su-TgN" eventType="touchUpInside" id="pOv-Av-dBK"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
@@ -630,7 +630,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQo-PB-2uQ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InS-d2-xfv">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InS-d2-xfv" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="545"/>
                                         <subviews>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1W-FP-q2z">
@@ -650,7 +650,7 @@
                                                     <action selector="centerMapButtonTap:" destination="yek-2l-Amz" eventType="touchUpInside" id="esj-Th-xpq"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAm-qT-qHM">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAm-qT-qHM" userLabel="Description Label View">
                                                 <rect key="frame" x="24" y="420" width="319" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hK-Zp-Dgj" customClass="DescriptionLabel" customModule="SkateBudapest" customModuleProvider="target">
@@ -733,37 +733,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTd-30-aIx">
-                                <rect key="frame" x="24" y="272.5" width="319" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ciq-D8-EtF">
-                                <rect key="frame" x="164.5" y="313.5" width="46" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-Db-qzn" userLabel="Alignment view 1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="103.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTA-Uv-AA3" userLabel="Content view">
+                                <rect key="frame" x="32" y="123.5" width="311" height="285.5"/>
+                                <subviews>
+                                    <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCU-ol-boP" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
+                                        <rect key="frame" x="95.5" y="25" width="120" height="120"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="Snv-NS-iYt"/>
+                                            <constraint firstAttribute="width" constant="120" id="Ylw-4w-Ckn"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTd-30-aIx">
+                                        <rect key="frame" x="40" y="165" width="231" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ciq-D8-EtF" customClass="Button" customModule="SkateBudapest" customModuleProvider="target">
+                                        <rect key="frame" x="132.5" y="205.5" width="46" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ae1-nY-iXJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="doneButtonTap:" destination="mg5-fR-0So" eventType="touchUpInside" id="lDe-iD-Sou"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ae1-nY-iXJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ciq-D8-EtF" secondAttribute="bottom" constant="40" id="5fs-e4-V8c"/>
+                                    <constraint firstItem="wTd-30-aIx" firstAttribute="leading" secondItem="oTA-Uv-AA3" secondAttribute="leading" constant="40" id="ANR-wh-Mlt"/>
+                                    <constraint firstItem="jCU-ol-boP" firstAttribute="top" secondItem="oTA-Uv-AA3" secondAttribute="top" constant="25" id="Kpe-ZJ-8YR"/>
+                                    <constraint firstItem="Ciq-D8-EtF" firstAttribute="top" secondItem="wTd-30-aIx" secondAttribute="bottom" constant="20" id="OWk-xG-Kwu"/>
+                                    <constraint firstItem="wTd-30-aIx" firstAttribute="top" secondItem="jCU-ol-boP" secondAttribute="bottom" constant="20" id="PxH-cs-1iy"/>
+                                    <constraint firstItem="Ciq-D8-EtF" firstAttribute="centerX" secondItem="oTA-Uv-AA3" secondAttribute="centerX" id="Ynw-YK-LhJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="wTd-30-aIx" secondAttribute="trailing" constant="40" id="yyq-2x-aom"/>
+                                    <constraint firstItem="jCU-ol-boP" firstAttribute="centerX" secondItem="oTA-Uv-AA3" secondAttribute="centerX" id="zA3-87-Zp8"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="doneButtonTap:" destination="mg5-fR-0So" eventType="touchUpInside" id="lDe-iD-Sou"/>
-                                </connections>
-                            </button>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4v-np-6wo" userLabel="Alignment view 2">
+                                <rect key="frame" x="0.0" y="409" width="375" height="258"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ciq-D8-EtF" firstAttribute="top" secondItem="wTd-30-aIx" secondAttribute="bottom" constant="20" id="3Mp-3g-frc"/>
-                            <constraint firstItem="wTd-30-aIx" firstAttribute="leading" secondItem="F6A-jX-Nh1" secondAttribute="leading" constant="24" id="UKN-C7-SnI"/>
-                            <constraint firstItem="F6A-jX-Nh1" firstAttribute="trailing" secondItem="wTd-30-aIx" secondAttribute="trailing" constant="32" id="jbK-XO-o7H"/>
-                            <constraint firstItem="Ciq-D8-EtF" firstAttribute="centerY" secondItem="ZVv-Dd-GCV" secondAttribute="centerY" id="wxc-u3-enO"/>
-                            <constraint firstItem="Ciq-D8-EtF" firstAttribute="centerX" secondItem="ZVv-Dd-GCV" secondAttribute="centerX" id="xfR-Zk-bj5"/>
+                            <constraint firstItem="Ww5-Db-qzn" firstAttribute="height" secondItem="x4v-np-6wo" secondAttribute="height" multiplier="2/5" id="9HQ-rD-tYI"/>
+                            <constraint firstItem="oTA-Uv-AA3" firstAttribute="leading" secondItem="F6A-jX-Nh1" secondAttribute="leading" constant="32" id="ANT-ob-Emx"/>
+                            <constraint firstItem="F6A-jX-Nh1" firstAttribute="bottom" secondItem="x4v-np-6wo" secondAttribute="bottom" id="ERg-nM-PQh"/>
+                            <constraint firstItem="Ww5-Db-qzn" firstAttribute="leading" secondItem="F6A-jX-Nh1" secondAttribute="leading" id="EYm-sI-yL4"/>
+                            <constraint firstItem="F6A-jX-Nh1" firstAttribute="trailing" secondItem="x4v-np-6wo" secondAttribute="trailing" id="FcN-EW-QdH"/>
+                            <constraint firstItem="Ww5-Db-qzn" firstAttribute="top" secondItem="F6A-jX-Nh1" secondAttribute="top" id="Hw8-8W-v3H"/>
+                            <constraint firstItem="x4v-np-6wo" firstAttribute="top" secondItem="oTA-Uv-AA3" secondAttribute="bottom" id="K4e-eZ-BcP"/>
+                            <constraint firstItem="F6A-jX-Nh1" firstAttribute="trailing" secondItem="oTA-Uv-AA3" secondAttribute="trailing" constant="32" id="S85-nU-797"/>
+                            <constraint firstItem="x4v-np-6wo" firstAttribute="leading" secondItem="F6A-jX-Nh1" secondAttribute="leading" id="fb1-vp-L8A"/>
+                            <constraint firstItem="oTA-Uv-AA3" firstAttribute="top" secondItem="Ww5-Db-qzn" secondAttribute="bottom" id="unn-hP-Soj"/>
+                            <constraint firstItem="F6A-jX-Nh1" firstAttribute="trailing" secondItem="Ww5-Db-qzn" secondAttribute="trailing" id="xdq-Nz-ucQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F6A-jX-Nh1"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="Ciq-D8-EtF" id="XMC-8R-sVD"/>
+                        <outlet property="checkmarkVideoView" destination="jCU-ol-boP" id="8DD-pr-peg"/>
+                        <outlet property="titleLabel" destination="wTd-30-aIx" id="dfU-Z0-iMj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MM4-T6-Ov8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2959" y="143"/>
+            <point key="canvasLocation" x="2957.5999999999999" y="142.57871064467767"/>
         </scene>
     </scenes>
     <resources>

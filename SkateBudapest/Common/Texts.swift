@@ -12,6 +12,7 @@ struct Texts {
         case ok
         case loading
         case uploading
+        case back
         case cancel
         case delete
         case settings
@@ -56,6 +57,7 @@ struct Texts {
         case submitTextsEmailDescription
         case submitImagesDescription
         case submitPositionDescription
+        case submitResultTitle
 
         case submitDescriptionNavBarTitle
         case submitTypeNavBarTitle

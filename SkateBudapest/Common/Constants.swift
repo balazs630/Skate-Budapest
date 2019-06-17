@@ -22,6 +22,8 @@ struct Constant {
         static let skatepark = "skatepark-preview"
         static let streetspot = "streetspot-preview"
         static let skateshop = "skateshop-preview"
+
+        static let checkmark = "checkmark"
     }
 }
 

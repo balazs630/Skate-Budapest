@@ -12,6 +12,7 @@
 "ok" = "OK";
 "loading" = "Betöltés";
 "uploading" = "Feltöltés";
+"back" = "Vissza";
 "cancel" = "Mégse";
 "delete" = "Törlés";
 "settings" = "Beállítások";
@@ -53,6 +54,7 @@
 "submitTextsEmailDescription" = "Ha kérdésem merülne fel a hellyel kapcsolatban, ezen a címen tudlak elérni.";
 "submitImagesDescription" = "Kérlek töltsd fel a saját képeidet a helyről, több szemszögből. Legalább két kép hozzáadása kötelező.";
 "submitPositionDescription" = "Kérlek húzd a piros pin-t a térképen a hely pontos pozíciójára.";
+"submitResultTitle" = "Köszi a beküldést, hamarosan kiteszem a térképre az új helyet!";
 
 "submitDescriptionNavBarTitle" = "Hely beküldése";
 "submitTypeNavBarTitle" = "Típus választó";

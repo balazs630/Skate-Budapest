@@ -59,6 +59,7 @@
 		AC7E333A2299CD4C0011B36F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E33392299CD4C0011B36F /* VideoView.swift */; };
 		AC7F33CB22386C7F0015B1C8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */; };
 		AC8450B022B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8450AF22B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift */; };
+		AC8451AE22B85A79006564C5 /* checkmark.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC8451AD22B85A78006564C5 /* checkmark.mp4 */; };
 		AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8597752236F6B9009C0D6F /* RoutingEmptyViewController.swift */; };
 		AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F8B8D21C518BF00001551 /* ImageService.swift */; };
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
@@ -151,6 +152,7 @@
 		AC7E33392299CD4C0011B36F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		AC8450AF22B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtensions.swift; sourceTree = "<group>"; };
+		AC8451AD22B85A78006564C5 /* checkmark.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = checkmark.mp4; sourceTree = "<group>"; };
 		AC8597752236F6B9009C0D6F /* RoutingEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingEmptyViewController.swift; sourceTree = "<group>"; };
 		AC8F8B8D21C518BF00001551 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 				ACB3918F22A064AB00E017AF /* skatepark-preview.mp4 */,
 				ACB3918E22A064AA00E017AF /* streetspot-preview.mp4 */,
 				ACB3918D22A064AA00E017AF /* skateshop-preview.mp4 */,
+				AC8451AD22B85A78006564C5 /* checkmark.mp4 */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				ACB292F82235429F00DBB862 /* SubmitPlace.storyboard in Resources */,
 				AC273FD82234465300DF2AB9 /* LaunchScreen.storyboard in Resources */,
 				AC033FDD2195DCEF0005259B /* Localizable.strings in Resources */,
+				AC8451AE22B85A79006564C5 /* checkmark.mp4 in Resources */,
 				AC0B89AA21120E39006CDB7E /* PlaceDetails.storyboard in Resources */,
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
 				AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */,

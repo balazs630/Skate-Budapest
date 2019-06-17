@@ -12,6 +12,7 @@
 "ok" = "OK";
 "loading" = "Loading";
 "uploading" = "Uploading";
+"back" = "Back";
 "cancel" = "Cancel";
 "delete" = "Delete";
 "settings" = "Settings";
@@ -53,6 +54,7 @@
 "submitTextsEmailDescription" = "If I have any questions about this place, I can reach you by e-mail.";
 "submitImagesDescription" = "Please upload your own pictures of the place from multiple angles. Adding at least two image is required.";
 "submitPositionDescription" = "Please drag the red pin on the map to the exact position of the new place.";
+"submitResultTitle" = "Thanks for submitting, I'll add the new place on the map soon!";
 
 "submitDescriptionNavBarTitle" = "Submit place";
 "submitTypeNavBarTitle" = "Type selector";

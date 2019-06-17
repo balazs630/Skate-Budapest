@@ -33,15 +33,18 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
     }
 
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         stackView.layoutIfNeeded()
         configureVideoViews()
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         videoViewCollection.forEach { $0.play() }
     }
 
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         videoViewCollection.forEach { $0.stop() }
     }
 }

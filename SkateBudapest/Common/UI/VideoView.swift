@@ -12,7 +12,8 @@ class VideoView: UIView {
     // MARK: Properties
     private var playerLayer: AVPlayerLayer?
     private var player: AVPlayer?
-    public var isLoop: Bool = true
+    public var isLoop = true
+    public var videoContentMode = AVLayerVideoGravity.resizeAspectFill
 
     // MARK: Initializers
     required init?(coder aDecoder: NSCoder) {
@@ -41,8 +42,8 @@ extension VideoView {
     public func configure(videoURL: URL) {
         player = AVPlayer(url: videoURL)
         playerLayer = AVPlayerLayer(player: player)
-        playerLayer?.frame = frame
-        playerLayer?.videoGravity = .resizeAspectFill
+        playerLayer?.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        playerLayer?.videoGravity = videoContentMode
 
         guard let playerLayer = playerLayer else {
             debugPrint("Video is not available to play with url: \(videoURL)")
