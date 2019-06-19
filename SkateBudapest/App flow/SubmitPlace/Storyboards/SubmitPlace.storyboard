@@ -639,6 +639,17 @@
                                                     <constraint firstAttribute="height" constant="400" placeholder="YES" id="rwJ-Wv-PFR"/>
                                                 </constraints>
                                             </mapView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10A-Xe-fwL">
+                                                <rect key="frame" x="315" y="285" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="QAI-3b-deq"/>
+                                                    <constraint firstAttribute="height" constant="35" id="qv6-ZT-S5B"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="map-layers"/>
+                                                <connections>
+                                                    <action selector="changeMapLayerTap:" destination="yek-2l-Amz" eventType="touchUpInside" id="RKD-dg-mDa"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meT-B2-khX">
                                                 <rect key="frame" x="315" y="340" width="35" height="35"/>
                                                 <constraints>
@@ -687,6 +698,8 @@
                                             <constraint firstItem="d1W-FP-q2z" firstAttribute="leading" secondItem="InS-d2-xfv" secondAttribute="leading" id="SOh-s5-yNs"/>
                                             <constraint firstItem="meT-B2-khX" firstAttribute="trailing" secondItem="d1W-FP-q2z" secondAttribute="trailing" constant="-25" id="Vee-I5-Qed"/>
                                             <constraint firstItem="VeK-yE-cRz" firstAttribute="top" secondItem="6hK-Zp-Dgj" secondAttribute="bottom" constant="32" id="dr6-Wc-H3c"/>
+                                            <constraint firstItem="10A-Xe-fwL" firstAttribute="trailing" secondItem="d1W-FP-q2z" secondAttribute="trailing" constant="-25" id="iRR-8f-UeP"/>
+                                            <constraint firstItem="meT-B2-khX" firstAttribute="top" secondItem="10A-Xe-fwL" secondAttribute="bottom" constant="20" id="mr4-gG-HxL"/>
                                             <constraint firstAttribute="trailing" secondItem="d1W-FP-q2z" secondAttribute="trailing" id="r9s-H4-33s"/>
                                             <constraint firstAttribute="trailing" secondItem="MAm-qT-qHM" secondAttribute="trailing" constant="32" id="rLg-I3-YZx"/>
                                             <constraint firstItem="meT-B2-khX" firstAttribute="bottom" secondItem="d1W-FP-q2z" secondAttribute="bottom" constant="-25" id="t9H-F7-fho"/>
@@ -824,5 +837,6 @@
     </scenes>
     <resources>
         <image name="location-tracking-follow" width="128" height="128"/>
+        <image name="map-layers" width="128" height="128"/>
     </resources>
 </document>

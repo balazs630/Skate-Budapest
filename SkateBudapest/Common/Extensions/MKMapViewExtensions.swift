@@ -21,6 +21,11 @@ extension MKMapView {
             break
         }
     }
+
+    func toggleMapTypeBetween(_ types: MKMapType...) {
+        guard let currentTypeIndex = types.firstIndex(of: mapType) else { return }
+        mapType = currentTypeIndex < types.count - 1 ? types[currentTypeIndex + 1] : types[0]
+    }
 }
 
 // MARK: Utility methods

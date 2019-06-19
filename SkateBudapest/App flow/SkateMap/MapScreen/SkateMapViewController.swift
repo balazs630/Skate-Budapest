@@ -44,6 +44,10 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Actions
+    @IBAction func changeMapLayerTap(_ sender: Any) {
+        mapView.toggleMapTypeBetween(.standard, .hybrid)
+    }
+
     @IBAction func centerMapButtonTap(_ sender: Any) {
         guard LocationService.shared.location != nil else { return }
         mapView.toggleUserTrackingMode()

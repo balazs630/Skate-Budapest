@@ -21,6 +21,17 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkt-hd-d7o">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krL-eP-JXs">
+                                <rect key="frame" x="315" y="552" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="lyE-eY-Epc"/>
+                                    <constraint firstAttribute="height" constant="35" id="tLw-ly-Sh0"/>
+                                </constraints>
+                                <state key="normal" image="map-layers"/>
+                                <connections>
+                                    <action selector="changeMapLayerTap:" destination="vZY-YY-T4n" eventType="touchUpInside" id="xQF-TS-teE"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPG-ZP-jxx">
                                 <rect key="frame" x="315" y="607" width="35" height="35"/>
                                 <constraints>
@@ -37,11 +48,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kkt-hd-d7o" firstAttribute="bottom" secondItem="PBO-0S-Vc3" secondAttribute="bottom" id="7Ih-pd-0v9"/>
+                            <constraint firstItem="NPG-ZP-jxx" firstAttribute="top" secondItem="krL-eP-JXs" secondAttribute="bottom" constant="20" id="PWN-ab-Uck"/>
+                            <constraint firstItem="NPG-ZP-jxx" firstAttribute="trailing" secondItem="kkt-hd-d7o" secondAttribute="trailing" constant="-25" id="dMX-Pu-pPj"/>
                             <constraint firstItem="kkt-hd-d7o" firstAttribute="leading" secondItem="PBO-0S-Vc3" secondAttribute="leading" id="hRl-hn-pog"/>
-                            <constraint firstItem="OPh-BF-67Z" firstAttribute="bottom" secondItem="NPG-ZP-jxx" secondAttribute="bottom" constant="25" id="o6R-e5-9zv"/>
-                            <constraint firstItem="OPh-BF-67Z" firstAttribute="trailing" secondItem="NPG-ZP-jxx" secondAttribute="trailing" constant="25" id="tv5-yA-S9s"/>
                             <constraint firstAttribute="trailing" secondItem="kkt-hd-d7o" secondAttribute="trailing" id="uas-RH-fhl"/>
+                            <constraint firstItem="NPG-ZP-jxx" firstAttribute="bottom" secondItem="kkt-hd-d7o" secondAttribute="bottom" constant="-25" id="vEh-1E-FeB"/>
                             <constraint firstItem="kkt-hd-d7o" firstAttribute="top" secondItem="PBO-0S-Vc3" secondAttribute="top" id="wdv-yF-ehO"/>
+                            <constraint firstItem="krL-eP-JXs" firstAttribute="trailing" secondItem="kkt-hd-d7o" secondAttribute="trailing" constant="-25" id="xIi-JW-Lt6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OPh-BF-67Z"/>
                     </view>
@@ -231,5 +244,6 @@
     </scenes>
     <resources>
         <image name="location-tracking-follow" width="128" height="128"/>
+        <image name="map-layers" width="128" height="128"/>
     </resources>
 </document>

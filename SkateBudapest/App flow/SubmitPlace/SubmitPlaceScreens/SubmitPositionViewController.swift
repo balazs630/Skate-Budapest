@@ -75,6 +75,15 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Actions
+    @IBAction func changeMapLayerTap(_ sender: Any) {
+        mapView.toggleMapTypeBetween(.standard, .hybrid)
+    }
+
+    @IBAction func centerMapButtonTap(_ sender: Any) {
+        guard LocationService.shared.location != nil else { return }
+        mapView.toggleUserTrackingMode()
+    }
+
     @IBAction func submitButtonTap(_ sender: Any) {
         do {
             try validateInput()
@@ -83,11 +92,6 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
         } catch let error as ValidationError {
             present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
         } catch { }
-    }
-
-    @IBAction func centerMapButtonTap(_ sender: Any) {
-        guard LocationService.shared.location != nil else { return }
-        mapView.toggleUserTrackingMode()
     }
 
     private func sendPlaceSuggestion() {
