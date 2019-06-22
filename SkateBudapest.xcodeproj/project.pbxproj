@@ -34,6 +34,7 @@
 		AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */; };
 		AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D6F41217DCE3200BCDC02 /* RoutingViewController.swift */; };
 		AC54EABE21B9CCF8008694CF /* PlaceCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */; };
+		AC59418F22BE3AE0001446BA /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59418E22BE3AE0001446BA /* DataExtension.swift */; };
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
 		AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */; };
 		AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC63325B20FA95C3007E5D98 /* Assets.xcassets */; };
@@ -125,6 +126,7 @@
 		AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		AC3D6F41217DCE3200BCDC02 /* RoutingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingViewController.swift; sourceTree = "<group>"; };
 		AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCachingService.swift; sourceTree = "<group>"; };
+		AC59418E22BE3AE0001446BA /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		AC63325120FA95C2007E5D98 /* SkateBudapest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateBudapest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC63325420FA95C2007E5D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapViewController.swift; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 			children = (
 				AC64A9C12258DCE7006728D6 /* CGSizeExtension.swift */,
 				AC8450AF22B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift */,
+				AC59418E22BE3AE0001446BA /* DataExtension.swift */,
 				ACEB8C8522623AF400873D0A /* DoubleExtensions.swift */,
 				AC7B368F227E266B000A2C9C /* MKMapViewExtensions.swift */,
 				ACD5CBB621D190FE00EDE3E0 /* StringExtensions.swift */,
@@ -792,6 +795,7 @@
 				AC7B3690227E266B000A2C9C /* MKMapViewExtensions.swift in Sources */,
 				AC8450B022B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				AC18D5CD22468CDA00CB7243 /* Theme.swift in Sources */,
+				AC59418F22BE3AE0001446BA /* DataExtension.swift in Sources */,
 				AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */,
 				AC64A9B0225880B7006728D6 /* UITextFieldExtensions.swift in Sources */,
 				ACB292F1223541F000DBB862 /* SubmitPositionViewController.swift in Sources */,
