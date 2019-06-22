@@ -34,38 +34,42 @@ extension PlaceWebService {
             Parameter.status: WaypointStatus.active.rawValue
         ]
 
-        Alamofire.request(url, method: .get, parameters: queryParams).responseJSON { response in
-            switch response.result {
-            case .success:
-                guard let data = response.data else { return }
-                do {
-                    let places = try self.decoder.decode([PlaceApiModel].self, from: data)
-                    completion(Result.success(places))
-                } catch {
+        Alamofire.request(url, method: .get, parameters: queryParams)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.data else { return }
+                    do {
+                        let places = try self.decoder.decode([PlaceApiModel].self, from: data)
+                        completion(Result.success(places))
+                    } catch {
+                        completion(Result.failure(self.handle(error)))
+                    }
+                case .failure(let error):
                     completion(Result.failure(self.handle(error)))
                 }
-            case .failure(let error):
-                completion(Result.failure(self.handle(error)))
-            }
         }
     }
 
     func getPlaceDataVersion(completion: @escaping (Result<PlaceDataVersionApiModel>) -> Void) {
         let url = requestUrl(for: Slug.placeDataVersionPath)
 
-        Alamofire.request(url, method: .get).responseJSON { response in
-            switch response.result {
-            case .success:
-                guard let data = response.data else { return }
-                do {
-                    let info = try self.decoder.decode(PlaceDataVersionApiModel.self, from: data)
-                    completion(Result.success(info))
-                } catch {
+        Alamofire.request(url, method: .get)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    guard let data = response.data else { return }
+                    do {
+                        let info = try self.decoder.decode(PlaceDataVersionApiModel.self, from: data)
+                        completion(Result.success(info))
+                    } catch {
+                        completion(Result.failure(self.handle(error)))
+                    }
+                case .failure(let error):
                     completion(Result.failure(self.handle(error)))
                 }
-            case .failure(let error):
-                completion(Result.failure(self.handle(error)))
-            }
         }
     }
 
@@ -74,20 +78,20 @@ extension PlaceWebService {
         let url = requestUrl(for: Slug.placeSuggestionPath)
 
         Alamofire.upload(
-            multipartFormData: { multipartFormData in
-                multipartFormData.append(newPlace.name.data, withName: "name")
-                multipartFormData.append(newPlace.info.data, withName: "info")
-                multipartFormData.append(newPlace.type.data, withName: "type")
-                multipartFormData.append(newPlace.senderEmail.data, withName: "senderEmail")
-                multipartFormData.append(newPlace.latitude.data, withName: "latitude")
-                multipartFormData.append(newPlace.longitude.data, withName: "longitude")
-                multipartFormData.append(newPlace.image1, withName: "image1", mimeType: "image/jpeg")
-                multipartFormData.append(newPlace.image2, withName: "image2", mimeType: "image/jpeg")
+            multipartFormData: { formData in
+                formData.append(newPlace.name.data, withName: "name")
+                formData.append(newPlace.info.data, withName: "info")
+                formData.append(newPlace.type.data, withName: "type")
+                formData.append(newPlace.senderEmail.data, withName: "senderEmail")
+                formData.append(newPlace.latitude.data, withName: "latitude")
+                formData.append(newPlace.longitude.data, withName: "longitude")
+                formData.append(newPlace.image1, withName: "image1", mimeType: newPlace.image1.mimeType)
+                formData.append(newPlace.image2, withName: "image2", mimeType: newPlace.image2.mimeType)
                 if let image3 = newPlace.image3 {
-                    multipartFormData.append(image3, withName: "image3", mimeType: "image/jpeg")
+                    formData.append(image3, withName: "image3", mimeType: image3.mimeType)
                 }
                 if let image4 = newPlace.image4 {
-                    multipartFormData.append(image4, withName: "image4", mimeType: "image/jpeg")
+                    formData.append(image4, withName: "image4", mimeType: image4.mimeType)
                 }
             },
             to: url,
@@ -95,7 +99,7 @@ extension PlaceWebService {
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
-                    upload.responseJSON { response in
+                    upload.validate().responseJSON { response in
                         if let error = response.error {
                             completion(Result.failure(self.handle(error)))
                         }

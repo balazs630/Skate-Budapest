@@ -31,13 +31,13 @@ class RealmService {
 
     func writePlaces(with places: [PlaceApiModel], update: Bool = false) {
         try! realm.write {
-            realm.add(places.map { PlaceRealmModel($0) }, update: true)
+            realm.add(places.map { PlaceRealmModel($0) }, update: update)
         }
     }
 
     func writePlaceDataVersion(with placeDataVersion: PlaceDataVersionApiModel, update: Bool = false) {
         try! realm.write {
-            realm.add(PlaceDataVersionRealmModel(placeDataVersion), update: true)
+            realm.add(PlaceDataVersionRealmModel(placeDataVersion), update: update)
         }
     }
 }

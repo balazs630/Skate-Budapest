@@ -17,7 +17,7 @@ extension String {
         return data
     }
 
-    func localized(bundle: Bundle = .main, tableName: String = "Localizable") -> String {
+    func localized(tableName: String = "Localizable") -> String {
         return NSLocalizedString(self, tableName: tableName, value: "", comment: "")
     }
 }
