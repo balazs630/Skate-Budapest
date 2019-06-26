@@ -12,16 +12,15 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
-    private var currentImageView: UIImageView?
-    private lazy var placeholderImage = Theme.Image.addImagePlaceholder
+    private var currentImageView: ImageViewPicker?
     private lazy var mediaAlertController = MediaAlertController()
 
     // MARK: Outlets
     @IBOutlet weak var imageContainerStackView: UIStackView!
-    @IBOutlet weak var imageView1: UIImageView!
-    @IBOutlet weak var imageView2: UIImageView!
-    @IBOutlet weak var imageView3: UIImageView!
-    @IBOutlet weak var imageView4: UIImageView!
+    @IBOutlet weak var imageView1: ImageViewPicker!
+    @IBOutlet weak var imageView2: ImageViewPicker!
+    @IBOutlet weak var imageView3: ImageViewPicker!
+    @IBOutlet weak var imageView4: ImageViewPicker!
 
     @IBOutlet weak var descriptionLabel: DescriptionLabel!
     @IBOutlet weak var nextButton: Button!
@@ -59,7 +58,8 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
         mediaAlertController.presenter = self
 
         mediaAlertController.addDeleteAlertAction {
-            self.updateImage(to: self.placeholderImage)
+            self.updateImage(to: nil)
+            self.currentImageView?.showPlaceHolder = true
         }
     }
 
@@ -91,7 +91,7 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     }
 
     @IBAction func imageViewTap(_ sender: UITapGestureRecognizer) {
-        guard let imageView = sender.view as? UIImageView else { return }
+        guard let imageView = sender.view as? ImageViewPicker else { return }
         currentImageView = imageView
         present(mediaAlertController, animated: true)
     }
@@ -117,17 +117,10 @@ extension SubmitImagesViewController {
     }
 
     private func loadUserInput() {
-        imageView1.image = load(image: placeSuggestionDisplayItem?.image1)
-        imageView2.image = load(image: placeSuggestionDisplayItem?.image2)
-        imageView3.image = load(image: placeSuggestionDisplayItem?.image3)
-        imageView4.image = load(image: placeSuggestionDisplayItem?.image4)
-    }
-
-    private func load(image: UIImage?) -> UIImage {
-        guard let image = image,
-            image.size.width > 0 else { return placeholderImage }
-
-        return image
+        imageView1.image = placeSuggestionDisplayItem?.image1
+        imageView2.image = placeSuggestionDisplayItem?.image2
+        imageView3.image = placeSuggestionDisplayItem?.image3
+        imageView4.image = placeSuggestionDisplayItem?.image4
     }
 
     private func updateImage(to image: UIImage?) {
@@ -145,6 +138,7 @@ extension SubmitImagesViewController: UIImagePickerControllerDelegate {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
 
         currentImageView?.image = image.compress(rate: .low)
+        currentImageView?.showPlaceHolder = false
         currentImageView?.clearValidationErrorBorder()
         updateImage(to: currentImageView?.image)
 

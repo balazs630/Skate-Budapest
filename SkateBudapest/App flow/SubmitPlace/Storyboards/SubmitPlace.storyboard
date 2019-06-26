@@ -478,20 +478,20 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PAm-Xn-cmF">
                                                         <rect key="frame" x="0.0" y="0.0" width="319" height="162"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-UJ-GJc">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2m-UJ-GJc" customClass="ImageViewPicker" customModule="SkateBudapest" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="151.5" height="162"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <gestureRecognizers/>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="t9e-72-wzr" appends="YES" id="mHL-PM-6Ea"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="OF2-6g-Pua" appends="YES" id="5Tf-St-IjX"/>
                                                                 </connections>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HSl-8I-IkF">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HSl-8I-IkF" customClass="ImageViewPicker" customModule="SkateBudapest" customModuleProvider="target">
                                                                 <rect key="frame" x="167.5" y="0.0" width="151.5" height="162"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <gestureRecognizers/>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="kMt-sh-jsR" appends="YES" id="FyS-Al-ccM"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="Z2P-PM-gVb" appends="YES" id="72y-4F-9sc"/>
                                                                 </connections>
                                                             </imageView>
                                                         </subviews>
@@ -499,20 +499,20 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Oen-I5-aXU">
                                                         <rect key="frame" x="0.0" y="178" width="319" height="162"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9RO-Wk-DIW">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9RO-Wk-DIW" customClass="ImageViewPicker" customModule="SkateBudapest" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="151.5" height="162"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <gestureRecognizers/>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="GHp-6q-NMb" appends="YES" id="J94-i0-X5Z"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="DaA-GS-SlB" appends="YES" id="Olu-sc-Fdv"/>
                                                                 </connections>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fSX-VZ-BZN">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fSX-VZ-BZN" customClass="ImageViewPicker" customModule="SkateBudapest" customModuleProvider="target">
                                                                 <rect key="frame" x="167.5" y="0.0" width="151.5" height="162"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <gestureRecognizers/>
                                                                 <connections>
-                                                                    <outletCollection property="gestureRecognizers" destination="FAd-0K-JC6" appends="YES" id="LS6-iI-crj"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="B4D-ZB-Z3e" appends="YES" id="jhE-Hg-PsY"/>
                                                                 </connections>
                                                             </imageView>
                                                         </subviews>
@@ -588,32 +588,32 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="ZDn-5e-u1m" id="4qx-R1-RtQ"/>
                         <outlet property="imageContainerStackView" destination="AEu-XS-KhA" id="Maw-Ee-2hG"/>
-                        <outlet property="imageView1" destination="K2m-UJ-GJc" id="zy2-sl-7am"/>
-                        <outlet property="imageView2" destination="HSl-8I-IkF" id="bgc-r2-7cP"/>
-                        <outlet property="imageView3" destination="9RO-Wk-DIW" id="zQ3-Vs-dPj"/>
-                        <outlet property="imageView4" destination="fSX-VZ-BZN" id="0u8-x7-6VC"/>
+                        <outlet property="imageView1" destination="K2m-UJ-GJc" id="URg-If-FuJ"/>
+                        <outlet property="imageView2" destination="HSl-8I-IkF" id="h0a-9T-Yno"/>
+                        <outlet property="imageView3" destination="9RO-Wk-DIW" id="Kud-4j-0uh"/>
+                        <outlet property="imageView4" destination="fSX-VZ-BZN" id="5dT-h9-HM0"/>
                         <outlet property="nextButton" destination="9TQ-VR-fcc" id="YHT-a7-ntO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4e-Vl-jfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="t9e-72-wzr">
+                <tapGestureRecognizer id="OF2-6g-Pua">
                     <connections>
-                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="usA-Os-txl"/>
+                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="z7G-7D-Quo"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="kMt-sh-jsR">
+                <tapGestureRecognizer id="Z2P-PM-gVb">
                     <connections>
-                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="2KC-rZ-tev"/>
+                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="kEP-ep-yog"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="GHp-6q-NMb">
+                <tapGestureRecognizer id="DaA-GS-SlB">
                     <connections>
-                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="vlP-uU-YxM"/>
+                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="bs3-TL-rjY"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="FAd-0K-JC6">
+                <tapGestureRecognizer id="B4D-ZB-Z3e">
                     <connections>
-                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="Rjy-Yy-eAC"/>
+                        <action selector="imageViewTap:" destination="y7p-su-TgN" id="f9B-sY-xym"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

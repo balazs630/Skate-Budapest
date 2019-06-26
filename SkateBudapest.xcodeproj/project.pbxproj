@@ -67,6 +67,7 @@
 		AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC907892212997F600FC0528 /* UIImageViewExtensions.swift */; };
 		AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */; };
 		AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */; };
+		AC96C16B22C2D2C1007D7C2D /* ImageViewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */; };
 		ACA489BB20FA9E890084D9F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BA20FA9E890084D9F3 /* Constants.swift */; };
 		ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */; };
 		ACB292E8223541BF00DBB862 /* PlaceSuggestionApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */; };
@@ -161,6 +162,7 @@
 		AC907892212997F600FC0528 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewFullViewCell.swift; sourceTree = "<group>"; };
 		AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
+		AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPicker.swift; sourceTree = "<group>"; };
 		ACA489BA20FA9E890084D9F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSuggestionApiModel.swift; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 				ACC509D822AC7435005E99E0 /* Button.swift */,
 				ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */,
 				ACBD42CD22AEA6DC007E89A0 /* DescriptionLabel.swift */,
+				AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */,
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
 				AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */,
 				AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */,
@@ -743,6 +746,7 @@
 				AC64A9AE225558F7006728D6 /* UIImageExtension.swift in Sources */,
 				AC64A9B222588177006728D6 /* ValidatorFactory.swift in Sources */,
 				ACD5CBB721D190FE00EDE3E0 /* StringExtensions.swift in Sources */,
+				AC96C16B22C2D2C1007D7C2D /* ImageViewPicker.swift in Sources */,
 				ACD5CBBD21D195E700EDE3E0 /* Texts.swift in Sources */,
 				ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */,
 				ACC509DB22ADC3AC005E99E0 /* ButtonStyle.swift in Sources */,
