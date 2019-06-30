@@ -37,6 +37,8 @@ extension PlaceWebService {
         Alamofire.request(url, method: .get, parameters: queryParams)
             .validate()
             .responseJSON { response in
+                response.log()
+
                 switch response.result {
                 case .success:
                     guard let data = response.data else { return }
@@ -58,6 +60,8 @@ extension PlaceWebService {
         Alamofire.request(url, method: .get)
             .validate()
             .responseJSON { response in
+                response.log()
+
                 switch response.result {
                 case .success:
                     guard let data = response.data else { return }
@@ -99,12 +103,16 @@ extension PlaceWebService {
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
-                    upload.validate().responseJSON { response in
-                        if let error = response.error {
-                            completion(Result.failure(self.handle(error)))
+                    upload
+                        .validate()
+                        .responseJSON { response in
+                            response.log()
+
+                            if let error = response.error {
+                                completion(Result.failure(self.handle(error)))
+                            }
+                            completion(Result.success(response))
                         }
-                        completion(Result.success(response))
-                    }
                 case .failure(let error):
                     completion(Result.failure(self.handle(error)))
                 }

@@ -68,6 +68,8 @@
 		AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */; };
 		AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */; };
 		AC96C16B22C2D2C1007D7C2D /* ImageViewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */; };
+		ACA2CF0622C941E000E35C4D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA2CF0522C941E000E35C4D /* Log.swift */; };
+		ACA2CF0822C947C600E35C4D /* AlamofireExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA2CF0722C947C600E35C4D /* AlamofireExtensions.swift */; };
 		ACA489BB20FA9E890084D9F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BA20FA9E890084D9F3 /* Constants.swift */; };
 		ACA489BD20FA9EB50084D9F3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */; };
 		ACB292E8223541BF00DBB862 /* PlaceSuggestionApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */; };
@@ -163,6 +165,8 @@
 		AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewFullViewCell.swift; sourceTree = "<group>"; };
 		AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPicker.swift; sourceTree = "<group>"; };
+		ACA2CF0522C941E000E35C4D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		ACA2CF0722C947C600E35C4D /* AlamofireExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExtensions.swift; sourceTree = "<group>"; };
 		ACA489BA20FA9E890084D9F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACA489BC20FA9EB50084D9F3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		ACB292E7223541BF00DBB862 /* PlaceSuggestionApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSuggestionApiModel.swift; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 			children = (
 				ACA489BE20FA9EBA0084D9F3 /* Extensions */,
 				ACD5CBB921D1955300EDE3E0 /* Interfaces */,
+				ACA2CF0922C947EC00E35C4D /* Logging */,
 				ACD5CBB821D1953C00EDE3E0 /* UI */,
 				AC64A9B3225881E7006728D6 /* Validation */,
 				ACA489BA20FA9E890084D9F3 /* Constants.swift */,
@@ -491,9 +496,18 @@
 			path = ImageViewer;
 			sourceTree = "<group>";
 		};
+		ACA2CF0922C947EC00E35C4D /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				ACA2CF0522C941E000E35C4D /* Log.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		ACA489BE20FA9EBA0084D9F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ACA2CF0722C947C600E35C4D /* AlamofireExtensions.swift */,
 				AC64A9C12258DCE7006728D6 /* CGSizeExtension.swift */,
 				AC8450AF22B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift */,
 				AC59418E22BE3AE0001446BA /* DataExtension.swift */,
@@ -735,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA2CF0822C947C600E35C4D /* AlamofireExtensions.swift in Sources */,
 				ACB292F0223541F000DBB862 /* SubmitTextsViewController.swift in Sources */,
 				AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */,
 				AC64A9C022589932006728D6 /* ImageSizeBiggerThanValidator.swift in Sources */,
@@ -749,6 +764,7 @@
 				AC96C16B22C2D2C1007D7C2D /* ImageViewPicker.swift in Sources */,
 				ACD5CBBD21D195E700EDE3E0 /* Texts.swift in Sources */,
 				ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */,
+				ACA2CF0622C941E000E35C4D /* Log.swift in Sources */,
 				ACC509DB22ADC3AC005E99E0 /* ButtonStyle.swift in Sources */,
 				ACE6F71221B897B4000ABDF1 /* PlaceDisplayItem.swift in Sources */,
 				ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */,

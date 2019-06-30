@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setUpMainNavigator()
+        setupMainNavigator()
         initUserDefaults()
         enableKeyboardManager()
 
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: - Navigation setup
 extension AppDelegate {
-    func setUpMainNavigator() {
+    func setupMainNavigator() {
         coordinator = MainCoordinator()
 
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -58,7 +58,7 @@ extension AppDelegate {
     }
 }
 
-// MARK: - IQKeyboardManagerSwift pod methods
+// MARK: - IQKeyboardManagerSwift setup
 extension AppDelegate {
     private func enableKeyboardManager() {
         IQKeyboardManager.shared.enable = true
