@@ -18,17 +18,13 @@ ___
 - [x] Details screen with image gallery
 - [x] Text and image caching, full offline use
 - [x] Route planner with estimated time of arrival calculator (walk, car, public transport)
-- [x] Open Apple Maps for navigation
+- [x] Place suggestion screens where users can request missing places to add (with description, images, coordinates)
+- [x] Validate fields on place suggestion screens
+- [x] Follow location heading, switch between map types
 - [x] Error handling on various network / database operation failure with alerts
-- [x] Simple backend service, [see this](https://github.com/balazs630/Skate-Budapest-Backend) side project
+- [x] Simple backend service, [see this](https://github.com/balazs630/Skate-Budapest-Vapor) side project
 - [x] Full localisation in Hungarian and English languages
-
-
 ___
 **Backlog:**
 
 - [ ] Replace the dummy coordinates, texts and images with real content
-- [ ] Create app icon, image assets for map pins, more..
-- [ ] Create a screen where users can request missing places to add (with coordinates, description, images)
-- [ ] Notify users if a new skatepark is available in the city
-- [ ] Contact me form for feature requests
