@@ -29,18 +29,6 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
     // MARK: Screen configuration
     private func configureSelf() {
         mapView.delegate = self
-        configureNavigationBar()
-    }
-
-    private func configureNavigationBar() {
-        navigationItem.title = Texts.SkateMap.mapNavBarTitle.localized
-        navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: Theme.Icon.filteringEmpty,
-            style: .done,
-            target: self,
-            action: #selector(toFilteringScreen))
     }
 
     // MARK: Actions
@@ -92,27 +80,17 @@ extension SkateMapViewController {
         mapView.showAnnotations(waypoints, animated: true)
     }
 
-    private func filter(by selectedTypes: [WaypointType]) {
+    func filter(by selectedTypes: [WaypointType]) {
         mapView.annotations.forEach { annotation in
             if let waypoint = annotation as? PlaceDisplayItem {
                 mapView.view(for: annotation)?.isHidden = !selectedTypes.contains(waypoint.type)
             }
         }
     }
-
-    private func changeFilteringIcon(isFiltered: Bool) {
-        let buttonItem = navigationItem.rightBarButtonItem
-        buttonItem?.image = isFiltered ? Theme.Icon.filteringFull : Theme.Icon.filteringEmpty
-        navigationItem.rightBarButtonItem = buttonItem
-    }
 }
 
 // MARK: Navigation
 extension SkateMapViewController {
-    @objc private func toFilteringScreen() {
-        coordinator?.toFilteringScreen(using: self)
-    }
-
     private func toDetailsScreen(from view: MKAnnotationView) {
         guard let place = view.annotation as? PlaceDisplayItem else { return }
         coordinator?.toPlaceDetailsScreen(place: place)
@@ -165,22 +143,5 @@ extension SkateMapViewController: MKMapViewDelegate {
                  annotationView view: MKAnnotationView,
                  calloutAccessoryControlTapped control: UIControl) {
         toDetailsScreen(from: view)
-    }
-}
-
-// MARK: UIViewControllerTransitioningDelegate methods
-extension SkateMapViewController: UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController,
-                                presenting: UIViewController?,
-                                source: UIViewController) -> UIPresentationController? {
-        return HalfScreenModalPresentationController(presentedViewController: presented, presenting: presenting)
-    }
-}
-
-// MARK: PlaceFilterDelegate methods
-extension SkateMapViewController: PlaceFilterDelegate {
-    func filterAnnotations(by selectedTypes: [WaypointType]) {
-        changeFilteringIcon(isFiltered: WaypointType.allCases.count != selectedTypes.count)
-        return filter(by: selectedTypes)
     }
 }

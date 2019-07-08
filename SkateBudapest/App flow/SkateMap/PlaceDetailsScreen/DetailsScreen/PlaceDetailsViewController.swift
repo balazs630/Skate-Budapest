@@ -45,7 +45,7 @@ class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     }
 }
 
-// MARK: - Setup view
+// MARK: - Screen configuration
 extension PlaceDetailsViewController {
     private func configureSelf() {
         configureNavigationBarTitleView()
@@ -53,16 +53,6 @@ extension PlaceDetailsViewController {
         configureLocationTypeView()
         configureImageScrollView()
         configurePageControl()
-    }
-
-    private func addChildViewControllers() {
-        addRoutingViewController()
-    }
-
-    private func addRoutingViewController() {
-        let routingViewController = RoutingViewController.instantiateViewController(from: .placeDetails)
-        routingViewController.destinationLocation = waypoint.coordinate
-        add(routingViewController, to: routingContainerView)
     }
 
     private func configureNavigationBarTitleView() {
@@ -140,6 +130,19 @@ extension PlaceDetailsViewController {
         }
 
         return imageViews
+    }
+}
+
+// MARK: - Setup view
+extension PlaceDetailsViewController {
+    private func addChildViewControllers() {
+        addRoutingViewController()
+    }
+
+    private func addRoutingViewController() {
+        let routingViewController = RoutingViewController.instantiateViewController(from: .placeDetails)
+        routingViewController.destinationLocation = waypoint.coordinate
+        add(routingViewController, to: routingContainerView)
     }
 }
 

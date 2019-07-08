@@ -22,7 +22,7 @@ class SkateMapCoordinator: Coordinator {
 // MARK: Configuration
 extension SkateMapCoordinator {
     func embedRootScreenInNavigationController() -> UINavigationController {
-        toSkateMapScreen()
+        toSkateMapContainerScreen()
         return navigationController
     }
 
@@ -35,13 +35,13 @@ extension SkateMapCoordinator {
 
 // MARK: Navigation
 extension SkateMapCoordinator {
-    func toSkateMapScreen() {
-        let skateMapScreen = SkateMapViewController.instantiateViewController(from: .skateMap)
-        skateMapScreen.coordinator = self
-        navigationController.pushViewController(skateMapScreen, animated: true)
+    func toSkateMapContainerScreen() {
+        let skateMapContainerScreen = SkateMapContainerViewController.instantiateViewController(from: .skateMap)
+        skateMapContainerScreen.coordinator = self
+        navigationController.pushViewController(skateMapContainerScreen, animated: true)
     }
 
-    func toFilteringScreen(using sourceViewController: SkateMapViewController) {
+    func toFilteringScreen(using sourceViewController: SkateMapContainerViewController) {
         let filteringScreen = PlaceFilterViewController.instantiateViewController(from: .skateMap)
 
         filteringScreen.modalPresentationStyle = .custom
@@ -73,7 +73,7 @@ extension SkateMapCoordinator {
 // MARK: Back navigation actions
 extension SkateMapCoordinator {
     func backToSkateMapScreen() {
-        let previousScreen: SkateMapViewController? = firstViewController()
+        let previousScreen: SkateMapContainerViewController? = firstViewController()
         previousScreen?.navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
     }
 }

@@ -23,6 +23,8 @@
 		AC18D5CB2242DC3900CB7243 /* UIResponderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */; };
 		AC18D5CD22468CDA00CB7243 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18D5CC22468CDA00CB7243 /* Theme.swift */; };
 		AC20C31B21A0D22400D09E60 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */; };
+		AC2599FB22D31B6D002D74A1 /* SkateListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2599FA22D31B6D002D74A1 /* SkateListViewModel.swift */; };
+		AC2599FD22D31FA9002D74A1 /* SkateMapContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2599FC22D31FA9002D74A1 /* SkateMapContainerViewController.swift */; };
 		AC26A96C218DD51700641C84 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26A96B218DD51700641C84 /* LocationService.swift */; };
 		AC273FD62234437500DF2AB9 /* SubmitPlaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */; };
 		AC273FD82234465300DF2AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC273FD72234465300DF2AB9 /* LaunchScreen.storyboard */; };
@@ -33,6 +35,7 @@
 		AC2D9DAA21335558003A6263 /* PlaceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */; };
 		AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */; };
 		AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D6F41217DCE3200BCDC02 /* RoutingViewController.swift */; };
+		AC43949F22D3EA3400BF4958 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AC43949E22D3EA3400BF4958 /* README.md */; };
 		AC54EABE21B9CCF8008694CF /* PlaceCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */; };
 		AC59418F22BE3AE0001446BA /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59418E22BE3AE0001446BA /* DataExtension.swift */; };
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
@@ -118,6 +121,8 @@
 		AC18D5CA2242DC3900CB7243 /* UIResponderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtensions.swift; sourceTree = "<group>"; };
 		AC18D5CC22468CDA00CB7243 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		AC20C31A21A0D22400D09E60 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		AC2599FA22D31B6D002D74A1 /* SkateListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateListViewModel.swift; sourceTree = "<group>"; };
+		AC2599FC22D31FA9002D74A1 /* SkateMapContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapContainerViewController.swift; sourceTree = "<group>"; };
 		AC26A96B218DD51700641C84 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		AC273FD52234437500DF2AB9 /* SubmitPlaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitPlaceCoordinator.swift; sourceTree = "<group>"; };
 		AC273FD72234465300DF2AB9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 		AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFilterViewController.swift; sourceTree = "<group>"; };
 		AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		AC3D6F41217DCE3200BCDC02 /* RoutingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingViewController.swift; sourceTree = "<group>"; };
+		AC43949E22D3EA3400BF4958 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCachingService.swift; sourceTree = "<group>"; };
 		AC59418E22BE3AE0001446BA /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		AC63325120FA95C2007E5D98 /* SkateBudapest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateBudapest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,7 +273,7 @@
 		AC171D5F2103D7D4008747AB /* SkateMap */ = {
 			isa = PBXGroup;
 			children = (
-				AC2D9DAB21335D58003A6263 /* MapScreen */,
+				AC2D9DAB21335D58003A6263 /* MapScreens */,
 				AC2D9DAC21335D70003A6263 /* FilteringScreen */,
 				AC0B89A72111FDBA006CDB7E /* PlaceDetailsScreen */,
 				ACB292F922358EE900DBB862 /* Coordinators */,
@@ -306,12 +312,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AC2D9DAB21335D58003A6263 /* MapScreen */ = {
+		AC2D9DAB21335D58003A6263 /* MapScreens */ = {
 			isa = PBXGroup;
 			children = (
+				AC2599FC22D31FA9002D74A1 /* SkateMapContainerViewController.swift */,
 				AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */,
+				AC2599FA22D31B6D002D74A1 /* SkateListViewModel.swift */,
 			);
-			path = MapScreen;
+			path = MapScreens;
 			sourceTree = "<group>";
 		};
 		AC2D9DAC21335D70003A6263 /* FilteringScreen */ = {
@@ -442,6 +450,7 @@
 			children = (
 				AC63326020FA95C3007E5D98 /* Info.plist */,
 				ACB6CF7F2128681C00583F11 /* Budapest, Hungary.gpx */,
+				AC43949E22D3EA3400BF4958 /* README.md */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -682,6 +691,7 @@
 				AC8451AE22B85A79006564C5 /* checkmark.mp4 in Resources */,
 				AC0B89AA21120E39006CDB7E /* PlaceDetails.storyboard in Resources */,
 				AC63325C20FA95C3007E5D98 /* Assets.xcassets in Resources */,
+				AC43949F22D3EA3400BF4958 /* README.md in Resources */,
 				AC033FB22195D04B0005259B /* SkateMap.storyboard in Resources */,
 				ACB3919022A064AB00E017AF /* skateshop-preview.mp4 in Resources */,
 				ACB3919122A064AB00E017AF /* streetspot-preview.mp4 in Resources */,
@@ -790,6 +800,7 @@
 				ACC509D922AC7435005E99E0 /* Button.swift in Sources */,
 				AC64A9B52258891B006728D6 /* ValidationError.swift in Sources */,
 				AC11F26D2290C971008ECBDD /* ActionAlertDialog.swift in Sources */,
+				AC2599FD22D31FA9002D74A1 /* SkateMapContainerViewController.swift in Sources */,
 				AC64A9B722588942006728D6 /* EmailFormatValidator.swift in Sources */,
 				AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */,
 				AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */,
@@ -798,6 +809,7 @@
 				AC2C030F21AADD1B00784F4E /* PlaceDataVersionApiModel.swift in Sources */,
 				AC2D9DAA21335558003A6263 /* PlaceFilterViewController.swift in Sources */,
 				AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */,
+				AC2599FB22D31B6D002D74A1 /* SkateListViewModel.swift in Sources */,
 				AC18D5C5223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift in Sources */,
 				AC26A96C218DD51700641C84 /* LocationService.swift in Sources */,
 				AC273FD62234437500DF2AB9 /* SubmitPlaceCoordinator.swift in Sources */,
