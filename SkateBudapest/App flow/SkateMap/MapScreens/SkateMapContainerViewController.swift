@@ -8,6 +8,11 @@
 
 import UIKit
 
+private enum SegmentedControlState: Int {
+    case map = 0
+    case list = 1
+}
+
 class SkateMapContainerViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SkateMapCoordinator?
@@ -28,6 +33,7 @@ class SkateMapContainerViewController: UIViewController, StoryboardLoadable {
     // MARK: Screen configuration
     private func configureSelf() {
         configureNavigationBar()
+        configureSegmentedControl()
     }
 
     private func configureNavigationBar() {
@@ -40,26 +46,43 @@ class SkateMapContainerViewController: UIViewController, StoryboardLoadable {
             target: self,
             action: #selector(toFilteringScreen))
     }
+
+    private func configureSegmentedControl() {
+        segmentedControl.setTitle(Texts.SkateMap.mapSegmentTitle.localized,
+                                  forSegmentAt: SegmentedControlState.map.rawValue)
+        segmentedControl.setTitle(Texts.SkateMap.listSegmentTitle.localized,
+                                  forSegmentAt: SegmentedControlState.list.rawValue)
+    }
 }
 
 // MARK: - Setup view
 extension SkateMapContainerViewController {
     private func addChildViewControllers() {
+        addSkateMapViewController()
+    }
+
+    private func addSkateMapViewController() {
         skateMapViewController.coordinator = coordinator
         add(skateMapViewController, to: containerView)
+    }
+
+    private func addSkateListViewController() {
+        skateListViewController.coordinator = coordinator
+        skateListViewController.dataSource.places = skateMapViewController.waypoints
+        add(skateListViewController, to: containerView)
     }
 }
 
 // MARK: Actions
 extension SkateMapContainerViewController {
     @IBAction func segmentedControlTap(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            add(skateMapViewController, to: containerView)
-        case 1:
-            add(skateListViewController, to: containerView)
-        default:
-            break
+        guard let selectedSegment = SegmentedControlState(rawValue: sender.selectedSegmentIndex) else { return }
+
+        switch selectedSegment {
+        case .map:
+            addSkateMapViewController()
+        case .list:
+            addSkateListViewController()
         }
     }
 }
@@ -84,7 +107,7 @@ extension SkateMapContainerViewController: UIViewControllerTransitioningDelegate
 extension SkateMapContainerViewController: PlaceFilterDelegate {
     func filterAnnotations(by selectedTypes: [WaypointType]) {
         changeFilteringIcon(isFiltered: WaypointType.allCases.count != selectedTypes.count)
-        return skateMapViewController.filter(by: selectedTypes)
+        skateMapViewController.filter(by: selectedTypes)
     }
 
     private func changeFilteringIcon(isFiltered: Bool) {

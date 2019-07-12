@@ -28,6 +28,9 @@ struct Texts {
         case mapNavBarTitle
         case mapTabBarTitle
 
+        case mapSegmentTitle
+        case listSegmentTitle
+
         case filterScreenTitle
         case filterButtonTitle
 

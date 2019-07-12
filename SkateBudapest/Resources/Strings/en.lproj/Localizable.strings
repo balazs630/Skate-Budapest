@@ -27,6 +27,9 @@
 "mapNavBarTitle" = "Map";
 "mapTabBarTitle" = "Map";
 
+"mapSegmentTitle" = "Map";
+"listSegmentTitle" = "List";
+
 "filterScreenTitle" = "Filter by place type";
 "filterButtonTitle" = "Filter";
 

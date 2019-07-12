@@ -18,6 +18,7 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
     weak var delegate: PlaceFilterDelegate?
 
     // MARK: Outlets
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
 
     @IBOutlet weak var skateparkSwitch: UISwitch!
@@ -40,6 +41,7 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
+        headerView.backgroundColor = Theme.Color.primaryTurquoise
         titleLabel.text = Texts.SkateMap.filterScreenTitle.localized
 
         skateshopLabel.text = Texts.SkateMap.skateshopType.localized

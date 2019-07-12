@@ -10,8 +10,14 @@ import MapKit
 
 class SkateMapViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
-    private let placeCachingService = PlaceCachingService()
     weak var coordinator: SkateMapCoordinator?
+    private let placeCachingService = PlaceCachingService()
+    var waypoints: [PlaceDisplayItem]! {
+        didSet {
+            clearMapWaypoints()
+            add(waypoints: waypoints)
+        }
+    }
 
     // MARK: Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -45,7 +51,6 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
 // MARK: Waypoint operations
 extension SkateMapViewController {
     private func loadMapWaypoints() {
-        clearWaypoints()
         addActivityIndicator(title: Texts.General.loading.localized)
 
         placeCachingService.getPlaces { result in
@@ -53,7 +58,7 @@ extension SkateMapViewController {
 
             switch result {
             case .success(let waypoints):
-                self.add(waypoints: waypoints)
+                self.waypoints = waypoints
             case .failure(let error):
                 self.present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
             }
@@ -71,7 +76,7 @@ extension SkateMapViewController {
         }
     }
 
-    private func clearWaypoints() {
+    private func clearMapWaypoints() {
         mapView.removeAnnotations(mapView.annotations)
     }
 

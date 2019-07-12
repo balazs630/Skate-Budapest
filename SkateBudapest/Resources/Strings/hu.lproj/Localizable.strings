@@ -27,6 +27,9 @@
 "mapNavBarTitle" = "Térkép";
 "mapTabBarTitle" = "Térkép";
 
+"mapSegmentTitle" = "Térkép";
+"listSegmentTitle" = "Lista";
+
 "filterScreenTitle" = "Szűrés a hely típusára";
 "filterButtonTitle" = "Szűrés";
 
