@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreLocation
+import MapKit
 
 struct Constant {
     static let shortVersionString = "CFBundleShortVersionString"
@@ -16,7 +16,10 @@ struct Constant {
     static let calloutViewIdentifier = "customMKAnnotationView"
     static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
 
-    static let defaultCityCoordinate = CLLocationCoordinate2D(latitude: 47.499567, longitude: 19.046496)
+    static let defaultCityCoordinate = CLLocationCoordinate2D(latitude: 47.500, longitude: 19.107)
+    static let defaultCityRegion = MKCoordinateRegion(center: Constant.defaultCityCoordinate,
+                                                      latitudinalMeters: 25000,
+                                                      longitudinalMeters: 25000)
 
     struct Video {
         static let skatepark = "skatepark-preview"

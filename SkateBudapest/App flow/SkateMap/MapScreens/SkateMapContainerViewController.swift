@@ -68,7 +68,7 @@ extension SkateMapContainerViewController {
 
     private func addSkateListViewController() {
         skateListViewController.coordinator = coordinator
-        skateListViewController.dataSource.places = skateMapViewController.waypoints
+        skateListViewController.dataSource.places = skateMapViewController.waypoints ?? []
         add(skateListViewController, to: containerView)
     }
 }
@@ -107,7 +107,7 @@ extension SkateMapContainerViewController: UIViewControllerTransitioningDelegate
 extension SkateMapContainerViewController: PlaceFilterDelegate {
     func filterAnnotations(by selectedTypes: [WaypointType]) {
         changeFilteringIcon(isFiltered: WaypointType.allCases.count != selectedTypes.count)
-        skateMapViewController.filter(by: selectedTypes)
+        skateMapViewController.updateMapWaypoints()
     }
 
     private func changeFilteringIcon(isFiltered: Bool) {

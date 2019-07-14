@@ -39,6 +39,7 @@
 		AC4394A122D3EE2200BF4958 /* SkateListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4394A022D3EE2200BF4958 /* SkateListCell.swift */; };
 		AC4394A322D3F3D000BF4958 /* SkateListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4394A222D3F3D000BF4958 /* SkateListDataSource.swift */; };
 		AC54EABE21B9CCF8008694CF /* PlaceCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */; };
+		AC55AE0C22DBC4E200FFEFC6 /* PlaceFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55AE0B22DBC4E200FFEFC6 /* PlaceFilterController.swift */; };
 		AC59418F22BE3AE0001446BA /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC59418E22BE3AE0001446BA /* DataExtension.swift */; };
 		AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325420FA95C2007E5D98 /* AppDelegate.swift */; };
 		AC63325720FA95C2007E5D98 /* SkateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC63325620FA95C2007E5D98 /* SkateMapViewController.swift */; };
@@ -57,6 +58,7 @@
 		AC6905FB21C073C900A2088A /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FA21C073C900A2088A /* RealmError.swift */; };
 		AC6905FD21C073E400A2088A /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FC21C073E400A2088A /* BaseError.swift */; };
 		AC69060521C0784300A2088A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69060421C0784300A2088A /* Result.swift */; };
+		AC69361D22DBBDF5005081E8 /* PlaceFilterPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69361C22DBBDF5005081E8 /* PlaceFilterPreference.swift */; };
 		AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */; };
 		AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19221B08AA000C20451 /* RealmService.swift */; };
 		AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19621B2B1A600C20451 /* BaseWebService.swift */; };
@@ -139,6 +141,7 @@
 		AC4394A022D3EE2200BF4958 /* SkateListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateListCell.swift; sourceTree = "<group>"; };
 		AC4394A222D3F3D000BF4958 /* SkateListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateListDataSource.swift; sourceTree = "<group>"; };
 		AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCachingService.swift; sourceTree = "<group>"; };
+		AC55AE0B22DBC4E200FFEFC6 /* PlaceFilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFilterController.swift; sourceTree = "<group>"; };
 		AC59418E22BE3AE0001446BA /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		AC63325120FA95C2007E5D98 /* SkateBudapest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateBudapest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC63325420FA95C2007E5D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 		AC6905FA21C073C900A2088A /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
 		AC6905FC21C073E400A2088A /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		AC69060421C0784300A2088A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AC69361C22DBBDF5005081E8 /* PlaceFilterPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFilterPreference.swift; sourceTree = "<group>"; };
 		AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRealmModel.swift; sourceTree = "<group>"; };
 		AC6BD19221B08AA000C20451 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		AC6BD19621B2B1A600C20451 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
@@ -332,6 +336,8 @@
 			isa = PBXGroup;
 			children = (
 				AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */,
+				AC55AE0B22DBC4E200FFEFC6 /* PlaceFilterController.swift */,
+				AC69361C22DBBDF5005081E8 /* PlaceFilterPreference.swift */,
 				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 			);
 			path = FilteringScreen;
@@ -772,8 +778,10 @@
 				AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */,
 				AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
+				AC55AE0C22DBC4E200FFEFC6 /* PlaceFilterController.swift in Sources */,
 				AC11F26B2290BDCA008ECBDD /* UIApplicationExtensions.swift in Sources */,
 				AC64A9BA22588A8A006728D6 /* TextLengthValidator.swift in Sources */,
+				AC69361D22DBBDF5005081E8 /* PlaceFilterPreference.swift in Sources */,
 				AC64A9AE225558F7006728D6 /* UIImageExtension.swift in Sources */,
 				AC64A9B222588177006728D6 /* ValidatorFactory.swift in Sources */,
 				ACD5CBB721D190FE00EDE3E0 /* StringExtensions.swift in Sources */,

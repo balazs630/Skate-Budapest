@@ -14,8 +14,8 @@ protocol PlaceFilterDelegate: class {
 
 class PlaceFilterViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
-    private let defaults = UserDefaults.standard
     weak var delegate: PlaceFilterDelegate?
+    var placeFilterController = PlaceFilterController()
 
     // MARK: Outlets
     @IBOutlet weak var headerView: UIView!
@@ -36,7 +36,7 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
         super.viewDidLoad()
         configureSelf()
         addGestureRecognizers()
-        loadFilterPreferences()
+        applyFilteringPreferences()
     }
 
     // MARK: Screen configuration
@@ -60,9 +60,25 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Button actions
     @IBAction func filterButtonTap(_ sender: Any) {
-        delegate?.filterAnnotations(by: selectedTypes())
-        saveFilterPreferences()
+        persistFilteringPreferences()
+        delegate?.filterAnnotations(by: placeFilterController.selectedTypes())
         dismiss(animated: true, completion: nil)
+    }
+
+    // MARK: Load/save switch states
+    private func applyFilteringPreferences() {
+        let preferences = placeFilterController.loadFilterPreferences()
+        skateparkSwitch.isOn = preferences.isSkatepark
+        skateshopSwitch.isOn = preferences.isSkateshop
+        streetspotSwitch.isOn = preferences.isStreetspot
+    }
+
+    private func persistFilteringPreferences() {
+        placeFilterController.saveFilterPreferences(
+            PlaceFilterPreference(isSkatepark: skateparkSwitch.isOn,
+                                  isSkateshop: skateshopSwitch.isOn,
+                                  isStreetspot: streetspotSwitch.isOn)
+        )
     }
 
     // MARK: Gesture recognizer actions
@@ -96,31 +112,5 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
         @unknown default:
             break
         }
-    }
-}
-
-// MARK: Utility methods
-extension PlaceFilterViewController {
-    private func selectedTypes() -> [WaypointType] {
-        var filteredTypes = [WaypointType]()
-        if skateparkSwitch.isOn { filteredTypes.append(WaypointType.skatepark) }
-        if skateshopSwitch.isOn { filteredTypes.append(WaypointType.skateshop) }
-        if streetspotSwitch.isOn { filteredTypes.append(WaypointType.streetspot) }
-
-        return filteredTypes
-    }
-
-    private func loadFilterPreferences() {
-        skateparkSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Switch.skatepark)
-        skateshopSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Switch.skateshop)
-        streetspotSwitch.isOn = defaults.bool(forKey: UserDefaults.Key.Switch.streetspot)
-    }
-
-    private func saveFilterPreferences() {
-        defaults.set(skateparkSwitch.isOn, forKey: UserDefaults.Key.Switch.skatepark)
-        defaults.set(skateshopSwitch.isOn, forKey: UserDefaults.Key.Switch.skateshop)
-        defaults.set(streetspotSwitch.isOn, forKey: UserDefaults.Key.Switch.streetspot)
-
-        defaults.synchronize()
     }
 }

@@ -12,10 +12,10 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SkateMapCoordinator?
     private let placeCachingService = PlaceCachingService()
+    private let placeFilterController = PlaceFilterController()
     var waypoints: [PlaceDisplayItem]! {
         didSet {
-            clearMapWaypoints()
-            add(waypoints: waypoints)
+            updateMapWaypoints()
         }
     }
 
@@ -32,9 +32,16 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
         loadMapWaypoints()
     }
 
+    override func didMove(toParent parent: UIViewController?) {
+        if parent != nil {
+            updateMapWaypoints()
+        }
+    }
+
     // MARK: Screen configuration
     private func configureSelf() {
         mapView.delegate = self
+        mapView.setRegion(Constant.defaultCityRegion, animated: true)
     }
 
     // MARK: Actions
@@ -76,19 +83,12 @@ extension SkateMapViewController {
         }
     }
 
-    private func clearMapWaypoints() {
-        mapView.removeAnnotations(mapView.annotations)
-    }
-
-    private func add(waypoints: [PlaceDisplayItem]) {
-        mapView.addAnnotations(waypoints)
-        mapView.showAnnotations(waypoints, animated: true)
-    }
-
-    func filter(by selectedTypes: [WaypointType]) {
-        mapView.annotations.forEach { annotation in
-            if let waypoint = annotation as? PlaceDisplayItem {
-                mapView.view(for: annotation)?.isHidden = !selectedTypes.contains(waypoint.type)
+    func updateMapWaypoints() {
+        waypoints?.forEach { annotation in
+            if placeFilterController.visibility(for: annotation) {
+                mapView.addAnnotation(annotation)
+            } else {
+                mapView.removeAnnotation(annotation)
             }
         }
     }
