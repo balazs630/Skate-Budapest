@@ -20,7 +20,7 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Outlets
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var placesMapView: MKMapView!
     @IBOutlet weak var centerLocationButton: UIButton!
 
     // MARK: View lifecycle
@@ -40,18 +40,18 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        mapView.delegate = self
-        mapView.setRegion(Constant.defaultCityRegion, animated: true)
+        placesMapView.delegate = self
+        placesMapView.setRegion(Constant.defaultCityRegion, animated: true)
     }
 
     // MARK: Actions
-    @IBAction func changeMapLayerTap(_ sender: Any) {
-        mapView.toggleMapTypeBetween(.standard, .hybrid)
+    @IBAction func changeMapTypeTap(_ sender: Any) {
+        placesMapView.toggleMapTypeBetween(.standard, .hybrid)
     }
 
     @IBAction func centerMapButtonTap(_ sender: Any) {
         guard LocationService.shared.location != nil else { return }
-        mapView.toggleUserTrackingMode()
+        placesMapView.toggleUserTrackingMode()
     }
 }
 
@@ -72,18 +72,8 @@ extension SkateMapViewController {
         }
     }
 
-    private func getWaypointImage(for type: WaypointType) -> UIImage {
-        switch type {
-        case .skatepark:
-            return Theme.Icon.skateparkPin
-        case .skateshop:
-            return Theme.Icon.skateshopPin
-        case .streetspot:
-            return Theme.Icon.streetSpotPin
-        }
-    }
-
     func updateMapWaypoints() {
+        guard let mapView = placesMapView else { return }
         waypoints?.forEach { annotation in
             if placeFilterController.visibility(for: annotation) {
                 mapView.addAnnotation(annotation)
@@ -109,11 +99,11 @@ extension SkateMapViewController: MKMapViewDelegate {
                                               reuseIdentifier: Constant.calloutViewIdentifier)
         guard !annotation.isKind(of: MKUserLocation.self) else { return nil }
         guard let waypoint = annotation as? PlaceDisplayItem else {
-            fatalError("Unable to cast MKAnnotation to Waypoint")
+            fatalError("Unable to cast MKAnnotation to PlaceDisplayItem")
         }
 
         annotationView.canShowCallout = true
-        annotationView.image = getWaypointImage(for: waypoint.type)
+        annotationView.image = waypoint.type.image
         annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.calloutImageViewSize)
         annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
 

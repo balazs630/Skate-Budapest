@@ -22,10 +22,24 @@ class SkateListViewController: UIViewController, StoryboardLoadable {
         configureSelf()
     }
 
+    override func didMove(toParent parent: UIViewController?) {
+        if parent != nil {
+            updateListWaypoints()
+        }
+    }
+
     // MARK: Screen configuration
     private func configureSelf() {
         placesTableView.delegate = self
         placesTableView.dataSource = dataSource
+    }
+}
+
+// MARK: Waypoint operations
+extension SkateListViewController {
+    func updateListWaypoints() {
+        guard let tableview = placesTableView else { return }
+        tableview.reloadData()
     }
 }
 

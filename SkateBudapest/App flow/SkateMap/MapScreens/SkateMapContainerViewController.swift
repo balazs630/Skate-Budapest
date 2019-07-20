@@ -108,6 +108,7 @@ extension SkateMapContainerViewController: PlaceFilterDelegate {
     func filterAnnotations(by selectedTypes: [WaypointType]) {
         changeFilteringIcon(isFiltered: WaypointType.allCases.count != selectedTypes.count)
         skateMapViewController.updateMapWaypoints()
+        skateListViewController.updateListWaypoints()
     }
 
     private func changeFilteringIcon(isFiltered: Bool) {

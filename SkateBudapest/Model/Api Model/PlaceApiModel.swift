@@ -5,6 +5,8 @@
 //  Created by Horváth Balázs on 2018. 11. 21..
 //
 
+import UIKit
+
 struct PlaceApiModel: Codable {
     // swiftlint:disable:next identifier_name
     var id: String
@@ -19,6 +21,17 @@ struct PlaceApiModel: Codable {
 
 enum WaypointType: String, CaseIterable, Codable {
     case skatepark, skateshop, streetspot
+
+    var image: UIImage {
+        switch self {
+        case .skatepark:
+            return Theme.Icon.skateparkPin
+        case .skateshop:
+            return Theme.Icon.skateshopPin
+        case .streetspot:
+            return Theme.Icon.streetSpotPin
+        }
+    }
 }
 
 enum WaypointStatus: String, Codable {

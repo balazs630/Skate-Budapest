@@ -10,18 +10,24 @@ import UIKit
 
 class SkateListDataSource: NSObject {
     // MARK: Properties
+    private let placeFilterController = PlaceFilterController()
     public var places: [PlaceDisplayItem]
 
     // MARK: Initializers
     init(places: [PlaceDisplayItem]) {
         self.places = places
     }
+
+    // MARK: Utility
+    private func filteredPlaces() -> [PlaceDisplayItem] {
+        return places.filter { placeFilterController.visibility(for: $0) }
+    }
 }
 
 // MARK: - UITableViewDataSource
 extension SkateListDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return places.count
+        return filteredPlaces().count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,7 +36,7 @@ extension SkateListDataSource: UITableViewDataSource {
             fatalError("SkateListCell cannot be found")
         }
 
-        cell.displayItem = places[indexPath.row]
+        cell.displayItem = filteredPlaces()[indexPath.row]
 
         return cell
     }
