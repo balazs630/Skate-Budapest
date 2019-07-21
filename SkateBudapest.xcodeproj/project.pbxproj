@@ -281,7 +281,7 @@
 		AC171D5F2103D7D4008747AB /* SkateMap */ = {
 			isa = PBXGroup;
 			children = (
-				AC2D9DAB21335D58003A6263 /* MapScreens */,
+				AC2D9DAB21335D58003A6263 /* PlacesScreens */,
 				AC2D9DAC21335D70003A6263 /* FilteringScreen */,
 				AC0B89A72111FDBA006CDB7E /* PlaceDetailsScreen */,
 				ACB292F922358EE900DBB862 /* Coordinators */,
@@ -320,7 +320,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AC2D9DAB21335D58003A6263 /* MapScreens */ = {
+		AC2D9DAB21335D58003A6263 /* PlacesScreens */ = {
 			isa = PBXGroup;
 			children = (
 				AC2599FC22D31FA9002D74A1 /* SkateMapContainerViewController.swift */,
@@ -329,7 +329,7 @@
 				AC4394A222D3F3D000BF4958 /* SkateListDataSource.swift */,
 				AC4394A022D3EE2200BF4958 /* SkateListCell.swift */,
 			);
-			path = MapScreens;
+			path = PlacesScreens;
 			sourceTree = "<group>";
 		};
 		AC2D9DAC21335D70003A6263 /* FilteringScreen */ = {
@@ -338,7 +338,6 @@
 				AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */,
 				AC55AE0B22DBC4E200FFEFC6 /* PlaceFilterController.swift */,
 				AC69361C22DBBDF5005081E8 /* PlaceFilterPreference.swift */,
-				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 			);
 			path = FilteringScreen;
 			sourceTree = "<group>";
@@ -584,6 +583,7 @@
 				ACC509D822AC7435005E99E0 /* Button.swift */,
 				ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */,
 				ACBD42CD22AEA6DC007E89A0 /* DescriptionLabel.swift */,
+				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 				AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */,
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
 				AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */,

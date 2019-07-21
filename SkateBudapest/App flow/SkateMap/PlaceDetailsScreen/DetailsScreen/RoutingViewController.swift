@@ -94,7 +94,8 @@ extension RoutingViewController {
         transportTypes.forEach { transportType in
             request.transportType = transportType
             let directions = MKDirections(request: request)
-            directions.calculateETA { (etaResponse, error) -> Void in
+            directions.calculateETA { [weak self] (etaResponse, error) -> Void in
+                guard let `self` = self else { return }
                 if let error = error {
                     self.present(ResultAlertDialog.build(title: Texts.LocationDetails.directions.localized,
                                                          message: error.localizedDescription), animated: true)

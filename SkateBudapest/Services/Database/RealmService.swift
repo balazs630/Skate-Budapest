@@ -45,7 +45,9 @@ class RealmService {
 // MARK: Helper functions
 extension RealmService {
     func isPlacesDataPersisted(completion: @escaping (Bool) -> Void) {
-        isPlacesAvailable { isPlacesAvailable in
+        isPlacesAvailable { [weak self] isPlacesAvailable in
+            guard let `self` = self else { return }
+
             self.isPlaceDataVersionAvailable { isPlaceDataVersionAvailable in
                 if isPlacesAvailable, isPlaceDataVersionAvailable {
                     completion(true)

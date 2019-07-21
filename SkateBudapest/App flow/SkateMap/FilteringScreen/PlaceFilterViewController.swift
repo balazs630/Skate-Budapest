@@ -100,12 +100,12 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
             if touchPoint.y - initialTouchPoint.y > 200 {
                 dismiss(animated: true, completion: nil)
             } else {
-                UIView.animate(withDuration: 0.2, animations: {
+                UIView.animate(withDuration: 0.2) {
                     self.view.frame = CGRect(x: 0,
                                              y: 0,
                                              width: self.view.frame.size.width,
                                              height: self.view.frame.size.height)
-                })
+                }
             }
         case .failed, .possible:
             break

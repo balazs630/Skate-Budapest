@@ -57,7 +57,9 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
         mediaAlertController.delegate = self
         mediaAlertController.presenter = self
 
-        mediaAlertController.addDeleteAlertAction {
+        mediaAlertController.addDeleteAlertAction { [weak self] in
+            guard let `self` = self else { return }
+
             self.updateImage(to: nil)
             self.currentImageView?.showPlaceHolder = true
         }

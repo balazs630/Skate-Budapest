@@ -30,7 +30,9 @@ class MediaAlertController: UIAlertController {
 // MARK: - Alert actions
 extension MediaAlertController {
     public func addPhotoLibraryAlertAction() {
-        let alertAction = UIAlertAction(title: Texts.General.photoLibrary.localized, style: .default, handler: { _ in
+        let alertAction = UIAlertAction(title: Texts.General.photoLibrary.localized, style: .default) { [weak self] _ in
+            guard let `self` = self else { return }
+
             self.mediaPermissionService.requestPhotosPermission { granted in
                 guard granted else {
                     self.showSettingsAlert(Texts.General.turnOnPhotosInSettings.localized)
@@ -40,13 +42,15 @@ extension MediaAlertController {
                     self.presentPhotoLibrary()
                 }
             }
-        })
+        }
 
         addAction(alertAction)
     }
 
     public func addCameraAlertAction() {
-        let alertAction = UIAlertAction(title: Texts.General.takePhoto.localized, style: .default, handler: { _ in
+        let alertAction = UIAlertAction(title: Texts.General.takePhoto.localized, style: .default) { [weak self] _ in
+            guard let `self` = self else { return }
+
             self.mediaPermissionService.requestCameraPermission { granted in
                 guard granted else {
                     self.showSettingsAlert(Texts.General.turnOnCameraInSettings.localized)
@@ -56,7 +60,7 @@ extension MediaAlertController {
                     self.presentCamera()
                 }
             }
-        })
+        }
 
         addAction(alertAction)
     }
@@ -74,9 +78,9 @@ extension MediaAlertController {
     }
 
     private func showSettingsAlert(_ message: String) {
-        let openSettingsAction = UIAlertAction(title: Texts.General.settings.localized, style: .default, handler: { _ in
+        let openSettingsAction = UIAlertAction(title: Texts.General.settings.localized, style: .default) { _ in
             UIApplication.openSettings()
-        })
+        }
 
         let alertController = ActionAlertDialog.build(title: Texts.General.permissionDenied.localized,
                                                       message: message,

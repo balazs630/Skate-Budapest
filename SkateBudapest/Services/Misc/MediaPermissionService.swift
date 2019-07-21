@@ -15,9 +15,9 @@ extension MediaPermissionService {
     func requestPhotosPermission(_ closure: @escaping ((Bool) -> Void) ) {
         guard !isPhotosAccessGranted() else { return closure(true) }
 
-        PHPhotoLibrary.requestAuthorization({ status in
+        PHPhotoLibrary.requestAuthorization { status in
             status == .authorized ? closure(true) : closure(false)
-        })
+        }
     }
 
     func requestCameraPermission(_ closure: @escaping ((Bool) -> Void) ) {

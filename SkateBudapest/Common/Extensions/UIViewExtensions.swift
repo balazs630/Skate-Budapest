@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     func addSubviews(_ subviews: [UIView]) {
-        subviews.forEach({ self.addSubview($0) })
+        subviews.forEach { self.addSubview($0) }
     }
 
     @IBInspectable public var cornerRadius: CGFloat {
