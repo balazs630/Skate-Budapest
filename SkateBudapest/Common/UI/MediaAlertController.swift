@@ -12,7 +12,7 @@ class MediaAlertController: UIAlertController {
     // MARK: Properties
     private let mediaPermissionService = MediaPermissionService()
     weak var delegate: (UIImagePickerControllerDelegate & UINavigationControllerDelegate)?
-    var presenter: UIViewController?
+    weak var presenter: UIViewController?
 
     // MARK: Initializers
     public init() {

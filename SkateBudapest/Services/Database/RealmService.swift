@@ -6,18 +6,16 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
-// swiftlint:disable force_try
-
 import RealmSwift
 
 class RealmService {
     // MARK: Properties
-    fileprivate var realm: Realm { return try! Realm() }
+    fileprivate var realm: Realm? { return try? Realm() }
 
     // MARK: Read/write processes
     func readPlaces(completion: @escaping (([PlaceDisplayItem]?) -> Void)) {
-        let places = realm.objects(PlaceRealmModel.self)
-        if Array(places).isEmpty {
+        guard let places = realm?.objects(PlaceRealmModel.self) else { return }
+        if places.isEmpty {
             completion(nil)
         } else {
             completion(places.map { PlaceDisplayItem($0) })
@@ -25,18 +23,20 @@ class RealmService {
     }
 
     func readPlaceDataVersion(completion: @escaping (String?) -> Void) {
-        let placeDataVersion = Array(realm.objects(PlaceDataVersionRealmModel.self))
+        guard let placeDataVersion = realm?.objects(PlaceDataVersionRealmModel.self) else { return }
         completion(placeDataVersion.first?.dataVersion)
     }
 
     func writePlaces(with places: [PlaceApiModel], update: Bool = false) {
-        try! realm.write {
+        guard let realm = realm else { return }
+        try? realm.write {
             realm.add(places.map { PlaceRealmModel($0) }, update: update)
         }
     }
 
     func writePlaceDataVersion(with placeDataVersion: PlaceDataVersionApiModel, update: Bool = false) {
-        try! realm.write {
+        guard let realm = realm else { return }
+        try? realm.write {
             realm.add(PlaceDataVersionRealmModel(placeDataVersion), update: update)
         }
     }
