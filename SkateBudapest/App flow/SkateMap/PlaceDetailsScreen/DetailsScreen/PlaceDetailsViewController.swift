@@ -41,7 +41,9 @@ class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     }
 
     override func willMove(toParent parent: UIViewController?) {
-        coordinator?.backToSkateMapScreen()
+        if parent == nil {
+            backToSkateMapScreen()
+        }
     }
 }
 
@@ -151,6 +153,10 @@ extension PlaceDetailsViewController {
     @objc private func toImageViewerScreen() {
         imageOffset.row = pageControl.currentPage
         coordinator?.toImageViewerScreen(using: self)
+    }
+
+    private func backToSkateMapScreen() {
+        coordinator?.backToSkateMapScreen()
     }
 }
 

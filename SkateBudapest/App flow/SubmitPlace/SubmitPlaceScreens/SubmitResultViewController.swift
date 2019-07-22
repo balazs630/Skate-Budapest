@@ -57,6 +57,11 @@ class SubmitResultViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Actions
     @IBAction func doneButtonTap(_ sender: Any) {
+        toSubmitPlaceDescriptionScreen()
+    }
+
+    // MARK: Navigation
+    private func toSubmitPlaceDescriptionScreen() {
         coordinator?.toSubmitPlaceDescriptionScreen()
     }
 }

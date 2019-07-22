@@ -25,7 +25,7 @@ class SubmitPlaceDescriptionViewController: UIViewController, StoryboardLoadable
 
     // MARK: Actions
     @IBAction func nextButtonTap(_ sender: Any) {
-        coordinator?.toSubmitPlaceTypeSelectorScreen()
+        toSubmitPlaceTypeSelectorScreen()
     }
 }
 
@@ -56,5 +56,12 @@ extension SubmitPlaceDescriptionViewController {
     private func configureButtons() {
         nextButton.style = .next
         nextButton.setTitle(Texts.SubmitPlace.next.localized, for: .normal)
+    }
+}
+
+// MARK: Navigation
+extension SubmitPlaceDescriptionViewController {
+    private func toSubmitPlaceTypeSelectorScreen() {
+        coordinator?.toSubmitPlaceTypeSelectorScreen()
     }
 }

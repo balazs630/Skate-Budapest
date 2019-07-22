@@ -36,7 +36,7 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
         super.viewWillDisappear(animated)
         if isMovingFromParent {
             saveUserInput()
-            coordinator?.backToSubmitTextsScreen(with: placeSuggestionDisplayItem)
+            backToSubmitTextsScreen()
         }
     }
 
@@ -86,7 +86,7 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
         do {
             try validateInput()
             saveUserInput()
-            coordinator?.toSubmitPositionScreen(with: placeSuggestionDisplayItem)
+            toSubmitPositionScreen()
         } catch let error as ValidationError {
             present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
         } catch { }
@@ -130,6 +130,17 @@ extension SubmitImagesViewController {
             .filter { $0 == currentImageView }
             .first
             .map { $0.image = image }
+    }
+}
+
+// MARK: Navigation
+extension SubmitImagesViewController {
+    private func toSubmitPositionScreen() {
+        coordinator?.toSubmitPositionScreen(with: placeSuggestionDisplayItem)
+    }
+
+    private func backToSubmitTextsScreen() {
+        coordinator?.backToSubmitTextsScreen(with: placeSuggestionDisplayItem)
     }
 }
 

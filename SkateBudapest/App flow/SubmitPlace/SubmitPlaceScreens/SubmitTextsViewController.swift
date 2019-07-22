@@ -36,7 +36,7 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
         super.viewWillDisappear(animated)
         if isMovingFromParent {
             saveUserInput()
-            coordinator?.backToSubmitTypeSelectorScreen(with: placeSuggestionDisplayItem)
+            backToSubmitTypeSelectorScreen()
         }
     }
 
@@ -75,7 +75,7 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
         do {
             try validateInput()
             saveUserInput()
-            coordinator?.toSubmitImagesScreen(with: placeSuggestionDisplayItem)
+            toSubmitImagesScreen()
         } catch let error as ValidationError {
             present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
         } catch { }
@@ -100,6 +100,17 @@ extension SubmitTextsViewController {
         titleTextField.text = placeSuggestionDisplayItem?.name
         infoTextView.text = placeSuggestionDisplayItem?.info
         contactEmailTextField.text = placeSuggestionDisplayItem?.senderEmail
+    }
+}
+
+// MARK: Navigation
+extension SubmitTextsViewController {
+    private func toSubmitImagesScreen() {
+        coordinator?.toSubmitImagesScreen(with: placeSuggestionDisplayItem)
+    }
+
+    private func backToSubmitTypeSelectorScreen() {
+        coordinator?.backToSubmitTypeSelectorScreen(with: placeSuggestionDisplayItem)
     }
 }
 

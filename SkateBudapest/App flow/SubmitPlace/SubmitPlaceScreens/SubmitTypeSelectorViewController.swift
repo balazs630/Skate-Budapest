@@ -78,16 +78,23 @@ extension SubmitTypeSelectorViewController {
 extension SubmitTypeSelectorViewController {
     @IBAction func skateparkTypeTap(_ sender: Any) {
         saveUserInput(type: .skatepark)
-        coordinator?.toSubmitTextsScreen(with: placeSuggestionDisplayItem)
+        toSubmitTextsScreen()
     }
 
     @IBAction func streetSpotTypeTap(_ sender: Any) {
         saveUserInput(type: .streetspot)
-        coordinator?.toSubmitTextsScreen(with: placeSuggestionDisplayItem)
+        toSubmitTextsScreen()
     }
 
     @IBAction func skateshopTypeTap(_ sender: Any) {
         saveUserInput(type: .skateshop)
+        toSubmitTextsScreen()
+    }
+}
+
+// MARK: Navigation
+extension SubmitTypeSelectorViewController {
+    private func toSubmitTextsScreen() {
         coordinator?.toSubmitTextsScreen(with: placeSuggestionDisplayItem)
     }
 }

@@ -35,7 +35,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
         super.viewWillDisappear(animated)
         if isMovingFromParent {
             saveUserInput()
-            coordinator?.backToImagesScreen(with: placeSuggestionDisplayItem)
+            backToImagesScreen()
         }
     }
 
@@ -106,7 +106,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
 
             switch result {
             case .success:
-                self.coordinator?.toSubmitSummaryScreen()
+                self.toSubmitSummaryScreen()
             case .failure(let error):
                 self.present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
             }
@@ -130,6 +130,17 @@ extension SubmitPositionViewController {
         guard let displayItem = placeSuggestionDisplayItem else { return }
         locationPin.coordinate = displayItem.coordinate
         mapView.addAnnotation(locationPin)
+    }
+}
+
+// MARK: Navigation
+extension SubmitPositionViewController {
+    private func toSubmitSummaryScreen() {
+        coordinator?.toSubmitSummaryScreen()
+    }
+
+    private func backToImagesScreen() {
+        coordinator?.backToImagesScreen(with: placeSuggestionDisplayItem)
     }
 }
 
