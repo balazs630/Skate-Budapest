@@ -32,6 +32,10 @@ enum ImageCompressionRate {
 }
 
 extension UIImage {
+    var isEmpty: Bool {
+        return self.size.width == 0 || self.size.height == 0 ? true : false
+    }
+
     func compress(rate: ImageCompressionRate) -> UIImage {
         return compressBelow(rect: rate.imageDimension()).compress(compressionQuality: rate.compressionQulity())
     }

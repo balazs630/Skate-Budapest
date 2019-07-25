@@ -593,6 +593,10 @@
                         <outlet property="imageView3" destination="9RO-Wk-DIW" id="Kud-4j-0uh"/>
                         <outlet property="imageView4" destination="fSX-VZ-BZN" id="5dT-h9-HM0"/>
                         <outlet property="nextButton" destination="9TQ-VR-fcc" id="YHT-a7-ntO"/>
+                        <outletCollection property="imageViews" destination="K2m-UJ-GJc" collectionClass="NSMutableArray" id="eO9-gO-ZLr"/>
+                        <outletCollection property="imageViews" destination="HSl-8I-IkF" collectionClass="NSMutableArray" id="cai-G8-bn1"/>
+                        <outletCollection property="imageViews" destination="9RO-Wk-DIW" collectionClass="NSMutableArray" id="LN9-jl-7Ow"/>
+                        <outletCollection property="imageViews" destination="fSX-VZ-BZN" collectionClass="NSMutableArray" id="3ft-8V-XfX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4e-Vl-jfH" userLabel="First Responder" sceneMemberID="firstResponder"/>

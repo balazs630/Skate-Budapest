@@ -51,4 +51,8 @@ class ImageViewPicker: UIImageView {
             placeHolderImage.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
+
+    func showPlaceHolderIfNeeded() {
+        showPlaceHolder = self.image?.isEmpty ?? true
+    }
 }

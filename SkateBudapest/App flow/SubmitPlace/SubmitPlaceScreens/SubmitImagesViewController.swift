@@ -21,6 +21,7 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     @IBOutlet weak var imageView2: ImageViewPicker!
     @IBOutlet weak var imageView3: ImageViewPicker!
     @IBOutlet weak var imageView4: ImageViewPicker!
+    @IBOutlet var imageViews: [ImageViewPicker]!
 
     @IBOutlet weak var descriptionLabel: DescriptionLabel!
     @IBOutlet weak var nextButton: Button!
@@ -29,7 +30,13 @@ class SubmitImagesViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
-        loadUserInput()
+    }
+
+    override func didMove(toParent parent: UIViewController?) {
+        super.didMove(toParent: parent)
+        if parent != nil {
+            loadUserInput()
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -106,14 +113,14 @@ extension SubmitImagesViewController {
             try view.validate(.imageIsRequired)
         }
 
-        try [imageView1, imageView2, imageView3, imageView4].forEach { view in
+        try imageViews.forEach { view in
             try view.validate(.imageSizeBiggerThan(CGSize(width: 600, height: 600)))
         }
     }
 
     private func saveUserInput() {
-        placeSuggestionDisplayItem?.image1 = imageView1.image!
-        placeSuggestionDisplayItem?.image2 = imageView2.image!
+        placeSuggestionDisplayItem?.image1 = imageView1.image ?? UIImage()
+        placeSuggestionDisplayItem?.image2 = imageView2.image ?? UIImage()
         placeSuggestionDisplayItem?.image3 = imageView3.image
         placeSuggestionDisplayItem?.image4 = imageView4.image
     }
@@ -123,10 +130,14 @@ extension SubmitImagesViewController {
         imageView2.image = placeSuggestionDisplayItem?.image2
         imageView3.image = placeSuggestionDisplayItem?.image3
         imageView4.image = placeSuggestionDisplayItem?.image4
+
+        imageViews.forEach {
+            $0.showPlaceHolderIfNeeded()
+        }
     }
 
     private func updateImage(to image: UIImage?) {
-        [imageView1, imageView2, imageView3, imageView4]
+        imageViews
             .filter { $0 == currentImageView }
             .first
             .map { $0.image = image }
