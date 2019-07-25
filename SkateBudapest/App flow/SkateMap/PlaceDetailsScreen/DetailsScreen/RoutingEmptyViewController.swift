@@ -15,6 +15,7 @@ class RoutingEmptyViewController: UIViewController, StoryboardLoadable {
 
     // MARK: View lifecycle
     override func viewDidLoad() {
+        super.viewDidLoad()
         configureSelf()
     }
 

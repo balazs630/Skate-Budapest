@@ -35,12 +35,14 @@ class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let xOffset = imageScrollView.frame.width * CGFloat(imageOffset.row)
         pageControl.currentPage = imageOffset.row
         imageScrollView.setContentOffset(CGPoint(x: xOffset, y: 0), animated: false)
     }
 
     override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
         if parent == nil {
             backToSkateMapScreen()
         }

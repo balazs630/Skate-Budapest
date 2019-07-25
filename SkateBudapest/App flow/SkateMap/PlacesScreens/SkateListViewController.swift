@@ -23,6 +23,7 @@ class SkateListViewController: UIViewController, StoryboardLoadable {
     }
 
     override func didMove(toParent parent: UIViewController?) {
+        super.didMove(toParent: parent)
         if parent != nil {
             updateListWaypoints()
         }

@@ -15,6 +15,7 @@ class ImagePreviewFullViewCell: UICollectionViewCell {
 
     // MARK: View lifecycle
     override func awakeFromNib() {
+        super.awakeFromNib()
         scrollView.delegate = self
         addDoubleTapGestureRecogniser()
     }
