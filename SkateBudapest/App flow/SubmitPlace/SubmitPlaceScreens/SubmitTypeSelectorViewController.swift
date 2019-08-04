@@ -45,7 +45,9 @@ class SubmitTypeSelectorViewController: UIViewController, StoryboardLoadable {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        videoViewCollection.forEach { $0.stop() }
+        videoViewCollection.forEach {
+            $0.commonDeinit()
+        }
     }
 }
 
@@ -67,7 +69,7 @@ extension SubmitTypeSelectorViewController {
         skateshopLabel.text = Texts.SkateMap.skateshopType.localized
     }
 
-    private func configureVideoViews() {
+    func configureVideoViews() {
         skateparkVideoView.configure(filename: Constant.Video.skatepark)
         streetSpotVideoView.configure(filename: Constant.Video.streetspot)
         skateshopVideoView.configure(filename: Constant.Video.skateshop)

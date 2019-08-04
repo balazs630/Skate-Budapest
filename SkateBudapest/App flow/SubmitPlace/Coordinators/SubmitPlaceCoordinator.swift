@@ -89,6 +89,7 @@ extension SubmitPlaceCoordinator {
     func backToSubmitTypeSelectorScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
         let previousScreen: SubmitTypeSelectorViewController? = firstViewController()
         previousScreen?.placeSuggestionDisplayItem = placeSuggestion
+        previousScreen?.configureVideoViews()
     }
 
     func backToSubmitTextsScreen(with placeSuggestion: PlaceSuggestionDisplayItem?) {
