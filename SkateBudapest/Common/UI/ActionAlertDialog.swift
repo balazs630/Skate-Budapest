@@ -9,13 +9,21 @@
 import UIKit
 
 class ActionAlertDialog {
-    static func build(title: String = "", message: String = "", primaryAction: UIAlertAction) -> UIAlertController {
+    static func build(title: String = "",
+                      message: String = "",
+                      primaryAction: UIAlertAction,
+                      cancelAction: UIAlertAction? = nil) -> UIAlertController {
         let alertController = UIAlertController(title: title,
                                                 message: message,
                                                 preferredStyle: .alert)
 
-        let cancelAction = UIAlertAction(title: Texts.General.cancel.localized, style: .cancel, handler: nil)
-        [primaryAction, cancelAction].forEach { alertController.addAction($0) }
+        alertController.addAction(primaryAction)
+        if let cancelAction = cancelAction {
+            alertController.addAction(cancelAction)
+        } else {
+            let defaultCancelAction = UIAlertAction(title: Texts.General.cancel.localized, style: .cancel, handler: nil)
+            alertController.addAction(defaultCancelAction)
+        }
 
         return alertController
     }
