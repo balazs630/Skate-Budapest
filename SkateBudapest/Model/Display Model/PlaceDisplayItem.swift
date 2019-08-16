@@ -8,7 +8,6 @@
 import MapKit
 
 final class PlaceDisplayItem: NSObject {
-    // swiftlint:disable:next identifier_name
     var id: String
     var latitude: Double
     var longitude: Double

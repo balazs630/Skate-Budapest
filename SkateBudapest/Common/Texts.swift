@@ -8,7 +8,6 @@
 
 struct Texts {
     enum General: String, Localizable {
-        // swiftlint:disable:next identifier_name
         case ok
         case loading
         case uploading

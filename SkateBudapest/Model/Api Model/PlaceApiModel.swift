@@ -8,7 +8,6 @@
 import UIKit
 
 struct PlaceApiModel: Codable {
-    // swiftlint:disable:next identifier_name
     var id: String
     var latitude: Double
     var longitude: Double

@@ -13,5 +13,10 @@ custom_rules:
         regex: '(print\()'
         severity: error
 
+identifier_name:
+  excluded:
+    - id
+    - ok
+
 excluded:
   - Pods

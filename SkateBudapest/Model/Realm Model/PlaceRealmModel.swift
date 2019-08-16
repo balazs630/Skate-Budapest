@@ -9,7 +9,6 @@
 import RealmSwift
 
 final class PlaceRealmModel: Object {
-    // swiftlint:disable:next identifier_name
     @objc dynamic var id = ""
     @objc dynamic var latitude = 0.0
     @objc dynamic var longitude = 0.0
