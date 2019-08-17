@@ -61,7 +61,7 @@ extension SkateMapViewController {
     private func loadMapWaypoints() {
         addActivityIndicator(title: Texts.General.loading.localized)
 
-        placeCachingService.getPlaces { [weak self] result in
+        placeCachingService.getPlaces(on: self) { [weak self] result in
             guard let `self` = self else { return }
             self.removeActivityIndicator()
 

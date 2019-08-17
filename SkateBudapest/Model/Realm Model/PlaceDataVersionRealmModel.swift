@@ -9,10 +9,11 @@
 import RealmSwift
 
 final class PlaceDataVersionRealmModel: Object {
+    @objc dynamic var id = ""
     @objc dynamic var dataVersion = ""
 
     override class func primaryKey() -> String? {
-        return "dataVersion"
+        return "id"
     }
 }
 
@@ -20,6 +21,7 @@ final class PlaceDataVersionRealmModel: Object {
 extension PlaceDataVersionRealmModel {
     convenience init(_ placeDataVersionApiModel: PlaceDataVersionApiModel) {
         self.init()
+        self.id = placeDataVersionApiModel.id
         self.dataVersion = placeDataVersionApiModel.dataVersion
     }
 }

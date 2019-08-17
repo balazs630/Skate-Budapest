@@ -15,6 +15,7 @@ struct Texts {
         case cancel
         case delete
         case settings
+        case update
 
         case photoLibrary
         case takePhoto
@@ -32,6 +33,9 @@ struct Texts {
 
         case filterScreenTitle
         case filterButtonTitle
+
+        case updateDatabaseTitle
+        case updateDatabaseMessage
 
         case skateparkType
         case streetspotType

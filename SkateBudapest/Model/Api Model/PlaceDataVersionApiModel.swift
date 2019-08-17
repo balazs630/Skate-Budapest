@@ -6,5 +6,6 @@
 //
 
 struct PlaceDataVersionApiModel: Codable {
+    var id: String
     var dataVersion: String
 }

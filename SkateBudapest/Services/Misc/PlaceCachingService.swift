@@ -6,7 +6,7 @@
 //  Copyright © 2018. Horváth Balázs. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class PlaceCachingService {
     // MARK: Properties
@@ -16,7 +16,8 @@ class PlaceCachingService {
 
 // MARK: Retrieve data from network or database
 extension PlaceCachingService {
-    func getPlaces(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
+    func getPlaces(on viewController: UIViewController,
+                   completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
         realmService.isPlacesDataPersisted { [weak self] isPlacesDataPersisted in
             guard let `self` = self else { return }
 
@@ -24,7 +25,8 @@ extension PlaceCachingService {
                 self.isPlacesUpdateAvailable { [weak self] updateAvailable in
                     guard let `self` = self else { return }
                     if updateAvailable {
-                        self.getFromNetwork(completion: completion)
+                        let updateAlertDialog = self.buildUpdateActionDialog(completion: completion)
+                        viewController.present(updateAlertDialog, animated: true)
                     } else {
                         self.getFromDatabase(completion: completion)
                     }
@@ -90,5 +92,21 @@ extension PlaceCachingService {
                 completion(false)
             }
         }
+    }
+
+    private func buildUpdateActionDialog(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void)
+            -> UIAlertController {
+        let updateAction = UIAlertAction(title: Texts.General.update.localized, style: .default) { _ in
+            self.getFromNetwork(completion: completion)
+        }
+
+        let cancelAction = UIAlertAction(title: Texts.General.cancel.localized, style: .cancel) { _ in
+            self.getFromDatabase(completion: completion)
+        }
+
+        return ActionAlertDialog.build(title: Texts.SkateMap.updateDatabaseTitle.localized,
+                                       message: Texts.SkateMap.updateDatabaseMessage.localized,
+                                       primaryAction: updateAction,
+                                       cancelAction: cancelAction)
     }
 }

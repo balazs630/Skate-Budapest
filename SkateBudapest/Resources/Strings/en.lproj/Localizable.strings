@@ -16,6 +16,7 @@
 "cancel" = "Cancel";
 "delete" = "Delete";
 "settings" = "Settings";
+"update" = "Update";
 
 "photoLibrary" = "Photo library";
 "takePhoto" = "Camera";
@@ -32,6 +33,9 @@
 
 "filterScreenTitle" = "Filter by place type";
 "filterButtonTitle" = "Filter";
+
+"updateDatabaseTitle" = "Information";
+"updateDatabaseMessage" = "New version of place collection is available.";
 
 "skateparkType" = "Skatepark";
 "streetspotType" = "Streetspot";

@@ -27,14 +27,14 @@ class RealmService {
         completion(placeDataVersion.first?.dataVersion)
     }
 
-    func writePlaces(_ places: [PlaceApiModel], update: Bool = false) {
+    func writePlaces(_ places: [PlaceApiModel], update: Bool) {
         guard let realm = realm else { return }
         try? realm.write {
             realm.add(places.map { PlaceRealmModel($0) }, update: update)
         }
     }
 
-    func writePlaceDataVersion(_ placeDataVersion: PlaceDataVersionApiModel, update: Bool = false) {
+    func writePlaceDataVersion(_ placeDataVersion: PlaceDataVersionApiModel, update: Bool) {
         guard let realm = realm else { return }
         try? realm.write {
             realm.add(PlaceDataVersionRealmModel(placeDataVersion), update: update)
