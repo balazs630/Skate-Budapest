@@ -77,7 +77,7 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
             saveUserInput()
             toSubmitImagesScreen()
         } catch let error as ValidationError {
-            present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
+            ResultAlertDialog(title: error.title, message: error.message).show()
         } catch { }
     }
 }

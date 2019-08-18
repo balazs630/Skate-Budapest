@@ -29,25 +29,3 @@ enum ButtonStyle {
         }
     }
 }
-
-struct ButtonAppearance {
-    // MARK: Properties
-    var backgroundColor: UIColor
-    var font: UIFont
-    var textColor: UIColor
-    var radious: CGFloat
-    var contentInsets: UIEdgeInsets
-
-    // MARK: Initializers
-    init(font: UIFont,
-         textColor: UIColor,
-         backgroundColor: UIColor,
-         radious: CGFloat,
-         contentInsets: UIEdgeInsets) {
-        self.font = font
-        self.textColor = textColor
-        self.backgroundColor = backgroundColor
-        self.radious = radious
-        self.contentInsets = contentInsets
-    }
-}

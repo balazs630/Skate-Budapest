@@ -61,7 +61,7 @@ extension SkateMapViewController {
     private func loadMapWaypoints() {
         addActivityIndicator(title: Texts.General.loading.localized)
 
-        placeCachingService.getPlaces(on: self) { [weak self] result in
+        placeCachingService.getPlaces() { [weak self] result in
             guard let `self` = self else { return }
             self.removeActivityIndicator()
 
@@ -69,7 +69,7 @@ extension SkateMapViewController {
             case .success(let waypoints):
                 self.waypoints = waypoints
             case .failure(let error):
-                self.present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
+                ResultAlertDialog(title: error.title, message: error.message).show()
             }
         }
     }

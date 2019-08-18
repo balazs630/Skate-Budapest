@@ -16,8 +16,7 @@ class PlaceCachingService {
 
 // MARK: Retrieve data from network or database
 extension PlaceCachingService {
-    func getPlaces(on viewController: UIViewController,
-                   completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
+    func getPlaces(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void) {
         realmService.isPlacesDataPersisted { [weak self] isPlacesDataPersisted in
             guard let `self` = self else { return }
 
@@ -25,8 +24,7 @@ extension PlaceCachingService {
                 self.isPlacesUpdateAvailable { [weak self] updateAvailable in
                     guard let `self` = self else { return }
                     if updateAvailable {
-                        let updateAlertDialog = self.buildUpdateActionDialog(completion: completion)
-                        viewController.present(updateAlertDialog, animated: true)
+                        self.buildUpdateActionDialog(completion: completion).show()
                     } else {
                         self.getFromDatabase(completion: completion)
                     }
@@ -95,7 +93,7 @@ extension PlaceCachingService {
     }
 
     private func buildUpdateActionDialog(completion: @escaping (Result<[PlaceDisplayItem]>) -> Void)
-            -> UIAlertController {
+            -> AlertController {
         let updateAction = UIAlertAction(title: Texts.General.update.localized, style: .default) { _ in
             self.getFromNetwork(completion: completion)
         }
@@ -104,9 +102,9 @@ extension PlaceCachingService {
             self.getFromDatabase(completion: completion)
         }
 
-        return ActionAlertDialog.build(title: Texts.SkateMap.updateDatabaseTitle.localized,
-                                       message: Texts.SkateMap.updateDatabaseMessage.localized,
-                                       primaryAction: updateAction,
-                                       cancelAction: cancelAction)
+        return ActionAlertDialog(title: Texts.SkateMap.updateDatabaseTitle.localized,
+                                 message: Texts.SkateMap.updateDatabaseMessage.localized,
+                                 primaryAction: updateAction,
+                                 cancelAction: cancelAction)
     }
 }

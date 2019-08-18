@@ -82,11 +82,11 @@ extension MediaAlertController {
             UIApplication.openSettings()
         }
 
-        let alertController = ActionAlertDialog.build(title: Texts.General.permissionDenied.localized,
-                                                      message: message,
-                                                      primaryAction: openSettingsAction)
+        let alert = ActionAlertDialog(title: Texts.General.permissionDenied.localized,
+                                      message: message,
+                                      primaryAction: openSettingsAction)
 
-        presenter?.present(alertController, animated: true)
+        presenter?.present(alert, animated: true)
     }
 }
 

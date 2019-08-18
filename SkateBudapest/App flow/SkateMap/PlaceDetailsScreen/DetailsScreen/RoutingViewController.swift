@@ -98,8 +98,8 @@ extension RoutingViewController {
             directions.calculateETA { [weak self] (etaResponse, error) -> Void in
                 guard let `self` = self else { return }
                 if let error = error {
-                    self.present(ResultAlertDialog.build(title: Texts.LocationDetails.directions.localized,
-                                                         message: error.localizedDescription), animated: true)
+                    ResultAlertDialog(title: Texts.LocationDetails.directions.localized,
+                                      message: error.localizedDescription).show()
                 } else {
                     if let travelTime = etaResponse?.expectedTravelTime {
                         self.setTransitTimeButtonTexts(for: transportType, travelTime: travelTime)

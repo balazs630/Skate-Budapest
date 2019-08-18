@@ -73,6 +73,8 @@
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
 		AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC907892212997F600FC0528 /* UIImageViewExtensions.swift */; };
 		AC9078952129B72900FC0528 /* ImagePreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */; };
+		AC9371892308C33300296949 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9371882308C33300296949 /* AlertController.swift */; };
+		AC93718D2309FAE900296949 /* ButtonAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC93718C2309FAE900296949 /* ButtonAppearance.swift */; };
 		AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */; };
 		AC96C16B22C2D2C1007D7C2D /* ImageViewPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */; };
 		ACA2CF0622C941E000E35C4D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA2CF0522C941E000E35C4D /* Log.swift */; };
@@ -177,6 +179,8 @@
 		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		AC907892212997F600FC0528 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		AC9078942129B72900FC0528 /* ImagePreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewFullViewCell.swift; sourceTree = "<group>"; };
+		AC9371882308C33300296949 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		AC93718C2309FAE900296949 /* ButtonAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAppearance.swift; sourceTree = "<group>"; };
 		AC95CF5E2157C72000D90F04 /* TimeIntervalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtensions.swift; sourceTree = "<group>"; };
 		AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPicker.swift; sourceTree = "<group>"; };
 		ACA2CF0522C941E000E35C4D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -494,6 +498,40 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		AC93718A2309F9E800296949 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				AC9371882308C33300296949 /* AlertController.swift */,
+				AC11F26C2290C971008ECBDD /* ActionAlertDialog.swift */,
+				AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */,
+				AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		AC93718B2309FAD500296949 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				ACBD42CD22AEA6DC007E89A0 /* DescriptionLabel.swift */,
+				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
+				AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */,
+				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
+				AC1484FA22B13CF20005BE18 /* TextView.swift */,
+				AC7E33392299CD4C0011B36F /* VideoView.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		AC93718E2309FAF600296949 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				ACC509D822AC7435005E99E0 /* Button.swift */,
+				ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */,
+				AC93718C2309FAE900296949 /* ButtonAppearance.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		AC947F66219E2BC7005007C4 /* SubmitPlaceScreens */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,17 +617,9 @@
 		ACD5CBB821D1953C00EDE3E0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				AC11F26C2290C971008ECBDD /* ActionAlertDialog.swift */,
-				ACC509D822AC7435005E99E0 /* Button.swift */,
-				ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */,
-				ACBD42CD22AEA6DC007E89A0 /* DescriptionLabel.swift */,
-				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
-				AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */,
-				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
-				AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */,
-				AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */,
-				AC1484FA22B13CF20005BE18 /* TextView.swift */,
-				AC7E33392299CD4C0011B36F /* VideoView.swift */,
+				AC93718A2309F9E800296949 /* Alert */,
+				AC93718E2309FAF600296949 /* Button */,
+				AC93718B2309FAD500296949 /* Misc */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -775,6 +805,7 @@
 				ACB292F0223541F000DBB862 /* SubmitTextsViewController.swift in Sources */,
 				AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */,
 				AC64A9C022589932006728D6 /* ImageSizeBiggerThanValidator.swift in Sources */,
+				AC9371892308C33300296949 /* AlertController.swift in Sources */,
 				AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */,
 				AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
@@ -824,6 +855,7 @@
 				AC2C030F21AADD1B00784F4E /* PlaceDataVersionApiModel.swift in Sources */,
 				AC2D9DAA21335558003A6263 /* PlaceFilterViewController.swift in Sources */,
 				AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */,
+				AC93718D2309FAE900296949 /* ButtonAppearance.swift in Sources */,
 				AC4394A122D3EE2200BF4958 /* SkateListCell.swift in Sources */,
 				AC2599FB22D31B6D002D74A1 /* SkateListViewController.swift in Sources */,
 				AC18D5C5223BD95A00CB7243 /* PlaceSuggestionDisplayItem.swift in Sources */,

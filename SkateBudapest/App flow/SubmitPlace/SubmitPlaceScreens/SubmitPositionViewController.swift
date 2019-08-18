@@ -90,7 +90,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
             saveUserInput()
             sendPlaceSuggestion()
         } catch let error as ValidationError {
-            present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
+            ResultAlertDialog(title: error.title, message: error.message).show()
         } catch { }
     }
 
@@ -108,7 +108,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
             case .success:
                 self.toSubmitSummaryScreen()
             case .failure(let error):
-                self.present(ResultAlertDialog.build(title: error.title, message: error.message), animated: true)
+                ResultAlertDialog(title: error.title, message: error.message).show()
             }
         }
     }
