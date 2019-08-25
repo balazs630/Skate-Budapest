@@ -1,6 +1,6 @@
 *** Keywords ***
 Launch App
-    Open Application  ${APPIUM_SERVER}  platformName=${PLATFORM_NAME}  platformVersion=${PLATFORM_VERSION}  deviceName=${DEVICE_NAME}  app=${APP}  automationName=appium  appPackage=${APP_PACKAGE}
+    Open Application  ${APPIUM_SERVER}  platformName=${PLATFORM_NAME}  platformVersion=${PLATFORM_VERSION}  deviceName=${DEVICE_NAME}  app=${APP}  automationName=appium  appPackage=${APP_PACKAGE} autoAcceptAlerts=true
 
 Allow Location Permission
     Click Element  nsp=name=="Allow"
