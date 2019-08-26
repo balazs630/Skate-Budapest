@@ -38,4 +38,5 @@ In PyCharm, install `Robot Framework Support` plugin for sytax highlight and aut
 
 ## Documentation
 
-https://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html 
+https://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
