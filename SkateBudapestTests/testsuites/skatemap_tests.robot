@@ -1,7 +1,8 @@
 *** Settings ***
 Library           AppiumLibrary
-Resource          util/variables.robot
-Resource          util/keywords.robot
+Resource          ../configuration/appium.robot
+Resource          ../util/variables.robot
+Resource          ../util/keywords.robot
 
 *** Test Case ***
 Test SkateMap Screen

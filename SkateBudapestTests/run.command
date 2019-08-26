@@ -8,4 +8,4 @@ OUTPUT_DIR=report
 cd "$(dirname "$0")"
 cp -fR $APP_SOURCE_FILE $APP_DEST_DIR
 
-robot --outputdir $OUTPUT_DIR testcases.robot
+robot --outputdir $OUTPUT_DIR testsuites
