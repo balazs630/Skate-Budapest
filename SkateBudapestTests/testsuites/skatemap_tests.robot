@@ -1,21 +1,21 @@
 *** Settings ***
 Library           AppiumLibrary
+
 Resource          ../configuration/appium.robot
 Resource          ../util/variables.robot
 Resource          ../util/keywords.robot
 
+Suite Setup       Launch App
+Documentation     Test main skatemap screen, list screen, detail screen and waypoint filtering related functionality.
+
 *** Test Case ***
 Test SkateMap Screen
-    Launch App
-
     Map Screen Elements Are Visible
 
     Tap Toggle Map Layer
     Tap Toggle Map Layer
 
 Test SkateMap Waypoint Selection
-    Launch App
-
     Tap On Map Waypoint
     Waypoint Preview Is Visible
     Deselect Map Waypoint
@@ -24,8 +24,6 @@ Test SkateMap Waypoint Selection
     Waypoint Preview Is Visible
 
 Test Place Details Screen From Map
-    Launch App
-
     Tap On Map Waypoint
     Tap On Map Waypoint Preview
 
@@ -38,8 +36,6 @@ Test Place Details Screen From Map
     Map Screen Elements Are Visible
 
 Test Place Details Screen From List
-    Launch App
-
     Switch To List View
 
     List Screen Elements Are Visible
@@ -53,8 +49,6 @@ Test Place Details Screen From List
     Map Screen Elements Are Visible
 
 Test Waypoint Filter Open/Close
-    Launch App
-
     Tap On Filter Button
     Filter Elements Are Visible
     Filter Options Are Turned On
@@ -68,8 +62,6 @@ Test Waypoint Filter Open/Close
     Filter Options Are Turned On
 
 Test Waypoint Map Filtering
-    Launch App
-
     Tap On Filter Button
     Filter Turn Off All Options
     Filter Save
@@ -84,8 +76,6 @@ Test Waypoint Map Filtering
     List Waypoints Are Not Visible
 
 Test Waypoint List Filtering
-    Launch App
-
     Switch To List View
 
     Tap On Filter Button

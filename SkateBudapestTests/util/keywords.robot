@@ -2,6 +2,13 @@
 Launch App
     Open Application  ${APPIUM_SERVER}  platformName=${PLATFORM_NAME}  platformVersion=${PLATFORM_VERSION}  deviceName=${DEVICE_NAME}  app=${APP}  automationName=appium  appPackage=${APP_PACKAGE} autoAcceptAlerts=true
 
+Tap On
+    [Arguments]  ${element}
+    Click Element  ${element}
+
+Navigate Back
+    Click A Point  40  30
+
 Allow Location Permission
     Click Element  nsp=name=="Allow"
 
