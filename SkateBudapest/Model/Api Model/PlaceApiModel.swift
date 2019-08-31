@@ -21,7 +21,7 @@ struct PlaceApiModel: Codable {
 enum WaypointType: String, CaseIterable, Codable {
     case skatepark, skateshop, streetspot
 
-    var image: UIImage {
+    var pinIcon: UIImage {
         switch self {
         case .skatepark:
             return Theme.Icon.skateparkPin

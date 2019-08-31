@@ -24,19 +24,12 @@ class ImageViewerViewController: UIViewController, StoryboardLoadable {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setCollectionViewDelegate()
-        setCollectionViewDataSource()
+        configureSelf()
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-
-        guard let flowLayout = imageCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
-        flowLayout.itemSize = imageCollectionView.frame.size
-        flowLayout.invalidateLayout()
-
-        imageCollectionView.collectionViewLayout.invalidateLayout()
+        updateCollectionViewLayout()
     }
 
     override func viewDidLayoutSubviews() {
@@ -48,14 +41,27 @@ class ImageViewerViewController: UIViewController, StoryboardLoadable {
         super.viewWillDisappear(animated)
         delegate?.updateImageOffset(indexPath: imageOffset)
     }
-}
 
-// MARK: UICollectionViewDataSource
-extension ImageViewerViewController: UICollectionViewDataSource {
-    private func setCollectionViewDataSource() {
-        imageCollectionView.dataSource = self
+    // MARK: Screen configuration
+    private func configureSelf() {
+        configureCollectionView()
     }
 
+    private func configureCollectionView() {
+        imageCollectionView.accessibilityIdentifier = AccessibilityID.PlaceDetails.imageViewer
+        imageCollectionView.dataSource = self
+        imageCollectionView.delegate = self
+    }
+
+    private func updateCollectionViewLayout() {
+        guard let flowLayout = imageCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        flowLayout.itemSize = imageCollectionView.frame.size
+        flowLayout.invalidateLayout()
+    }
+}
+
+// MARK: UICollectionViewDataSource methods
+extension ImageViewerViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
@@ -76,8 +82,4 @@ extension ImageViewerViewController: UICollectionViewDataSource {
 }
 
 // MARK: UICollectionViewDelegate
-extension ImageViewerViewController: UICollectionViewDelegate {
-    private func setCollectionViewDelegate() {
-        imageCollectionView.delegate = self
-    }
-}
+extension ImageViewerViewController: UICollectionViewDelegate { }

@@ -30,6 +30,7 @@ extension SkateMapCoordinator {
         viewController.tabBarItem = UITabBarItem(title: Texts.SkateMap.mapTabBarTitle.localized,
                                                  image: Theme.Icon.mapIcon,
                                                  selectedImage: Theme.Icon.mapIcon)
+        viewController.tabBarItem.accessibilityIdentifier = AccessibilityID.SkateMap.mapTabBar
     }
 }
 

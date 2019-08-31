@@ -31,8 +31,13 @@ class SkateListViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
+        configureTableview()
+    }
+
+    private func configureTableview() {
         placesTableView.delegate = self
         placesTableView.dataSource = dataSource
+        placesTableView.accessibilityIdentifier = AccessibilityID.SkateMap.listTableView
     }
 }
 

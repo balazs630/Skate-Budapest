@@ -10,4 +10,4 @@ Documentation     Test submit place screens, including textfield and image input
 
 *** Test Case ***
 Test Description Screen Step
-    Sleep 1s
+    Sleep  1s

@@ -57,6 +57,7 @@ extension PlaceDetailsViewController {
         configureLocationTypeView()
         configureImageScrollView()
         configurePageControl()
+        addAccessibilityIDs()
     }
 
     private func configureNavigationBarTitleView() {
@@ -80,6 +81,15 @@ extension PlaceDetailsViewController {
         }
 
         return String(format: "%.1f km", distance / 1000)
+    }
+
+    private func addAccessibilityIDs() {
+        titleLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.titleLabel
+        locationTypeView.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryView
+        locationTypeLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryLabel
+        distanceLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.distanceLabel
+        descriptionLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.descriptionLabel
+        pageControl.accessibilityIdentifier = AccessibilityID.PlaceDetails.imageStepper
     }
 
     private func configureLocationTypeView() {
@@ -124,6 +134,7 @@ extension PlaceDetailsViewController {
         (0..<images.count).forEach { index in
             let imageView = UIImageView()
             imageView.image = images[index]
+            imageView.accessibilityIdentifier = AccessibilityID.PlaceDetails.image
             imageView.contentMode = .scaleAspectFit
             imageView.frame = CGRect(x: view.frame.width * CGFloat(index),
                                      y: 0,

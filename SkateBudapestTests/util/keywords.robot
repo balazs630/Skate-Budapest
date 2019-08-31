@@ -9,8 +9,8 @@ Tap On
 Navigate Back
     Click A Point  40  30
 
-Allow Location Permission
+Allow Permission
     Click Element  nsp=name=="Allow"
 
-Don't Allow Location Permission
+Don't Allow Permission
     Click Element  nsp=name=="Don’t Allow"

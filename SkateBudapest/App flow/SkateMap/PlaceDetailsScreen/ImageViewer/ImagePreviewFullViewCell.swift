@@ -16,19 +16,32 @@ class ImagePreviewFullViewCell: UICollectionViewCell {
     // MARK: View lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        scrollView.delegate = self
-        addDoubleTapGestureRecogniser()
+        configureSelf()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        scrollView.frame = bounds
-        imageView.frame = bounds
+        updateFrames()
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        configureScrollView()
+    }
+
+    // MARK: Screen configuration
+    private func configureSelf() {
+        scrollView.delegate = self
+        addDoubleTapGestureRecogniser()
+    }
+
+    private func configureScrollView() {
         scrollView.setZoomScale(1, animated: true)
+    }
+
+    private func updateFrames() {
+        scrollView.frame = bounds
+        imageView.frame = bounds
     }
 
     // MARK: Render cell

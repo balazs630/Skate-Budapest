@@ -22,6 +22,7 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
     // MARK: Outlets
     @IBOutlet weak var placesMapView: MKMapView!
     @IBOutlet weak var centerLocationButton: UIButton!
+    @IBOutlet weak var mapLayerButton: UIButton!
 
     // MARK: View lifecycle
     override func viewDidLoad() {
@@ -41,8 +42,18 @@ class SkateMapViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
+        configureMapview()
+        addAccessibilityIDs()
+    }
+
+    private func configureMapview() {
         placesMapView.delegate = self
         placesMapView.setRegion(Constant.defaultCityRegion, animated: true)
+    }
+
+    private func addAccessibilityIDs() {
+        centerLocationButton.accessibilityIdentifier = AccessibilityID.SkateMap.mapLocationButton
+        mapLayerButton.accessibilityIdentifier = AccessibilityID.SkateMap.mapLayerButton
     }
 
     // MARK: Actions
@@ -104,8 +115,9 @@ extension SkateMapViewController: MKMapViewDelegate {
             fatalError("Unable to cast MKAnnotation to PlaceDisplayItem")
         }
 
+        annotationView.accessibilityIdentifier = AccessibilityID.SkateMap.mapWaypointPin
         annotationView.canShowCallout = true
-        annotationView.image = waypoint.type.image
+        annotationView.image = waypoint.type.pinIcon
         annotationView.leftCalloutAccessoryView = UIButton(frame: Constant.calloutImageViewSize)
         annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight)
 

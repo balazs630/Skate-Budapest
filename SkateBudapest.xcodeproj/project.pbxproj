@@ -63,6 +63,7 @@
 		AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19221B08AA000C20451 /* RealmService.swift */; };
 		AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19621B2B1A600C20451 /* BaseWebService.swift */; };
 		AC6BD19C21B2B63C00C20451 /* ResultAlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */; };
+		AC6BDEDD231AFAB700F3041F /* AccessibilityIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BDEDC231AFAB700F3041F /* AccessibilityIDs.swift */; };
 		AC7B3690227E266B000A2C9C /* MKMapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7B368F227E266B000A2C9C /* MKMapViewExtensions.swift */; };
 		AC7E333A2299CD4C0011B36F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7E33392299CD4C0011B36F /* VideoView.swift */; };
 		AC7F33CB22386C7F0015B1C8 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */; };
@@ -169,6 +170,7 @@
 		AC6BD19221B08AA000C20451 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		AC6BD19621B2B1A600C20451 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
 		AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAlertDialog.swift; sourceTree = "<group>"; };
+		AC6BDEDC231AFAB700F3041F /* AccessibilityIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIDs.swift; sourceTree = "<group>"; };
 		AC7B368F227E266B000A2C9C /* MKMapViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtensions.swift; sourceTree = "<group>"; };
 		AC7E33392299CD4C0011B36F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		AC7F33CA22386C7F0015B1C8 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 				AC64A9B3225881E7006728D6 /* Validation */,
 				ACA489BA20FA9E890084D9F3 /* Constants.swift */,
 				ACD5CBBC21D195E700EDE3E0 /* Texts.swift */,
+				AC6BDEDC231AFAB700F3041F /* AccessibilityIDs.swift */,
 				AC18D5CC22468CDA00CB7243 /* Theme.swift */,
 			);
 			path = Common;
@@ -884,6 +887,7 @@
 				AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */,
 				AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */,
 				ACB3919422A06F8F00E017AF /* SubmitPlaceDescriptionViewController.swift in Sources */,
+				AC6BDEDD231AFAB700F3041F /* AccessibilityIDs.swift in Sources */,
 				ACD5CBBB21D195B300EDE3E0 /* Localizable.swift in Sources */,
 				AC6905FD21C073E400A2088A /* BaseError.swift in Sources */,
 			);

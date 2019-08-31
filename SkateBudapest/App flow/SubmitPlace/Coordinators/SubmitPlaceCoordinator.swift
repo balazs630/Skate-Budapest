@@ -30,6 +30,7 @@ extension SubmitPlaceCoordinator {
         viewController.tabBarItem = UITabBarItem(title: Texts.SubmitPlace.submit.localized,
                                                  image: Theme.Icon.addPinIcon,
                                                  selectedImage: Theme.Icon.addPinIcon)
+        viewController.tabBarItem.accessibilityIdentifier = AccessibilityID.SkateMap.submitTabBar
     }
 }
 

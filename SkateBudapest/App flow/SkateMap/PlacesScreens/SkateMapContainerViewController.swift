@@ -39,15 +39,21 @@ class SkateMapContainerViewController: UIViewController, StoryboardLoadable {
     private func configureNavigationBar() {
         navigationItem.title = Texts.SkateMap.mapNavBarTitle.localized
         navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
+        addFilterNavigationBarItem()
+    }
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: Theme.Icon.filteringEmpty,
-            style: .done,
-            target: self,
-            action: #selector(toFilteringScreen))
+    private func addFilterNavigationBarItem() {
+        let filterButton = UIBarButtonItem(image: Theme.Icon.filteringEmpty,
+                                           style: .done,
+                                           target: self,
+                                           action: #selector(toFilteringScreen))
+
+        filterButton.accessibilityIdentifier = AccessibilityID.Filter.navBarButton
+        navigationItem.rightBarButtonItem = filterButton
     }
 
     private func configureSegmentedControl() {
+        segmentedControl.accessibilityIdentifier = AccessibilityID.SkateMap.mapSegmentControl
         segmentedControl.setTitle(Texts.SkateMap.mapSegmentTitle.localized,
                                   forSegmentAt: SegmentedControlState.map.rawValue)
         segmentedControl.setTitle(Texts.SkateMap.listSegmentTitle.localized,
