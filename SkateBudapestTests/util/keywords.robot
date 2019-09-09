@@ -1,16 +1,20 @@
 *** Keywords ***
-Launch App
+Launch app
     Open Application  ${APPIUM_SERVER}  platformName=${PLATFORM_NAME}  platformVersion=${PLATFORM_VERSION}  deviceName=${DEVICE_NAME}  app=${APP}  automationName=appium  appPackage=${APP_PACKAGE} autoAcceptAlerts=true
 
-Tap On
+Tap on
     [Arguments]  ${element}
-    Click Element  ${element}
+    Click element  ${element}
 
-Navigate Back
-    Click A Point  40  30
+Tap a point
+    [Arguments]  ${x}  ${y}
+    Click a point  ${x}  ${y}
 
-Allow Permission
-    Click Element  nsp=name=="Allow"
+Navigate back
+    Tap a point  40  30
 
-Don't Allow Permission
-    Click Element  nsp=name=="Don’t Allow"
+Allow permission
+    Tap on  nsp=name=="Allow"
+
+Don't allow permission
+    Tap on  nsp=name=="Don’t Allow"

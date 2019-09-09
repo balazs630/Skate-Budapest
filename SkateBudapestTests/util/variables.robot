@@ -1,6 +1,9 @@
 *** Variables ***
-
 ## Accessibility IDs:
+
+# ******************************************************************************
+# S K A T E M A P
+# ******************************************************************************
 ${SKATEMAP_MAP_TAB_BAR}                                     skatemap.map.tab.bar
 ${SKATEMAP_SUBMIT_TAB_BAR}                                  skatemap.submit.tab.bar
 
@@ -31,3 +34,9 @@ ${SKATEMAP_DETAIL_ENABLE_LOCATION_BUTTON}                   skatemap.detail.enab
 ${SKATEMAP_DETAIL_IMAGE}                                    skatemap.detail.image
 ${SKATEMAP_DETAIL_IMAGE_STEPPER}                            skatemap.detail.image.stepper
 ${SKATEMAP_DETAIL_IMAGE_VIEWER}                             skatemap.detail.image.viewer
+
+# ******************************************************************************
+# S U B M I T   P L A C E
+# ******************************************************************************
+
+# TODO

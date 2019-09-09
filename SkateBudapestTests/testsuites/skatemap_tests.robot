@@ -5,94 +5,85 @@ Resource          ../configuration/appium.robot
 Resource          ../util/variables.robot
 Resource          ../util/keywords.robot
 
-Suite Setup       Launch App
+Suite Setup       Launch app
 Documentation     Test main skatemap screen, list screen, detail screen and waypoint filtering related functionality.
 
 *** Test Case ***
-Test SkateMap Screen
-    Map Screen Elements Are Visible
+Skatemap screen
+    Map screen elements are visible
 
-    Tap Toggle Map Layer
-    Tap Toggle Map Layer
+Place details screen from map
+    When Tap on map waypoint
+        And Tap on map waypoint preview
+    Then Place details screen elements are visible
 
-Test SkateMap Waypoint Selection
-    Tap On Map Waypoint
-    Waypoint Preview Is Visible
-    Deselect Map Waypoint
-    Waypoint Preview Is Not Visible
-    Tap On Map Waypoint
-    Waypoint Preview Is Visible
+    When Open place image
+    Then Image viewer is visible
 
-Test Place Details Screen From Map
-    Tap On Map Waypoint
-    Tap On Map Waypoint Preview
+    When Navigate back
+    Then Place details screen elements are visible
 
-    Place Details Screen Elements Are Visible
-    Open Place Image
-    Place Image Is Visible
-    Navigate Back
-    Place Details Screen Elements Are Visible
-    Navigate Back
-    Map Screen Elements Are Visible
+    When Navigate back
+    Then Map screen elements are visible
 
-Test Place Details Screen From List
-    Switch To List View
+Place details screen from list
+    When Switch to list view
+    Then List screen elements are visible
 
-    List Screen Elements Are Visible
-    Open Waypoint From List
-    Place Details Screen Elements Are Visible
-    Navigate Back
-    List Screen Elements Are Visible
+    When Open waypoint from list
+    Then Place details screen elements are visible
 
-    Switch To Map View
+    When Navigate back
+    Then List screen elements are visible
 
-    Map Screen Elements Are Visible
+    When Switch to map view
+    Then Map screen elements are visible
 
-Test Waypoint Filter Open/Close
-    Tap On Filter Button
-    Filter Elements Are Visible
-    Filter Options Are Turned On
-    Close Filter
-    Filter Elements Are Not Visible
+Waypoint filter open/close
+    When Tap on filter button
+    Then Filter elements are visible
 
-    Tap On Filter Button
-    Filter Turn Off All Options
-    Close Filter
-    Tap On Filter Button
-    Filter Options Are Turned On
+    When Close filter
+    Then Filter elements are not visible
 
-Test Waypoint Map Filtering
-    Tap On Filter Button
-    Filter Turn Off All Options
-    Filter Save
-    Filter Elements Are Not Visible
-    Map Waypoints Are Not Visible
+    When Tap on filter button
+        And Filter turn off all options
+        And Close filter
+        And Tap on filter button
+    Then Filter options are turned on
 
-    Tap On Filter Button
-    Filter Options Are Turned Off
-    Close Filter
+Waypoint map filtering
+    When Tap on filter button
+        And Filter turn off all options
+        And Filter save
+    Then Filter elements are not visible
+        And Map waypoints are not visible
 
-    Switch To List View
-    List Waypoints Are Not Visible
+    When Tap on filter button
+        And Filter options are turned off
+        And Close filter
+        And Switch to list view
+    Then List waypoints are not visible
 
-Test Waypoint List Filtering
-    Switch To List View
+Waypoint list filtering
+    Given Launch app
 
-    Tap On Filter Button
-    Filter Turn Off All Options
-    Filter Save
-    List Waypoints Are Not Visible
+    When Switch to list view
+        And Tap on filter button
+        And Filter turn off all options
+        And Filter save
+    Then List waypoints are not visible
 
-    Switch To Map View
-    Map Waypoints Are Not Visible
+    When Switch to map view
+    Then Map waypoints are not visible
 
-    Switch To List View
-    List Waypoints Are Not Visible
+    When Switch to list view
+    Then List waypoints are not visible
 
-    Tap On Filter Button
-    Filter Turn On All Options
-    Filter Save
-    List Waypoints Are Visible
+    When Tap on filter button
+        And Filter turn on all options
+        And Filter save
+    Then List waypoints are visible
 
-    Switch To Map View
-    Map Waypoints Are Visible
+    When Switch to map view
+    Then Map waypoints are visible
