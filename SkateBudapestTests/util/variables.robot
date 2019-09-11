@@ -2,28 +2,30 @@
 ## Accessibility IDs:
 
 # ******************************************************************************
-# S K A T E M A P
+# S K A T E   M A P
 # ******************************************************************************
 ${SKATEMAP_MAP_TAB_BAR}                                     skatemap.map.tab.bar
 ${SKATEMAP_SUBMIT_TAB_BAR}                                  skatemap.submit.tab.bar
 
 ${SKATEMAP_MAP_SEGMENT_CONTROL}                             skatemap.map.segment.control
-
+${SKATEMAP_MAP_SEGMENT_VIEW}                                #TODO
 ${SKATEMAP_MAP_LAYER_BUTTON}                                skatemap.map.layer.button
 ${SKATEMAP_MAP_LOCATION_BUTTON}                             skatemap.map.location.button
 ${SKATEMAP_MAP_WAYPOINT_PIN}                                skatemap.map.waypoint.pin
+
+# ******************************************************************************
+# S K A T E   L I S T
+# ******************************************************************************
+${SKATEMAP_LIST_SEGMENT_VIEW}                               #TODO
 ${SKATEMAP_LIST_TABLEVIEW}                                  skatemap.list.tableview
+${SKATEMAP_LIST_CELL_CONTAINER_VIEW}                        skatemap.list.cell.container.view
+${SKATEMAP_LIST_CELL_TITLE_LABEL}                           skatemap.list.cell.title.label
+${SKATEMAP_LIST_CELL_DESCRIPTION_LABEL}                     skatemap.list.cell.description.label
+${SKATEMAP_LIST_CELL_THUMBNAIL_IMAGE}                       skatemap.list.cell.thumbnail.image
 
-${SKATEMAP_FILTER_NAV_BAR_BUTTON}                           skatemap.filter.nav.bar.button
-${SKATEMAP_FILTER_TITLE_LABEL}                              skatemap.filter.title.label
-${SKATEMAP_FILTER_SKATESHOP_LABEL}                          skatemap.filter.skateshop.label
-${SKATEMAP_FILTER_SKATESHOP_SWITCH}                         skatemap.filter.skateshop.switch
-${SKATEMAP_FILTER_STREETSPOT_LABEL}                         skatemap.filter.streetspot.label
-${SKATEMAP_FILTER_STREETSPOT_SWITCH}                        skatemap.filter.streetspot.switch
-${SKATEMAP_FILTER_SKATEPARK_LABEL}                          skatemap.filter.skatepark.label
-${SKATEMAP_FILTER_SKATEPARK_SWITCH}                         skatemap.filter.skatepark.switch
-${SKATEMAP_FILTER_ACTION_BUTTON}                            skatemap.filter.action.button
-
+# ******************************************************************************
+# P L A C E   D E T A I L S
+# ******************************************************************************
 ${SKATEMAP_DETAIL_TITLE_LABEL}                              skatemap.detail.title.label
 ${SKATEMAP_DETAIL_CATEGORY_VIEW}                            skatemap.detail.category.view
 ${SKATEMAP_DETAIL_CATEGORY_LABEL}                           skatemap.detail.category.label
@@ -36,7 +38,19 @@ ${SKATEMAP_DETAIL_IMAGE_STEPPER}                            skatemap.detail.imag
 ${SKATEMAP_DETAIL_IMAGE_VIEWER}                             skatemap.detail.image.viewer
 
 # ******************************************************************************
+# F I L T E R
+# ******************************************************************************
+${SKATEMAP_FILTER_NAV_BAR_BUTTON}                           skatemap.filter.nav.bar.button
+${SKATEMAP_FILTER_TITLE_LABEL}                              skatemap.filter.title.label
+${SKATEMAP_FILTER_SKATESHOP_LABEL}                          skatemap.filter.skateshop.label
+${SKATEMAP_FILTER_SKATESHOP_SWITCH}                         skatemap.filter.skateshop.switch
+${SKATEMAP_FILTER_STREETSPOT_LABEL}                         skatemap.filter.streetspot.label
+${SKATEMAP_FILTER_STREETSPOT_SWITCH}                        skatemap.filter.streetspot.switch
+${SKATEMAP_FILTER_SKATEPARK_LABEL}                          skatemap.filter.skatepark.label
+${SKATEMAP_FILTER_SKATEPARK_SWITCH}                         skatemap.filter.skatepark.switch
+${SKATEMAP_FILTER_ACTION_BUTTON}                            skatemap.filter.action.button
+
+# ******************************************************************************
 # S U B M I T   P L A C E
 # ******************************************************************************
-
 # TODO

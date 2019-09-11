@@ -6,6 +6,7 @@ Resource          ../util/variables.robot
 Resource          ../util/keywords.robot
 
 Suite Setup       Launch app
+
 Documentation     Test submit place screens, including textfield and image inputs and navigating between steps.
 
 *** Test Case ***

@@ -6,6 +6,7 @@ Resource          ../util/variables.robot
 Resource          ../util/keywords.robot
 
 Suite Setup       Launch app
+
 Documentation     Test main skatemap screen, list screen, detail screen and waypoint filtering related functionality.
 
 *** Test Case ***
@@ -30,7 +31,7 @@ Place details screen from list
     When Switch to list view
     Then List screen elements are visible
 
-    When Open waypoint from list
+    When Tap cell from list
     Then Place details screen elements are visible
 
     When Navigate back
@@ -63,7 +64,7 @@ Waypoint map filtering
         And Filter options are turned off
         And Close filter
         And Switch to list view
-    Then List waypoints are not visible
+    Then List cells are not visible
 
 Waypoint list filtering
     Given Launch app
@@ -72,18 +73,18 @@ Waypoint list filtering
         And Tap on filter button
         And Filter turn off all options
         And Filter save
-    Then List waypoints are not visible
+    Then List cells are not visible
 
     When Switch to map view
     Then Map waypoints are not visible
 
     When Switch to list view
-    Then List waypoints are not visible
+    Then List cells are not visible
 
     When Tap on filter button
         And Filter turn on all options
         And Filter save
-    Then List waypoints are visible
+    Then List cells are visible
 
     When Switch to map view
     Then Map waypoints are visible
