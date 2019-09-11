@@ -143,6 +143,20 @@
 		AC43949E22D3EA3400BF4958 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		AC4394A022D3EE2200BF4958 /* SkateListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateListCell.swift; sourceTree = "<group>"; };
 		AC4394A222D3F3D000BF4958 /* SkateListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateListDataSource.swift; sourceTree = "<group>"; };
+		AC5220E62329823A005C7A0B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		AC5220F12329823A005C7A0B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		AC5220F22329823A005C7A0B /* SkateBudapest.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = SkateBudapest.app; sourceTree = "<group>"; };
+		AC5220F42329823A005C7A0B /* appium.robot */ = {isa = PBXFileReference; lastKnownFileType = text; path = appium.robot; sourceTree = "<group>"; };
+		AC5220F52329823A005C7A0B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AC5220F72329823A005C7A0B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		AC5220F82329823A005C7A0B /* log.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = log.html; sourceTree = "<group>"; };
+		AC5220F92329823A005C7A0B /* output.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = output.xml; sourceTree = "<group>"; };
+		AC5220FA2329823A005C7A0B /* report.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = report.html; sourceTree = "<group>"; };
+		AC5220FB2329823A005C7A0B /* run.command */ = {isa = PBXFileReference; lastKnownFileType = text; path = run.command; sourceTree = "<group>"; };
+		AC5220FD2329823A005C7A0B /* skatemap_tests.robot */ = {isa = PBXFileReference; lastKnownFileType = text; path = skatemap_tests.robot; sourceTree = "<group>"; };
+		AC5220FE2329823A005C7A0B /* submit_place_tests.robot */ = {isa = PBXFileReference; lastKnownFileType = text; path = submit_place_tests.robot; sourceTree = "<group>"; };
+		AC5221002329823A005C7A0B /* keywords.robot */ = {isa = PBXFileReference; lastKnownFileType = text; path = keywords.robot; sourceTree = "<group>"; };
+		AC5221012329823A005C7A0B /* variables.robot */ = {isa = PBXFileReference; lastKnownFileType = text; path = variables.robot; sourceTree = "<group>"; };
 		AC54EABD21B9CCF8008694CF /* PlaceCachingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCachingService.swift; sourceTree = "<group>"; };
 		AC55AE0B22DBC4E200FFEFC6 /* PlaceFilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFilterController.swift; sourceTree = "<group>"; };
 		AC59418E22BE3AE0001446BA /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
@@ -358,10 +372,72 @@
 			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
+		AC5220E52329823A005C7A0B /* SkateBudapestTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC5220F02329823A005C7A0B /* app */,
+				AC5220F32329823A005C7A0B /* configuration */,
+				AC5220F62329823A005C7A0B /* report */,
+				AC5220FC2329823A005C7A0B /* testsuites */,
+				AC5220FF2329823A005C7A0B /* util */,
+				AC5220E62329823A005C7A0B /* .gitignore */,
+				AC5220F52329823A005C7A0B /* README.md */,
+				AC5220FB2329823A005C7A0B /* run.command */,
+			);
+			path = SkateBudapestTests;
+			sourceTree = "<group>";
+		};
+		AC5220F02329823A005C7A0B /* app */ = {
+			isa = PBXGroup;
+			children = (
+				AC5220F12329823A005C7A0B /* .gitkeep */,
+				AC5220F22329823A005C7A0B /* SkateBudapest.app */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		AC5220F32329823A005C7A0B /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				AC5220F42329823A005C7A0B /* appium.robot */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
+		AC5220F62329823A005C7A0B /* report */ = {
+			isa = PBXGroup;
+			children = (
+				AC5220F72329823A005C7A0B /* .gitkeep */,
+				AC5220F82329823A005C7A0B /* log.html */,
+				AC5220F92329823A005C7A0B /* output.xml */,
+				AC5220FA2329823A005C7A0B /* report.html */,
+			);
+			path = report;
+			sourceTree = "<group>";
+		};
+		AC5220FC2329823A005C7A0B /* testsuites */ = {
+			isa = PBXGroup;
+			children = (
+				AC5220FD2329823A005C7A0B /* skatemap_tests.robot */,
+				AC5220FE2329823A005C7A0B /* submit_place_tests.robot */,
+			);
+			path = testsuites;
+			sourceTree = "<group>";
+		};
+		AC5220FF2329823A005C7A0B /* util */ = {
+			isa = PBXGroup;
+			children = (
+				AC5221002329823A005C7A0B /* keywords.robot */,
+				AC5221012329823A005C7A0B /* variables.robot */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		AC63324820FA95C2007E5D98 = {
 			isa = PBXGroup;
 			children = (
 				AC63325320FA95C2007E5D98 /* SkateBudapest */,
+				AC5220E52329823A005C7A0B /* SkateBudapestTests */,
 				AC63325220FA95C2007E5D98 /* Products */,
 				D3E59318DCC8C505C7AD5C3C /* Pods */,
 				47704572B094EB0E34445C14 /* Frameworks */,
