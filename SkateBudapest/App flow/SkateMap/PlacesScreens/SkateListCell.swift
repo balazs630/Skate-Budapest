@@ -21,6 +21,12 @@ class SkateListCell: UITableViewCell {
             setupImage()
         }
     }
+
+    // MARK: View lifycycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        addAccessibilityIDs()
+    }
 }
 
 // MARK: Setup view
@@ -33,5 +39,13 @@ extension SkateListCell {
     private func setupImage() {
         guard let imageData = displayItem?.thumbnailImageData else { return }
         thumbnailImageView.image = UIImage(data: imageData)
+    }
+
+    private func addAccessibilityIDs() {
+        accessibilityIdentifier = AccessibilityID.SkateMap.listCellContainerView
+
+        titleLabel.accessibilityIdentifier = AccessibilityID.SkateMap.listCellTitleLabel
+        descriptionLabel.accessibilityIdentifier = AccessibilityID.SkateMap.listCellDescriptionLabel
+        thumbnailImageView.accessibilityIdentifier = AccessibilityID.SkateMap.listCallThumbnailImage
     }
 }

@@ -87,7 +87,6 @@ extension PlaceDetailsViewController {
         titleLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.titleLabel
         locationTypeView.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryView
         locationTypeLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryLabel
-        distanceLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.distanceLabel
         descriptionLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.descriptionLabel
         pageControl.accessibilityIdentifier = AccessibilityID.PlaceDetails.imageStepper
     }
