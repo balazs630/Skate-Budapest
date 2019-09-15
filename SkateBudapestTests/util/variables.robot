@@ -11,7 +11,7 @@ ${SKATEMAP_MAP_SEGMENT_CONTROL}                             skatemap.map.segment
 ${SKATEMAP_MAP_SEGMENT_VIEW}                                #TODO
 ${SKATEMAP_MAP_LAYER_BUTTON}                                skatemap.map.layer.button
 ${SKATEMAP_MAP_LOCATION_BUTTON}                             skatemap.map.location.button
-${SKATEMAP_MAP_WAYPOINT_PIN}                                skatemap.map.waypoint.pin
+${SKATEMAP_MAP_WAYPOINT_PIN}                                //XCUIElementTypeOther[@name="skatemap.map.waypoint.pin"][1]
 
 # ******************************************************************************
 # S K A T E   L I S T
@@ -29,7 +29,6 @@ ${SKATEMAP_LIST_CELL_THUMBNAIL_IMAGE}                       skatemap.list.cell.t
 ${SKATEMAP_DETAIL_TITLE_LABEL}                              skatemap.detail.title.label
 ${SKATEMAP_DETAIL_CATEGORY_VIEW}                            skatemap.detail.category.view
 ${SKATEMAP_DETAIL_CATEGORY_LABEL}                           skatemap.detail.category.label
-${SKATEMAP_DETAIL_DISTANCE_LABEL}                           skatemap.detail.distance.label
 ${SKATEMAP_DETAIL_DESCRIPTION_LABEL}                        skatemap.detail.description.label
 ${SKATEMAP_DETAIL_ENABLE_LOCATION_LABEL}                    skatemap.detail.enable.location.label
 ${SKATEMAP_DETAIL_ENABLE_LOCATION_BUTTON}                   skatemap.detail.enable.location.button

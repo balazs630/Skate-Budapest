@@ -23,6 +23,18 @@ Allow permission
 Don't allow permission
     Tap on    nsp=name=="Don’t Allow"
 
+Swipe up
+    Swipe by percent    50    90    50    10
+
+Swipe right
+    Swipe by percent    90    50    10    50
+
+Swipe down
+    Swipe by percent    50    10    50    90
+
+Swipe left
+    Swipe by percent    10    50    90    50
+
 # ******************************************************************************
 # S K A T E   M A P
 # ******************************************************************************
@@ -45,9 +57,10 @@ Tap on map waypoint
     Tap on    ${SKATEMAP_MAP_WAYPOINT_PIN}
 
 Tap on map waypoint preview
+    Sleep     1s    # Wait for animation
     ${pin_location}=    Get element location    ${SKATEMAP_MAP_WAYPOINT_PIN}
-    ${pin_preview_location_x}=    ${pin_location['x']}
-    ${pin_preview_location_y}=    ${pin_location['y']} - 20
+    ${pin_preview_location_x}=  Set variable    ${pin_location['x'] + 30}
+    ${pin_preview_location_y}=  Set variable    ${pin_location['y'] - 30}
 
     Tap a point    ${pin_preview_location_x}    ${pin_preview_location_y}
 
@@ -84,11 +97,11 @@ Place details screen elements are visible
     Wait until element is visible    ${SKATEMAP_DETAIL_TITLE_LABEL}
     Element should be visible    ${SKATEMAP_DETAIL_CATEGORY_VIEW}
     Element should be visible    ${SKATEMAP_DETAIL_CATEGORY_LABEL}
-    Element should be visible    ${SKATEMAP_DETAIL_DISTANCE_LABEL}
     Element should be visible    ${SKATEMAP_DETAIL_DESCRIPTION_LABEL}
     Element should be visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_LABEL}
     Element should be visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_BUTTON}
-    Element should be visible    ${SKATEMAP_DETAIL_IMAGE}
+    Page should contain element    ${SKATEMAP_DETAIL_IMAGE}
+    Swipe up
     Element should be visible    ${SKATEMAP_DETAIL_IMAGE_STEPPER}
 
 Open place image
@@ -118,8 +131,8 @@ Tap on filter button
     Tap on    ${SKATEMAP_FILTER_NAV_BAR_BUTTON}
 
 Close filter
-    ${screen_vertical_center}=    Get window width / 2
-    Tap a point    150    ${screen_vertical_center}
+    ${screen_vertical_center}=    Get window width
+    Tap a point    200    200
 
 Close filter by swipe
     Log    Needs implementation...
