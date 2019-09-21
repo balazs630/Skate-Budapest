@@ -9,17 +9,13 @@
 import Alamofire
 
 extension DataRequest {
-    @discardableResult
-    public func log() -> Self {
+    public func log() {
         Log.debug(self)
-        return self
     }
 }
 
 extension DataResponse {
-    @discardableResult
-    public func log() -> DataResponse {
+    public func log() {
         Log.debug(self)
-        return self
     }
 }

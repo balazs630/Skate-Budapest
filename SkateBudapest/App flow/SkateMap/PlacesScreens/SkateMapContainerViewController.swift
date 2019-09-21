@@ -54,6 +54,10 @@ class SkateMapContainerViewController: UIViewController, StoryboardLoadable {
 
     private func configureSegmentedControl() {
         segmentedControl.accessibilityIdentifier = AccessibilityID.SkateMap.mapSegmentControl
+
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        segmentedControl.setTitleTextAttributes(textAttributes, for: .selected)
+
         segmentedControl.setTitle(Texts.SkateMap.mapSegmentTitle.localized,
                                   forSegmentAt: SegmentedControlState.map.rawValue)
         segmentedControl.setTitle(Texts.SkateMap.listSegmentTitle.localized,
