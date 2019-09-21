@@ -51,7 +51,7 @@ extension PlaceCachingService {
 
             switch result {
             case .success(let dataVersion):
-                self.realmService.writePlaceDataVersion(dataVersion, update: true)
+                self.realmService.writePlaceDataVersion(dataVersion, update: .all)
             case .failure(let error):
                 completion(Result.failure(NetworkError(message: error.message)))
             }
@@ -62,7 +62,7 @@ extension PlaceCachingService {
 
             switch result {
             case .success(let places):
-                self.realmService.writePlaces(places, update: true)
+                self.realmService.writePlaces(places, update: .all)
                 self.getFromDatabase(completion: completion)
             case .failure(let error):
                 completion(Result.failure(NetworkError(message: error.message)))
