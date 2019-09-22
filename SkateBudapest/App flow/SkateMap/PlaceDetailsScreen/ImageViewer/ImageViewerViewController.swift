@@ -48,7 +48,6 @@ class ImageViewerViewController: UIViewController, StoryboardLoadable {
     }
 
     private func configureCollectionView() {
-        imageCollectionView.accessibilityIdentifier = AccessibilityID.PlaceDetails.imageViewer
         imageCollectionView.dataSource = self
         imageCollectionView.delegate = self
     }

@@ -98,17 +98,8 @@ Place details screen elements are visible
     Element should be visible    ${SKATEMAP_DETAIL_CATEGORY_VIEW}
     Element should be visible    ${SKATEMAP_DETAIL_CATEGORY_LABEL}
     Element should be visible    ${SKATEMAP_DETAIL_DESCRIPTION_LABEL}
-    Element should be visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_LABEL}
-    Element should be visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_BUTTON}
-    Page should contain element    ${SKATEMAP_DETAIL_IMAGE}
-    Swipe up
-    Element should be visible    ${SKATEMAP_DETAIL_IMAGE_STEPPER}
-
-Open place image
-    Tap on    ${SKATEMAP_DETAIL_IMAGE}
-
-Image viewer is visible
-    Wait until element is visible    ${SKATEMAP_DETAIL_IMAGE_VIEWER}
+    Wait until element is visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_LABEL}
+    Wait until element is visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_BUTTON}
 
 # ******************************************************************************
 # F I L T E R

@@ -18,12 +18,6 @@ Place details screen from map
         And Tap on map waypoint preview
     Then Place details screen elements are visible
 
-    When Open place image
-    Then Image viewer is visible
-
-    When Navigate back
-    Then Place details screen elements are visible
-
     When Navigate back
     Then Map screen elements are visible
 
@@ -40,51 +34,51 @@ Place details screen from list
     When Switch to map view
     Then Map screen elements are visible
 
-Waypoint filter open/close
-    When Tap on filter button
-    Then Filter elements are visible
+#Waypoint filter open/close
+#    When Tap on filter button
+#    Then Filter elements are visible
+#
+#    When Close filter
+#    Then Filter elements are not visible
+#
+#    When Tap on filter button
+#        And Filter turn off all options
+#        And Close filter
+#        And Tap on filter button
+#    Then Filter options are turned on
 
-    When Close filter
-    Then Filter elements are not visible
+#Waypoint map filtering
+#    When Tap on filter button
+#        And Filter turn off all options
+#        And Filter save
+#    Then Filter elements are not visible
+#        And Map waypoints are not visible
+#
+#    When Tap on filter button
+#        And Filter options are turned off
+#        And Close filter
+#        And Switch to list view
+#    Then List cells are not visible
 
-    When Tap on filter button
-        And Filter turn off all options
-        And Close filter
-        And Tap on filter button
-    Then Filter options are turned on
-
-Waypoint map filtering
-    When Tap on filter button
-        And Filter turn off all options
-        And Filter save
-    Then Filter elements are not visible
-        And Map waypoints are not visible
-
-    When Tap on filter button
-        And Filter options are turned off
-        And Close filter
-        And Switch to list view
-    Then List cells are not visible
-
-Waypoint list filtering
-    Given Launch app
-
-    When Switch to list view
-        And Tap on filter button
-        And Filter turn off all options
-        And Filter save
-    Then List cells are not visible
-
-    When Switch to map view
-    Then Map waypoints are not visible
-
-    When Switch to list view
-    Then List cells are not visible
-
-    When Tap on filter button
-        And Filter turn on all options
-        And Filter save
-    Then List cells are visible
-
-    When Switch to map view
-    Then Map waypoints are visible
+#Waypoint list filtering
+#    Given Launch app
+#
+#    When Switch to list view
+#        And Tap on filter button
+#        And Filter turn off all options
+#        And Filter save
+#    Then List cells are not visible
+#
+#    When Switch to map view
+#    Then Map waypoints are not visible
+#
+#    When Switch to list view
+#    Then List cells are not visible
+#
+#    When Tap on filter button
+#        And Filter turn on all options
+#        And Filter save
+#    Then List cells are visible
+#
+#    When Switch to map view
+#    Then Map waypoints are visible

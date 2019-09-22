@@ -42,9 +42,6 @@ struct AccessibilityID {
         static let descriptionLabel = "skatemap.detail.description.label"
         static let enableLocationLabel = "skatemap.detail.enable.location.label"
         static let enableLocationButton = "skatemap.detail.enable.location.button"
-        static let image = "skatemap.detail.image"
-        static let imageStepper = "skatemap.detail.image.stepper"
-        static let imageViewer = "skatemap.detail.image.viewer"
     }
 
     struct SubmitPlace {

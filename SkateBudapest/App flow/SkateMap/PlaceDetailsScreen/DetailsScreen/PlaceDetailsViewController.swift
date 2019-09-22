@@ -88,7 +88,6 @@ extension PlaceDetailsViewController {
         locationTypeView.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryView
         locationTypeLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryLabel
         descriptionLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.descriptionLabel
-        pageControl.accessibilityIdentifier = AccessibilityID.PlaceDetails.imageStepper
     }
 
     private func configureLocationTypeView() {
@@ -133,7 +132,6 @@ extension PlaceDetailsViewController {
         (0..<images.count).forEach { index in
             let imageView = UIImageView()
             imageView.image = images[index]
-            imageView.accessibilityIdentifier = AccessibilityID.PlaceDetails.image
             imageView.contentMode = .scaleAspectFit
             imageView.frame = CGRect(x: view.frame.width * CGFloat(index),
                                      y: 0,
