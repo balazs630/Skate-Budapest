@@ -315,7 +315,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufK-f0-iP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="Hd9-Uc-mhg">
                     <connections>
-                        <action selector="panGestureRecognizerHandler:" destination="afy-vZ-Nj2" id="87J-59-6xR"/>
+                        <action selector="didDragView:" destination="afy-vZ-Nj2" id="87J-59-6xR"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>

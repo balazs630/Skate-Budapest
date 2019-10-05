@@ -35,7 +35,6 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSelf()
-        addGestureRecognizers()
         applyFilteringPreferences()
     }
 
@@ -69,12 +68,6 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
         filterButton.accessibilityIdentifier = AccessibilityID.Filter.actionButton
     }
 
-    private func addGestureRecognizers() {
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self,
-                                                          action: #selector(panGestureRecognizerHandler(_:)))
-        view.addGestureRecognizer(panGestureRecognizer)
-    }
-
     // MARK: Button actions
     @IBAction func filterButtonTap(_ sender: Any) {
         persistFilteringPreferences()
@@ -99,35 +92,7 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Gesture recognizer actions
-    @IBAction func panGestureRecognizerHandler(_ sender: UIPanGestureRecognizer) {
-        let touchPoint = sender.location(in: view?.window)
-        var initialTouchPoint = CGPoint.zero
-
-        switch sender.state {
-        case .began:
-            initialTouchPoint = touchPoint
-        case .changed:
-            if touchPoint.y > initialTouchPoint.y {
-                view.frame.origin.y = touchPoint.y - initialTouchPoint.y
-                if view.frame.origin.y < view.frame.height {
-                    dismiss(animated: true, completion: nil)
-                }
-            }
-        case .ended, .cancelled:
-            if touchPoint.y - initialTouchPoint.y > 200 {
-                dismiss(animated: true, completion: nil)
-            } else {
-                UIView.animate(withDuration: 0.2) {
-                    self.view.frame = CGRect(x: 0,
-                                             y: 0,
-                                             width: self.view.frame.size.width,
-                                             height: self.view.frame.size.height)
-                }
-            }
-        case .failed, .possible:
-            break
-        @unknown default:
-            break
-        }
+    @IBAction func didDragView(_ sender: UIPanGestureRecognizer) {
+        dismiss(animated: true)
     }
 }
