@@ -71,7 +71,7 @@ Switch to list view
     Tap on    ${SKATEMAP_LIST_SEGMENT_VIEW}
 
 List screen elements are visible
-    Wait until element is visible    ${SKATEMAP_LIST_TABLEVIEW}
+    Wait until page contains element    ${SKATEMAP_LIST_TABLEVIEW}
     Element should be visible    ${SKATEMAP_FILTER_NAV_BAR_BUTTON}
     Element should be visible    ${SKATEMAP_MAP_SEGMENT_CONTROL}
 

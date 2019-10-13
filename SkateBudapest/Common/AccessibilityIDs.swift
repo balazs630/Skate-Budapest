@@ -16,7 +16,7 @@ struct AccessibilityID {
         static let mapLocationButton = "skatemap.map.location.button"
         static let mapWaypointPin = "skatemap.map.waypoint.pin"
 
-        static let listTableView = "skatemap.list.tableView"
+        static let listTableView = "skatemap.list.tableview"
         static let listCellContainerView = "skatemap.list.cell.container.view"
         static let listCellTitleLabel = "skatemap.list.cell.title.label"
         static let listCellDescriptionLabel = "skatemap.list.cell.description.label"
