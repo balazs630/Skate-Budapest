@@ -3,7 +3,7 @@
 # G E N E R A L
 # ******************************************************************************
 Launch app
-    Open application    ${APPIUM_SERVER}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    app=${APP}    automationName=appium    appPackage=${APP_PACKAGE}
+    Open application    ${APPIUM_SERVER}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    app=${APP}    automationName=${AUTOMATION_NAME}    appPackage=${APP_PACKAGE}
     Allow permission
 
 Tap on
