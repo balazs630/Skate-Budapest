@@ -8,7 +8,7 @@ This app is for everyone who wants to visualise extreme sport related things on 
 
 **Main application - with dummy content, icons and images:**
 
-<img src="http://i.imgur.com/l4hLWan.jpg" width="900px" />
+<img src="http://i.imgur.com/ByuFY8r.jpg" width="900px" />
 
 ___
 **Done:**
