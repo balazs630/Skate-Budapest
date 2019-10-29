@@ -26,7 +26,7 @@ ${SKATEMAP_LIST_CELL_THUMBNAIL_IMAGE}                       skatemap.list.cell.t
 # ******************************************************************************
 # P L A C E   D E T A I L S
 # ******************************************************************************
-${SKATEMAP_DETAIL_TITLE_LABEL}                              skatemap.detail.title.label
+${SKATEMAP_DETAIL_TITLE_VIEW}                               skatemap.detail.title.view
 ${SKATEMAP_DETAIL_CATEGORY_VIEW}                            skatemap.detail.category.view
 ${SKATEMAP_DETAIL_CATEGORY_LABEL}                           skatemap.detail.category.label
 ${SKATEMAP_DETAIL_DESCRIPTION_LABEL}                        skatemap.detail.description.label

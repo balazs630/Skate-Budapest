@@ -3,7 +3,7 @@
 # G E N E R A L
 # ******************************************************************************
 Launch app
-    Open application    ${APPIUM_SERVER}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    app=${APP}    automationName=${AUTOMATION_NAME}    appPackage=${APP_PACKAGE}
+    Open application    ${APPIUM_SERVER}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    app=${APP}    automationName=${AUTOMATION_NAME}
     Allow permission
 
 Tap on
@@ -94,8 +94,7 @@ Tap cell from list
 # P L A C E   D E T A I L S
 # ******************************************************************************
 Place details screen elements are visible
-    Wait until element is visible    ${SKATEMAP_DETAIL_TITLE_LABEL}
-    Element should be visible    ${SKATEMAP_DETAIL_CATEGORY_VIEW}
+    Wait until element is visible    ${SKATEMAP_DETAIL_CATEGORY_VIEW}
     Element should be visible    ${SKATEMAP_DETAIL_CATEGORY_LABEL}
     Element should be visible    ${SKATEMAP_DETAIL_DESCRIPTION_LABEL}
     Wait until element is visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_LABEL}
