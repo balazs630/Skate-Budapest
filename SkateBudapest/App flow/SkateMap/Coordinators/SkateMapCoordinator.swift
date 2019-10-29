@@ -70,11 +70,3 @@ extension SkateMapCoordinator {
         navigationController.pushViewController(imageViewerScreen, animated: true)
     }
 }
-
-// MARK: Back navigation actions
-extension SkateMapCoordinator {
-    func backToSkateMapScreen() {
-        let previousScreen: SkateMapContainerViewController? = firstViewController()
-        previousScreen?.navigationController?.navigationBar.barTintColor = Theme.Color.primaryTurquoise
-    }
-}

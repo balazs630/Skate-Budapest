@@ -44,7 +44,14 @@ class ImageViewerViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
+        configureNavigationItem()
         configureCollectionView()
+    }
+
+    private func configureNavigationItem() {
+        if #available(iOS 11.0, *) {
+            navigationItem.largeTitleDisplayMode = .never
+        }
     }
 
     private func configureCollectionView() {

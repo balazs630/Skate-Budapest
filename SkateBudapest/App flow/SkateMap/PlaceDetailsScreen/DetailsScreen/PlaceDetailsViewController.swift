@@ -17,7 +17,6 @@ class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     var imageOffset = IndexPath(row: 0, section: 0)
 
     // MARK: Outlets
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locationTypeView: UIView!
     @IBOutlet weak var locationTypeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
@@ -61,13 +60,13 @@ extension PlaceDetailsViewController {
     }
 
     private func configureNavigationBarTitleView() {
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = Theme.Color.navbarLightGrey
+        if #available(iOS 11.0, *) {
+            coordinator?.navigationController.navigationBar.prefersLargeTitles = true
+        }
     }
 
     private func configureLabels() {
-        titleLabel.text = waypoint.name
+        navigationItem.title = waypoint.name
         descriptionLabel.text = waypoint.info
         descriptionLabel.textColor = Theme.Color.textDark
         distanceLabel.text = destinationDistanceInKilometer()
@@ -84,7 +83,6 @@ extension PlaceDetailsViewController {
     }
 
     private func addAccessibilityIDs() {
-        titleLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.titleLabel
         locationTypeView.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryView
         locationTypeLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryLabel
         descriptionLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.descriptionLabel
@@ -166,7 +164,10 @@ extension PlaceDetailsViewController {
     }
 
     private func backToSkateMapScreen() {
-        coordinator?.backToSkateMapScreen()
+        if #available(iOS 11.0, *) {
+            navigationItem.title = ""
+            navigationController?.navigationBar.prefersLargeTitles = false
+        }
     }
 }
 
