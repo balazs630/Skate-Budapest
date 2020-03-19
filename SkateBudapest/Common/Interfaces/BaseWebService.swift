@@ -8,25 +8,37 @@
 
 import Alamofire
 
+enum ApiEnvironment {
+    case development
+    case production
+}
+
 protocol BaseWebService {
-    var defaultEnvironment: ApiEnvironment { get }
+    var environment: ApiEnvironment { get }
+    var baseUrl: String { get }
+    var apiKey: String? { get }
     var decoder: JSONDecoder { get }
 
     func requestUrl(for path: String) -> String
     func handle(_ error: Error) -> NetworkError
 }
 
+// MARK: Default implementation
 extension BaseWebService {
+    var environment: ApiEnvironment {
+        return .production
+    }
+
+    var apiKey: String? {
+        return nil
+    }
+
     var decoder: JSONDecoder {
         return JSONDecoder()
     }
 
-    var defaultEnvironment: ApiEnvironment {
-        return .production
-    }
-
     func requestUrl(for path: String) -> String {
-        return defaultEnvironment.url + path
+        return baseUrl + path
     }
 
     func handle(_ error: Error) -> NetworkError {

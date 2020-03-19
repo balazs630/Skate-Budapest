@@ -8,14 +8,32 @@
 
 import Alamofire
 
-final class PlaceWebService: BaseWebService { }
+final class PlaceWebService: BaseWebService {
+    var baseUrl: String {
+        switch environment {
+        case .development:
+            return "http://localhost:8080"
+        case .production:
+            return "https://skatebudapest.libertyskate.hu"
+        }
+    }
+
+    var apiKey: String {
+        switch environment {
+        case .development:
+            return "1da550b6-086d-456a-8968-948228cc07e1"
+        case .production:
+            return "96b75a50-5ae0-4ba6-967c-9b14ef32e7f5"
+        }
+    }
+}
 
 extension PlaceWebService {
     fileprivate enum Slug {
-        static let apiVersionPath = "/v1"
+        static let apiVersionPath = "/api/v1"
         static let placePath = "\(apiVersionPath)/places"
-        static let placeDataVersionPath = "\(placePath)/dataversion"
-        static let placeSuggestionPath = "\(apiVersionPath)/suggestplace"
+        static let placeDataVersionPath = "\(placePath)/data_version"
+        static let placeSuggestionPath = "\(apiVersionPath)/suggest_place"
     }
 
     fileprivate enum Parameter {
@@ -29,12 +47,13 @@ extension PlaceWebService {
 extension PlaceWebService {
     func getPlaces(completion: @escaping (Result<[PlaceApiModel]>) -> Void) {
         let url = requestUrl(for: Slug.placePath)
+        let headers = ["Api-Key": apiKey]
         let queryParams: Parameters = [
             Parameter.language: Locale.current.languageCode ?? Parameter.defaultLanguageCode,
             Parameter.status: WaypointStatus.active.rawValue
         ]
 
-        Alamofire.request(url, method: .get, parameters: queryParams)
+        Alamofire.request(url, method: .get, parameters: queryParams, headers: headers)
             .validate()
             .responseJSON { response in
                 response.log()
@@ -56,8 +75,9 @@ extension PlaceWebService {
 
     func getPlaceDataVersion(completion: @escaping (Result<PlaceDataVersionApiModel>) -> Void) {
         let url = requestUrl(for: Slug.placeDataVersionPath)
+        let headers = ["Api-Key": apiKey]
 
-        Alamofire.request(url, method: .get)
+        Alamofire.request(url, method: .get, headers: headers)
             .validate()
             .responseJSON { response in
                 response.log()
@@ -80,6 +100,7 @@ extension PlaceWebService {
     func postPlaceSuggestion(newPlace: PlaceSuggestionApiModel,
                              completion: @escaping (Result<DataResponse<Any>>) -> Void) {
         let url = requestUrl(for: Slug.placeSuggestionPath)
+        let headers = ["Api-Key": apiKey]
 
         Alamofire.upload(
             multipartFormData: { formData in
@@ -100,6 +121,7 @@ extension PlaceWebService {
             },
             to: url,
             method: .post,
+            headers: headers,
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):

@@ -30,15 +30,6 @@ struct Constant {
     }
 }
 
-enum ApiEnvironment: String {
-    case development = "http://localhost:8080"
-    case production = "https://skatebudapest.libertyskate.hu"
-
-    var url: String {
-        return rawValue
-    }
-}
-
 enum StoryboardName: String {
     case skateMap = "SkateMap"
     case placeDetails = "PlaceDetails"
