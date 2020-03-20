@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. AppiumLibrary is an Appium testing library for [Robot Framework](https://robotframework.org/#introduction).
+1. [Appium Library](https://github.com/serhatbolsu/robotframework-appiumlibrary) is a testing library for [Robot Framework](https://robotframework.org/#introduction).
 It uses Appium (version 1.x) to communicate with Android and iOS application similar to how Selenium WebDriver talks to web browser. 
 Install the main package with [Homebrew](https://brew.sh):
 ```
@@ -22,7 +22,7 @@ WebDriverAgent (part of Appium) is using Carthage to fetch all dependencies:
 brew install carthage
 ```
 
-4. For editing .robot files I recommend using PyCharm CE:
+For editing .robot files I recommend using [PyCharm CE](https://www.jetbrains.com/pycharm/download/):
 ```
 brew cask install pycharm-ce
 ```
@@ -31,12 +31,11 @@ In PyCharm, install `Robot Framework Support` plugin for sytax highlight and aut
 
 ## Running tests
 
-1. Build the application in Xcode
-2. Open the Appium app, select `Start Server`
-3. Double click on `run.command` or execute it from Terminal: `sh run.command`
-4. See test results in the `/output` folder
+1. Open the Appium app, select `Start Server`
+2. Double click on `run.command` or execute it from Terminal: `sh run.command`
+3. See test results in the `/output` folder
 
 ## Documentation
 
-https://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html
-https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
+* AppiumLibrary: https://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html
+* Robot Framework User Guide: https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
