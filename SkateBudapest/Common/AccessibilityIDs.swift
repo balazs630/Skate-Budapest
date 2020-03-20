@@ -25,14 +25,6 @@ struct AccessibilityID {
 
     struct Filter {
         static let navBarButton = "skatemap.filter.nav.bar.button"
-        static let titleLabel = "skatemap.filter.title.label"
-        static let skateshopLabel = "skatemap.filter.skateshop.label"
-        static let skateshopSwitch = "skatemap.filter.skateshop.switch"
-        static let streetspotLabel = "skatemap.filter.streetspot.label"
-        static let streetspotSwitch = "skatemap.filter.streetspot.switch"
-        static let skateparkLabel = "skatemap.filter.skatepark.label"
-        static let skateparkSwitch = "skatemap.filter.skatepark.switch"
-        static let actionButton = "skatemap.filter.action.button"
     }
 
     struct PlaceDetails {
@@ -41,8 +33,5 @@ struct AccessibilityID {
         static let descriptionLabel = "skatemap.detail.description.label"
         static let enableLocationLabel = "skatemap.detail.enable.location.label"
         static let enableLocationButton = "skatemap.detail.enable.location.button"
-    }
-
-    struct SubmitPlace {
     }
 }

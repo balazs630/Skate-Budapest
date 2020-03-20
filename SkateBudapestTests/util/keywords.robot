@@ -20,20 +20,33 @@ Navigate back
 Allow permission
     Tap on    nsp=name=="Allow"
 
+Allow permission once
+    Tap on    nsp=name=="Allow Once"
+
 Don't allow permission
     Tap on    nsp=name=="Don’t Allow"
 
-Swipe up
-    Swipe by percent    50    90    50    10
+Accept alert
+    Tap on    ${ALERT_DIALOG_ACCEPT_BUTTON}
 
-Swipe right
-    Swipe by percent    90    50    10    50
+Dismiss alert
+    Tap on    ${ALERT_DIALOG_CANCEL_BUTTON}
 
-Swipe down
-    Swipe by percent    50    10    50    90
+Input text and close keyboard
+    [Arguments]    ${element}    ${text}
+    Clear Text    ${element}
+    Input text    ${element}    ${text}
+    Dismiss keyboard
 
-Swipe left
-    Swipe by percent    10    50    90    50
+Dismiss keyboard
+    Tap on    ${KEYBOARD_DONE_BUTTON}
+
+Scroll down to the bottom of the screen
+    Scroll Down    ${MAIN_APPLICATION}
+
+${element} is selected
+    Wait until element is visible    ${element}
+    Element attribute should match    ${element}    selected    true
 
 # ******************************************************************************
 # S K A T E   M A P
@@ -99,53 +112,3 @@ Place details screen elements are visible
     Element should be visible    ${SKATEMAP_DETAIL_DESCRIPTION_LABEL}
     Wait until element is visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_LABEL}
     Wait until element is visible    ${SKATEMAP_DETAIL_ENABLE_LOCATION_BUTTON}
-
-# ******************************************************************************
-# F I L T E R
-# ******************************************************************************
-
-Filter elements are visible
-    Wait until element is visible    ${SKATEMAP_FILTER_TITLE_LABEL}
-    Element should be visible    ${SKATEMAP_FILTER_SKATESHOP_LABEL}
-    Element should be visible    ${SKATEMAP_FILTER_STREETSPOT_LABEL}
-    Element should be visible    ${SKATEMAP_FILTER_STREETSPOT_LABEL}
-    Element should be visible    ${SKATEMAP_FILTER_SKATEPARK_LABEL}
-
-Filter elements are not visible
-    Page should not contain element    ${SKATEMAP_FILTER_TITLE_LABEL}
-    Page should not contain element    ${SKATEMAP_FILTER_SKATESHOP_LABEL}
-    Page should not contain element    ${SKATEMAP_FILTER_STREETSPOT_LABEL}
-    Page should not contain element    ${SKATEMAP_FILTER_SKATEPARK_LABEL}
-
-Tap on filter button
-    Tap on    ${SKATEMAP_FILTER_NAV_BAR_BUTTON}
-
-Close filter
-    ${screen_vertical_center}=    Get window width
-    Tap a point    200    200
-
-Close filter by swipe
-    Log    Needs implementation...
-
-Filter turn on all options
-    Tap on    ${SKATEMAP_FILTER_SKATESHOP_SWITCH}
-    Tap on    ${SKATEMAP_FILTER_STREETSPOT_SWITCH}
-    Tap on    ${SKATEMAP_FILTER_SKATEPARK_SWITCH}
-
-Filter turn off all options
-    Tap on    ${SKATEMAP_FILTER_SKATESHOP_SWITCH}
-    Tap on    ${SKATEMAP_FILTER_STREETSPOT_SWITCH}
-    Tap on    ${SKATEMAP_FILTER_SKATEPARK_SWITCH}
-
-Filter options are turned on
-    Element attribute should match    ${SKATEMAP_FILTER_SKATESHOP_SWITCH}    selected    true
-    Element attribute should match    ${SKATEMAP_FILTER_STREETSPOT_SWITCH}    selected    true
-    Element attribute should match    ${SKATEMAP_FILTER_SKATEPARK_SWITCH}    selected    true
-
-Filter options are turned off
-    Element attribute should match    ${SKATEMAP_FILTER_SKATESHOP_SWITCH}    selected    false
-    Element attribute should match    ${SKATEMAP_FILTER_STREETSPOT_SWITCH}    selected    false
-    Element attribute should match    ${SKATEMAP_FILTER_SKATEPARK_SWITCH}    selected    false
-
-Filter save
-    Tap on    ${SKATEMAP_FILTER_ACTION_BUTTON}

@@ -2,6 +2,16 @@
 ## Accessibility IDs:
 
 # ******************************************************************************
+# G E N E R A L
+# ******************************************************************************
+${MAIN_APPLICATION}                                         //XCUIElementTypeApplication
+${KEYBOARD_DONE_BUTTON}                                     //XCUIElementTypeToolbar[@name="Toolbar"]//XCUIElementTypeButton[@name="Done"]
+
+${ALERT_DIALOG}                                             //XCUIElementTypeAlert
+${ALERT_DIALOG_ACCEPT_BUTTON}                               //XCUIElementTypeAlert//XCUIElementTypeButton[@name="OK"]
+${ALERT_DIALOG_CANCEL_BUTTON}                               //XCUIElementTypeAlert//XCUIElementTypeButton[@name="Cancel"]
+
+# ******************************************************************************
 # S K A T E   M A P
 # ******************************************************************************
 ${SKATEMAP_MAP_TAB_BAR}                                     skatemap.map.tab.bar
@@ -37,16 +47,3 @@ ${SKATEMAP_DETAIL_ENABLE_LOCATION_BUTTON}                   skatemap.detail.enab
 # F I L T E R
 # ******************************************************************************
 ${SKATEMAP_FILTER_NAV_BAR_BUTTON}                           skatemap.filter.nav.bar.button
-${SKATEMAP_FILTER_TITLE_LABEL}                              skatemap.filter.title.label
-${SKATEMAP_FILTER_SKATESHOP_LABEL}                          skatemap.filter.skateshop.label
-${SKATEMAP_FILTER_SKATESHOP_SWITCH}                         skatemap.filter.skateshop.switch
-${SKATEMAP_FILTER_STREETSPOT_LABEL}                         skatemap.filter.streetspot.label
-${SKATEMAP_FILTER_STREETSPOT_SWITCH}                        skatemap.filter.streetspot.switch
-${SKATEMAP_FILTER_SKATEPARK_LABEL}                          skatemap.filter.skatepark.label
-${SKATEMAP_FILTER_SKATEPARK_SWITCH}                         skatemap.filter.skatepark.switch
-${SKATEMAP_FILTER_ACTION_BUTTON}                            skatemap.filter.action.button
-
-# ******************************************************************************
-# S U B M I T   P L A C E
-# ******************************************************************************
-# TODO

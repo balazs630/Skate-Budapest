@@ -40,8 +40,6 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
 
     // MARK: Screen configuration
     private func configureSelf() {
-        addAccessibilityIDs()
-
         headerView.backgroundColor = Theme.Color.primaryTurquoise
         titleLabel.text = Texts.SkateMap.filterScreenTitle.localized
 
@@ -51,21 +49,6 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
 
         filterButton.style = .action
         filterButton.setTitle(Texts.SkateMap.filterButtonTitle.localized, for: .normal)
-    }
-
-    private func addAccessibilityIDs() {
-        titleLabel.accessibilityIdentifier = AccessibilityID.Filter.titleLabel
-
-        skateshopLabel.accessibilityIdentifier = AccessibilityID.Filter.skateshopLabel
-        skateshopSwitch.accessibilityIdentifier = AccessibilityID.Filter.skateshopSwitch
-
-        streetspotLabel.accessibilityIdentifier = AccessibilityID.Filter.streetspotLabel
-        streetspotSwitch.accessibilityIdentifier = AccessibilityID.Filter.streetspotSwitch
-
-        skateparkLabel.accessibilityIdentifier = AccessibilityID.Filter.skateparkLabel
-        skateparkSwitch.accessibilityIdentifier = AccessibilityID.Filter.skateparkSwitch
-
-        filterButton.accessibilityIdentifier = AccessibilityID.Filter.actionButton
     }
 
     // MARK: Button actions
