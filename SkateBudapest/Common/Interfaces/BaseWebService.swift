@@ -17,7 +17,6 @@ protocol BaseWebService {
     var environment: ApiEnvironment { get }
     var baseUrl: String { get }
     var apiKey: String? { get }
-    var decoder: JSONDecoder { get }
 
     func requestUrl(for path: String) -> String
     func handle(_ error: Error) -> NetworkError
@@ -31,10 +30,6 @@ extension BaseWebService {
 
     var apiKey: String? {
         return nil
-    }
-
-    var decoder: JSONDecoder {
-        return JSONDecoder()
     }
 
     func requestUrl(for path: String) -> String {

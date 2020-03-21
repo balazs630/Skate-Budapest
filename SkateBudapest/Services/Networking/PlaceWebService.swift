@@ -47,26 +47,20 @@ extension PlaceWebService {
 extension PlaceWebService {
     func getPlaces(completion: @escaping (Result<[PlaceApiModel]>) -> Void) {
         let url = requestUrl(for: Slug.placePath)
-        let headers = ["Api-Key": apiKey]
-        let queryParams: Parameters = [
+        let headers = HTTPHeaders(["Api-Key": apiKey])
+        let queryParams = [
             Parameter.language: Locale.current.languageCode ?? Parameter.defaultLanguageCode,
             Parameter.status: WaypointStatus.active.rawValue
         ]
 
-        Alamofire.request(url, method: .get, parameters: queryParams, headers: headers)
+        AF.request(url, method: .get, parameters: queryParams, headers: headers)
             .validate()
-            .responseJSON { response in
+            .responseDecodable(of: [PlaceApiModel].self) { response in
                 response.log()
 
                 switch response.result {
-                case .success:
-                    guard let data = response.data else { return }
-                    do {
-                        let places = try self.decoder.decode([PlaceApiModel].self, from: data)
-                        completion(Result.success(places))
-                    } catch {
-                        completion(Result.failure(self.handle(error)))
-                    }
+                case .success(let values):
+                    completion(Result.success(values))
                 case .failure(let error):
                     completion(Result.failure(self.handle(error)))
                 }
@@ -75,34 +69,27 @@ extension PlaceWebService {
 
     func getPlaceDataVersion(completion: @escaping (Result<PlaceDataVersionApiModel>) -> Void) {
         let url = requestUrl(for: Slug.placeDataVersionPath)
-        let headers = ["Api-Key": apiKey]
+        let headers = HTTPHeaders(["Api-Key": apiKey])
 
-        Alamofire.request(url, method: .get, headers: headers)
+        AF.request(url, method: .get, headers: headers)
             .validate()
-            .responseJSON { response in
+            .responseDecodable(of: PlaceDataVersionApiModel.self) { response in
                 response.log()
 
                 switch response.result {
-                case .success:
-                    guard let data = response.data else { return }
-                    do {
-                        let info = try self.decoder.decode(PlaceDataVersionApiModel.self, from: data)
-                        completion(Result.success(info))
-                    } catch {
-                        completion(Result.failure(self.handle(error)))
-                    }
+                case .success(let value):
+                    completion(Result.success(value))
                 case .failure(let error):
                     completion(Result.failure(self.handle(error)))
                 }
         }
     }
 
-    func postPlaceSuggestion(newPlace: PlaceSuggestionApiModel,
-                             completion: @escaping (Result<DataResponse<Any>>) -> Void) {
+    func postPlaceSuggestion(newPlace: PlaceSuggestionApiModel, completion: @escaping (Result<Void>) -> Void) {
         let url = requestUrl(for: Slug.placeSuggestionPath)
-        let headers = ["Api-Key": apiKey]
+        let headers = HTTPHeaders(["Api-Key": apiKey])
 
-        Alamofire.upload(
+        AF.upload(
             multipartFormData: { formData in
                 formData.append(newPlace.name.data, withName: "name")
                 formData.append(newPlace.info.data, withName: "info")
@@ -121,24 +108,17 @@ extension PlaceWebService {
             },
             to: url,
             method: .post,
-            headers: headers,
-            encodingCompletion: { encodingResult in
-                switch encodingResult {
-                case .success(let upload, _, _):
-                    upload
-                        .validate()
-                        .responseJSON { response in
-                            response.log()
+            headers: headers)
+        .validate()
+        .responseJSON { response in
+            response.log()
 
-                            if let error = response.error {
-                                completion(Result.failure(self.handle(error)))
-                            }
-                            completion(Result.success(response))
-                        }
-                case .failure(let error):
-                    completion(Result.failure(self.handle(error)))
-                }
+            switch response.result {
+            case .success:
+                completion(Result.success(()))
+            case .failure(let error):
+                completion(Result.failure(self.handle(error)))
             }
-        )
+        }
     }
 }
