@@ -58,6 +58,7 @@ extension LoadingViewController {
 
     private func configureActivityIndicator() {
         containerView.addSubview(activityIndicator)
+        activityIndicator.color = .white
         activityIndicator.startAnimating()
 
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
