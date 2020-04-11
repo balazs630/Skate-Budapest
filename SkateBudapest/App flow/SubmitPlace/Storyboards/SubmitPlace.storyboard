@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ZK-Ol-1DI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beE-yM-J8f" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="429.5"/>
@@ -106,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-A7-jUd" userLabel="Content view">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-6o-uWs" userLabel="Description Label View">
                                         <rect key="frame" x="24" y="24" width="327" height="30"/>
@@ -126,21 +124,21 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8sa-0o-1aI">
-                                        <rect key="frame" x="24" y="68.5" width="327" height="542.5"/>
+                                        <rect key="frame" x="24" y="68.5" width="327" height="562.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtT-Q3-GKJ" userLabel="Skatepark view">
-                                                <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="174"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUq-EQ-8By" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="174"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOI-lD-oQt" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="174"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rj6-YG-3Bw">
-                                                        <rect key="frame" x="20" y="67" width="287" height="33.5"/>
+                                                        <rect key="frame" x="20" y="70.5" width="287" height="33.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -166,19 +164,19 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faH-3G-vAg" userLabel="Streetspot view">
-                                                <rect key="frame" x="0.0" y="187.5" width="327" height="167.5"/>
+                                                <rect key="frame" x="0.0" y="194" width="327" height="174.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDJ-At-ghh" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="174.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5g0-Te-yeI" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="174.5"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nky-rg-094">
-                                                        <rect key="frame" x="20" y="67" width="287" height="33.5"/>
+                                                        <rect key="frame" x="20" y="70.5" width="287" height="33.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33.5" id="ZOG-l2-xwF"/>
                                                         </constraints>
@@ -207,19 +205,19 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-BV-TaM" userLabel="Skateshop view">
-                                                <rect key="frame" x="0.0" y="375" width="327" height="167.5"/>
+                                                <rect key="frame" x="0.0" y="388.5" width="327" height="174"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oao-AN-7pS" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="174"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyP-Lg-d4A" userLabel="Filter Layer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="167.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="327" height="174"/>
                                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <gestureRecognizers/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkM-BQ-Gt1">
-                                                        <rect key="frame" x="20" y="67" width="287" height="33.5"/>
+                                                        <rect key="frame" x="20" y="70" width="287" height="33.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="33.5" id="c3W-Ov-zbi"/>
                                                         </constraints>
@@ -316,7 +314,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbC-DH-ETY">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggA-aq-SCW" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="565.5"/>
@@ -332,7 +330,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="OxM-RH-WN7"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -362,7 +359,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="eYh-0h-Ux3"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -467,7 +463,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awy-2S-iaJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5D-Pd-JUV" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="504.5"/>
@@ -632,7 +628,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQo-PB-2uQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InS-d2-xfv" userLabel="Content view">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="545"/>
@@ -751,11 +747,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-Db-qzn" userLabel="Alignment view 1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="103.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTA-Uv-AA3" userLabel="Content view">
-                                <rect key="frame" x="32" y="123.5" width="311" height="285.5"/>
+                                <rect key="frame" x="32" y="109" width="311" height="285.5"/>
                                 <subviews>
                                     <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCU-ol-boP" customClass="VideoView" customModule="SkateBudapest" customModuleProvider="target">
                                         <rect key="frame" x="95.5" y="25" width="120" height="120"/>
@@ -808,7 +804,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4v-np-6wo" userLabel="Alignment view 2">
-                                <rect key="frame" x="0.0" y="409" width="375" height="258"/>
+                                <rect key="frame" x="0.0" y="394.5" width="375" height="272.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
