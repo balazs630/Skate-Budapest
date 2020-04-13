@@ -61,8 +61,11 @@ class SubmitTextsViewController: UIViewController, StoryboardLoadable {
 
     private func configureInputFields() {
         titleTextField.delegate = self
-        contactEmailTextField.delegate = self
         infoTextView.delegate = self
+
+        contactEmailTextField.delegate = self
+        contactEmailTextField.textContentType = .emailAddress
+        contactEmailTextField.keyboardType = .emailAddress
     }
 
     private func configureButtons() {
