@@ -50,6 +50,16 @@
 "start" = "Indulás";
 "destination" = "Cél";
 
+// PlaceReportingViewController:
+"title" = "Hibabejelentő";
+"subTitle" = "Írd meg ha bármi változásról tudsz ezen a helyen";
+"email" = "E-mail:";
+"reportNotes" = "Észrevételek:";
+"send" = "Küldés";
+
+"successAlertTitle" = "Köszi a segítséget";
+"successAlertMessage" = "Hamarosan frissítem ezt a helyet";
+
 // SendPlaceViewController:
 "submit" = "Beküldés";
 "next" = "Tovább";

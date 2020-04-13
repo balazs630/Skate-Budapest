@@ -69,4 +69,10 @@ extension SkateMapCoordinator {
 
         navigationController.pushViewController(imageViewerScreen, animated: true)
     }
+
+    func toReportingScreen(place: PlaceDisplayItem) {
+        let reportingScreen = PlaceReportingViewController.instantiateViewController(from: .placeDetails)
+        reportingScreen.place = place
+        navigationController.present(reportingScreen, animated: true)
+    }
 }

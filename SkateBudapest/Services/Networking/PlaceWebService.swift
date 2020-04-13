@@ -34,6 +34,7 @@ extension PlaceWebService {
         static let placePath = "\(apiVersionPath)/places"
         static let placeDataVersionPath = "\(placePath)/data_version"
         static let placeSuggestionPath = "\(apiVersionPath)/suggest_place"
+        static let placeReportPath = "\(apiVersionPath)/report_place"
     }
 
     fileprivate enum Parameter {
@@ -105,6 +106,33 @@ extension PlaceWebService {
                 if let image4 = place.image4 {
                     formData.append(image4, withName: "image4", mimeType: image4.mimeType)
                 }
+            },
+            to: url,
+            method: .post,
+            headers: headers)
+        .validate()
+        .responseJSON { response in
+            response.log()
+
+            switch response.result {
+            case .success:
+                completion(Result.success(()))
+            case .failure(let error):
+                completion(Result.failure(self.handle(error)))
+            }
+        }
+    }
+
+    func postPlaceReport(report: PlaceReportApiModel, completion: @escaping (Result<Void>) -> Void) {
+        let url = requestUrl(for: Slug.placeReportPath)
+        let headers = HTTPHeaders(["Api-Key": apiKey])
+
+        AF.upload(
+            multipartFormData: { formData in
+                formData.append(report.placeId.data, withName: "placeId")
+                formData.append(report.placeName.data, withName: "placeName")
+                formData.append(report.reportText.data, withName: "reportText")
+                formData.append(report.senderEmail.data, withName: "senderEmail")
             },
             to: url,
             method: .post,

@@ -52,6 +52,7 @@ class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
 extension PlaceDetailsViewController {
     private func configureSelf() {
         configureNavigationBarTitleView()
+        configureNavigationBarButtons()
         configureLabels()
         configureLocationTypeView()
         configureImageScrollView()
@@ -63,6 +64,13 @@ extension PlaceDetailsViewController {
         if #available(iOS 11.0, *) {
             coordinator?.navigationController.navigationBar.prefersLargeTitles = true
         }
+    }
+
+    private func configureNavigationBarButtons() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Theme.Icon.bandageIcon,
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(toReportScreen))
     }
 
     private func configureLabels() {
@@ -168,6 +176,10 @@ extension PlaceDetailsViewController {
             navigationItem.title = ""
             navigationController?.navigationBar.prefersLargeTitles = false
         }
+    }
+
+    @objc private func toReportScreen() {
+        coordinator?.toReportingScreen(place: place)
     }
 }
 

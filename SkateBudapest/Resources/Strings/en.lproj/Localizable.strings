@@ -50,6 +50,16 @@
 "start" = "Start";
 "destination" = "Destination";
 
+// PlaceReportingViewController:
+"title" = "Report a change";
+"subTitle" = "Let me know if anything has changed at this place";
+"email" = "E-mail:";
+"reportNotes" = "Notes:";
+"send" = "Send";
+
+"successAlertTitle" = "Thanks for helping";
+"successAlertMessage" = "I'll update this place soon";
+
 // SendPlaceViewController:
 "submit" = "Submit";
 "next" = "Next";

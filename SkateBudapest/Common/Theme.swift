@@ -40,6 +40,8 @@ enum Theme {
         static let locationTrackingNone = UIImage(named: "location-tracking-none")!
         static let locationTrackingFollow = UIImage(named: "location-tracking-follow")!
         static let locationTrackingHeading = UIImage(named: "location-tracking-heading")!
+
+        static let bandageIcon = UIImage(named: "bandage")!
     }
 
     enum Image {

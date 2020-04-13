@@ -52,6 +52,17 @@ struct Texts {
         case destination
     }
 
+    enum PlaceReport: String, Localizable {
+        case title
+        case subTitle
+        case email
+        case reportNotes
+        case send
+
+        case successAlertTitle
+        case successAlertMessage
+    }
+
     enum SubmitPlace: String, Localizable {
         case submit
         case next
