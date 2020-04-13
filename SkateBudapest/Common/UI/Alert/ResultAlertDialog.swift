@@ -8,10 +8,17 @@
 
 import UIKit
 
+enum AlertAction {
+    case `default`
+    case custom
+}
+
 class ResultAlertDialog: AlertController {
-    convenience init(title: String?, message: String?) {
+    convenience init(title: String?, message: String?, alertAction: AlertAction? = .default) {
         self.init(title: title, message: message, preferredStyle: .alert)
-        addDefaultAction()
+        if case .default = alertAction {
+            addDefaultAction()
+        }
     }
 
     private func addDefaultAction() {
