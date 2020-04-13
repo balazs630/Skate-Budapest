@@ -22,9 +22,9 @@ class RoutingEmptyViewController: UIViewController, StoryboardLoadable {
     // MARK: Screen configuration
     private func configureSelf() {
         addAccessibilityIDs()
-        enableLocationLabel.text = Texts.LocationDetails.mapNavigationEmptyViewText.localized
+        enableLocationLabel.text = Texts.PlaceDetails.mapNavigationEmptyViewText.localized
         enableLocationLabel.textColor = Theme.Color.textDark
-        enableLocationButton.setTitle(Texts.LocationDetails.mapNavigationEmptyViewButtonText.localized, for: .normal)
+        enableLocationButton.setTitle(Texts.PlaceDetails.mapNavigationEmptyViewButtonText.localized, for: .normal)
     }
 
     private func addAccessibilityIDs() {

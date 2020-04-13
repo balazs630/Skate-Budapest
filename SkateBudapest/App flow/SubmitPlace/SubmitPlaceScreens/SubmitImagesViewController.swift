@@ -166,7 +166,7 @@ extension SubmitImagesViewController: UIImagePickerControllerDelegate {
         currentImageView?.clearValidationErrorBorder()
         updateImage(to: currentImageView?.image)
 
-        picker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true)
     }
 }
 

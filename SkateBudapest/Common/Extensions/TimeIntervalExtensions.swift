@@ -19,10 +19,10 @@ extension TimeInterval {
 
     var stringTime: String {
         if hours != 0 {
-            return "\(hours) \(Texts.LocationDetails.hour.localized)"
-                + " \(minutes) \(Texts.LocationDetails.minutes.localized)"
+            return "\(hours) \(Texts.PlaceDetails.hour.localized)"
+                + " \(minutes) \(Texts.PlaceDetails.minutes.localized)"
         } else {
-            return "\(minutes) \(Texts.LocationDetails.minutes.localized)"
+            return "\(minutes) \(Texts.PlaceDetails.minutes.localized)"
         }
     }
 }

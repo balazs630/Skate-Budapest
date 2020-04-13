@@ -5,8 +5,6 @@
 //  Created by Horváth Balázs on 2018. 11. 21..
 //
 
-import UIKit
-
 struct PlaceApiModel: Codable {
     var id: String
     var latitude: Double
@@ -16,23 +14,4 @@ struct PlaceApiModel: Codable {
     var type: WaypointType
     var thumbnailUrl: String?
     var imageUrls: [String?]
-}
-
-enum WaypointType: String, CaseIterable, Codable {
-    case skatepark, skateshop, streetspot
-
-    var pinIcon: UIImage {
-        switch self {
-        case .skatepark:
-            return Theme.Icon.skateparkPin
-        case .skateshop:
-            return Theme.Icon.skateshopPin
-        case .streetspot:
-            return Theme.Icon.streetSpotPin
-        }
-    }
-}
-
-enum WaypointStatus: String, Codable {
-    case active, inactive, pending
 }

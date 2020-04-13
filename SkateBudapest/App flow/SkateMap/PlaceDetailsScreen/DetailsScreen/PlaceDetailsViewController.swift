@@ -12,7 +12,7 @@ import CoreLocation
 class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SkateMapCoordinator?
-    var waypoint: PlaceDisplayItem!
+    var place: PlaceDisplayItem!
     var imageViews: [UIImageView]?
     var imageOffset = IndexPath(row: 0, section: 0)
 
@@ -66,15 +66,15 @@ extension PlaceDetailsViewController {
     }
 
     private func configureLabels() {
-        navigationItem.title = waypoint.name
-        descriptionLabel.text = waypoint.info
+        navigationItem.title = place.name
+        descriptionLabel.text = place.info
         descriptionLabel.textColor = Theme.Color.textDark
         distanceLabel.text = destinationDistanceInKilometer()
     }
 
     private func destinationDistanceInKilometer() -> String {
-        let destinationLocation = CLLocation(latitude: waypoint.coordinate.latitude,
-                                             longitude: waypoint.coordinate.longitude)
+        let destinationLocation = CLLocation(latitude: place.coordinate.latitude,
+                                             longitude: place.coordinate.longitude)
         guard let distance = LocationService.shared.location?.distance(from: destinationLocation) else {
             return ""
         }
@@ -89,12 +89,12 @@ extension PlaceDetailsViewController {
     }
 
     private func configureLocationTypeView() {
-        locationTypeLabel.text = waypoint.type.rawValue
+        locationTypeLabel.text = place.type.rawValue
         locationTypeView.backgroundColor = getLocationColor()
     }
 
     private func getLocationColor() -> UIColor {
-        switch waypoint.type {
+        switch place.type {
         case .skatepark:
             return Theme.Color.skatepark
         case .streetspot:
@@ -119,11 +119,11 @@ extension PlaceDetailsViewController {
     }
 
     private func configurePageControl() {
-        pageControl.numberOfPages = waypoint.imageDatas.count
+        pageControl.numberOfPages = place.imageDatas.count
     }
 
     private func loadImageViews() -> [UIImageView] {
-        let images = waypoint.imageDatas
+        let images = place.imageDatas
             .map { UIImage(data: $0 ?? Data()) }
 
         var imageViews = [UIImageView]()
@@ -151,7 +151,7 @@ extension PlaceDetailsViewController {
 
     private func addRoutingViewController() {
         let routingViewController = RoutingViewController.instantiateViewController(from: .placeDetails)
-        routingViewController.destinationLocation = waypoint.coordinate
+        routingViewController.destinationLocation = place.coordinate
         add(routingViewController, to: routingContainerView)
     }
 }
@@ -160,7 +160,7 @@ extension PlaceDetailsViewController {
 extension PlaceDetailsViewController {
     @objc private func toImageViewerScreen() {
         imageOffset.row = pageControl.currentPage
-        coordinator?.toImageViewerScreen(using: self)
+        coordinator?.toImageViewerScreen(from: self)
     }
 
     private func backToSkateMapScreen() {

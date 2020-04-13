@@ -44,7 +44,7 @@ class SkateMapContainerViewController: UIViewController, StoryboardLoadable {
 
     private func addFilterNavigationBarItem() {
         let filterButton = UIBarButtonItem(image: Theme.Icon.filteringEmpty,
-                                           style: .done,
+                                           style: .plain,
                                            target: self,
                                            action: #selector(toFilteringScreen))
 
@@ -100,7 +100,7 @@ extension SkateMapContainerViewController {
 // MARK: Navigation
 extension SkateMapContainerViewController {
     @objc private func toFilteringScreen() {
-        coordinator?.toFilteringScreen(using: self)
+        coordinator?.toFilteringScreen(from: self)
     }
 }
 

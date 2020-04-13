@@ -25,7 +25,8 @@ class RoutingViewController: UIViewController, StoryboardLoadable {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setObserverForUIApplicationDidBecomeActive()
+
+        configureSelf()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +35,17 @@ class RoutingViewController: UIViewController, StoryboardLoadable {
     }
 
     // MARK: Screen configuration
+    private func configureSelf() {
+        setupAppearance()
+        setObserverForUIApplicationDidBecomeActive()
+    }
+
+    private func setupAppearance() {
+        [transitRouteButton, drivingRouteButton, walkingRouteButton].forEach { button in
+            button.backgroundColor = Theme.Color.primaryTurquoise
+        }
+    }
+
     private func setObserverForUIApplicationDidBecomeActive() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(setupView),
@@ -98,7 +110,7 @@ extension RoutingViewController {
             directions.calculateETA { [weak self] (etaResponse, error) -> Void in
                 guard let `self` = self else { return }
                 if let error = error {
-                    ResultAlertDialog(title: Texts.LocationDetails.directions.localized,
+                    ResultAlertDialog(title: Texts.PlaceDetails.directions.localized,
                                       message: error.localizedDescription).show()
                 } else {
                     if let travelTime = etaResponse?.expectedTravelTime {
@@ -121,10 +133,10 @@ extension RoutingViewController {
     private func openMaps(directionMode: String) {
         guard let currentLocation = LocationService.shared.coordinates else { return }
         let currentLocationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation))
-        currentLocationMapItem.name = Texts.LocationDetails.start.localized
+        currentLocationMapItem.name = Texts.PlaceDetails.start.localized
 
         let destinationLocationMapItem = MKMapItem(placemark: MKPlacemark(coordinate: destinationLocation))
-        destinationLocationMapItem.name = Texts.LocationDetails.destination.localized
+        destinationLocationMapItem.name = Texts.PlaceDetails.destination.localized
 
         MKMapItem.openMaps(with: [currentLocationMapItem, destinationLocationMapItem],
                            launchOptions: [MKLaunchOptionsDirectionsModeKey: directionMode])

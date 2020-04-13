@@ -42,7 +42,7 @@ struct Texts {
         case skateshopType
     }
 
-    enum LocationDetails: String, Localizable {
+    enum PlaceDetails: String, Localizable {
         case mapNavigationEmptyViewText
         case mapNavigationEmptyViewButtonText
         case hour

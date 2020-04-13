@@ -42,7 +42,7 @@ extension SkateMapCoordinator {
         navigationController.pushViewController(skateMapContainerScreen, animated: true)
     }
 
-    func toFilteringScreen(using sourceViewController: SkateMapContainerViewController) {
+    func toFilteringScreen(from sourceViewController: SkateMapContainerViewController) {
         let filteringScreen = PlaceFilterViewController.instantiateViewController(from: .skateMap)
 
         filteringScreen.modalPresentationStyle = .custom
@@ -50,18 +50,18 @@ extension SkateMapCoordinator {
         filteringScreen.transitioningDelegate = sourceViewController
         filteringScreen.delegate = sourceViewController
 
-        navigationController.present(filteringScreen, animated: true, completion: nil)
+        navigationController.present(filteringScreen, animated: true)
     }
 
     func toPlaceDetailsScreen(place: PlaceDisplayItem) {
         let placeDetailsScreen = PlaceDetailsViewController.instantiateViewController(from: .placeDetails)
         placeDetailsScreen.coordinator = self
-        placeDetailsScreen.waypoint = place
+        placeDetailsScreen.place = place
 
         navigationController.pushViewController(placeDetailsScreen, animated: true)
     }
 
-    func toImageViewerScreen(using sourceViewController: PlaceDetailsViewController) {
+    func toImageViewerScreen(from sourceViewController: PlaceDetailsViewController) {
         let imageViewerScreen = ImageViewerViewController.instantiateViewController(from: .placeDetails)
         imageViewerScreen.images = sourceViewController.imageViews?.images()
         imageViewerScreen.imageOffset = sourceViewController.imageOffset

@@ -17,7 +17,10 @@ extension StoryboardLoadable where Self: UIViewController {
         let identifier = String(describing: self)
         let storyboard = UIStoryboard(name: storyboardName.rawValue, bundle: Bundle.main)
 
-        // swiftlint:disable:next force_cast
-        return storyboard.instantiateViewController(withIdentifier: identifier) as! Self
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? Self else {
+            fatalError("Storyboard '\(storyboardName)' doesn't contain a ViewController with identifier: \(identifier)")
+        }
+
+        return viewController
     }
 }

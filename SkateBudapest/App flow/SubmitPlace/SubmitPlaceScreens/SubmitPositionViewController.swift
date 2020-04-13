@@ -100,7 +100,7 @@ class SubmitPositionViewController: UIViewController, StoryboardLoadable {
         guard let displayItem = placeSuggestionDisplayItem else { return }
         let placeSuggestionApiModel = PlaceSuggestionApiModel(displayItem: displayItem)
 
-        placeWebService.postPlaceSuggestion(newPlace: placeSuggestionApiModel) { [weak self] result in
+        placeWebService.postPlaceSuggestion(place: placeSuggestionApiModel) { [weak self] result in
             guard let `self` = self else { return }
             self.removeActivityIndicator()
 

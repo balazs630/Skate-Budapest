@@ -55,7 +55,7 @@ class PlaceFilterViewController: UIViewController, StoryboardLoadable {
     @IBAction func filterButtonTap(_ sender: Any) {
         persistFilteringPreferences()
         delegate?.filterAnnotations(by: placeFilterController.selectedTypes())
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
 
     // MARK: Load/save switch states
