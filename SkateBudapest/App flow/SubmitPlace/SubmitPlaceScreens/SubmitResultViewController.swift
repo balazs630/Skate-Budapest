@@ -11,6 +11,7 @@ import UIKit
 class SubmitResultViewController: UIViewController, StoryboardLoadable {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
+    private let impactGenerator = UIImpactFeedbackGenerator()
 
     // MARK: Outlets
     @IBOutlet weak var checkmarkVideoView: VideoView!
@@ -20,6 +21,8 @@ class SubmitResultViewController: UIViewController, StoryboardLoadable {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        impactGenerator.impactOccurred()
         configureSelf()
     }
 
