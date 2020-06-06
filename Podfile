@@ -13,7 +13,7 @@ workspace 'SkateBudapest.xcworkspace'
 
 ## Inject pods
 target 'SkateBudapest' do
-  pod 'Alamofire', '~> 5.0.4'
-  pod 'RealmSwift', '~> 4.3.2'
+  pod 'Alamofire', '~> 5.2.1'
+  pod 'RealmSwift', '~> 5.0.2'
   pod 'IQKeyboardManagerSwift', '~> 6.5.5'
 end
