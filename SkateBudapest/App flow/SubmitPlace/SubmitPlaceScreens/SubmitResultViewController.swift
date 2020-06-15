@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubmitResultViewController: UIViewController, StoryboardLoadable {
+class SubmitResultViewController: UIViewController {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
     private let impactGenerator = UIImpactFeedbackGenerator()

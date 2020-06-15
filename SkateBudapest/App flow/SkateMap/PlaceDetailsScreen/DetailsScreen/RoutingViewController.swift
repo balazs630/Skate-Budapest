@@ -8,7 +8,7 @@
 
 import MapKit
 
-class RoutingViewController: UIViewController, StoryboardLoadable {
+class RoutingViewController: UIViewController {
     // MARK: Properties
     fileprivate var routingEmptyViewController: RoutingEmptyViewController?
     var destinationLocation: CLLocationCoordinate2D!

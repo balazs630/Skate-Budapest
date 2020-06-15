@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubmitImagesViewController: UIViewController, StoryboardLoadable {
+class SubmitImagesViewController: UIViewController {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?

@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class PlaceDetailsViewController: UIViewController, StoryboardLoadable {
+class PlaceDetailsViewController: UIViewController {
     // MARK: Properties
     weak var coordinator: SkateMapCoordinator?
     var place: PlaceDisplayItem!

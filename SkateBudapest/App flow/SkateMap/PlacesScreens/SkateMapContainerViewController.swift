@@ -13,7 +13,7 @@ private enum SegmentedControlState: Int {
     case list = 1
 }
 
-class SkateMapContainerViewController: UIViewController, StoryboardLoadable {
+class SkateMapContainerViewController: UIViewController {
     // MARK: Properties
     weak var coordinator: SkateMapCoordinator?
     lazy var skateMapViewController = SkateMapViewController.instantiateViewController(from: .skateMap)

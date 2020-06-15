@@ -8,7 +8,7 @@
 
 import MapKit
 
-class SkateMapViewController: UIViewController, StoryboardLoadable {
+class SkateMapViewController: UIViewController {
     // MARK: Properties
     weak var coordinator: SkateMapCoordinator?
     private let placeCachingService = PlaceCachingService()

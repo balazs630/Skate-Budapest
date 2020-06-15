@@ -100,7 +100,6 @@
 		ACC509D922AC7435005E99E0 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC509D822AC7435005E99E0 /* Button.swift */; };
 		ACC509DB22ADC3AC005E99E0 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */; };
 		ACCAC18E2234260C00502D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18D2234260C00502D6B /* Coordinator.swift */; };
-		ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */; };
 		ACCAC1932234292900502D6B /* SkateMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC1922234292900502D6B /* SkateMapCoordinator.swift */; };
 		ACCAC19522342B9800502D6B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCAC19422342B9800502D6B /* MainCoordinator.swift */; };
 		ACD5CBB721D190FE00EDE3E0 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5CBB621D190FE00EDE3E0 /* StringExtensions.swift */; };
@@ -226,7 +225,6 @@
 		ACC509D822AC7435005E99E0 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		ACC509DA22ADC3AC005E99E0 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		ACCAC18D2234260C00502D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
 		ACCAC1922234292900502D6B /* SkateMapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateMapCoordinator.swift; sourceTree = "<group>"; };
 		ACCAC19422342B9800502D6B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		ACD5CBB621D190FE00EDE3E0 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -720,7 +718,6 @@
 				AC6BD19621B2B1A600C20451 /* BaseWebService.swift */,
 				ACCAC18D2234260C00502D6B /* Coordinator.swift */,
 				ACD5CBBA21D195B300EDE3E0 /* Localizable.swift */,
-				ACCAC18F2234279300502D6B /* StoryboardLoadable.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -918,7 +915,6 @@
 				ACD5CBB721D190FE00EDE3E0 /* StringExtensions.swift in Sources */,
 				AC96C16B22C2D2C1007D7C2D /* ImageViewPicker.swift in Sources */,
 				ACD5CBBD21D195E700EDE3E0 /* Texts.swift in Sources */,
-				ACCAC1902234279300502D6B /* StoryboardLoadable.swift in Sources */,
 				ACA2CF0622C941E000E35C4D /* Log.swift in Sources */,
 				ACC509DB22ADC3AC005E99E0 /* ButtonStyle.swift in Sources */,
 				ACE6F71221B897B4000ABDF1 /* PlaceDisplayItem.swift in Sources */,

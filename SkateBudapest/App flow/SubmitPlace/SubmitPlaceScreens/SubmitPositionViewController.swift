@@ -8,7 +8,7 @@
 
 import MapKit
 
-class SubmitPositionViewController: UIViewController, StoryboardLoadable {
+class SubmitPositionViewController: UIViewController {
     // MARK: Properties
     private let placeWebService = PlaceWebService()
     weak var coordinator: SubmitPlaceCoordinator?

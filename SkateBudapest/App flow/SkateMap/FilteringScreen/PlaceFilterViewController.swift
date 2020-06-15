@@ -12,7 +12,7 @@ protocol PlaceFilterDelegate: class {
     func filterAnnotations(by selectedTypes: [WaypointType])
 }
 
-class PlaceFilterViewController: UIViewController, StoryboardLoadable {
+class PlaceFilterViewController: UIViewController {
     // MARK: Properties
     weak var delegate: PlaceFilterDelegate?
     var placeFilterController = PlaceFilterController()

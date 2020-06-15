@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaceReportingViewController: UIViewController, StoryboardLoadable {
+class PlaceReportingViewController: UIViewController {
     // MARK: Properties
     private let placeWebService = PlaceWebService()
     var place: PlaceDisplayItem!

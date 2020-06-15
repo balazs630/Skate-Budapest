@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SubmitPlaceDescriptionViewController: UIViewController, StoryboardLoadable {
+class SubmitPlaceDescriptionViewController: UIViewController {
     // MARK: Properties
     weak var coordinator: SubmitPlaceCoordinator?
 

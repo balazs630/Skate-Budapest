@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoutingEmptyViewController: UIViewController, StoryboardLoadable {
+class RoutingEmptyViewController: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var enableLocationLabel: UILabel!
     @IBOutlet weak var enableLocationButton: UIButton!

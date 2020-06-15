@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SkateListViewController: UIViewController, StoryboardLoadable {
+class SkateListViewController: UIViewController {
     // MARK: Properties
     weak var coordinator: SkateMapCoordinator?
     var dataSource = SkateListDataSource(places: [])
