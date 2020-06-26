@@ -13,5 +13,5 @@ struct PlaceApiModel: Codable {
     var info: String
     var type: WaypointType
     var thumbnailUrl: String?
-    var imageUrls: [String?]
+    var imageUrls: [String]?
 }
