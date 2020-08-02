@@ -75,8 +75,22 @@ extension PlaceDetailsViewController {
 
     private func configureLabels() {
         navigationItem.title = place.name
-        descriptionLabel.text = place.info
-        descriptionLabel.textColor = Theme.Color.textDark
+        descriptionLabel.attributedText = {
+            let attributedText = try? NSMutableAttributedString(
+                htmlString: place.info,
+                font: .systemFont(ofSize: 17))
+
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+
+            attributedText?.addAttributes([
+                .paragraphStyle: paragraphStyle,
+                .foregroundColor: Theme.Color.textDark
+            ], range: NSRange(location: 0, length: attributedText?.length ?? 0))
+
+            return attributedText
+        }()
+
         distanceLabel.text = destinationDistanceInKilometer()
     }
 
