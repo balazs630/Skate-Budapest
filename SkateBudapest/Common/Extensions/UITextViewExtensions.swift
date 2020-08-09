@@ -9,6 +9,12 @@
 import UIKit
 
 extension UITextView {
+    var textFitHeight: CGFloat {
+        return sizeThatFits(
+            CGSize(width: frame.width, height: .greatestFiniteMagnitude)
+        ).height
+    }
+
     func validate(_ validatorType: ValidatorType) throws {
         let validator = ValidatorFactory.validator(for: validatorType)
         guard let text = self.text else { return }

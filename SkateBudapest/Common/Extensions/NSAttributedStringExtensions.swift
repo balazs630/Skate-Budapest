@@ -36,3 +36,9 @@ extension NSAttributedString {
         self.init(attributedString: attributedString)
     }
 }
+
+extension NSMutableAttributedString {
+    public func addFullRangeAttributes(_ attrs: [NSAttributedString.Key: Any] = [:]) {
+        addAttributes(attrs, range: NSRange(location: 0, length: length))
+    }
+}

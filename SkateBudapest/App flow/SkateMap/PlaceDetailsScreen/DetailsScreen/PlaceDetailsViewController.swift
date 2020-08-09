@@ -20,7 +20,8 @@ class PlaceDetailsViewController: UIViewController {
     @IBOutlet weak var locationTypeView: UIView!
     @IBOutlet weak var locationTypeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var descriptionTextViewHeightConstraint: NSLayoutConstraint!
 
     @IBOutlet weak var routingContainerView: UIView!
     @IBOutlet weak var imageScrollView: UIScrollView!
@@ -31,6 +32,11 @@ class PlaceDetailsViewController: UIViewController {
         super.viewDidLoad()
         configureSelf()
         addChildViewControllers()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateDescriptionTextHeight()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +59,7 @@ extension PlaceDetailsViewController {
     private func configureSelf() {
         configureNavigationBarTitleView()
         configureNavigationBarButtons()
-        configureLabels()
+        configureTexts()
         configureLocationTypeView()
         configureImageScrollView()
         configurePageControl()
@@ -73,9 +79,10 @@ extension PlaceDetailsViewController {
                                                             action: #selector(toReportScreen))
     }
 
-    private func configureLabels() {
+    private func configureTexts() {
         navigationItem.title = place.name
-        descriptionLabel.attributedText = {
+
+        descriptionTextView.attributedText = {
             let attributedText = try? NSMutableAttributedString(
                 htmlString: place.info,
                 font: .systemFont(ofSize: 17))
@@ -83,15 +90,19 @@ extension PlaceDetailsViewController {
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 4
 
-            attributedText?.addAttributes([
+            attributedText?.addFullRangeAttributes([
                 .paragraphStyle: paragraphStyle,
                 .foregroundColor: Theme.Color.textDark
-            ], range: NSRange(location: 0, length: attributedText?.length ?? 0))
+            ])
 
             return attributedText
         }()
 
         distanceLabel.text = destinationDistanceInKilometer()
+    }
+
+    private func updateDescriptionTextHeight() {
+        descriptionTextViewHeightConstraint.constant = descriptionTextView.textFitHeight
     }
 
     private func destinationDistanceInKilometer() -> String {
@@ -107,7 +118,7 @@ extension PlaceDetailsViewController {
     private func addAccessibilityIDs() {
         locationTypeView.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryView
         locationTypeLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryLabel
-        descriptionLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.descriptionLabel
+        descriptionTextView.accessibilityIdentifier = AccessibilityID.PlaceDetails.descriptionLabel
     }
 
     private func configureLocationTypeView() {
