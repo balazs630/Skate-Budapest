@@ -8,9 +8,11 @@
 
 import UIKit
 
+class AlertWindow: UIWindow { }
+
 class AlertController: UIAlertController {
-    private lazy var alertWindow: UIWindow = {
-        let window = UIWindow(frame: UIScreen.main.bounds)
+    private lazy var alertWindow: AlertWindow = {
+        let window = AlertWindow(frame: UIScreen.main.bounds)
         window.rootViewController = ClearViewController()
         window.backgroundColor = .clear
         window.windowLevel = .alert
@@ -19,10 +21,16 @@ class AlertController: UIAlertController {
     }()
 
     func show(animated: Bool = true, completion: (() -> Void)? = nil) {
-        if let rootViewController = alertWindow.rootViewController {
+        if !hasPresentedAlertWindow() {
             alertWindow.makeKeyAndVisible()
-            rootViewController.present(self, animated: animated, completion: completion)
+            alertWindow.rootViewController?.present(self, animated: animated, completion: completion)
         }
+    }
+
+    private func hasPresentedAlertWindow() -> Bool {
+        return UIApplication.shared.windows.contains(where: {
+            $0.isKind(of: AlertWindow.self)
+        })
     }
 }
 
