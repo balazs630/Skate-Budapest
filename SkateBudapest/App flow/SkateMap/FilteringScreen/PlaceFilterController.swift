@@ -13,8 +13,8 @@ class PlaceFilterController {
     private let defaults = UserDefaults.standard
 
     // MARK: Utility methods
-    func visibility(for place: PlaceDisplayItem) -> Bool {
-        return selectedTypes().contains(place.type) ? true : false
+    func isSelected(type: WaypointType) -> Bool {
+        return selectedTypes().contains(type) ? true : false
     }
 
     func selectedTypes() -> [WaypointType] {
@@ -29,9 +29,11 @@ class PlaceFilterController {
     }
 
     func loadFilterPreferences() -> PlaceFilterPreference {
-        return PlaceFilterPreference(isSkatepark: defaults.bool(forKey: UserDefaults.Key.Switch.skatepark),
-                                     isSkateshop: defaults.bool(forKey: UserDefaults.Key.Switch.skateshop),
-                                     isStreetspot: defaults.bool(forKey: UserDefaults.Key.Switch.streetspot))
+        return PlaceFilterPreference(
+            isSkatepark: defaults.bool(forKey: UserDefaults.Key.Switch.skatepark),
+            isSkateshop: defaults.bool(forKey: UserDefaults.Key.Switch.skateshop),
+            isStreetspot: defaults.bool(forKey: UserDefaults.Key.Switch.streetspot)
+        )
     }
 
     func saveFilterPreferences(_ preferences: PlaceFilterPreference) {

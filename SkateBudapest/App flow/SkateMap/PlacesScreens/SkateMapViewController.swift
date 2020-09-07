@@ -88,7 +88,7 @@ extension SkateMapViewController {
     func updateMapWaypoints() {
         guard let mapView = placesMapView else { return }
         waypoints?.forEach { annotation in
-            if placeFilterController.visibility(for: annotation) {
+            if placeFilterController.isSelected(type: annotation.type) {
                 mapView.addAnnotation(annotation)
             } else {
                 mapView.removeAnnotation(annotation)
