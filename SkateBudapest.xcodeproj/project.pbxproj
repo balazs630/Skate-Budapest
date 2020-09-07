@@ -60,6 +60,7 @@
 		AC6905FD21C073E400A2088A /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6905FC21C073E400A2088A /* BaseError.swift */; };
 		AC69060521C0784300A2088A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69060421C0784300A2088A /* Result.swift */; };
 		AC69361D22DBBDF5005081E8 /* PlaceFilterPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69361C22DBBDF5005081E8 /* PlaceFilterPreference.swift */; };
+		AC6BBFF72506BBA0008A0969 /* EmptyDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BBFF62506BB9F008A0969 /* EmptyDataViewController.swift */; };
 		AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */; };
 		AC6BD19321B08AA000C20451 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19221B08AA000C20451 /* RealmService.swift */; };
 		AC6BD19721B2B1A600C20451 /* BaseWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD19621B2B1A600C20451 /* BaseWebService.swift */; };
@@ -185,6 +186,7 @@
 		AC6905FC21C073E400A2088A /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		AC69060421C0784300A2088A /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		AC69361C22DBBDF5005081E8 /* PlaceFilterPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFilterPreference.swift; sourceTree = "<group>"; };
+		AC6BBFF62506BB9F008A0969 /* EmptyDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataViewController.swift; sourceTree = "<group>"; };
 		AC6BD19021B0843500C20451 /* PlaceRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRealmModel.swift; sourceTree = "<group>"; };
 		AC6BD19221B08AA000C20451 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		AC6BD19621B2B1A600C20451 /* BaseWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebService.swift; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 				AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */,
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
+				AC6BBFF62506BB9F008A0969 /* EmptyDataViewController.swift */,
 				AC1484FA22B13CF20005BE18 /* TextView.swift */,
 				AC7E33392299CD4C0011B36F /* VideoView.swift */,
 			);
@@ -936,6 +939,7 @@
 				ACEB8C8622623AF400873D0A /* DoubleExtensions.swift in Sources */,
 				AC6905F921C073AF00A2088A /* NetworkError.swift in Sources */,
 				AC64A9C22258DCE7006728D6 /* CGSizeExtension.swift in Sources */,
+				AC6BBFF72506BBA0008A0969 /* EmptyDataViewController.swift in Sources */,
 				AC63325520FA95C2007E5D98 /* AppDelegate.swift in Sources */,
 				AC6BD19C21B2B63C00C20451 /* ResultAlertDialog.swift in Sources */,
 				ACFBD9762442810B00BB786F /* PlaceReportingViewController.swift in Sources */,

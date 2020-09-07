@@ -30,6 +30,8 @@
 
 "mapSegmentTitle" = "Map";
 "listSegmentTitle" = "List";
+"emptyListTitle" = "Something went wrong, cannot load the places.";
+"emptyListRetryButtonTitle" = "Try Again";
 
 "filterScreenTitle" = "Filter by place type";
 "filterButtonTitle" = "Filter";

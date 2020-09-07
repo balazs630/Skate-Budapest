@@ -30,6 +30,8 @@
 
 "mapSegmentTitle" = "Térkép";
 "listSegmentTitle" = "Lista";
+"emptyListTitle" = "Valami félrement, nem sikerült betölteni a helyeket.";
+"emptyListRetryButtonTitle" = "Újra";
 
 "filterScreenTitle" = "Szűrés a hely típusára";
 "filterButtonTitle" = "Szűrés";

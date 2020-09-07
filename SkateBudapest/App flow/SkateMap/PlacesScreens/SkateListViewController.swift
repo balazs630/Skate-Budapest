@@ -10,6 +10,8 @@ import UIKit
 
 class SkateListViewController: UIViewController {
     // MARK: Properties
+    private let placeCachingService = PlaceCachingService()
+    private var emptyScreen: EmptyDataViewController?
     weak var coordinator: SkateMapCoordinator?
     var dataSource = SkateListDataSource(places: [])
 
@@ -37,7 +39,41 @@ class SkateListViewController: UIViewController {
     private func configureTableview() {
         placesTableView.delegate = self
         placesTableView.dataSource = dataSource
+
+        if dataSource.places.isEmpty {
+            showEmptyDataView()
+        }
+
         placesTableView.accessibilityIdentifier = AccessibilityID.SkateMap.listTableView
+    }
+
+    // MARK: Empty data screen
+    private func showEmptyDataView() {
+        emptyScreen = EmptyDataViewController(
+            title: Texts.SkateMap.emptyListTitle.localized,
+            action: { [weak self] in
+                self?.reloadPlaces()
+        })
+        placesTableView.backgroundView = emptyScreen?.view
+        placesTableView.separatorStyle = .none
+    }
+
+    private func removeEmptyDataView() {
+        emptyScreen = nil
+        placesTableView.backgroundView = nil
+        placesTableView.separatorStyle = .singleLine
+    }
+
+    private func reloadPlaces() {
+        placeCachingService.getPlaces() { [weak self] result in
+            guard let `self` = self else { return }
+
+            if case .success(let places) = result {
+                self.dataSource.places = places
+                self.updateListWaypoints()
+                self.removeEmptyDataView()
+            }
+        }
     }
 }
 
