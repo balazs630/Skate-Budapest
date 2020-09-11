@@ -31,7 +31,7 @@ class DescriptionLabel: UILabel {
 // MARK: Overrides
 extension DescriptionLabel {
     override func drawText(in rect: CGRect) {
-        preferredMaxLayoutWidth = superview!.frame.width
+        preferredMaxLayoutWidth = superview?.frame.width ?? 0
         super.drawText(in: rect.inset(by: insets))
     }
 

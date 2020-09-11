@@ -16,12 +16,12 @@ private enum SegmentedControlState: Int {
 class SkateMapContainerViewController: UIViewController {
     // MARK: Properties
     weak var coordinator: SkateMapCoordinator?
-    lazy var skateMapViewController = SkateMapViewController.instantiateViewController(from: .skateMap)
-    lazy var skateListViewController = SkateListViewController.instantiateViewController(from: .skateMap)
+    private lazy var skateMapViewController = SkateMapViewController.instantiateViewController(from: .skateMap)
+    private lazy var skateListViewController = SkateListViewController.instantiateViewController(from: .skateMap)
 
     // MARK: Outlets
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    @IBOutlet private weak var containerView: UIView!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

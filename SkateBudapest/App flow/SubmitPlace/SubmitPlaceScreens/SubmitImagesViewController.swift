@@ -16,15 +16,15 @@ class SubmitImagesViewController: UIViewController {
     private lazy var mediaAlertController = MediaAlertController()
 
     // MARK: Outlets
-    @IBOutlet weak var imageContainerStackView: UIStackView!
-    @IBOutlet weak var imageView1: ImageViewPicker!
-    @IBOutlet weak var imageView2: ImageViewPicker!
-    @IBOutlet weak var imageView3: ImageViewPicker!
-    @IBOutlet weak var imageView4: ImageViewPicker!
-    @IBOutlet var imageViews: [ImageViewPicker]!
+    @IBOutlet private weak var imageContainerStackView: UIStackView!
+    @IBOutlet private weak var imageView1: ImageViewPicker!
+    @IBOutlet private weak var imageView2: ImageViewPicker!
+    @IBOutlet private weak var imageView3: ImageViewPicker!
+    @IBOutlet private weak var imageView4: ImageViewPicker!
+    @IBOutlet private var imageViews: [ImageViewPicker]!
 
-    @IBOutlet weak var descriptionLabel: DescriptionLabel!
-    @IBOutlet weak var nextButton: Button!
+    @IBOutlet private weak var descriptionLabel: DescriptionLabel!
+    @IBOutlet private weak var nextButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

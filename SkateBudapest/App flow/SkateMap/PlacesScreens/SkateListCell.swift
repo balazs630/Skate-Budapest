@@ -10,9 +10,9 @@ import UIKit
 
 class SkateListCell: UITableViewCell {
     // MARK: Outlets
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var thumbnailImageView: UIImageView!
 
     // MARK: Properties
     var displayItem: PlaceDisplayItem? {

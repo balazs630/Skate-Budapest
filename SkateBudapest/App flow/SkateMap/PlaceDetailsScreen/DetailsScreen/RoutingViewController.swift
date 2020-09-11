@@ -14,13 +14,13 @@ class RoutingViewController: UIViewController {
     var destinationLocation: CLLocationCoordinate2D!
 
     // MARK: Outlets
-    @IBOutlet weak var transitRouteButton: UIButton!
-    @IBOutlet weak var drivingRouteButton: UIButton!
-    @IBOutlet weak var walkingRouteButton: UIButton!
+    @IBOutlet private weak var transitRouteButton: UIButton!
+    @IBOutlet private weak var drivingRouteButton: UIButton!
+    @IBOutlet private weak var walkingRouteButton: UIButton!
 
-    @IBOutlet weak var transitActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var drivingActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var walkingActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var transitActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var drivingActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet private weak var walkingActivityIndicator: UIActivityIndicatorView!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

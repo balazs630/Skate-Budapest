@@ -16,10 +16,10 @@ class SubmitPositionViewController: UIViewController {
     lazy var locationPin = MKPointAnnotation()
 
     // MARK: Outlets
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var centerLocationButton: UIButton!
-    @IBOutlet weak var descriptionLabel: DescriptionLabel!
-    @IBOutlet weak var submitButton: Button!
+    @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private weak var centerLocationButton: UIButton!
+    @IBOutlet private weak var descriptionLabel: DescriptionLabel!
+    @IBOutlet private weak var submitButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

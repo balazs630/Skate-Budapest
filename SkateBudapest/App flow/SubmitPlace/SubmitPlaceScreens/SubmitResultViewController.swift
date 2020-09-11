@@ -14,9 +14,9 @@ class SubmitResultViewController: UIViewController {
     private let impactGenerator = UIImpactFeedbackGenerator()
 
     // MARK: Outlets
-    @IBOutlet weak var checkmarkVideoView: VideoView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var backButton: Button!
+    @IBOutlet private weak var checkmarkVideoView: VideoView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var backButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

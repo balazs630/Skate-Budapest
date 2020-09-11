@@ -13,9 +13,9 @@ class SubmitPlaceDescriptionViewController: UIViewController {
     weak var coordinator: SubmitPlaceCoordinator?
 
     // MARK: Outlets
-    @IBOutlet weak var graphicsImageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var nextButton: Button!
+    @IBOutlet private weak var graphicsImageView: UIImageView!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var nextButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

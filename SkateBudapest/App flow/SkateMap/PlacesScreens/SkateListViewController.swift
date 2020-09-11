@@ -16,7 +16,7 @@ class SkateListViewController: UIViewController {
     var dataSource = SkateListDataSource(places: [])
 
     // MARK: Outlets
-    @IBOutlet weak var placesTableView: UITableView!
+    @IBOutlet private weak var placesTableView: UITableView!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

@@ -14,17 +14,17 @@ class SubmitTypeSelectorViewController: UIViewController {
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
 
     // MARK: Outlets
-    @IBOutlet weak var descriptionLabel: DescriptionLabel!
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet private weak var descriptionLabel: DescriptionLabel!
+    @IBOutlet private weak var stackView: UIStackView!
 
-    @IBOutlet weak var skateparkLabel: UILabel!
-    @IBOutlet weak var streetspotLabel: UILabel!
-    @IBOutlet weak var skateshopLabel: UILabel!
+    @IBOutlet private weak var skateparkLabel: UILabel!
+    @IBOutlet private weak var streetspotLabel: UILabel!
+    @IBOutlet private weak var skateshopLabel: UILabel!
 
-    @IBOutlet weak var skateparkVideoView: VideoView!
-    @IBOutlet weak var streetSpotVideoView: VideoView!
-    @IBOutlet weak var skateshopVideoView: VideoView!
-    @IBOutlet var videoViewCollection: [VideoView]!
+    @IBOutlet private weak var skateparkVideoView: VideoView!
+    @IBOutlet private weak var streetSpotVideoView: VideoView!
+    @IBOutlet private weak var skateshopVideoView: VideoView!
+    @IBOutlet private var videoViewCollection: [VideoView]!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

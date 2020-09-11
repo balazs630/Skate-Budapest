@@ -14,14 +14,14 @@ class PlaceReportingViewController: UIViewController {
     var place: PlaceDisplayItem!
 
     // MARK: Outlets
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subTitleLabel: UILabel!
 
-    @IBOutlet weak var reportTextTitleLabel: UILabel!
-    @IBOutlet weak var reportTextView: UITextView!
-    @IBOutlet weak var emailTextTitleLabel: UILabel!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var submitButton: Button!
+    @IBOutlet private weak var reportTextTitleLabel: UILabel!
+    @IBOutlet private weak var reportTextView: UITextView!
+    @IBOutlet private weak var emailTextTitleLabel: UILabel!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var submitButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

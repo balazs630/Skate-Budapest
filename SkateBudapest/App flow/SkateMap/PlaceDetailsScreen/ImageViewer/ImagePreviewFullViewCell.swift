@@ -10,8 +10,8 @@ import UIKit
 
 class ImagePreviewFullViewCell: UICollectionViewCell {
     // MARK: Outlets
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var imageView: UIImageView!
 
     // MARK: View lifecycle
     override func awakeFromNib() {

@@ -17,15 +17,15 @@ class PlaceDetailsViewController: UIViewController {
     var imageOffset = IndexPath(row: 0, section: 0)
 
     // MARK: Outlets
-    @IBOutlet weak var locationTypeView: UIView!
-    @IBOutlet weak var locationTypeLabel: UILabel!
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var descriptionTextViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var locationTypeView: UIView!
+    @IBOutlet private weak var locationTypeLabel: UILabel!
+    @IBOutlet private weak var distanceLabel: UILabel!
+    @IBOutlet private weak var descriptionTextView: UITextView!
+    @IBOutlet private weak var descriptionTextViewHeightConstraint: NSLayoutConstraint!
 
-    @IBOutlet weak var routingContainerView: UIView!
-    @IBOutlet weak var imageScrollView: UIScrollView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet private weak var routingContainerView: UIView!
+    @IBOutlet private weak var imageScrollView: UIScrollView!
+    @IBOutlet private weak var pageControl: UIPageControl!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

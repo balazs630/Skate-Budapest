@@ -14,16 +14,16 @@ class SubmitTextsViewController: UIViewController {
     var placeSuggestionDisplayItem: PlaceSuggestionDisplayItem?
 
     // MARK: Outlets
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailDescriptionLabel: DescriptionLabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
+    @IBOutlet private weak var emailDescriptionLabel: DescriptionLabel!
 
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var infoTextView: TextView!
-    @IBOutlet weak var contactEmailTextField: UITextField!
+    @IBOutlet private weak var titleTextField: UITextField!
+    @IBOutlet private weak var infoTextView: TextView!
+    @IBOutlet private weak var contactEmailTextField: UITextField!
 
-    @IBOutlet weak var nextButton: Button!
+    @IBOutlet private weak var nextButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

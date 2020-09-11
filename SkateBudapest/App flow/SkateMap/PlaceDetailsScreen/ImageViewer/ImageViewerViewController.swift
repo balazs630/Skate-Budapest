@@ -19,7 +19,7 @@ class ImageViewerViewController: UIViewController {
     weak var delegate: ImageViewerViewControllerDelegate?
 
     // MARK: Outlets
-    @IBOutlet weak var imageCollectionView: UICollectionView!
+    @IBOutlet private weak var imageCollectionView: UICollectionView!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

@@ -13,16 +13,16 @@ class SkateMapViewController: UIViewController {
     weak var coordinator: SkateMapCoordinator?
     private let placeCachingService = PlaceCachingService()
     private let placeFilterController = PlaceFilterController()
-    var waypoints: [PlaceDisplayItem]! {
+    var waypoints: [PlaceDisplayItem]? {
         didSet {
             updateMapWaypoints()
         }
     }
 
     // MARK: Outlets
-    @IBOutlet weak var placesMapView: MKMapView!
-    @IBOutlet weak var centerLocationButton: UIButton!
-    @IBOutlet weak var mapLayerButton: UIButton!
+    @IBOutlet private weak var placesMapView: MKMapView!
+    @IBOutlet private weak var centerLocationButton: UIButton!
+    @IBOutlet private weak var mapLayerButton: UIButton!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

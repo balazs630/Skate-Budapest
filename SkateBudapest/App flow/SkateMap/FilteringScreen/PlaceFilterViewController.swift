@@ -15,21 +15,21 @@ protocol PlaceFilterDelegate: class {
 class PlaceFilterViewController: UIViewController {
     // MARK: Properties
     weak var delegate: PlaceFilterDelegate?
-    var placeFilterController = PlaceFilterController()
+    private var placeFilterController = PlaceFilterController()
 
     // MARK: Outlets
-    @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var headerView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
 
-    @IBOutlet weak var skateparkSwitch: UISwitch!
-    @IBOutlet weak var skateshopSwitch: UISwitch!
-    @IBOutlet weak var streetspotSwitch: UISwitch!
+    @IBOutlet private weak var skateparkSwitch: UISwitch!
+    @IBOutlet private weak var skateshopSwitch: UISwitch!
+    @IBOutlet private weak var streetspotSwitch: UISwitch!
 
-    @IBOutlet weak var skateshopLabel: UILabel!
-    @IBOutlet weak var streetspotLabel: UILabel!
-    @IBOutlet weak var skateparkLabel: UILabel!
+    @IBOutlet private weak var skateshopLabel: UILabel!
+    @IBOutlet private weak var streetspotLabel: UILabel!
+    @IBOutlet private weak var skateparkLabel: UILabel!
 
-    @IBOutlet weak var filterButton: Button!
+    @IBOutlet private weak var filterButton: Button!
 
     // MARK: View lifecycle
     override func viewDidLoad() {

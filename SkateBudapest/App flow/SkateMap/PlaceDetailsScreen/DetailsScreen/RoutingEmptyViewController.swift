@@ -10,8 +10,8 @@ import UIKit
 
 class RoutingEmptyViewController: UIViewController {
     // MARK: Outlets
-    @IBOutlet weak var enableLocationLabel: UILabel!
-    @IBOutlet weak var enableLocationButton: UIButton!
+    @IBOutlet private weak var enableLocationLabel: UILabel!
+    @IBOutlet private weak var enableLocationButton: UIButton!
 
     // MARK: View lifecycle
     override func viewDidLoad() {
