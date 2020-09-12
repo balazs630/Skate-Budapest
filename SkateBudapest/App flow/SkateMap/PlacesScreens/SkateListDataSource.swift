@@ -19,7 +19,7 @@ class SkateListDataSource: NSObject {
     }
 
     // MARK: Utility
-    private func filteredPlaces() -> [PlaceDisplayItem] {
+    func filteredPlaces() -> [PlaceDisplayItem] {
         return places.filter { placeFilterController.isSelected(type: $0.type) }
     }
 }

@@ -31,6 +31,7 @@
 "mapSegmentTitle" = "Map";
 "listSegmentTitle" = "List";
 "emptyListTitle" = "Something went wrong, cannot load the places.";
+"noResultListTitle" = "No results for the specified filter criteria.";
 "emptyListRetryButtonTitle" = "Try Again";
 
 "filterScreenTitle" = "Filter by place type";

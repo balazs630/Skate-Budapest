@@ -72,6 +72,7 @@
 		AC8450B022B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8450AF22B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift */; };
 		AC8451AE22B85A79006564C5 /* checkmark.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC8451AD22B85A78006564C5 /* checkmark.mp4 */; };
 		AC8597762236F6B9009C0D6F /* RoutingEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8597752236F6B9009C0D6F /* RoutingEmptyViewController.swift */; };
+		AC8AACAD250C37980058946A /* EmptyDataConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AACAC250C37980058946A /* EmptyDataConfiguration.swift */; };
 		AC8F8B8E21C518BF00001551 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F8B8D21C518BF00001551 /* ImageService.swift */; };
 		AC90789121297E6300FC0528 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC90789021297E6300FC0528 /* ImageViewerViewController.swift */; };
 		AC907893212997F600FC0528 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC907892212997F600FC0528 /* UIImageViewExtensions.swift */; };
@@ -198,6 +199,7 @@
 		AC8450AF22B6D0A10032DF75 /* CLLocationCoordinate2DExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtensions.swift; sourceTree = "<group>"; };
 		AC8451AD22B85A78006564C5 /* checkmark.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = checkmark.mp4; sourceTree = "<group>"; };
 		AC8597752236F6B9009C0D6F /* RoutingEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingEmptyViewController.swift; sourceTree = "<group>"; };
+		AC8AACAC250C37980058946A /* EmptyDataConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataConfiguration.swift; sourceTree = "<group>"; };
 		AC8F8B8D21C518BF00001551 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		AC90789021297E6300FC0528 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		AC907892212997F600FC0528 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
@@ -592,10 +594,10 @@
 		AC93718A2309F9E800296949 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
-				AC9371882308C33300296949 /* AlertController.swift */,
 				AC11F26C2290C971008ECBDD /* ActionAlertDialog.swift */,
-				AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */,
+				AC9371882308C33300296949 /* AlertController.swift */,
 				AC11F2682290BC5D008ECBDD /* MediaAlertController.swift */,
+				AC6BD19B21B2B63C00C20451 /* ResultAlertDialog.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -604,10 +606,11 @@
 			isa = PBXGroup;
 			children = (
 				ACBD42CD22AEA6DC007E89A0 /* DescriptionLabel.swift */,
+				AC8AACAC250C37980058946A /* EmptyDataConfiguration.swift */,
+				AC6BBFF62506BB9F008A0969 /* EmptyDataViewController.swift */,
 				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 				AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */,
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
-				AC6BBFF62506BB9F008A0969 /* EmptyDataViewController.swift */,
 				AC1484FA22B13CF20005BE18 /* TextView.swift */,
 				AC7E33392299CD4C0011B36F /* VideoView.swift */,
 			);
@@ -911,6 +914,7 @@
 				AC18D5C92241801000CB7243 /* LoadingViewController.swift in Sources */,
 				AC6BD19121B0843500C20451 /* PlaceRealmModel.swift in Sources */,
 				AC95CF5F2157C72000D90F04 /* TimeIntervalExtensions.swift in Sources */,
+				AC8AACAD250C37980058946A /* EmptyDataConfiguration.swift in Sources */,
 				AC9C70842444878A0061E9C9 /* PlaceReportApiModel.swift in Sources */,
 				AC55AE0C22DBC4E200FFEFC6 /* PlaceFilterController.swift in Sources */,
 				AC11F26B2290BDCA008ECBDD /* UIApplicationExtensions.swift in Sources */,

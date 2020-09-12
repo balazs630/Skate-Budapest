@@ -26,9 +26,10 @@ class SkateListViewController: UIViewController {
 
     override func didMove(toParent parent: UIViewController?) {
         super.didMove(toParent: parent)
-        if parent != nil {
-            updateListWaypoints()
-        }
+
+        guard parent != nil else { return }
+        updateListWaypoints()
+        handlePlacesNotDownloadedState()
     }
 
     // MARK: Screen configuration
@@ -39,21 +40,44 @@ class SkateListViewController: UIViewController {
     private func configureTableview() {
         placesTableView.delegate = self
         placesTableView.dataSource = dataSource
-
-        if dataSource.places.isEmpty {
-            showEmptyDataView()
-        }
-
         placesTableView.accessibilityIdentifier = AccessibilityID.SkateMap.listTableView
     }
 
     // MARK: Empty data screen
+    private func handlePlacesNotDownloadedState() {
+        dataSource.places.isEmpty
+            ? showEmptyDataView()
+            : ()
+    }
+
+    private func handleNoPlaceFilterResultState() {
+        dataSource.filteredPlaces().isEmpty
+            ? showNoResultDataView()
+            : removeEmptyDataView()
+    }
+
+    private func showNoResultDataView() {
+        emptyScreen = EmptyDataViewController(
+            configuration: EmptyDataConfiguration(
+                title: Texts.SkateMap.noResultListTitle.localized
+            )
+        )
+
+        placesTableView.backgroundView = emptyScreen?.view
+        placesTableView.separatorStyle = .none
+    }
+
     private func showEmptyDataView() {
         emptyScreen = EmptyDataViewController(
-            title: Texts.SkateMap.emptyListTitle.localized,
-            action: { [weak self] in
-                self?.reloadPlaces()
-        })
+            configuration: EmptyDataConfiguration(
+                title: Texts.SkateMap.emptyListTitle.localized,
+                hasActionButton: true,
+                buttonTitle: Texts.SkateMap.emptyListRetryButtonTitle.localized,
+                buttonAction: { [weak self] in
+                    self?.reloadPlaces()
+                }
+            )
+        )
         placesTableView.backgroundView = emptyScreen?.view
         placesTableView.separatorStyle = .none
     }
@@ -65,8 +89,11 @@ class SkateListViewController: UIViewController {
     }
 
     private func reloadPlaces() {
+        addActivityIndicator(title: Texts.General.loading.localized)
+
         placeCachingService.getPlaces() { [weak self] result in
             guard let `self` = self else { return }
+            self.removeActivityIndicator()
 
             if case .success(let places) = result {
                 self.dataSource.places = places
@@ -80,6 +107,7 @@ class SkateListViewController: UIViewController {
 // MARK: Waypoint operations
 extension SkateListViewController {
     func updateListWaypoints() {
+        handleNoPlaceFilterResultState()
         guard let tableview = placesTableView else { return }
         tableview.reloadData()
     }

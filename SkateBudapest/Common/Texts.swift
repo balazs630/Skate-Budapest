@@ -31,6 +31,7 @@ struct Texts {
         case mapSegmentTitle
         case listSegmentTitle
         case emptyListTitle
+        case noResultListTitle
         case emptyListRetryButtonTitle
 
         case filterScreenTitle
