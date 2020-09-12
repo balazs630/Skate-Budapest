@@ -22,11 +22,11 @@ struct ImageSizeBiggerThanValidator {
 extension ImageSizeBiggerThanValidator: ValidatorConvertible {
     func validate(_ value: Any?) throws {
         guard value != nil else { return }
-        guard
-            let image = value as? UIImage,
+
+        guard let image = value as? UIImage,
             image.size.isGreaterOrEqual(to: size)
-            else {
-                throw ValidationError(
+        else {
+            throw ValidationError(
                     message: Texts.Validation.imageSizeTooSmall.localizedWithParameter(
                         Int(size.width),
                         Int(size.height)

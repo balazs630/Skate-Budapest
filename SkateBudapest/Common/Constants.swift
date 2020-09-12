@@ -17,9 +17,11 @@ struct Constant {
     static let imageViewerCellIdentifier = "imageViewerCellIdentifier"
 
     static let defaultCityCoordinate = CLLocationCoordinate2D(latitude: 47.500, longitude: 19.107)
-    static let defaultCityRegion = MKCoordinateRegion(center: Constant.defaultCityCoordinate,
-                                                      latitudinalMeters: 25000,
-                                                      longitudinalMeters: 25000)
+    static let defaultCityRegion = MKCoordinateRegion(
+        center: Constant.defaultCityCoordinate,
+        latitudinalMeters: 25000,
+        longitudinalMeters: 25000
+    )
 
     struct Video {
         static let skatepark = "skatepark-preview"

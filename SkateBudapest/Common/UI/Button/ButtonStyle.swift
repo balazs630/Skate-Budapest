@@ -15,17 +15,21 @@ enum ButtonStyle {
     var appearance: ButtonAppearance {
         switch self {
         case .next:
-            return ButtonAppearance(font: .systemFont(ofSize: 20, weight: .medium),
-                                    textColor: .white,
-                                    backgroundColor: Theme.Color.lightBlue,
-                                    radious: 20,
-                                    contentInsets: UIEdgeInsets(top: 16, left: 32, bottom: 16, right: 32))
+            return ButtonAppearance(
+                font: .systemFont(ofSize: 20, weight: .medium),
+                textColor: .white,
+                backgroundColor: Theme.Color.lightBlue,
+                radious: 20,
+                contentInsets: UIEdgeInsets(top: 16, left: 32, bottom: 16, right: 32)
+            )
         case .action:
-            return ButtonAppearance(font: .systemFont(ofSize: 20, weight: .medium),
-                                    textColor: .white,
-                                    backgroundColor: Theme.Color.lightBlue,
-                                    radious: 10,
-                                    contentInsets: UIEdgeInsets())
+            return ButtonAppearance(
+                font: .systemFont(ofSize: 20, weight: .medium),
+                textColor: .white,
+                backgroundColor: Theme.Color.lightBlue,
+                radious: 10,
+                contentInsets: UIEdgeInsets()
+            )
         }
     }
 }

@@ -47,10 +47,12 @@ class RoutingViewController: UIViewController {
     }
 
     private func setObserverForUIApplicationDidBecomeActive() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(setupView),
-                                               name: UIApplication.didBecomeActiveNotification,
-                                               object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(setupView),
+            name: UIApplication.didBecomeActiveNotification,
+            object: nil
+        )
     }
 }
 

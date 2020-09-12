@@ -64,21 +64,24 @@ extension VideoView {
         }
 
         layer.addSublayer(playerLayer)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(didPlayToEndTime),
-                                               name: .AVPlayerItemDidPlayToEndTime,
-                                               object: player?.currentItem)
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didPlayToEndTime),
+            name: .AVPlayerItemDidPlayToEndTime,
+            object: player?.currentItem
+        )
     }
 }
 
 // MARK: AVPlayer notifications
 extension VideoView {
     @objc private func didPlayToEndTime() {
-        if isLoop {
-            player?.pause()
-            player?.seek(to: .zero)
-            player?.play()
-        }
+        guard isLoop else { return }
+
+        player?.pause()
+        player?.seek(to: .zero)
+        player?.play()
     }
 }
 

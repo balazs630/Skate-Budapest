@@ -13,11 +13,10 @@ struct ImageIsRequiredValidator { }
 // MARK: Validation
 extension ImageIsRequiredValidator: ValidatorConvertible {
     func validate(_ value: Any?) throws {
-        guard
-            let image = value as? UIImage,
+        guard let image = value as? UIImage,
             image.cgImage != nil
-            else {
-                throw ValidationError(message: Texts.Validation.imageRequired.localized)
+        else {
+            throw ValidationError(message: Texts.Validation.imageRequired.localized)
         }
     }
 }

@@ -571,6 +571,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		AC8AACAE250CCFCD0058946A /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				AC8AACAC250C37980058946A /* EmptyDataConfiguration.swift */,
+				AC6BBFF62506BB9F008A0969 /* EmptyDataViewController.swift */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
 		AC9003FE2193758A0007F7E5 /* SubmitPlace */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,8 +613,6 @@
 			isa = PBXGroup;
 			children = (
 				ACBD42CD22AEA6DC007E89A0 /* DescriptionLabel.swift */,
-				AC8AACAC250C37980058946A /* EmptyDataConfiguration.swift */,
-				AC6BBFF62506BB9F008A0969 /* EmptyDataViewController.swift */,
 				AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */,
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
 				AC1484FA22B13CF20005BE18 /* TextView.swift */,
@@ -712,6 +719,7 @@
 			children = (
 				AC93718A2309F9E800296949 /* Alert */,
 				AC93718E2309FAF600296949 /* Button */,
+				AC8AACAE250CCFCD0058946A /* EmptyView */,
 				AC93718B2309FAD500296949 /* Misc */,
 			);
 			path = UI;

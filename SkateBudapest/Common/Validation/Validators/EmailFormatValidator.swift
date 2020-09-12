@@ -13,11 +13,10 @@ struct EmailFormatValidator {
 // MARK: Validation
 extension EmailFormatValidator: ValidatorConvertible {
     func validate(_ value: Any?) throws {
-        guard
-            let text = value as? String,
+        guard let text = value as? String,
             text.range(of: pattern, options: .regularExpression) != nil
-            else {
-                throw ValidationError(message: Texts.Validation.invalidEmailFormat.localized)
+        else {
+            throw ValidationError(message: Texts.Validation.invalidEmailFormat.localized)
         }
     }
 }
