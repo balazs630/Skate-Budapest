@@ -58,10 +58,14 @@ class SkateMapContainerViewController: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segmentedControl.setTitleTextAttributes(textAttributes, for: .selected)
 
-        segmentedControl.setTitle(Texts.SkateMap.mapSegmentTitle.localized,
-                                  forSegmentAt: SegmentedControlState.map.rawValue)
-        segmentedControl.setTitle(Texts.SkateMap.listSegmentTitle.localized,
-                                  forSegmentAt: SegmentedControlState.list.rawValue)
+        segmentedControl.setTitle(
+            Texts.SkateMap.mapSegmentTitle.localized,
+            forSegmentAt: SegmentedControlState.map.rawValue
+        )
+        segmentedControl.setTitle(
+            Texts.SkateMap.listSegmentTitle.localized,
+            forSegmentAt: SegmentedControlState.list.rawValue
+        )
     }
 }
 
@@ -73,6 +77,7 @@ extension SkateMapContainerViewController {
 
     private func addSkateMapViewController() {
         skateMapViewController.coordinator = coordinator
+        skateMapViewController.waypoints = skateListViewController.dataSource.places
         add(skateMapViewController, to: containerView)
     }
 
@@ -123,7 +128,10 @@ extension SkateMapContainerViewController: PlaceFilterDelegate {
 
     private func changeFilteringIcon(isFiltered: Bool) {
         let buttonItem = navigationItem.rightBarButtonItem
-        buttonItem?.image = isFiltered ? Theme.Icon.filteringFull : Theme.Icon.filteringEmpty
+        buttonItem?.image = isFiltered
+            ? Theme.Icon.filteringFull
+            : Theme.Icon.filteringEmpty
+
         navigationItem.rightBarButtonItem = buttonItem
     }
 }

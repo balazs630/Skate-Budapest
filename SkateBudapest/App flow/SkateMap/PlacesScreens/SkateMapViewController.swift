@@ -27,17 +27,10 @@ class SkateMapViewController: UIViewController {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSelf()
 
+        configureSelf()
         LocationService.shared.startTracking()
         loadMapWaypoints()
-    }
-
-    override func didMove(toParent parent: UIViewController?) {
-        super.didMove(toParent: parent)
-        if parent != nil {
-            updateMapWaypoints()
-        }
     }
 
     // MARK: Screen configuration
@@ -87,12 +80,11 @@ extension SkateMapViewController {
 
     func updateMapWaypoints() {
         guard let mapView = placesMapView else { return }
+
         waypoints?.forEach { annotation in
-            if placeFilterController.isSelected(type: annotation.type) {
-                mapView.addAnnotation(annotation)
-            } else {
-                mapView.removeAnnotation(annotation)
-            }
+            placeFilterController.isSelected(type: annotation.type)
+                ? mapView.addAnnotation(annotation)
+                : mapView.removeAnnotation(annotation)
         }
     }
 }

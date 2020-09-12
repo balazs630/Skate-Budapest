@@ -57,6 +57,8 @@ class SkateListViewController: UIViewController {
     }
 
     private func showNoResultDataView() {
+        guard placesTableView != nil else { return }
+
         emptyScreen = EmptyDataViewController(
             configuration: EmptyDataConfiguration(
                 title: Texts.SkateMap.noResultListTitle.localized
@@ -68,6 +70,8 @@ class SkateListViewController: UIViewController {
     }
 
     private func showEmptyDataView() {
+        guard placesTableView != nil else { return }
+
         emptyScreen = EmptyDataViewController(
             configuration: EmptyDataConfiguration(
                 title: Texts.SkateMap.emptyListTitle.localized,
@@ -83,6 +87,8 @@ class SkateListViewController: UIViewController {
     }
 
     private func removeEmptyDataView() {
+        guard placesTableView != nil else { return }
+
         emptyScreen = nil
         placesTableView.backgroundView = nil
         placesTableView.separatorStyle = .singleLine
