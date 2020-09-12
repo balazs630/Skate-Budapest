@@ -31,7 +31,6 @@
 		AC2C030921AADC6300784F4E /* PlaceWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C030821AADC6300784F4E /* PlaceWebService.swift */; };
 		AC2C030F21AADD1B00784F4E /* PlaceDataVersionApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C030C21AADD1B00784F4E /* PlaceDataVersionApiModel.swift */; };
 		AC2C031121AADD1B00784F4E /* PlaceApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C030E21AADD1B00784F4E /* PlaceApiModel.swift */; };
-		AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */; };
 		AC2D9DAA21335558003A6263 /* PlaceFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */; };
 		AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */; };
 		AC3D6F42217DCE3200BCDC02 /* RoutingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3D6F41217DCE3200BCDC02 /* RoutingViewController.swift */; };
@@ -142,7 +141,6 @@
 		AC2C030821AADC6300784F4E /* PlaceWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceWebService.swift; sourceTree = "<group>"; };
 		AC2C030C21AADD1B00784F4E /* PlaceDataVersionApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDataVersionApiModel.swift; sourceTree = "<group>"; };
 		AC2C030E21AADD1B00784F4E /* PlaceApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceApiModel.swift; sourceTree = "<group>"; };
-		AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfScreenModalPresentationController.swift; sourceTree = "<group>"; };
 		AC2D9DA921335558003A6263 /* PlaceFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFilterViewController.swift; sourceTree = "<group>"; };
 		AC2E12A8211276D600A5B05E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		AC3D6F41217DCE3200BCDC02 /* RoutingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingViewController.swift; sourceTree = "<group>"; };
@@ -608,7 +606,6 @@
 				ACBD42CD22AEA6DC007E89A0 /* DescriptionLabel.swift */,
 				AC8AACAC250C37980058946A /* EmptyDataConfiguration.swift */,
 				AC6BBFF62506BB9F008A0969 /* EmptyDataViewController.swift */,
-				AC2D9DA721335523003A6263 /* HalfScreenModalPresentationController.swift */,
 				AC96C16A22C2D2C1007D7C2D /* ImageViewPicker.swift */,
 				AC18D5C82241801000CB7243 /* LoadingViewController.swift */,
 				AC1484FA22B13CF20005BE18 /* TextView.swift */,
@@ -993,7 +990,6 @@
 				ACCAC19522342B9800502D6B /* MainCoordinator.swift in Sources */,
 				AC64A9C4225AA27E006728D6 /* ImageIsRequiredValidator.swift in Sources */,
 				AC2E12A9211276D600A5B05E /* UIViewExtensions.swift in Sources */,
-				AC2D9DA821335523003A6263 /* HalfScreenModalPresentationController.swift in Sources */,
 				ACB3919422A06F8F00E017AF /* SubmitPlaceDescriptionViewController.swift in Sources */,
 				AC6BDEDD231AFAB700F3041F /* AccessibilityIDs.swift in Sources */,
 				ACD5CBBB21D195B300EDE3E0 /* Localizable.swift in Sources */,

@@ -109,15 +109,6 @@ extension SkateMapContainerViewController {
     }
 }
 
-// MARK: UIViewControllerTransitioningDelegate methods
-extension SkateMapContainerViewController: UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController,
-                                presenting: UIViewController?,
-                                source: UIViewController) -> UIPresentationController? {
-        return HalfScreenModalPresentationController(presentedViewController: presented, presenting: presenting)
-    }
-}
-
 // MARK: PlaceFilterDelegate methods
 extension SkateMapContainerViewController: PlaceFilterDelegate {
     func filterAnnotations(by selectedTypes: [WaypointType]) {

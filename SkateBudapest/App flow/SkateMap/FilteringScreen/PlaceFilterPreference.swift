@@ -7,7 +7,7 @@
 //
 
 struct PlaceFilterPreference {
-    var isSkatepark: Bool
-    var isSkateshop: Bool
-    var isStreetspot: Bool
+    let isSkatepark: Bool
+    let isSkateshop: Bool
+    let isStreetspot: Bool
 }

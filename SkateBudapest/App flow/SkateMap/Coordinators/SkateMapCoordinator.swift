@@ -45,9 +45,7 @@ extension SkateMapCoordinator {
     func toFilteringScreen(from sourceViewController: SkateMapContainerViewController) {
         let filteringScreen = PlaceFilterViewController.instantiateViewController(from: .skateMap)
 
-        filteringScreen.modalPresentationStyle = .custom
-        filteringScreen.view.frame.size.width = sourceViewController.view.frame.width
-        filteringScreen.transitioningDelegate = sourceViewController
+        filteringScreen.modalPresentationStyle = .overFullScreen
         filteringScreen.delegate = sourceViewController
 
         navigationController.present(filteringScreen, animated: true)

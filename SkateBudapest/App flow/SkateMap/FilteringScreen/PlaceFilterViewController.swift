@@ -21,13 +21,14 @@ class PlaceFilterViewController: UIViewController {
     @IBOutlet private weak var headerView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
 
+    @IBOutlet private weak var skateparkLabel: UILabel!
     @IBOutlet private weak var skateparkSwitch: UISwitch!
-    @IBOutlet private weak var skateshopSwitch: UISwitch!
+
+    @IBOutlet private weak var streetspotLabel: UILabel!
     @IBOutlet private weak var streetspotSwitch: UISwitch!
 
     @IBOutlet private weak var skateshopLabel: UILabel!
-    @IBOutlet private weak var streetspotLabel: UILabel!
-    @IBOutlet private weak var skateparkLabel: UILabel!
+    @IBOutlet private weak var skateshopSwitch: UISwitch!
 
     @IBOutlet private weak var filterButton: Button!
 
