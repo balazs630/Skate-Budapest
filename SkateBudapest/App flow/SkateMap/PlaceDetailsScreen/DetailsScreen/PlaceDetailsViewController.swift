@@ -17,6 +17,7 @@ class PlaceDetailsViewController: UIViewController {
     var imageOffset = IndexPath(row: 0, section: 0)
 
     // MARK: Outlets
+    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var locationTypeView: UIView!
     @IBOutlet private weak var locationTypeLabel: UILabel!
     @IBOutlet private weak var distanceLabel: UILabel!
@@ -34,11 +35,6 @@ class PlaceDetailsViewController: UIViewController {
         addChildViewControllers()
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        updateDescriptionTextHeight()
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let xOffset = imageScrollView.frame.width * CGFloat(imageOffset.row)
@@ -48,9 +44,9 @@ class PlaceDetailsViewController: UIViewController {
 
     override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
-        if parent == nil {
-            backToSkateMapScreen()
-        }
+
+        guard parent == nil else { return }
+        backToSkateMapScreen()
     }
 }
 
@@ -67,20 +63,23 @@ extension PlaceDetailsViewController {
     }
 
     private func configureNavigationBarTitleView() {
-        if #available(iOS 11.0, *) {
-            coordinator?.navigationController.navigationBar.prefersLargeTitles = true
-        }
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = Theme.Color.navbarLightGrey
     }
 
     private func configureNavigationBarButtons() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Theme.Icon.bandageIcon,
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(toReportScreen))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: Theme.Icon.bandageIcon,
+            style: .plain,
+            target: self,
+            action: #selector(toReportScreen)
+        )
     }
 
     private func configureTexts() {
-        navigationItem.title = place.name
+        titleLabel.text = place.name
+        distanceLabel.text = destinationDistanceInKilometer()
 
         descriptionTextView.attributedText = {
             let attributedText = try? NSMutableAttributedString(
@@ -98,11 +97,9 @@ extension PlaceDetailsViewController {
             return attributedText
         }()
 
-        distanceLabel.text = destinationDistanceInKilometer()
-    }
-
-    private func updateDescriptionTextHeight() {
-        descriptionTextViewHeightConstraint.constant = descriptionTextView.textFitHeight
+        DispatchQueue.main.async {
+            self.descriptionTextViewHeightConstraint.constant = self.descriptionTextView.textFitHeight
+        }
     }
 
     private func destinationDistanceInKilometer() -> String {
@@ -116,6 +113,7 @@ extension PlaceDetailsViewController {
     }
 
     private func addAccessibilityIDs() {
+        titleLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.titleLabel
         locationTypeView.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryView
         locationTypeLabel.accessibilityIdentifier = AccessibilityID.PlaceDetails.categoryLabel
         descriptionTextView.accessibilityIdentifier = AccessibilityID.PlaceDetails.descriptionLabel
@@ -123,18 +121,7 @@ extension PlaceDetailsViewController {
 
     private func configureLocationTypeView() {
         locationTypeLabel.text = place.type.rawValue
-        locationTypeView.backgroundColor = getLocationColor()
-    }
-
-    private func getLocationColor() -> UIColor {
-        switch place.type {
-        case .skatepark:
-            return Theme.Color.skatepark
-        case .streetspot:
-            return Theme.Color.streetSpot
-        case .skateshop:
-            return Theme.Color.skateshop
-        }
+        locationTypeView.backgroundColor = place.type.backgroundColor
     }
 
     private func configureImageScrollView() {
@@ -164,10 +151,12 @@ extension PlaceDetailsViewController {
             let imageView = UIImageView()
             imageView.image = images[index]
             imageView.contentMode = .scaleAspectFit
-            imageView.frame = CGRect(x: view.frame.width * CGFloat(index),
-                                     y: 0,
-                                     width: UIScreen.main.bounds.width,
-                                     height: imageScrollView.frame.height)
+            imageView.frame = CGRect(
+                x: view.frame.width * CGFloat(index),
+                y: 0,
+                width: UIScreen.main.bounds.width,
+                height: imageScrollView.frame.height
+            )
 
             imageViews.append(imageView)
         }
@@ -197,10 +186,7 @@ extension PlaceDetailsViewController {
     }
 
     private func backToSkateMapScreen() {
-        if #available(iOS 11.0, *) {
-            navigationItem.title = ""
-            navigationController?.navigationBar.prefersLargeTitles = false
-        }
+        coordinator?.backToSkateMapScreen()
     }
 
     @objc private func toReportScreen() {

@@ -21,4 +21,15 @@ enum WaypointType: String, CaseIterable, Codable {
             return Theme.Icon.streetSpotPin
         }
     }
+
+    var backgroundColor: UIColor {
+        switch self {
+        case .skatepark:
+            return Theme.Color.skatepark
+        case .streetspot:
+            return Theme.Color.streetSpot
+        case .skateshop:
+            return Theme.Color.skateshop
+        }
+    }
 }

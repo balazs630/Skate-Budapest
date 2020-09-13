@@ -28,6 +28,7 @@ struct AccessibilityID {
     }
 
     struct PlaceDetails {
+        static let titleLabel = "skatemap.detail.title.label"
         static let categoryView = "skatemap.detail.category.view"
         static let categoryLabel = "skatemap.detail.category.label"
         static let descriptionLabel = "skatemap.detail.description.label"

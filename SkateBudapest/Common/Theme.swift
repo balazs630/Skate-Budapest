@@ -17,9 +17,9 @@ enum Theme {
         static let navbarLightGrey = UIColor.color(red: 248, green: 248, blue: 248)
         static let descriptionLabelLightGray = UIColor.color(red: 216, green: 216, blue: 216)
 
-        static let skatepark = UIColor.color(red: 210, green: 64, blue: 140)
-        static let skateshop = UIColor.color(red: 64, green: 200, blue: 140)
-        static let streetSpot = UIColor.color(red: 135, green: 200, blue: 240)
+        static let skatepark = UIColor.color(red: 210, green: 64, blue: 140, alpha: 0.5)
+        static let skateshop = UIColor.color(red: 64, green: 200, blue: 140, alpha: 0.5)
+        static let streetSpot = UIColor.color(red: 135, green: 200, blue: 240, alpha: 0.5)
     }
 
     enum Icon {
