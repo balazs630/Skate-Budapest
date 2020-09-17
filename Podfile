@@ -17,3 +17,12 @@ target 'SkateBudapest' do
   pod 'RealmSwift', '~> 5.0.2'
   pod 'IQKeyboardManagerSwift', '~> 6.5.5'
 end
+
+## Remove the custom deployment targets from Pods
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+    end
+  end
+end
