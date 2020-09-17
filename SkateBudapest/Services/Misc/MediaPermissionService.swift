@@ -35,7 +35,7 @@ extension MediaPermissionService {
         switch PHPhotoLibrary.authorizationStatus() {
         case .authorized:
             return true
-        case .notDetermined, .restricted, .denied:
+        case .notDetermined, .restricted, .denied, .limited:
             return false
         @unknown default:
             return false
