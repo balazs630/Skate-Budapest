@@ -6,9 +6,9 @@ iOS app that shows the skateparks, skate spots and skateshops located in Budapes
 This app is for everyone who wants to visualise extreme sport related things on a map, especially skaters from abroad who has no idea where to start in Budapest.
 
 
-**Main application - with dummy content, icons and images:**
+**Main app:**
 
-<img src="http://i.imgur.com/ByuFY8r.jpg" width="900px" />
+<img src="http://i.imgur.com/hQZPBCw.jpg" width="900px" />
 
 ___
 **Done:**
@@ -19,12 +19,16 @@ ___
 - [x] Text and image caching, full offline use
 - [x] Route planner with estimated time of arrival calculator (walk, car, public transport)
 - [x] Place suggestion screens where users can request missing places to add (with description, images, coordinates)
+- [x] Place report screen where users can send notes or report a problem 
 - [x] Validate fields on place suggestion screens
 - [x] Follow location heading, switch between map types
 - [x] Error handling on various network / database operation failure with alerts
 - [x] Simple backend service, [see this](https://github.com/balazs630/Skate-Budapest-Vapor) side project
 - [x] Full localisation in Hungarian and English languages
+- [x] Automation e2e tests
 ___
 **Backlog:**
 
-- [ ] Replace the dummy coordinates, texts and images with real content
+- [ ] Add more places
+- [ ] Waypoint clustering on the map
+- [ ] Support Dark Mode
