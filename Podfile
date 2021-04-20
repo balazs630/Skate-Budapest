@@ -13,9 +13,9 @@ workspace 'SkateBudapest.xcworkspace'
 
 ## Inject pods
 target 'SkateBudapest' do
-  pod 'Alamofire', '~> 5.2.1'
-  pod 'RealmSwift', '~> 5.0.2'
-  pod 'IQKeyboardManagerSwift', '~> 6.5.5'
+  pod 'Alamofire', '~> 5.4.2'
+  pod 'RealmSwift', '~> 5.5.1'
+  pod 'IQKeyboardManagerSwift', '~> 6.5.6'
 end
 
 ## Remove the custom deployment targets from Pods
